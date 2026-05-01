@@ -32,7 +32,7 @@ My work is organized under the **[DGAF (Dynamic Governance Agentic Formation) Fr
 | [sentinel-governance](https://github.com/ndrorchestration/sentinel-governance) | Detect-remediate-revalidate CI/CD integrity framework | GitHub Actions, PowerShell |
 | [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Phi-driven multi-agent drift simulation, real-time harmonic monitoring | TypeScript |
 | [Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) | WebRTC multi-device acoustic mesh, WebSocket signaling, SLAM | JavaScript |
-| [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | Goldcanstaytoday 3-layer benchmark suite | Python |
+| [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | Multi-layer AI evaluation benchmark suite | Python |
 | [3d-visualization-hub](https://github.com/ndrorchestration/3d-visualization-hub) | Governance score plots, drift trajectories, phi-harmonic viz | Python, Streamlit, Plotly |
 | [ai-governance-frameworks](https://github.com/ndrorchestration/ai-governance-frameworks) | NIST AI RMF, ISO 42001, IIA frameworks — DGAF bridge | Markdown |
 | [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | IP-safe prompt system examples and evaluation patterns | Markdown, Python |
@@ -60,4 +60,4 @@ I publish governance, orchestration, RAG, agentic, and evaluation workflow templ
 
 ---
 
-*Governance by DGAF · Meta-orchestrated by Agent Amethyst · Updated April 2026*
+*Governance by DGAF · Meta-orchestrated by Agent Amethyst · Updated May 2026*
