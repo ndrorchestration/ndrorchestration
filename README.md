@@ -1,4 +1,4 @@
-# Andrew “Ndr Ender” Hensel
+# Hi Friends!, I'm Andrew // Ndr "Ender" Hensel
 
 **AI Orchestration Engineer · Systems Builder · Governance Architect**
 
