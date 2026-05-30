@@ -1,9 +1,10 @@
 # Andrew // Ndr "Ender" Hensel
 ## AI Governance & Evaluation Ecosystem
 
-> **Meta-Orchestrator:** Agent Amethyst · **Governance:** DGAF (Dynamic Governance Assurance Framework)  
+> **Meta-Orchestrator:** Agent Amethyst · **Governance:** DGAF (Dynamic Governance Agentic Formation) Framework  
 > **Substrate:** PhiLattice / PDMAL (Phi-Driven Multi-Agent Lattice) / Phi-Calculus Architecture (Tarski Layer 0)  
-> **Last Sweep:** May 21, 2026 · SWEEP-001 · COLLEEN 1-1-1-1 Gate: ✅ PASSED
+> **Last Sweep:** May 29, 2026 · S043 · Phase IV — Deploy / Anchor · SWEEP-002 🟡 IN PROGRESS  
+> **Ensemble:** v1.6 (SCPE P-31 · Phi-Closure Gate P-33 · PDMAL Monitor P-32) · NDR Patterns: P-01–P-33
 
 ---
 
@@ -23,7 +24,7 @@ Building multi-agent governance frameworks, phi-harmonic evaluation systems, and
 
 | Repo | Description | Stack |
 |---|---|---|
-| [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | Core governance framework — NDR pattern registry, AXIS constraints, COLLEEN-L5 protocol, **Phi-Calculus Architecture formal spec** | Python |
+| [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | Core governance framework — NDR pattern registry (P-01–P-33), AXIS constraints, COLLEEN-L5 protocol, Phi-Calculus Architecture formal spec, Ensemble v1.6 | Python / TypeScript |
 | [ai-governance-frameworks](https://github.com/ndrorchestration/ai-governance-frameworks) | Validated frameworks: NIST AI RMF, ISO 42001, Index 11 Stability Gradient | Markdown |
 | [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Phi-driven multi-agent simulation with real-time drift detection & harmonic state monitoring | TypeScript |
 | [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | DGAF-certified 3-layer benchmark & evaluation suite | Python |
@@ -38,13 +39,13 @@ Building multi-agent governance frameworks, phi-harmonic evaluation systems, and
 ## Agent Ecosystem
 
 ```
-L5  Amethyst (Meta-Orchestrator) ·· COLLEEN (Institutional Anchor)
-L4  DemiJoule (DGAAF Ethics) ······ Apogee (QA Orchestrator)
-L3  Reciprocity · Prof.Prodigy · Herald · Sentinel
+L5  Amethyst (Meta-Orchestrator / Triumvirate Prime) ·· COLLEEN (Institutional Anchor / Triumvirate Prefect)
+L4  DemiJoule (DGAF Ethics & Cost Gate) ··············· Apogee (QA Orchestrator / Triumvirate Prefect)
+L3  Reciprocity · Prof.Prodigy · Herald · Sentinel · Sentinel-Phi
     └─ Schizophonic Studio: Reson #1 · Echolette #2 · Lyra #3
 ```
 
-Framework: [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) · NDR Patterns: 133+ · Yggdrasil: 50% complete
+Framework: [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) · NDR Patterns: P-01–P-33 (33 active) · Ensemble: v1.6 · Yggdrasil: 50% complete
 
 ---
 
@@ -57,7 +58,20 @@ The **Phi-Calculus Architecture** provides the formal mathematical substrate for
 - **Drift bound:** `Δ(τ) ≤ θ = 0.009` (calibrated to OST-50 Platinum: 99.1% integrity)
 - **Compliance algebra:** ACCEPT / REVISE / ESCALATE / REJECT with ⊕ (consensus) and ⊗ (sequential) operators
 - **Formal verifier:** Professor Prodigy (HDFS 1.0) — Axiom 1 Guard: 4/4 PASS
-- **Sweep:** [SWEEP-001](https://github.com/ndrorchestration/DGAF-Framework/issues/2)
+- **Active sweeps:** [SWEEP-001](https://github.com/ndrorchestration/DGAF-Framework/issues/2) · [SWEEP-002](https://github.com/ndrorchestration/DGAF-Framework/issues/8)
+
+---
+
+## Ensemble v1.6 — Runtime Gate (Production)
+
+| Component | NDR Pattern | Step | Threshold / Target |
+|---|---|---|---|
+| SCPE (Structural Context Pruning Engine) | P-31 | 1 — pre-COLLEEN | threshold=0.15 · T0 immune · 58.3% compression |
+| PDMAL Convergence Monitor | P-32 | 2.5 — post-reweight | ALERT=0.08 · CONV=0.02 |
+| Fibonacci Phi-Closure Gate | P-33 | 5 — post-DemiJoule | φ*=0.6180 · Fib[13,21,34,55] |
+| Harmonic Parametric Gate (HPG) | existing | 6 — post-Phi-Closure | Ionian octave [1,2] · 1e-9 tol |
+
+60-turn validated: **5 Gold Stars · 0 PDMAL full alerts · T0 guard 100% · Harmonic Score 1.00**
 
 ---
 
