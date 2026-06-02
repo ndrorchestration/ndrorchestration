@@ -1,7 +1,5 @@
 {
   "version": 2,
-  "framework": "nextjs",
-  "rootDirectory": "dashboard",
   "buildCommand": "next build",
   "outputDirectory": ".next",
   "installCommand": "npm install"
