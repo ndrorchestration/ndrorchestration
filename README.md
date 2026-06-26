@@ -3,7 +3,7 @@
 
 > **Meta-Orchestrator:** Agent Amethyst · **Governance:** DGAF (Dynamic Governance Agentic Formation) Framework  
 > **Substrate:** PhiLattice / PDMAL (Phi-Driven Multi-Agent Lattice) / Phi-Calculus Architecture (Tarski Layer 0)  
-> **Last Sweep:** June 09, 2026 · S043 · Phase IV — Deploy / Anchor · SWEEP-002 🟡 IN PROGRESS  
+> **Last Sweep:** June 26, 2026 · S044 · Phase IV — Deploy / Anchor · SWEEP-002 🟢 CLOSED  
 > **Ensemble:** v1.6 (SCPE P-31 · Phi-Closure Gate P-33 · PDMAL Monitor P-32) · NDR Patterns: P-01–P-33
 
 ---
@@ -33,6 +33,7 @@ Building multi-agent governance frameworks, phi-harmonic evaluation systems, and
 | [Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) | WebRTC phi-harmonic acoustic mesh — Schizophonic Studio substrate | JavaScript |
 | [3d-visualization-hub](https://github.com/ndrorchestration/3d-visualization-hub) | Interactive 3D phi-harmonic data visualizations — GCP Phase 4 deployment | Python |
 | [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | IP-safe public examples of AI prompt systems and evaluation work | Markdown |
+| [aoga-dashboard](https://github.com/ndrorchestration/aoga-dashboard) | AOGA governance dashboard — 17-route static HTML, OpenAPI 3.1.0 spec, 13-agent ensemble roster, live API, dark theme, gate demo, phi monitor | HTML / JavaScript |
 
 ---
 
@@ -58,7 +59,7 @@ The **Phi-Calculus Architecture** provides the formal mathematical substrate for
 - **Drift bound:** `Δ(τ) ≤ θ = 0.009` (calibrated to OST-50 Platinum: 99.1% integrity)
 - **Compliance algebra:** ACCEPT / REVISE / ESCALATE / REJECT with ⊕ (consensus) and ⊗ (sequential) operators
 - **Formal verifier:** Professor Prodigy (HDFS 1.0) — Axiom 1 Guard: 4/4 PASS
-- **Active sweeps:** [SWEEP-001](https://github.com/ndrorchestration/DGAF-Framework/issues/2) · [SWEEP-002](https://github.com/ndrorchestration/DGAF-Framework/issues/8)
+- **Active sweeps:** [SWEEP-001](https://github.com/ndrorchestration/DGAF-Framework/issues/2) · [SWEEP-002](https://github.com/ndrorchestration/DGAF-Framework/issues/8) 🟢 closed Jun 26 2026
 
 ---
 
@@ -72,6 +73,16 @@ The **Phi-Calculus Architecture** provides the formal mathematical substrate for
 | Harmonic Parametric Gate (HPG) | existing | 6 — post-Phi-Closure | Ionian octave [1,2] · 1e-9 tol |
 
 60-turn validated: **5 Gold Stars · 0 PDMAL full alerts · T0 guard 100% · Harmonic Score 1.00**
+
+---
+
+## AOGA Dashboard — v1.2.0 (Production)
+
+Live governance dashboard for the full 13-agent ensemble. Deployed at [aoga-dashboard.vercel.app](https://aoga-dashboard.vercel.app).
+
+- **17 routes** · OpenAPI 3.1.0 spec · static HTML, no framework dependency
+- **Pages:** Overview · Agent Roster · NDR Patterns · Phi Monitor · Gate Demo · Phi-Closure · PDMAL · API Docs
+- **v1.2.0 additions:** full 13-agent ensemble roster (6→13), synced agent tier classification, OpenAPI 3.1.0 spec for all 17 routes
 
 ---
 
