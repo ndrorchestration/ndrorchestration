@@ -106,7 +106,8 @@ const Home: NextPage = () => {
           </nav>
 
           <footer style={{ marginTop: '3rem', textAlign: 'center', color: '#444', fontSize: '0.8rem' }}>
-            DGAF Framework · Phi-Calculus Architecture · Agent Amethyst meta-orchestrated
+            DGAF Framework · Phi-Calculus Architecture · Agent Amethyst meta-orchestrated<br />
+            <span style={{ color: '#333', fontSize: '0.72rem' }}>S045 · Jun 26 2026 · Entrepreneur Hub Phase 0 🟢</span>
           </footer>
         </div>
       </main>
