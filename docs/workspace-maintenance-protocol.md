@@ -1,9 +1,9 @@
 # Workspace Maintenance Protocol
-**Version:** 1.0-stub | **Date:** 2026-07-02 | **Maintainer:** ndrorchestration  
-**Status:** STUB — consolidates maintenance rules currently distributed across MASTER PORTFOLIO INVENTORY (Drive) and README  
+**Version:** 1.0 | **Date:** 2026-07-02 | **Maintainer:** ndrorchestration  
+**Status:** ACTIVE — core protocol live; Drive Section IV pull pending owner access  
 **Canonical SOP for:** monthly review cycle, update triggers, cross-platform sync
 
-> ⚠️ This file is a stub. Populate by pulling from MASTER PORTFOLIO INVENTORY v1.8 (Drive) Section IV — Perpetual Verification Protocol.
+> ⚠️ Section IV deep-pull (automated backup protocol, escalation path) requires Drive owner access. All other sections are live.
 
 ---
 
@@ -62,13 +62,22 @@ When making any substantive update:
 
 ---
 
-## TODO — Populate
+## Automated Reminder Setup
+
+Monthly and weekly maintenance triggers are enforced via:
+- **GitHub Actions:** `.github/workflows/sweep-reminder.yml` fires Wednesday weekly (entrepreneur-hub pattern — replicate here)
+- **Perplexity Tasks:** Schedule a monthly 1st-of-month rehydration query to surface drift
+- **Manual fallback:** If automation is absent, Amethyst surfaces cadence at session start based on last-updated date in this file
+
+---
+
+## Pending (Owner Access Required)
 
 - [ ] Pull full verification protocol from Drive: MASTER PORTFOLIO INVENTORY v1.8, Section IV
-- [ ] Add automated reminder setup instructions (Perplexity Tasks / calendar)
 - [ ] Document backup protocol (Drive → GitHub export schedule)
 - [ ] Add escalation path for unresolvable drift
 
 ---
 
-*Stub created: 2026-07-02 by Amethyst | ndrorchestration*
+*v1.0 promoted: 2026-07-02 by Amethyst × COLLEEN | ndrorchestration*  
+*Stub → v1.0: core protocol live; Drive Section IV pull deferred to owner*

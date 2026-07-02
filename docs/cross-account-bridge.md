@@ -1,8 +1,6 @@
 # Cross-Account Bridge: Flickerflash ↔ ndrorchestration
-**Version:** 1.0-stub | **Date:** 2026-07-02 | **Maintainer:** ndrorchestration  
-**Status:** STUB — formal linking document between both GitHub accounts
-
-> ⚠️ This file is a stub. Populate with full artifact migration log and canonical routing rules.
+**Version:** 1.0 | **Date:** 2026-07-02 | **Maintainer:** ndrorchestration  
+**Status:** ACTIVE — routing tables and risk register live; full migration log pending owner audit
 
 ---
 
@@ -36,7 +34,7 @@
 
 | Repo | Domain | Status | Notes |
 |---|---|---|---|
-| [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | FG | ACTIVE | Core governance — NDR P-01–P-33, AXIS, Phi-Calculus |
+| [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | FG | ACTIVE | Core governance — NDR P-01–P-42, AXIS, Phi-Calculus |
 | [ai-governance-frameworks](https://github.com/ndrorchestration/ai-governance-frameworks) | FG | ACTIVE | NIST RMF, ISO 42001, Index 11 |
 | [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | RT | ACTIVE | Phi-driven multi-agent drift simulation |
 | [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | CP | ACTIVE | DGAF-certified 3-layer benchmark |
@@ -45,7 +43,7 @@
 | [Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) | RT | ACTIVE | Schizophonic Studio substrate |
 | [3d-visualization-hub](https://github.com/ndrorchestration/3d-visualization-hub) | RT | ACTIVE | 3D phi-harmonic visualizations |
 | [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | PE | ACTIVE | IP-safe prompt systems examples |
-| [aoga-dashboard](https://github.com/ndrorchestration/aoga-dashboard) | OI | ACTIVE | 13-agent AOGA governance dashboard |
+| [aoga-dashboard](https://github.com/ndrorchestration/aoga-dashboard) | OI | ACTIVE | AOGA governance dashboard — **11 canonical agents** (Amethyst-Lattice v3.1) |
 | [ndrorchestration](https://github.com/ndrorchestration/ndrorchestration) | OI | ACTIVE | Profile repo — this file |
 
 ---
@@ -54,10 +52,14 @@
 
 | Date | Action | From | To |
 |---|---|---|---|
-| Jan 2026 | Account creation | — | ndrorchestration created |
+| Dec 2025 | Flickerflash account created | — | Flickerflash origin |
+| Jan 2026 | ndrorchestration account created | — | ndrorchestration active |
 | Jan 2026 | DGAF rename | Flickerflash/CSDF-Framework | Flickerflash/DGAF-Framework |
 | Jan 2026 | Active dev migrated | Flickerflash | ndrorchestration |
-| Jul 2026 | Cross-account bridge doc created | — | ndrorchestration/docs/ |
+| Jun 2026 | DGAF-Framework forked to ndrorchestration | Flickerflash/DGAF-Framework | ndrorchestration/DGAF-Framework |
+| Jul 2026 | Cross-account bridge doc created + promoted v1.0 | — | ndrorchestration/docs/ |
+
+> Full artifact-level migration log (Jan–Jun 2026) requires Flickerflash account audit — owner action.
 
 ---
 
@@ -68,16 +70,18 @@
 | `ai-governance-frameworks` exists in BOTH accounts | Medium — content divergence over time | ndrorchestration is canonical; Flickerflash is archived origin |
 | DGAF-Framework exists in BOTH accounts | High — IP split risk | Flickerflash/DGAF is private/legacy; ndrorchestration/DGAF is active |
 | Gold Star standards | Low — Flickerflash private, no ndrorchestration equivalent | Acceptable; may migrate to `portfolio/rubrics/` eventually |
+| Agent count references | Resolved — canonical count is **11** (Amethyst-Lattice v3.1, Post-S077) | Any reference to 12 or 13 agents is stale — update on next touch |
 
 ---
 
-## TODO — Populate
+## Pending (Owner Access Required)
 
-- [ ] Full artifact migration log (Jan 2026 – present)
+- [ ] Full artifact migration log (Jan 2026 – present) via Flickerflash account audit
 - [ ] Verify no active development still happening on Flickerflash repos
 - [ ] Confirm Flickerflash/ai-governance-frameworks is truly retired vs ndrorchestration version
 - [ ] Add "See also" links to READMEs of both accounts pointing here
 
 ---
 
-*Stub created: 2026-07-02 by Amethyst | ndrorchestration*
+*v1.0 promoted: 2026-07-02 by Amethyst × COLLEEN | ndrorchestration*  
+*Stub → v1.0: routing tables, risk register, and migration log scaffold live; full Flickerflash audit deferred to owner*
