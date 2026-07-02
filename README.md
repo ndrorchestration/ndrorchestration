@@ -6,6 +6,8 @@
 > **Last Sweep:** June 26, 2026 · S045 · Phase IV — Deploy / Anchor · Entrepreneur Hub Phase 0 🟢 CLOSED  
 > **Ensemble:** v1.6 (SCPE P-31 · Phi-Closure Gate P-33 · PDMAL Monitor P-32) · NDR Patterns: P-01–P-33
 
+📂 **[Master Classification Index](docs/master-classification-index.md)** — cross-workspace taxonomy (GitHub · Drive · Perplexity Spaces)
+
 ---
 
 ## About
@@ -112,3 +114,15 @@ Needle.app underwent its second full company pivot on June 22, 2026, exiting the
 - π-calculus · Metallic means / Supergolden ratio
 - OpenTelemetry OTel v1.41.0+
 - Knaster–Tarski Fixed-Point Theorem (Phi-Calculus substrate)
+
+---
+
+## Workspace Navigation
+
+| Document | Location | Purpose |
+|---|---|---|
+| [Master Classification Index](docs/master-classification-index.md) | `docs/` | Cross-workspace taxonomy — GitHub · Drive · Perplexity Spaces |
+| [Session Logs](logs/) | `logs/` | Audit trail — sweep records, session summaries |
+| [Portfolio Artifacts](portfolio/) | `portfolio/` | Resume headers, rubrics, glossary, visualizations |
+| [Profile](profile/) | `profile/` | Agent ecosystem cards, bio variants |
+| [Dashboard](dashboard/) | `dashboard/` | Governance dashboard assets |
