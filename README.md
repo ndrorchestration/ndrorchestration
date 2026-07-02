@@ -88,7 +88,16 @@ Live governance dashboard for the full 13-agent ensemble. Deployed at [aoga-dash
 
 ## Entrepreneur Hub — Phase 0 🟢 CLOSED (Jun 26, 2026)
 
-Needle.app partner directory presence established. Template portfolio seeded. Phase 1 (revenue activation) queued.
+**⚠️ PLATFORM DEPRECATED — Needle.app Partner Program CLOSED (Jun 22, 2026)**
+
+Needle.app underwent its second full company pivot on June 22, 2026, exiting the workflow builder/marketplace business entirely to become a B2B revenue agent platform. The partner program, template marketplace, and all partner-facing infrastructure were deprecated without advance partner notice.
+
+- **Final Analytics (Jun 26, 2026 — last confirmed snapshot):** 13,138 views · 1,144 uses · 2,904 runs · 20+ countries
+- **Templates Published:** Evaluate LLM Output Quality · Generate Grounded KB Answers · KB Answer With Quality Check · Define AI Governance Specification
+- **Partner Identity:** Partner #11 (NDR AI Orchestra) — `needle.app/partners-directory/ndr-ai-orchestra` (now 404)
+- **Platform status:** `workflows.needle.app` — Internal Server Error (offline)
+- **Framework IP:** DGAF Framework, template content, and NDR AI Orchestra brand fully retained and portable
+- **Closing note:** The engagement ran its full productive life. The platform ended it, not the work.
 
 - **Status:** Phase 0 infrastructure complete — Vercel deploy chain stabilized, SWEEP-002 closed, Needle analytics baseline set
 - **Next:** Phase 1 — template monetization activation, partner directory optimization, NT-01/NT-02 usage recovery
