@@ -102,15 +102,6 @@
 | GCP Project: pentagonal (Cloud Run) | GCP / europe-west1 | INTERNAL | ACTIVE |
 | Master Classification Index (this file) | ndrorchestration/ndrorchestration/docs/ | PUBLIC | ACTIVE |
 
----
-
-## QUARANTINE
-
-| Artifact | Reason | Action |
-|---|---|---|
-| Boom Party Bar Stock doc | Non-AI personal artifact in AI workspace | Remove from AI drive folders; refile in personal |
-
----
 
 ## Drive Folder ↔ GitHub Path Mirror Standard
 
