@@ -1,5 +1,5 @@
 # NDR Master Classification Index
-**Version:** 1.2 | **Date:** 2026-07-05 | **Maintainer:** ndrorchestration  
+**Version:** 1.3 | **Date:** 2026-07-05 | **Maintainer:** ndrorchestration  
 **Schema:** `[DOMAIN] [VISIBILITY] [STATUS]`
 
 ---
@@ -10,7 +10,8 @@
 |---|---|---|
 | 1.0 | 2026-07-02 | Initial release |
 | 1.1 | 2026-07-05 | Added TW domain; expanded Space routing; added 20+ artifacts across all domains; removed QUARANTINE status code; updated maintenance protocol |
-| 1.2 | 2026-07-05 | Added ECOSYSTEM_INVENTORY.md (G-01 CLOSED); added vocabulary-taxonomy.md; registered both under OI and TW respectively; Drive mirror table updated |
+| 1.2 | 2026-07-05 | Added ECOSYSTEM_INVENTORY.md (G-01 CLOSED); added vocabulary-taxonomy.md; Drive mirror table updated |
+| 1.3 | 2026-07-05 | Added agent-reciprocity-instantiation.md (G-05 CLOSED), agent-colleen-instantiation.md, agent-activation-order.md (G-07 CLOSED); all registered under TW |
 
 ---
 
@@ -66,6 +67,7 @@
 | AI Governance Frameworks repo | Flickerflash/ai-governance-frameworks | PUBLIC | ACTIVE |
 | AOGA System Architecture Spec (13-agent roster, OpenAPI 3.1.0) | ndrorchestration/aoga-dashboard | PUBLIC | ACTIVE |
 | ndrorchestration Ecosystem Landing | ndrorchestration/ndrorchestration (Vercel: ndrorchestration.vercel.app) | PUBLIC | ACTIVE |
+| Agent Reciprocity — DGAF-8 Alignment Spec | ndrorchestration/docs/agent-reciprocity-instantiation.md | PUBLIC | ACTIVE |
 
 ---
 
@@ -135,6 +137,8 @@
 | Dependabot PR Audit (next 14.2.28→15.5.18, dashboard dir) | ndrorchestration/ndrorchestration #Dependabot PR | PUBLIC | DRAFT |
 | P-34 Flywheel v1.0 (Needle-GitHub two-sided engine) | entrepreneur-hub/docs/MONETIZATIONFLYWHEEL.md | PUBLIC | ACTIVE |
 | ECOSYSTEM_INVENTORY.md (file tree + sweep log) | ndrorchestration/ndrorchestration/docs/ | PUBLIC | ACTIVE |
+| COLLEEN Instantiation Spec | ndrorchestration/docs/agent-colleen-instantiation.md | PUBLIC | ACTIVE |
+| Driftwatch App (Vite/React, Herald agent, Zod env, CSP hardened) | ndrorchestration/Driftwatch (Vercel: driftwatch.vercel.app) | PUBLIC | ACTIVE |
 
 ---
 
@@ -143,6 +147,9 @@
 | Artifact | Repo / Location | Visibility | Status |
 |---|---|---|---|
 | Agent Amethyst Instantiation Spec v1.0 | ndrorchestration/docs/agent-amethyst-instantiation.md | PUBLIC | ACTIVE |
+| Agent Reciprocity Instantiation Spec v1.0 | ndrorchestration/docs/agent-reciprocity-instantiation.md | PUBLIC | ACTIVE |
+| Agent COLLEEN Instantiation Spec v1.0 | ndrorchestration/docs/agent-colleen-instantiation.md | PUBLIC | ACTIVE |
+| Agent Activation Order Manifest v1.0 | ndrorchestration/docs/agent-activation-order.md | PUBLIC | ACTIVE |
 | Agent Roster: Apogee, Reciprocity, COLLEEN, Reson, Echolette, Lyra, Herald, Sentinel | ndrorchestration/docs/agent-roster.md | PUBLIC | ACTIVE |
 | DGAF Orchestration Protocol (AMETHYST HOSTING & GOVERNANCE CONTRACT v1.0) | Perplexity Space config | INTERNAL | ACTIVE |
 | R&D Bootstrap Workspace Readme | entrepreneur-hub/README.md | PUBLIC | ACTIVE |
