@@ -1,6 +1,16 @@
 # NDR Master Classification Index
-**Version:** 1.1 | **Date:** 2026-07-05 | **Maintainer:** ndrorchestration  
+**Version:** 1.2 | **Date:** 2026-07-05 | **Maintainer:** ndrorchestration  
 **Schema:** `[DOMAIN] [VISIBILITY] [STATUS]`
+
+---
+
+## Changelog
+
+| Version | Date | Change |
+|---|---|---|
+| 1.0 | 2026-07-02 | Initial release |
+| 1.1 | 2026-07-05 | Added TW domain; expanded Space routing; added 20+ artifacts across all domains; removed QUARANTINE status code; updated maintenance protocol |
+| 1.2 | 2026-07-05 | Added ECOSYSTEM_INVENTORY.md (G-01 CLOSED); added vocabulary-taxonomy.md; registered both under OI and TW respectively; Drive mirror table updated |
 
 ---
 
@@ -87,7 +97,7 @@
 | ResumeApex-Re-WorkiFlow | Drive/Resume-Career/ | INTERNAL | ARCHIVE |
 | Needle Entrepreneur Hub Repo (T-EH-01–05 scaffold, ROADMAP, COLLEEN) | ndrorchestration/entrepreneur-hub | PUBLIC | ACTIVE |
 | Needle Partner Analytics Jun 26 2026 (NMS-003 delta snapshot) | Drive / Session Memory | INTERNAL | ACTIVE |
-| NMS Analytics Snapshot: 13.1K views / 4.19 LTV / 2.9K runs | Drive | INTERNAL | ACTIVE |
+| NMS Analytics Snapshot: 13.1K views / $4.19 LTV / 2.9K runs | Drive | INTERNAL | ACTIVE |
 | T-EH Template Folders (ai-product-launch, governance-starter-pack, marketplace-optimizer, monetization-diagnostic, sprint-planner) | entrepreneur-hub/ | PUBLIC | DRAFT |
 
 ---
@@ -124,6 +134,7 @@
 | COLLEEN GitHub Action Spec (weekly link sweep, .github/workflows/colleen-sweep.yml) | entrepreneur-hub/.github/workflows/ | PUBLIC | DRAFT |
 | Dependabot PR Audit (next 14.2.28→15.5.18, dashboard dir) | ndrorchestration/ndrorchestration #Dependabot PR | PUBLIC | DRAFT |
 | P-34 Flywheel v1.0 (Needle-GitHub two-sided engine) | entrepreneur-hub/docs/MONETIZATIONFLYWHEEL.md | PUBLIC | ACTIVE |
+| ECOSYSTEM_INVENTORY.md (file tree + sweep log) | ndrorchestration/ndrorchestration/docs/ | PUBLIC | ACTIVE |
 
 ---
 
@@ -131,12 +142,13 @@
 
 | Artifact | Repo / Location | Visibility | Status |
 |---|---|---|---|
-| Agent Amethyst Role Spec (meta-orchestrator, DGAF host) | ndrorchestration/docs/ | PUBLIC | ACTIVE |
-| Agent Roster: Apogee, Reciprocity, COLLEEN, Reson, Echolette, Lyra, Herald, Sentinel | ndrorchestration/docs/ | PUBLIC | ACTIVE |
+| Agent Amethyst Instantiation Spec v1.0 | ndrorchestration/docs/agent-amethyst-instantiation.md | PUBLIC | ACTIVE |
+| Agent Roster: Apogee, Reciprocity, COLLEEN, Reson, Echolette, Lyra, Herald, Sentinel | ndrorchestration/docs/agent-roster.md | PUBLIC | ACTIVE |
 | DGAF Orchestration Protocol (AMETHYST HOSTING & GOVERNANCE CONTRACT v1.0) | Perplexity Space config | INTERNAL | ACTIVE |
 | R&D Bootstrap Workspace Readme | entrepreneur-hub/README.md | PUBLIC | ACTIVE |
 | Team Wiki Routing Map (Space → Domain → Artifact) | ndrorchestration/docs/master-classification-index.md (this file) | PUBLIC | ACTIVE |
 | Agent R&D Experiment Log | Drive / Session Memory | INTERNAL | ACTIVE |
+| Internal Vocabulary & Taxonomy | ndrorchestration/docs/vocabulary-taxonomy.md | PUBLIC | ACTIVE |
 
 ---
 
@@ -153,6 +165,7 @@ Drive folder names **must mirror** GitHub path schema to prevent schema drift.
 | `Resume/Career/` | `portfolio/resume/` |
 | `[03] SYSTEM_GOVERNANCE/` | `docs/` |
 | `Team-Wiki/Agent-R&D/` | `docs/team-wiki/` |
+| `Vocabulary-Taxonomy/` | `docs/vocabulary-taxonomy.md` |
 
 ---
 
