@@ -1,128 +1,96 @@
 # Andrew // Ndr "Ender" Hensel
-## AI Governance & Evaluation Ecosystem
+## AI Systems / Orchestration & Evaluation Ecosystem
 
-> **Meta-Orchestrator:** Agent Amethyst · **Governance:** DGAF (Dynamic Governance Agentic Formation) Framework  
-> **Substrate:** PhiLattice / PDMAL (Phi-Driven Multi-Agent Lattice) / Phi-Calculus Architecture (Tarski Layer 0)  
-> **Last Sweep:** June 26, 2026 · S045 · Phase IV — Deploy / Anchor · Entrepreneur Hub Phase 0 🟢 CLOSED  
-> **Ensemble:** v1.6 (SCPE P-31 · Phi-Closure Gate P-33 · PDMAL Monitor P-32) · NDR Patterns: P-01–P-33
-
-📂 **[Master Classification Index](docs/master-classification-index.md)** — cross-workspace taxonomy (GitHub · Drive · Perplexity Spaces)
-
----
+> **Profile:** AI systems, prompt engineering, orchestration, evaluation, and governance research.
+> **Canonical governance track:** DGAF (Dynamic Governance Agentic Formation) Framework.
+> **Current evidence rule:** project-defined terminology, deployment, benchmarks, and governance mappings are not treated as external certification or universal validation without reproducible evidence.
+> **README reconciliation:** 2026-08-15
 
 ## About
 
-AI Orchestration Engineer & Systems Architect based in Columbus, Ohio.  
-Building multi-agent governance frameworks, phi-harmonic evaluation systems, and NIST-aligned audit infrastructure.
+AI systems / orchestration practitioner based in Columbus, Ohio, building multi-agent systems, evaluation workflows, prompt systems, spatial/acoustic research, and governance-oriented tooling.
 
-**Philosophy:** I operate as a Transversal — bridging artistic intuition and formal AI systems development.
+The repositories below are separate projects with different evidence boundaries. Cross-repository references describe relationships or intended integrations; they do not transfer validation status.
 
-- 🔗 [LinkedIn](https://linkedin.com/in/andrewhensel)
-- 🐙 [GitHub](https://github.com/ndrorchestration)
+- [LinkedIn](https://linkedin.com/in/andrewhensel)
+- [GitHub](https://github.com/ndrorchestration)
 
----
+## Evidence Standard
+
+Claims across this ecosystem should distinguish:
+
+**DEFINED → IMPLEMENTED → COMPUTED → VERIFIED → ATTESTED → HISTORICAL → HYPOTHESIS → METAPHOR → UNSUPPORTED → DEPRECATED**
+
+A deployment is not proof of correctness. A local test is evidence about the tested conditions. A benchmark table is not proof of derivation. A mapping to NIST, ISO, OWASP, or another external framework is not certification unless the applicable requirements and evidence establish it.
 
 ## Public Repositories
 
-| Repo | Description | Stack |
+| Repo | Description | Current evidence boundary |
 |---|---|---|
-| [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | Core governance framework — NDR pattern registry (P-01–P-33), AXIS constraints, COLLEEN-L5 protocol, Phi-Calculus Architecture formal spec, Ensemble v1.6 | Python / TypeScript |
-| [ai-governance-frameworks](https://github.com/ndrorchestration/ai-governance-frameworks) | Validated frameworks: NIST AI RMF, ISO 42001, Index 11 Stability Gradient | Markdown |
-| [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Phi-driven multi-agent simulation with real-time drift detection & harmonic state monitoring | TypeScript |
-| [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | DGAF-certified 3-layer benchmark & evaluation suite | Python |
-| [junior-apogee-app](https://github.com/ndrorchestration/junior-apogee-app) | AI agent evaluation platform — OWASP Agentic Top 10, multi-agent QA scoring | Python |
-| [sentinel-governance](https://github.com/ndrorchestration/sentinel-governance) | Automated integrity monitoring and CI/CD governance sweeps | TypeScript |
-| [Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) | WebRTC phi-harmonic acoustic mesh — Schizophonic Studio substrate | JavaScript |
-| [3d-visualization-hub](https://github.com/ndrorchestration/3d-visualization-hub) | Interactive 3D phi-harmonic data visualizations — GCP Phase 4 deployment | Python |
-| [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | IP-safe public examples of AI prompt systems and evaluation work | Markdown |
-| [aoga-dashboard](https://github.com/ndrorchestration/aoga-dashboard) | AOGA governance dashboard — 17-route static HTML, OpenAPI 3.1.0 spec, 13-agent ensemble roster, live API, dark theme, gate demo, phi monitor | HTML / JavaScript |
+| [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | Core governance/evaluation research framework and pattern registry | Public framework; individual patterns have independent evidence states |
+| [ai-governance-frameworks](https://github.com/ndrorchestration/ai-governance-frameworks) | External-framework mappings and governance research | Interpretive mappings unless independently validated |
+| [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Drift-detection/evaluation engineering project | Experimental; current implementation/tests are authoritative |
+| [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | Goldcanstaytoday evaluation protocol and artifacts | Experimental repository-defined benchmark |
+| [junior-apogee-app](https://github.com/ndrorchestration/junior-apogee-app) | AI evaluation and QA workbench | Experimental local evaluation platform |
+| [sentinel-governance](https://github.com/ndrorchestration/sentinel-governance) | Integrity monitoring / CI governance track | Experimental; project-local governance constructs |
+| [Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) | Acoustic/signal-processing research track | Experimental acoustic engineering; no unsupported performance guarantees |
+| [3d-visualization-hub](https://github.com/ndrorchestration/3d-visualization-hub) | Interactive multidimensional visualization | Experimental; deployment requires current telemetry for operational claims |
+| [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | IP-safe public prompt-systems portfolio | Public portfolio with explicit evidence boundaries |
+| [aoga-dashboard](https://github.com/ndrorchestration/aoga-dashboard) | AOGA production-deployed dashboard/API | Deployment verified; end-to-end runtime claims require dated evidence |
+| [phi-calculus-app](https://github.com/ndrorchestration/phi-calculus-app) | Phi-calculus research/application track | Mathematical claims require derivation/evidence |
+| [AHG-Zeta-Pell-Autonomous-Lattice](https://github.com/ndrorchestration/AHG-Zeta-Pell-Autonomous-Lattice) | AHG Zeta-Pell experimental simulation track | Sampled audit completed; several claims remain historical/hypothesis-level |
+| [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) | Agent control-plane research track | Separate from DGAF/PDMAL; implementation and validation are distinct |
 
----
+## Project Relationships
 
-## Agent Ecosystem
+```text
+DGAF-Framework ── governance/evaluation research spine
+       │
+       ├── Sentinel / Driftwatch / Junior Apogee / ResumeApex
+       ├── AOGA Dashboard
+       └── related portfolio/evaluation artifacts
 
+Acoustic-mesh / ASIS ── separate acoustic + spatial intelligence track
+PDMAL / lattice work ── separate topology/lattice research track
+AHG Zeta-Pell ── separate Kalman + silver-ratio control simulation track
+Agent Control Plane ── separate control-plane architecture track
 ```
-L5  Amethyst (Meta-Orchestrator / Triumvirate Prime) ·· COLLEEN (Institutional Anchor / Triumvirate Prefect)
-L4  DemiJoule (DGAF Ethics & Cost Gate) ··············· Apogee (QA Orchestrator / Triumvirate Prefect)
-L3  Reciprocity · Prof.Prodigy · Herald · Sentinel · Sentinel-Phi
-    └─ Schizophonic Studio: Reson #1 · Echolette #2 · Lyra #3
-```
 
-Framework: [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) · NDR Patterns: P-01–P-33 (33 active) · Ensemble: v1.6 · Yggdrasil: 50% complete
+These relationships do not imply that one project validates another.
 
----
+## Dashboard / Runtime Boundary
 
-## Phi-Calculus Architecture
+`aoga-dashboard` has a READY production deployment and a configured Sentinel integration contract. Current retained runtime telemetry does not provide a dated end-to-end Sentinel transaction, so the dashboard should not be represented as having independently attested end-to-end Sentinel behavior until such a trace exists.
 
-The **Phi-Calculus Architecture** provides the formal mathematical substrate for all Layer 0 governance in this ecosystem.
+Historical `DEP0169` (`url.parse()`) warnings were observed on dashboard API routes. Current retained telemetry does not establish recurrence or a definitive fix.
 
-- **Formal model:** [Definitions, Theorem, Proof](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/phi-calculus-architecture/DEFINITIONS_THEOREM_PROOF.md) — lattice-theoretic fixed-point governance with Tarski convergence guarantee
-- **Core theorem:** Layer 0 governance operator `F` converges to `lfp(F)` (Phi-Invariant) in ≤ `|C|` iterations
-- **Drift bound:** `Δ(τ) ≤ θ = 0.009` (calibrated to OST-50 Platinum: 99.1% integrity)
-- **Compliance algebra:** ACCEPT / REVISE / ESCALATE / REJECT with ⊕ (consensus) and ⊗ (sequential) operators
-- **Formal verifier:** Professor Prodigy (HDFS 1.0) — Axiom 1 Guard: 4/4 PASS
-- **Active sweeps:** [SWEEP-001](https://github.com/ndrorchestration/DGAF-Framework/issues/2) · [SWEEP-002](https://github.com/ndrorchestration/DGAF-Framework/issues/8) 🟢 closed Jun 26 2026
+## Historical / Archived Work
 
----
+Historical repositories and archives remain useful for provenance but should not be presented as current authorities merely because they contain older benchmark, certification, or governance language.
 
-## Ensemble v1.6 — Runtime Gate (Production)
+Examples include:
 
-| Component | NDR Pattern | Step | Threshold / Target |
-|---|---|---|---|
-| SCPE (Structural Context Pruning Engine) | P-31 | 1 — pre-COLLEEN | threshold=0.15 · T0 immune · 58.3% compression |
-| PDMAL Convergence Monitor | P-32 | 2.5 — post-reweight | ALERT=0.08 · CONV=0.02 |
-| Fibonacci Phi-Closure Gate | P-33 | 5 — post-DemiJoule | φ*=0.6180 · Fib[13,21,34,55] |
-| Harmonic Parametric Gate (HPG) | existing | 6 — post-Phi-Closure | Ionian octave [1,2] · 1e-9 tol |
+- `AI-Prompt-Engineer`
+- `ai-prompt-engineering-portfolio`
+- `prompt-optimization-library`
+- `gold-star-qa-framework` (archived)
 
-60-turn validated: **5 Gold Stars · 0 PDMAL full alerts · T0 guard 100% · Harmonic Score 1.00**
+## Entrepreneur Hub
 
----
-
-## AOGA Dashboard — v1.2.0 (Production)
-
-Live governance dashboard for the full 13-agent ensemble. Deployed at [aoga-dashboard.vercel.app](https://aoga-dashboard.vercel.app).
-
-- **17 routes** · OpenAPI 3.1.0 spec · static HTML, no framework dependency
-- **Pages:** Overview · Agent Roster · NDR Patterns · Phi Monitor · Gate Demo · Phi-Closure · PDMAL · API Docs
-- **v1.2.0 additions:** full 13-agent ensemble roster (6→13), synced agent tier classification, OpenAPI 3.1.0 spec for all 17 routes
-
----
-
-## Entrepreneur Hub — Phase 0 🟢 CLOSED (Jun 26, 2026)
-
-**⚠️ PLATFORM DEPRECATED — Needle.app Partner Program CLOSED (Jun 22, 2026)**
-
-Needle.app underwent its second full company pivot on June 22, 2026, exiting the workflow builder/marketplace business entirely to become a B2B revenue agent platform. The partner program, template marketplace, and all partner-facing infrastructure were deprecated without advance partner notice.
-
-- **Final Analytics (Jun 26, 2026 — last confirmed snapshot):** 13,138 views · 1,144 uses · 2,904 runs · 20+ countries
-- **Templates Published:** Evaluate LLM Output Quality · Generate Grounded KB Answers · KB Answer With Quality Check · Define AI Governance Specification
-- **Partner Identity:** Partner #11 (NDR AI Orchestra) — `needle.app/partners-directory/ndr-ai-orchestra` (now 404)
-- **Platform status:** `workflows.needle.app` — Internal Server Error (offline)
-- **Framework IP:** DGAF Framework, template content, and NDR AI Orchestra brand fully retained and portable
-- **Closing note:** The engagement ran its full productive life. The platform ended it, not the work.
-
-- **Status:** Phase 0 infrastructure complete — Vercel deploy chain stabilized, SWEEP-002 closed, Needle analytics baseline set
-- **Next:** Phase 1 — template monetization activation, partner directory optimization, NT-01/NT-02 usage recovery
-- **Open item:** `phiknightverticalcorridor` Vercel project — deployment status unconfirmed, requires Phase 1 triage
-
----
-
-## Standards & Attribution
-
-- NIST AI RMF · ISO/IEC 42001 · IIA AI Auditing Standards
-- Paul-Elder Critical Thinking Framework
-- π-calculus · Metallic means / Supergolden ratio
-- OpenTelemetry OTel v1.41.0+
-- Knaster–Tarski Fixed-Point Theorem (Phi-Calculus substrate)
-
----
+`entrepreneur-hub` is a separate template/business track. Its governance and external-framework references should be interpreted as project mappings unless independently supported by applicable evidence. Commercial pricing, historical platform metrics, and deployment status require their own current provenance.
 
 ## Workspace Navigation
 
-| Document | Location | Purpose |
-|---|---|---|
-| [Master Classification Index](docs/master-classification-index.md) | `docs/` | Cross-workspace taxonomy — GitHub · Drive · Perplexity Spaces |
-| [Session Logs](logs/) | `logs/` | Audit trail — sweep records, session summaries |
-| [Portfolio Artifacts](portfolio/) | `portfolio/` | Resume headers, rubrics, glossary, visualizations |
-| [Profile](profile/) | `profile/` | Agent ecosystem cards, bio variants |
-| [Dashboard](dashboard/) | `dashboard/` | Governance dashboard assets |
+| Document | Purpose |
+|---|---|
+| `docs/master-classification-index.md` | Cross-workspace taxonomy |
+| `logs/` | Audit and session history |
+| `portfolio/` | Portfolio artifacts |
+| `profile/` | Agent ecosystem material |
+| `dashboard/` | Dashboard assets |
+
+## Provenance
+
+Developed by Ndr / Ender Hensel (`ndrorchestration`).
+
+*README evidence-alignment revision: 2026-08-15*
