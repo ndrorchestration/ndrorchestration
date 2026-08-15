@@ -21,12 +21,12 @@ Current connected owner inventory: **29 repositories**.
 |---|---|---|
 | `Acoustic-mesh` | Acoustic/WebRTC mesh; ASIS engineering track | VERIFIED inventory; physical/acoustic validation PENDING |
 | `Meshsense` | MeshSense / RuView Status | VERIFIED inventory; runtime/source equivalence PENDING |
-| `DGAF-Framework` | Dynamic Governance Agentic Formation; PDMAL lineage | VERIFIED inventory; empirical claims remain bounded |
+| `DGAF-Framework` | Dynamic Governance Agentic Formation; PDMAL lineage | VERIFIED inventory; empirical claims bounded |
 | `Driftwatch` | Drift simulation/detection research | VERIFIED inventory; detector benchmark PENDING |
 | `Amethyst-Governance-Eval-Stack` | Guardrail/evaluation stack | VERIFIED inventory; effectiveness validation PENDING |
 | `phi-calculus-app` | Phi-calculus research/visualization | VERIFIED inventory; empirical claims bounded |
 | `AHG-Zeta-Pell-Autonomous-Lattice` | AHG/Pell/lattice research | VERIFIED inventory; Pass 2 source work PENDING |
-| `agent-control-plane` | Proposed orchestration/control plane | VERIFIED inventory; specification-stage |
+| `agent-control-plane` | Proposed orchestration/control plane | VERIFIED inventory; executable kernel/CI present; production-scale claims excluded |
 
 ### Evaluation / governance tooling
 
@@ -63,7 +63,7 @@ Current connected owner inventory: **29 repositories**.
 
 | System | GitHub | Vercel | Connection state |
 |---|---|---|---|
-| MeshSense / RuView Status | `ndrorchestration/Meshsense` | `meshsense-ruview-status` | **VERIFIED** identity mapping; runtime endpoint equivalence **PENDING** |
+| MeshSense / RuView Status | `ndrorchestration/Meshsense` | `meshsense-ruview-status` | **VERIFIED** identity mapping; runtime endpoint/source equivalence **PENDING** |
 | Driftwatch | `ndrorchestration/Driftwatch` | `driftwatch` | **VERIFIED** identity/name match; detector evidence **PENDING** |
 | Phi-Calculus | `ndrorchestration/phi-calculus-app` | `phi-calculus` | **VERIFIED** identity/name mapping; runtime/evidence state tracked separately |
 | Portfolio / ecosystem index | `ndrorchestration/ndrorchestration` | `ndrorchestration` | **VERIFIED** as deployment/project surface; scope is presentation/infrastructure |
@@ -93,19 +93,19 @@ Presence in Vercel does **not** imply that the corresponding GitHub source bindi
 
 `canonical source → CI → production deployment → authenticated endpoint verification → runtime/source equivalence → behavioral evidence`
 
-Current gate: endpoint/runtime equivalence remains PENDING because direct `/api/status` verification is authentication-constrained.
+Current gate: endpoint/runtime equivalence remains **PENDING**. Source inspection confirms the explicit Node status surface and Vercel configuration, but does not establish the exact production commit serving `/health` and `/api/status`.
 
 ### Driftwatch
 
 `signal specification → detector implementation → frozen baseline → benchmark → error analysis → reproducible artifact`
 
-Current gate: detector implementation/benchmark evidence PENDING.
+Current gate: detector implementation/benchmark evidence **PENDING**. Package and lockfile identity were corrected during normalization; CI build/type integrity is not detector validation.
 
 ### Acoustic-Mesh / ASIS
 
 `network implementation → software tests → acoustic/sensor protocol → physical measurement → uncertainty/replication`
 
-Current gate: physical measurement evidence PENDING.
+Current gate: physical measurement evidence **PENDING**. Workspace/CI structure is verified separately from acoustic capability.
 
 ### PDMAL / Phi-Calculus / AHG lattice
 
@@ -131,6 +131,18 @@ The correction establishes:
 ### Axiom Lens inventory discrepancy
 
 No repository named `Axiom Lens` is present in the current 29-repository connected owner inventory, and no matching repository was found by GitHub repository search. Its canonical GitHub identity is therefore **UNRESOLVED** and must not be inferred from project terminology.
+
+### Repository quality normalization
+
+The 2026-08-15 quality pass established concrete baselines for DGAF, Driftwatch, Acoustic-Mesh, AHG Zeta-Pell, and MeshSense. These baselines classify code/build evidence separately from detector effectiveness, acoustic validation, runtime equivalence, or experimental validation.
+
+Key findings:
+
+- Driftwatch package/lockfile root identity mismatch corrected; behavioral detector benchmark remains open.
+- DGAF CI contains meaningful tests and scans but several gates are non-blocking and coverage has a zero failure threshold; CI is therefore `VERIFIED PARTIAL`.
+- Acoustic-Mesh CI/workspace structure is present, but no inspected evidence establishes acoustic performance or conventional automated behavioral tests.
+- AHG Zeta-Pell Pass-2 chaos/FML mitigation and Three-Regime Governor source evidence were not established; historical benchmarks remain unreproduced.
+- MeshSense source/runtime surface is coded and deployment configuration exists, but exact production source equivalence remains unverified.
 
 ### Normalization rule
 
@@ -163,9 +175,11 @@ A mathematically correct calculation is not automatically a useful engineering s
 | PDMAL comparative experiment | **PENDING** |
 | AHG Pass 2 | **PENDING** |
 | Axiom Lens repository identity | **PENDING / unresolved** |
-| Documentation layer | **MECHANICALLY SYNCHRONIZED at inventory level** |
+| Documentation/inventory layer | **MECHANICALLY SYNCHRONIZED at current inventory level** |
 | Repository quality normalization | **IN PROGRESS** |
 
 ## Final closure condition
 
-The documentation-and-connections layer is considered synchronized when every accessible repository has an inventory classification and every applicable cross-system connection is marked `VERIFIED`, `NOT APPLICABLE`, or `PENDING` with an actionable reason. This manifest satisfies that inventory-level condition. Runtime, empirical, and repository-quality closure remain separate gates.
+The documentation-and-connections layer is considered synchronized when every accessible repository has an inventory classification and every applicable cross-system connection is marked `VERIFIED`, `NOT APPLICABLE`, or `PENDING` with an actionable reason. The 2026-08-15 inventory and manifest satisfy that inventory-level condition. Runtime, empirical, and repository-quality closure remain separate gates.
+
+*Last updated: 2026-08-15 during repository quality normalization.*
