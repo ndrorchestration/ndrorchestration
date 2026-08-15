@@ -42,7 +42,7 @@ Current gate: detector benchmark pending.
 
 Current gate: physical measurement evidence pending.
 
-### PDMAL / Phi-Calulus / AHG lattice
+### PDMAL / Phi-Calculus / AHG lattice
 
 `definition → derivation → computation → reproducible experiment → independent/appropriate review`
 
