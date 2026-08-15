@@ -1,183 +1,112 @@
 # NDR Ecosystem Inventory
-**Version:** 1.0 | **Date:** 2026-07-05 | **Domain:** OI  
-**Sweep:** COLLEEN-EH-004 | **Status:** ACTIVE  
+
+**Version:** 2.0 | **Date:** 2026-08-15 | **Domain:** OI  
+**Status:** ACTIVE / NORMALIZATION IN PROGRESS  
 **Canonical Path:** `ndrorchestration/ndrorchestration/docs/ECOSYSTEM_INVENTORY.md`
 
-> This file closes Gap G-01 from `agent-amethyst-instantiation.md`. It is the authoritative file-tree record and sweep log for the full NDR ecosystem. COLLEEN updates this on every sweep. Amethyst verifies before any session synthesis.
+> Historical inventory material below is retained for provenance. For current state, the 2026-08-15 normalization addendum at the end of this file supersedes the July 5 state.
 
 ---
 
-## GitHub Repositories
+## Historical Inventory State — 2026-07-05
 
-### ndrorchestration/ndrorchestration (Primary Operational Repo)
+This section is retained as historical evidence and is not the current source of truth.
 
-```
-ndrorchestration/ndrorchestration/
-├── README.md                                    (8,065 bytes) PUBLIC ACTIVE
-├── vercel.json                                  (135 bytes)   PUBLIC ACTIVE
-├── dashboard/                                   (dir)
-├── docs/
-│   ├── agent-amethyst-instantiation.md          (13,814 bytes) PUBLIC ACTIVE  [2026-07-05]
-│   ├── agent-roster.md                          (7,746 bytes)  PUBLIC ACTIVE  [prior]
-│   ├── cross-account-bridge.md                  (5,526 bytes)  PUBLIC ACTIVE  [prior]
-│   ├── ECOSYSTEM_INVENTORY.md                   (this file)    PUBLIC ACTIVE  [2026-07-05]
-│   ├── master-classification-index.md           (9,688 bytes)  PUBLIC ACTIVE  [2026-07-05 v1.1 -> v1.2]
-│   ├── vocabulary-taxonomy.md                   (new)          PUBLIC ACTIVE  [2026-07-05]
-│   └── workspace-maintenance-protocol.md        (3,162 bytes)  PUBLIC ACTIVE  [prior]
-├── logs/                                        (dir)
-├── portfolio/                                   (dir)
-└── profile/                                     (dir)
-```
+The July 5 inventory recorded the primary operational repo, entrepreneur-hub, aoga-dashboard, phiknightverticalcorridor, legacy Flickerflash repositories, Vercel projects, GCP infrastructure, Drive registry, Needle registry, and the June/July sweep history. Its recorded state predates the 2026-08-15 29-repository normalization and should not be used to infer current deployment or repository status.
 
-**Missing / Not Yet Committed (Open Gaps):**
+---
 
-| Gap ID | File | Status |
+# 2026-08-15 NORMALIZATION ADDENDUM — CURRENT STATE
+
+## Current source of truth
+
+The live `ndrorchestration` GitHub owner inventory contains **29 repositories** as of 2026-08-15. The canonical mechanical connection record is `docs/ECOSYSTEM_SYNC_MANIFEST_2026-08-15.md`. The engineering evidence record is the repository quality audit matrix maintained during the current normalization workflow.
+
+## Current canonical system boundaries
+
+| System | Canonical repository | Current evidence state |
 |---|---|---|
-| G-02 | `docs/SESSION_ANCHORS.md` | OPEN |
-| G-03 | `docs/NDR_PATTERN_REGISTRY_UNIFIED.md` | OPEN |
-| G-04 | `CHANGELOG.md` | OPEN |
-| G-05 | 5th pentagonal agent spec | PENDING |
-| G-06 | `.github/workflows/colleen-sweep.yml` | DRAFT |
+| DGAF | `DGAF-Framework` | CI verified partial; empirical claims bounded |
+| Driftwatch | `Driftwatch` | package/lockfile identity corrected; build/type integrity; detector benchmark pending |
+| ASIS | `Acoustic-mesh` | acoustic/WebRTC engineering track; physical evidence pending |
+| MeshSense / RuView Status | `Meshsense` | runtime surface coded; production source equivalence pending |
+| AHG Zeta-Pell | `AHG-Zeta-Pell-Autonomous-Lattice` | Pass-2 source evidence pending |
+| Agent Control Plane | `agent-control-plane` | executable kernel/CI present; production-scale claims excluded |
+| Phi-Calculus | `phi-calculus-app` | empirical evidence bounded |
+| ResumeApex | `resumeapex-eval` | reproducibility audit pending |
+| Junior Apogee | `junior-apogee-app` | evidence audit pending |
+| Sentinel Governance | `sentinel-governance` | evidence audit pending |
+| Amethyst Governance Eval Stack | `Amethyst-Governance-Eval-Stack` | effectiveness validation pending |
+| AI Governance Frameworks | `ai-governance-frameworks` | evidence audit pending |
+| Gold Star Standards | `Gold-star-standards` | evidence audit pending |
+| Gold Star QA Framework | `gold-star-qa-framework` | historical/archive |
+| 3D Visualization Hub | `3d-visualization-hub` | evidence audit pending |
+| AI Prompt Systems Portfolio | `ai-prompt-systems-portfolio` | portfolio/support surface |
+| Prompt Engineering Portfolio | `AI-Prompt-Engineer` / `ai-prompt-engineering-portfolio` | portfolio/archive |
+| Prompt Optimization Library | `prompt-optimization-library` | evidence audit pending |
+| AOGA Dashboard | `aoga-dashboard` | runtime/evidence audit pending |
+| PPTL Governance Dashboard | `pptl-governance-dashboard` | evidence audit pending |
+| DGAF Ops | `dgaf-ops` | evidence audit pending |
+| Phi-Knight Vertical Corridor API | `api` | runtime/evidence tracked separately |
+| Entrepreneur Hub | `entrepreneur-hub` | support/template track |
+| Automation Scripts | `automation-scripts` | evidence audit pending |
+| Chat Archives | `chat-archives` | archival |
+| Career Positioning | `career-positioning` | support |
+| GitHub configuration | `.github` | support infrastructure |
+| Canonical ecosystem index | `ndrorchestration` | inventory/documentation surface |
 
----
+## 2026-08-15 completed normalization work
 
-### ndrorchestration/entrepreneur-hub
+- Canonical portfolio README reconciled to current evidence boundaries.
+- 29-repository inventory established.
+- Ecosystem synchronization manifest established.
+- Repository quality audit matrix established.
+- PDMAL mathematical correction recorded: plastic constant `1.3247179572447454`; dodecahedral graph Cheeger constant `0.6`; unweighted Forman-Ricci is `-2` on every current edge and is not presently a useful discriminating signal.
+- Driftwatch package/lockfile root identity mismatch corrected.
+- Driftwatch quality baseline updated: build/type integrity is distinct from detector validation.
+- Acoustic-Mesh quality baseline updated: workspace/CI structure is distinct from acoustic/physical validation.
+- AHG Zeta-Pell quality baseline established; Pass-2 source evidence remains open.
+- MeshSense quality baseline established; deployment/source equivalence remains open.
 
-```
-entrepreneur-hub/
-├── README.md
-├── docs/
-│   ├── MONETIZATIONFLYWHEEL.md     P-34 v1.0 flywheel spec         ACTIVE
-│   ├── NEEDLETEMPLATEINDEX.md      COLLEEN Sweep-EH-003            ACTIVE
-│   ├── ROADMAP.md                  Phase 0 closed / Phase 1 open   ACTIVE
-│   └── NEEDLETEMPLATEINDEX.md      COLLEEN Sweep-EH-003 stamp      ACTIVE
-├── ai-product-launch-checklist/     T-EH-01 folder                  DRAFT
-├── governance-starter-pack/         T-EH-05 folder                  DRAFT
-├── marketplace-optimizer/           T-EH-03 folder                  DRAFT
-├── monetization-diagnostic/         T-EH-04 folder                  DRAFT
-└── sprint-planner/                  T-EH-02 folder                  DRAFT
-```
+## Current open evidence gates
 
-**Needle template links:** All 5 T-EH templates listed as PENDING Phase 1 in NEEDLETEMPLATEINDEX. No live Needle URLs yet.
+- DGAF CI gate hardening and test/evidence audit.
+- Driftwatch detector benchmark/calibration.
+- Acoustic-Mesh acoustic and sensor measurements.
+- MeshSense production runtime/source equivalence.
+- AHG Zeta-Pell Pass 2 and reproducible traces.
+- PDMAL empirical validation.
+- real-trace calibration of `D_a`.
+- weighted Forman-Ricci definition/usefulness validation.
+- missing TLA+ containment specification reconstruction.
+- broader repository security/provenance audit.
+- final GitHub ↔ Notion ↔ Vercel mechanical synchronization.
 
----
+## Cross-system rules
 
-### ndrorchestration/aoga-dashboard
+- ASIS = **Acoustic Spatial Insight System**.
+- `Meshsense` is the GitHub repository identifier.
+- `MeshSense / RuView Status` is the system identity.
+- `meshsense-ruview-status` is the Vercel project identifier.
+- Acoustic-Mesh and MeshSense/RuView are separate repositories/systems.
+- DGAF, PDMAL, ASIS, Acoustic-Mesh, AHG Zeta-Pell, Agent Control Plane, and Axiom Lens are not one monolithic system.
+- Relationships between projects do not transfer validation.
+- A commit is not a deployment; a deployment is not runtime verification; runtime verification is not physical or empirical validation.
+- Unknown repository or deployment identity remains unresolved rather than being inferred from naming.
 
-```
-aoga-dashboard/
-├── (17 routes, OpenAPI 3.1.0 spec)
-├── 13-agent roster wired
-└── dark theme | Vercel: aoga-dashboard.vercel.app
-```
+## Current sweep log
 
-**Status:** v1.2.0 ACTIVE | Last deployment: READY (post-2026-06-09 chain fix)
-
----
-
-### ndrorchestration/phiknightverticalcorridor
-
-```
-phiknightverticalcorridor/
-└── (Vercel project, created 2026-05-05)
-```
-
-**Status:** DRAFT | Deployment status: unconfirmed (no verified READY deployment)
-
----
-
-### Flickerflash (Legacy / Gold-Standard Account)
-
-| Repo | Purpose | Status |
-|---|---|---|
-| Flickerflash/DGAF-Framework | Core DGAF framework, PDMAL, agent governance | ACTIVE PRIVATE |
-| Flickerflash/ai-governance-frameworks | Public governance templates | ACTIVE PUBLIC |
-| Flickerflash/gold-star-qa-framework | Gold Star QA, Phase 4 rubrics | ARCHIVE PUBLIC |
-
----
-
-## Vercel Projects (ndrorchestration team)
-
-| Project | URL | Last Deploy | Status |
+| Sweep | Date | Scope | State |
 |---|---|---|---|
-| ndrorchestration | ndrorchestration.vercel.app | 2026-06-09 (sweep date update) | READY |
-| aoga-dashboard | aoga-dashboard.vercel.app | 2026-05-29 (chain fix, READY) | READY |
-| phiknightverticalcorridor | (TBD) | 2026-05-05 (created) | UNCONFIRMED |
+| SWEEP-001 | 2026-06-16 | entrepreneur-hub NEEDLETEMPLATEINDEX | Historical / completed |
+| SWEEP-002 | 2026-06-26 | ndrorchestration S044 | Historical / completed |
+| SWEEP-EH-003 | 2026-06-26 | entrepreneur-hub NEEDLETEMPLATEINDEX | Historical / completed |
+| COLLEEN-EH-004 | 2026-07-05 | full ecosystem inventory | Historical / superseded |
+| NORMALIZATION-001 | 2026-08-15 | 29-repository inventory, taxonomy, evidence matrix | Active |
+| NORMALIZATION-002 | 2026-08-15 | DGAF, Driftwatch, Acoustic-Mesh, AHG, MeshSense P1 audit | Active |
 
-**Deployment audit note:** ndrorchestration had 10 consecutive ERROR deployments (2026-05-25–29) before READY was achieved. Root cause: fatal syntax error in `Layout.tsx` (unclosed array, no export). All resolved by 2026-05-29.
+## Synchronization rule
 
----
+This inventory is a mechanical index, not an assertion that every repository is validated. Current state must be read together with `ECOSYSTEM_SYNC_MANIFEST_2026-08-15.md` and the repository quality audit matrix. Historical logs remain historical.
 
-## GCP Infrastructure
-
-| Project | Service | Region | Status |
-|---|---|---|---|
-| pentagonal | Cloud Run | europe-west1 | ACTIVE |
-
----
-
-## Google Drive Folder Registry
-
-| Drive Folder | GitHub Equivalent | Domain |
-|---|---|---|
-| `Agent-Frameworks/Orchestration/` | `portfolio/frameworks/` | FG |
-| `Evaluation-Tools/` | `portfolio/rubrics/` | PE |
-| `Visualizations/Architecture/` | `portfolio/visualizations/` | RT |
-| `Mathematical-Models/` | `portfolio/math-models/` | RT |
-| `Resume/Career/` | `portfolio/resume/` | CP |
-| `[03] SYSTEM_GOVERNANCE/` | `docs/` | FG/OI |
-| `Team-Wiki/Agent-R&D/` | `docs/team-wiki/` | TW |
-
-**Key Drive artifacts (INTERNAL, not committed to GitHub):**
-- MASTER PORTFOLIO INVENTORY v1.8
-- Master Context File — PEL
-- NDR Stasis Manifest (Patterns 1–132)
-- Hardened Multi-Agent Substrate Spec
-- Triadic Orchestration Choreography
-- Agent Orchestration Matrix (xlsx)
-- Phi Helix Interactive Model
-- 3D Multi-Agent Architecture HTML
-- Driftwatch Progress Report
-- Auditing Engineering Terminology Taxonomy
-- COLLEEN + Lavender Agent Cognition Map
-- Hensel Formalism v1.0
-- Incident Report NMS-INC-001
-- Vercel Deployment Audit 2026-05-25→06-09
-- Phi Harmonic Stability Map (Enhanced).html
-- Agent Amethyst Rebrand GoogleAppsScript 2026-04-06
-
----
-
-## Needle.app Template Registry
-
-| Template ID | Name | Needle URL | Runs (90d) | Status |
-|---|---|---|---|---|
-| NT-01 | Evaluate LLM Output Quality | live | 860 | ACTIVE |
-| NT-02 | Generate Grounded KB Answers | live | 1,248 | ACTIVE |
-| NT-03 | KB Answer With Quality Check | live | 476 | ACTIVE (flat anomaly Jun 2026, NMS-INC-001) |
-| NT-04 | Define AI Governance Specification | live | 320 | ACTIVE (flat anomaly Jun 2026, NMS-INC-001) |
-| NT-05 | Test Governance API Gates | live | 0 | ACTIVE (high views, 0 runs — discovery/conversion gap) |
-| T-EH-01 | AI Product Launch Checklist | pending | — | DRAFT (Phase 1) |
-| T-EH-02 | Sprint Planner | pending | — | DRAFT (Phase 1) |
-| T-EH-03 | Marketplace Optimizer | pending | — | DRAFT (Phase 1) |
-| T-EH-04 | Monetization Diagnostic | pending | — | DRAFT (Phase 1) |
-| T-EH-05 | AI Governance Starter Pack | pending | — | DRAFT (Phase 1 — priority launch) |
-
-**Aggregate (90d window, Jun 26 2026):** 13,138 views / 1,144 uses / 2,904 runs / $4.19 LTV
-
----
-
-## Sweep Log
-
-| Sweep ID | Date | Executor | Scope | Outcome |
-|---|---|---|---|
-| SWEEP-001 | 2026-06-16 | COLLEEN | entrepreneur-hub NEEDLETEMPLATEINDEX | Completed; all 5 T-EH links pending Phase 1 |
-| SWEEP-002 | 2026-06-26 | COLLEEN | ndrorchestration S044 | Closed; repo table updated, AOGA row added |
-| SWEEP-EH-003 | 2026-06-26 | COLLEEN | entrepreneur-hub NEEDLETEMPLATEINDEX | Completed; 5 stubs confirmed unresolved |
-| COLLEEN-EH-004 | 2026-07-05 | COLLEEN | Full ecosystem inventory (this file) | Completed; ECOSYSTEM_INVENTORY.md created, G-01 closed |
-
-**Automation status:** `colleen-sweep.yml` GitHub Action is DRAFT. No automated sweeps are executing yet. All sweeps above are manually executed by Amethyst+COLLEEN in session.
-
----
-
-*Last updated: 2026-07-05 by COLLEEN (sweep executor) / Amethyst (verifier) | ndrorchestration*
+*Last updated: 2026-08-15 during repository quality normalization.*
