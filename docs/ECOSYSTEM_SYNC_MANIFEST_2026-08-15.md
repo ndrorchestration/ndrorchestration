@@ -113,6 +113,29 @@ Current gate: physical measurement evidence PENDING.
 
 Current gate: project-local experimental evidence remains incomplete where explicitly marked.
 
+## 2026-08-15 normalization findings
+
+### PDMAL mathematical authority correction
+
+`DGAF-Framework/docs/formalism/PDMAL_MATH_VERIFIED_v1.md` is now explicitly **SUPERSEDED** for current mathematical authority. The current correction record is `docs/formalism/PDMAL_MATH_CORRECTION_2026-08-15.md`.
+
+The correction establishes:
+
+- plastic constant = `1.3247179572447454`;
+- dodecahedral graph Cheeger constant = `0.6`;
+- unweighted Forman-Ricci on the current dodecahedral topology is constant at `-2` per edge and is therefore not currently a useful discriminating audit signal;
+- ContractionMonitor is an empirical runtime proxy, not proof of contraction;
+- weighted Forman-Ricci remains an open research item pending a defined edge-weight model and usefulness validation;
+- `D_a` admission belongs to DGAF Quintet calibration discipline rather than an arbitrary universal threshold.
+
+### Axiom Lens inventory discrepancy
+
+No repository named `Axiom Lens` is present in the current 29-repository connected owner inventory, and no matching repository was found by GitHub repository search. Its canonical GitHub identity is therefore **UNRESOLVED** and must not be inferred from project terminology.
+
+### Normalization rule
+
+A mathematically correct calculation is not automatically a useful engineering signal. Repository claims must distinguish calculation correctness from engineering usefulness, and neither should be promoted beyond the evidence actually produced by the repository.
+
 ## Cross-system rules
 
 - ASIS = **Acoustic Spatial Insight System**.
@@ -139,8 +162,10 @@ Current gate: project-local experimental evidence remains incomplete where expli
 | Acoustic/ASIS physical validation | **PENDING** |
 | PDMAL comparative experiment | **PENDING** |
 | AHG Pass 2 | **PENDING** |
+| Axiom Lens repository identity | **PENDING / unresolved** |
 | Documentation layer | **MECHANICALLY SYNCHRONIZED at inventory level** |
+| Repository quality normalization | **IN PROGRESS** |
 
 ## Final closure condition
 
-The documentation-and-connections layer is considered synchronized when every accessible repository has an inventory classification and every applicable cross-system connection is marked `VERIFIED`, `NOT APPLICABLE`, or `PENDING` with an actionable reason. This manifest satisfies that inventory-level condition. Runtime and empirical closure remain separate gates.
+The documentation-and-connections layer is considered synchronized when every accessible repository has an inventory classification and every applicable cross-system connection is marked `VERIFIED`, `NOT APPLICABLE`, or `PENDING` with an actionable reason. This manifest satisfies that inventory-level condition. Runtime, empirical, and repository-quality closure remain separate gates.
