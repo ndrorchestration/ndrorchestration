@@ -34,6 +34,7 @@ A deployment is not proof of correctness. A local test is evidence about the tes
 | [junior-apogee-app](https://github.com/ndrorchestration/junior-apogee-app) | AI evaluation and QA workbench | Experimental local evaluation platform |
 | [sentinel-governance](https://github.com/ndrorchestration/sentinel-governance) | Integrity monitoring / CI governance track | Experimental; project-local governance constructs |
 | [Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) | Acoustic/signal-processing research track | Experimental acoustic engineering; no unsupported performance guarantees |
+| [Meshsense](https://github.com/ndrorchestration/Meshsense) | MeshSense / RuView Status runtime and deployment observation surface | CI verified; Vercel deployment/runtime verification pending |
 | [3d-visualization-hub](https://github.com/ndrorchestration/3d-visualization-hub) | Interactive multidimensional visualization | Experimental; deployment requires current telemetry for operational claims |
 | [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | IP-safe public prompt-systems portfolio | Public portfolio with explicit evidence boundaries |
 | [aoga-dashboard](https://github.com/ndrorchestration/aoga-dashboard) | AOGA production-deployed dashboard/API | Deployment verified; end-to-end runtime claims require dated evidence |
@@ -51,7 +52,8 @@ DGAF-Framework ── governance/evaluation research spine
        └── related portfolio/evaluation artifacts
 
 Acoustic-mesh / ASIS ── separate acoustic + spatial intelligence track
-PDMAL / lattice work ── separate topology/lattice research track
+Meshsense / RuView Status ── runtime/deployment observation surface for the MeshSense branch
+PDMAL / lattice work ── separate topology/lattice research track within DGAF
 AHG Zeta-Pell ── separate Kalman + silver-ratio control simulation track
 Agent Control Plane ── separate control-plane architecture track
 ```
@@ -63,6 +65,16 @@ These relationships do not imply that one project validates another.
 `aoga-dashboard` has a READY production deployment and a configured Sentinel integration contract. Current retained runtime telemetry does not provide a dated end-to-end Sentinel transaction, so the dashboard should not be represented as having independently attested end-to-end Sentinel behavior until such a trace exists.
 
 Historical `DEP0169` (`url.parse()`) warnings were observed on dashboard API routes. Current retained telemetry does not establish recurrence or a definitive fix.
+
+### MeshSense / RuView Status
+
+The canonical source repository is `ndrorchestration/Meshsense`. The corresponding Vercel project remains `meshsense-ruview-status`. These are two infrastructure identifiers for the same runtime/status surface, not separate systems.
+
+GitHub source and CI are verified. Vercel deployment and runtime verification remain pending. The prior failed Vercel deployment is retained as historical evidence rather than overwritten.
+
+### Acoustic-Mesh Boundary
+
+`Acoustic-mesh` is the acoustic/WebRTC engineering track. Its implementation should be evaluated on acoustic sensing, signal processing, networking, and spatial-analysis evidence. DGAF, Amethyst, and PDMAL relationships do not transfer validation to the acoustic system.
 
 ## Historical / Archived Work
 
