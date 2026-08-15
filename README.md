@@ -21,23 +21,27 @@ Claims across this ecosystem should distinguish:
 
 **DEFINED → IMPLEMENTED → COMPUTED → VERIFIED → ATTESTED → HISTORICAL → HYPOTHESIS → METAPHOR → UNSUPPORTED → DEPRECATED**
 
+Operational evidence may also be **PENDING** when a specific validation or synchronization action remains open. These labels describe evidence state; they are not interchangeable with project maturity or deployment status.
+
 A deployment is not proof of correctness. A local test is evidence about the tested conditions. A benchmark table is not proof of derivation. A mapping to NIST, ISO, OWASP, or another external framework is not certification unless the applicable requirements and evidence establish it.
 
 ## Public Repositories
+
+This is a **curated portfolio index**, not an exhaustive mirror of all 29 repositories in the connected owner inventory. The canonical mechanical inventory is maintained in `docs/ECOSYSTEM_SYNC_MANIFEST_2026-08-15.md`.
 
 | Repo | Description | Current evidence boundary |
 |---|---|---|
 | [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | Core governance/evaluation research framework and pattern registry | Public framework; individual patterns have independent evidence states |
 | [ai-governance-frameworks](https://github.com/ndrorchestration/ai-governance-frameworks) | External-framework mappings and governance research | Interpretive mappings unless independently validated |
-| [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Drift-detection/evaluation engineering project | Experimental; current implementation/tests are authoritative |
+| [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Drift-detection/evaluation engineering project | Experimental; detector benchmark remains pending |
 | [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | Goldcanstaytoday evaluation protocol and artifacts | Experimental repository-defined benchmark |
 | [junior-apogee-app](https://github.com/ndrorchestration/junior-apogee-app) | AI evaluation and QA workbench | Experimental local evaluation platform |
 | [sentinel-governance](https://github.com/ndrorchestration/sentinel-governance) | Integrity monitoring / CI governance track | Experimental; project-local governance constructs |
-| [Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) | Acoustic/signal-processing research track | Experimental acoustic engineering; no unsupported performance guarantees |
-| [Meshsense](https://github.com/ndrorchestration/Meshsense) | MeshSense / RuView Status runtime and deployment observation surface | CI verified; Vercel deployment/runtime verification pending |
-| [3d-visualization-hub](https://github.com/ndrorchestration/3d-visualization-hub) | Interactive multidimensional visualization | Experimental; deployment requires current telemetry for operational claims |
+| [Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) | Acoustic/WebRTC and spatial-intelligence engineering track | Experimental; physical/acoustic validation remains pending |
+| [Meshsense](https://github.com/ndrorchestration/Meshsense) | MeshSense / RuView Status runtime and deployment observation surface | Production deployment exists; GitHub-source/runtime equivalence remains pending |
+| [3d-visualization-hub](https://github.com/ndrorchestration/3d-visualization-hub) | Interactive multidimensional visualization | Experimental; operational claims require current telemetry |
 | [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | IP-safe public prompt-systems portfolio | Public portfolio with explicit evidence boundaries |
-| [aoga-dashboard](https://github.com/ndrorchestration/aoga-dashboard) | AOGA production-deployed dashboard/API | Deployment verified; end-to-end runtime claims require dated evidence |
+| [aoga-dashboard](https://github.com/ndrorchestration/aoga-dashboard) | AOGA production-deployed dashboard/API | Latest GitHub → Vercel deployment binding verified; endpoint/runtime behavior remains pending |
 | [phi-calculus-app](https://github.com/ndrorchestration/phi-calculus-app) | Phi-calculus research/application track | Mathematical claims require derivation/evidence |
 | [AHG-Zeta-Pell-Autonomous-Lattice](https://github.com/ndrorchestration/AHG-Zeta-Pell-Autonomous-Lattice) | AHG Zeta-Pell experimental simulation track | Sampled audit completed; several claims remain historical/hypothesis-level |
 | [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) | Agent control-plane research track | Separate from DGAF/PDMAL; implementation and validation are distinct |
@@ -51,7 +55,8 @@ DGAF-Framework ── governance/evaluation research spine
        ├── AOGA Dashboard
        └── related portfolio/evaluation artifacts
 
-Acoustic-mesh / ASIS ── separate acoustic + spatial intelligence track
+Acoustic-Mesh / ASIS ── separate acoustic + spatial intelligence track
+ASIS = Acoustic Spatial Insight System
 Meshsense / RuView Status ── runtime/deployment observation surface for the MeshSense branch
 PDMAL / lattice work ── separate topology/lattice research track within DGAF
 AHG Zeta-Pell ── separate Kalman + silver-ratio control simulation track
@@ -62,7 +67,7 @@ These relationships do not imply that one project validates another.
 
 ## Dashboard / Runtime Boundary
 
-`aoga-dashboard` has a READY production deployment and a configured Sentinel integration contract. Current retained runtime telemetry does not provide a dated end-to-end Sentinel transaction, so the dashboard should not be represented as having independently attested end-to-end Sentinel behavior until such a trace exists.
+`aoga-dashboard` has a READY production deployment and a configured Sentinel integration contract. The latest production deployment is explicitly bound to GitHub commit `7ef3f560f650fe63b6e40c2e9a38b96e39d3800d`. This establishes a current source/deployment binding, not end-to-end correctness or orchestration behavior. Current retained runtime telemetry does not provide a dated end-to-end Sentinel transaction, so the dashboard should not be represented as having independently attested end-to-end Sentinel behavior until such a trace exists.
 
 Historical `DEP0169` (`url.parse()`) warnings were observed on dashboard API routes. Current retained telemetry does not establish recurrence or a definitive fix.
 
@@ -70,11 +75,11 @@ Historical `DEP0169` (`url.parse()`) warnings were observed on dashboard API rou
 
 The canonical source repository is `ndrorchestration/Meshsense`. The corresponding Vercel project remains `meshsense-ruview-status`. These are two infrastructure identifiers for the same runtime/status surface, not separate systems.
 
-GitHub source and CI are verified. Vercel deployment and runtime verification remain pending. The prior failed Vercel deployment is retained as historical evidence rather than overwritten.
+The latest Vercel production deployment is READY, so deployment existence is verified. The inspected deployment metadata does not expose a GitHub commit binding; therefore exact GitHub-source/runtime equivalence remains PENDING. The prior failed Vercel deployment is retained as historical evidence rather than overwritten.
 
-### Acoustic-Mesh Boundary
+### Acoustic-Mesh / ASIS Boundary
 
-`Acoustic-mesh` is the acoustic/WebRTC engineering track. Its implementation should be evaluated on acoustic sensing, signal processing, networking, and spatial-analysis evidence. DGAF, Amethyst, and PDMAL relationships do not transfer validation to the acoustic system.
+`ASIS` means **Acoustic Spatial Insight System**. `Acoustic-mesh` is the acoustic/WebRTC engineering track supporting the ASIS branch. Its implementation should be evaluated on acoustic sensing, signal processing, networking, and spatial-analysis evidence. Physical/acoustic validation remains a separate evidence gate. DGAF, Amethyst, and PDMAL relationships do not transfer validation to the acoustic system.
 
 ## Historical / Archived Work
 
