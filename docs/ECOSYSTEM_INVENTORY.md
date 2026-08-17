@@ -1,112 +1,84 @@
 # NDR Ecosystem Inventory
 
-**Version:** 2.0 | **Date:** 2026-08-15 | **Domain:** OI  
+**Version:** 2.1 | **Date:** 2026-08-17 | **Domain:** OI  
 **Status:** ACTIVE / NORMALIZATION IN PROGRESS  
 **Canonical Path:** `ndrorchestration/ndrorchestration/docs/ECOSYSTEM_INVENTORY.md`
 
-> Historical inventory material below is retained for provenance. For current state, the 2026-08-15 normalization addendum at the end of this file supersedes the July 5 state.
+> Historical inventory material below is retained for provenance. Current state is maintained in the normalization addendum and the linked project evidence records.
 
 ---
-
-## Historical Inventory State — 2026-07-05
-
-This section is retained as historical evidence and is not the current source of truth.
-
-The July 5 inventory recorded the primary operational repo, entrepreneur-hub, aoga-dashboard, phiknightverticalcorridor, legacy Flickerflash repositories, Vercel projects, GCP infrastructure, Drive registry, Needle registry, and the June/July sweep history. Its recorded state predates the 2026-08-15 29-repository normalization and should not be used to infer current deployment or repository status.
-
----
-
-# 2026-08-15 NORMALIZATION ADDENDUM — CURRENT STATE
 
 ## Current source of truth
 
-The live `ndrorchestration` GitHub owner inventory contains **29 repositories** as of 2026-08-15. The canonical mechanical connection record is `docs/ECOSYSTEM_SYNC_MANIFEST_2026-08-15.md`. The engineering evidence record is the repository quality audit matrix maintained during the current normalization workflow.
+The live `ndrorchestration` GitHub owner inventory contains the repositories exposed through the connected GitHub account. The current mechanical inventory includes `Acoustic-mesh`, `Meshsense`, and `ndrorchestration`; no separately named ASIS-AR Android repository is exposed by the current repository listing/search.
 
 ## Current canonical system boundaries
 
 | System | Canonical repository | Current evidence state |
 |---|---|---|
 | DGAF | `DGAF-Framework` | CI verified partial; empirical claims bounded |
-| Driftwatch | `Driftwatch` | package/lockfile identity corrected; build/type integrity; detector benchmark pending |
 | ASIS | `Acoustic-mesh` | acoustic/WebRTC engineering track; physical evidence pending |
-| MeshSense / RuView Status | `Meshsense` | runtime surface coded; production source equivalence pending |
+| ASIS-AR | **No separately verified repository** | Galaxy S24 implementation is documented; canonical Android source recovery open |
+| MeshSense / RuView Status | `Meshsense` | runtime surface coded; production provenance verified; FM-01 real-data evidence pending |
 | AHG Zeta-Pell | `AHG-Zeta-Pell-Autonomous-Lattice` | Pass-2 source evidence pending |
 | Agent Control Plane | `agent-control-plane` | executable kernel/CI present; production-scale claims excluded |
 | Phi-Calculus | `phi-calculus-app` | empirical evidence bounded |
-| ResumeApex | `resumeapex-eval` | reproducibility audit pending |
-| Junior Apogee | `junior-apogee-app` | evidence audit pending |
-| Sentinel Governance | `sentinel-governance` | evidence audit pending |
-| Amethyst Governance Eval Stack | `Amethyst-Governance-Eval-Stack` | effectiveness validation pending |
-| AI Governance Frameworks | `ai-governance-frameworks` | evidence audit pending |
-| Gold Star Standards | `Gold-star-standards` | evidence audit pending |
-| Gold Star QA Framework | `gold-star-qa-framework` | historical/archive |
+| Driftwatch | `Driftwatch` | detector benchmark pending |
 | 3D Visualization Hub | `3d-visualization-hub` | evidence audit pending |
-| AI Prompt Systems Portfolio | `ai-prompt-systems-portfolio` | portfolio/support surface |
-| Prompt Engineering Portfolio | `AI-Prompt-Engineer` / `ai-prompt-engineering-portfolio` | portfolio/archive |
-| Prompt Optimization Library | `prompt-optimization-library` | evidence audit pending |
-| AOGA Dashboard | `aoga-dashboard` | runtime/evidence audit pending |
-| PPTL Governance Dashboard | `pptl-governance-dashboard` | evidence audit pending |
-| DGAF Ops | `dgaf-ops` | evidence audit pending |
-| Phi-Knight Vertical Corridor API | `api` | runtime/evidence tracked separately |
-| Entrepreneur Hub | `entrepreneur-hub` | support/template track |
-| Automation Scripts | `automation-scripts` | evidence audit pending |
-| Chat Archives | `chat-archives` | archival |
-| Career Positioning | `career-positioning` | support |
-| GitHub configuration | `.github` | support infrastructure |
+| Acoustic-Mesh / Acoustic Trio | `Acoustic-mesh` | acoustic analysis/teaching scope; physical evidence pending |
 | Canonical ecosystem index | `ndrorchestration` | inventory/documentation surface |
 
-## 2026-08-15 completed normalization work
+## ASIS / Galaxy S24 source-recovery finding — 2026-08-17
 
-- Canonical portfolio README reconciled to current evidence boundaries.
-- 29-repository inventory established.
-- Ecosystem synchronization manifest established.
-- Repository quality audit matrix established.
-- PDMAL mathematical correction recorded: plastic constant `1.3247179572447454`; dodecahedral graph Cheeger constant `0.6`; unweighted Forman-Ricci is `-2` on every current edge and is not presently a useful discriminating signal.
-- Driftwatch package/lockfile root identity mismatch corrected.
-- Driftwatch quality baseline updated: build/type integrity is distinct from detector validation.
-- Acoustic-Mesh quality baseline updated: workspace/CI structure is distinct from acoustic/physical validation.
-- AHG Zeta-Pell quality baseline established; Pass-2 source evidence remains open.
-- MeshSense quality baseline established; deployment/source equivalence remains open.
+The connected GitHub repository inventory was rechecked for ASIS/ASIS-AR naming variants. No separately named `ASIS-AR`, `ASIS_AR`, `ASIS-Android`, or equivalent Galaxy S24 Android repository was exposed.
 
-## Current open evidence gates
+`Acoustic-mesh` was checked for `ASIS-AR` and Android source markers through the connected GitHub file search; no matching Android implementation source was found through the connector surface. This is a **source-visibility/recovery finding, not proof of source absence**.
 
-- DGAF CI gate hardening and test/evidence audit.
-- Driftwatch detector benchmark/calibration.
-- Acoustic-Mesh acoustic and sensor measurements.
-- MeshSense production runtime/source equivalence.
-- AHG Zeta-Pell Pass 2 and reproducible traces.
-- PDMAL empirical validation.
-- real-trace calibration of `D_a`.
-- weighted Forman-Ricci definition/usefulness validation.
-- missing TLA+ containment specification reconstruction.
-- broader repository security/provenance audit.
-- final GitHub ↔ Notion ↔ Vercel mechanical synchronization.
+Do not create a competing Android repository solely to satisfy the gap. The current ASIS-AR gate remains:
+
+**Source recovery → SensorManager implementation → physical Galaxy S24 execution → evidence manifest → S24-1 PASS/FAIL.**
+
+## MeshSense / RuView separation
+
+- `Meshsense` is the independent companion-layer experiment around the existing third-party `ruvnet/RuView` system.
+- MeshSense investigates six provisional failure-mode compensation hypotheses.
+- ESP32-S3/NIC hardware belongs to the **RuView/FM-01 experiment only**.
+- It is **not** the primary hardware path for ASIS/ASIS-AR.
+- Deployment/runtime provenance does not transfer between systems.
+
+## ASIS-AR hardware path
+
+**Primary platform:** Samsung Galaxy S24.
+
+The current implementation target is the Android-exposed sensor stack and associated platform channels, followed by synchronization, calibration, sensor fusion, and spatial-state construction.
+
+The first implementation gate is **S24-1 — runtime sensor inventory**. It requires a physical S24 execution that produces a non-empty sensor inventory, observed event timestamps/counts, rate statistics, device/build/API provenance, and a deterministic hashable manifest.
+
+Raw Wi-Fi CSI is explicitly outside the S24-1 gate. Wi-Fi metadata availability must not be treated as raw CSI access.
 
 ## Cross-system rules
 
 - ASIS = **Acoustic Spatial Insight System**.
+- ASIS-AR = Galaxy S24 implementation of the ASIS architecture, pending recovery of canonical source evidence.
 - `Meshsense` is the GitHub repository identifier.
-- `MeshSense / RuView Status` is the system identity.
+- `MeshSense / RuView Status` is the MeshSense system identity.
 - `meshsense-ruview-status` is the Vercel project identifier.
 - Acoustic-Mesh and MeshSense/RuView are separate repositories/systems.
-- DGAF, PDMAL, ASIS, Acoustic-Mesh, AHG Zeta-Pell, Agent Control Plane, and Axiom Lens are not one monolithic system.
 - Relationships between projects do not transfer validation.
 - A commit is not a deployment; a deployment is not runtime verification; runtime verification is not physical or empirical validation.
 - Unknown repository or deployment identity remains unresolved rather than being inferred from naming.
 
-## Current sweep log
+## Current open evidence gates
 
-| Sweep | Date | Scope | State |
-|---|---|---|---|
-| SWEEP-001 | 2026-06-16 | entrepreneur-hub NEEDLETEMPLATEINDEX | Historical / completed |
-| SWEEP-002 | 2026-06-26 | ndrorchestration S044 | Historical / completed |
-| SWEEP-EH-003 | 2026-06-26 | entrepreneur-hub NEEDLETEMPLATEINDEX | Historical / completed |
-| COLLEEN-EH-004 | 2026-07-05 | full ecosystem inventory | Historical / superseded |
-| NORMALIZATION-001 | 2026-08-15 | 29-repository inventory, taxonomy, evidence matrix | Active |
-| NORMALIZATION-002 | 2026-08-15 | DGAF, Driftwatch, Acoustic-Mesh, AHG, MeshSense P1 audit | Active |
+- ASIS-AR canonical Android source recovery.
+- ASIS-AR S24-1 physical sensor inventory.
+- S24 synchronized acquisition and calibration.
+- Acoustic-Mesh acoustic and sensor measurements.
+- MeshSense FM-01 real-CSI/physical validation.
+- DGAF empirical validation and broader repository security/provenance audit.
 
 ## Synchronization rule
 
-This inventory is a mechanical index, not an assertion that every repository is validated. Current state must be read together with `ECOSYSTEM_SYNC_MANIFEST_2026-08-15.md` and the repository quality audit matrix. Historical logs remain historical.
+This inventory is a mechanical index, not an assertion that every repository is validated. Current state must be read together with the relevant Notion project records and repository-specific experiment/quality documents. Historical logs remain historical.
 
-*Last updated: 2026-08-15 during repository quality normalization.*
+*Last updated: 2026-08-17 during ASIS/ASIS-AR source-recovery normalization.*
