@@ -8,6 +8,7 @@ export interface Gate {
   detail: string;
 }
 
+// Governance invariant: Claims do not upgrade epistemic status. Evidence does.
 export const orbitSnapshot = {
   project: 'DGAF / PDMAL',
   epistemicState: 'Historical freeze → corrected runner → candidate apparatus → new freeze not authorized',
