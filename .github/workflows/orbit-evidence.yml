@@ -1,0 +1,50 @@
+name: ORBIT Evidence Snapshot
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build evidence snapshot
+        shell: bash
+        run: |
+          mkdir -p orbit-evidence
+          HEAD_SHA="$(git rev-parse HEAD)"
+          N0="false"
+          AUTH="false"
+          grep -Eiq 'Current empirical state.*N *= *0' README.md && N0="true" || true
+          grep -Eiq 'Pilot authorization.*Not granted' README.md && AUTH="true" || true
+          BARE_COUNT="$(grep -RIl --exclude-dir=.git --exclude-dir=node_modules '340% coordination gain' . | wc -l | tr -d ' ')"
+          cat > orbit-evidence/snapshot.json <<EOF
+          {
+            "schema": "orbit.evidence.v1",
+            "generatedAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "repository": "ndrorchestration/ndrorchestration",
+            "head": "${HEAD_SHA}",
+            "readme": {"empiricalN0": ${N0}, "pilotUnauthorized": ${AUTH}},
+            "propagation": {"340PercentClaimFiles": ${BARE_COUNT}},
+            "governance": {"failClosed": true}
+          }
+          EOF
+          cat orbit-evidence/snapshot.json
+
+      - name: Upload immutable evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: orbit-evidence-${{ github.sha }}
+          path: orbit-evidence/snapshot.json
+          retention-days: 90
