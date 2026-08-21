@@ -11,6 +11,9 @@ on:
 permissions:
   contents: read
 
+env:
+  NODE_VERSION: 24
+
 jobs:
   validate-and-snapshot:
     runs-on: ubuntu-latest
@@ -24,7 +27,9 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: dashboard/package.json
 
       - name: Install dashboard
         working-directory: dashboard
