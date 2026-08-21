@@ -1,0 +1,105 @@
+name: ORBIT Evidence Snapshot
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # PRs otherwise check out GitHub's synthetic merge commit. ORBIT
+          # evidence must identify the contributor's actual source HEAD.
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dashboard
+        working-directory: dashboard
+        run: npm install --no-audit --no-fund
+
+      - name: ORBIT invariant tests
+        working-directory: dashboard
+        run: npm test
+
+      - name: Production build
+        working-directory: dashboard
+        run: npm run build
+
+      - name: Build evidence snapshot
+        shell: bash
+        env:
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          EVENT_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          mkdir -p orbit-evidence
+          SOURCE_SHA="$(git rev-parse HEAD)"
+          N0="false"
+          AUTH="false"
+          grep -Eiq 'Current empirical state.*N *= *0' README.md && N0="true" || true
+          grep -Eiq 'Pilot authorization.*Not granted' README.md && AUTH="true" || true
+
+          # Search only source/documentation files. Build output, dependencies,
+          # VCS metadata, caches and generated artifacts are not evidence sources.
+          CLAIM_COUNT="$({
+            find . -type f \
+              -not -path './.git/*' \
+              -not -path './node_modules/*' \
+              -not -path './dashboard/node_modules/*' \
+              -not -path './dashboard/.next/*' \
+              -not -path './.next/*' \
+              -not -path './orbit-evidence/*' \
+              \( -name '*.md' -o -name '*.mdx' -o -name '*.txt' -o -name '*.json' -o -name '*.yml' -o -name '*.yaml' -o -name '*.py' -o -name '*.ts' -o -name '*.tsx' -o -name '*.js' -o -name '*.mjs' \) -print0 | \
+            xargs -0 grep -ohF '340% coordination gain' 2>/dev/null || true
+          } | wc -l | tr -d ' ' )"
+
+          cat > orbit-evidence/snapshot.json <<EOF
+          {
+            "schema": "orbit.evidence.v2",
+            "generatedAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "repository": "ndrorchestration/ndrorchestration",
+            "head": "${SOURCE_SHA}",
+            "headSemantics": "source-head",
+            "githubEventSha": "${EVENT_SHA}",
+            "pullRequestHeadSha": "${PR_HEAD_SHA:-}",
+            "readme": {"empiricalN0": ${N0}, "pilotUnauthorized": ${AUTH}},
+            "propagation": {"340PercentClaimOccurrences": ${CLAIM_COUNT}},
+            "governance": {"failClosed": true}
+          }
+          EOF
+          cat orbit-evidence/snapshot.json
+
+      - name: Verify source SHA semantics
+        shell: bash
+        env:
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          ACTUAL="$(git rev-parse HEAD)"
+          if [[ -n "${PR_HEAD_SHA}" && "${ACTUAL}" != "${PR_HEAD_SHA}" ]]; then
+            echo "ERROR: ORBIT checked out ${ACTUAL}, expected PR source HEAD ${PR_HEAD_SHA}" >&2
+            exit 1
+          fi
+          echo "ORBIT source HEAD semantics: PASS (${ACTUAL})"
+
+      - name: Upload immutable evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: orbit-evidence-${{ github.event.pull_request.head.sha || github.sha }}
+          path: orbit-evidence/snapshot.json
+          retention-days: 90
