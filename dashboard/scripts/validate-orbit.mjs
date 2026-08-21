@@ -19,7 +19,7 @@ if (!evidence.includes("EVIDENCE_SCHEMA = 'orbit.evidence.v2'")) throw new Error
 if (!evidence.includes("headSemantics: 'source-head'")) throw new Error('ORBIT source-head semantics missing');
 if (!evidence.includes('v.head') || !evidence.includes('/^[0-9a-f]{40}$/')) throw new Error('ORBIT must validate full commit SHAs');
 if (!evidence.includes('governance?.failClosed === true')) throw new Error('ORBIT evidence must be fail-closed');
-if (!config.includes("ORBIT_REPOSITORY") || !config.includes("ORBIT_BRANCH")) throw new Error('ORBIT runtime configuration is not centralized');
+if (!config.includes('ORBIT_REPOSITORY') || !config.includes('ORBIT_BRANCH')) throw new Error('ORBIT runtime configuration is not centralized');
 if (!config.includes('githubTimeoutMs: 5000')) throw new Error('ORBIT GitHub timeout configuration missing');
 
 if (packageJson.engines?.node !== '>=24.0.0') throw new Error('ORBIT requires Node >=24.0.0');
@@ -31,7 +31,7 @@ if (!api.includes('res.status(503)')) throw new Error('ORBIT live evidence failu
 if (!api.includes('readinessScoreFor(gates)')) throw new Error('ORBIT API readiness must reflect reconciled gates');
 if (!api.includes('README contradiction')) throw new Error('ORBIT must fail closed on documentation contradiction');
 if (!api.includes('orbitConfig.repository') || !api.includes('orbitConfig.branch')) throw new Error('ORBIT API must honor runtime repository configuration');
-if (!page.includes('scoreFor(snapshot)')) throw new Error('ORBIT UI must support snapshot-derived readiness');
+if (!/function scoreFor\(snapshot/.test(page)) throw new Error('ORBIT UI must support snapshot-derived readiness');
 if (!page.includes("cache: 'no-store'")) throw new Error('ORBIT live refresh must bypass browser cache');
 if (!health.includes("status: 'ok'") || !health.includes("req.method !== 'GET'")) throw new Error('ORBIT health endpoint incomplete');
 if (!schema.includes('orbit.evidence.v2') || !schema.includes('source-head semantics')) throw new Error('ORBIT schema endpoint incomplete');
