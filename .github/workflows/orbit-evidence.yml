@@ -15,10 +15,11 @@ jobs:
   validate-and-snapshot:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout source commit
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -39,20 +40,27 @@ jobs:
 
       - name: Build evidence snapshot
         shell: bash
+        env:
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          EVENT_SHA: ${{ github.sha }}
         run: |
+          set -euo pipefail
           mkdir -p orbit-evidence
-          HEAD_SHA="$(git rev-parse HEAD)"
+          SOURCE_SHA="$(git rev-parse HEAD)"
           N0="false"
           AUTH="false"
           grep -Eiq 'Current empirical state.*N *= *0' README.md && N0="true" || true
           grep -Eiq 'Pilot authorization.*Not granted' README.md && AUTH="true" || true
-          CLAIM_COUNT="$(grep -Roh --exclude-dir=.git --exclude-dir=node_modules '340% coordination gain' . | wc -l | tr -d ' ')"
+          CLAIM_COUNT="$({ find . -type f -not -path './.git/*' -not -path './node_modules/*' -not -path './dashboard/node_modules/*' -not -path './dashboard/.next/*' -not -path './.next/*' -not -path './orbit-evidence/*' \( -name '*.md' -o -name '*.mdx' -o -name '*.txt' -o -name '*.json' -o -name '*.yml' -o -name '*.yaml' -o -name '*.py' -o -name '*.ts' -o -name '*.tsx' -o -name '*.js' -o -name '*.mjs' \) -print0 | xargs -0 grep -ohF '340% coordination gain' 2>/dev/null || true; } | wc -l | tr -d ' ' )"
           cat > orbit-evidence/snapshot.json <<EOF
           {
-            "schema": "orbit.evidence.v1",
+            "schema": "orbit.evidence.v2",
             "generatedAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
             "repository": "ndrorchestration/ndrorchestration",
-            "head": "${HEAD_SHA}",
+            "head": "${SOURCE_SHA}",
+            "headSemantics": "source-head",
+            "githubEventSha": "${EVENT_SHA}",
+            "pullRequestHeadSha": "${PR_HEAD_SHA:-}",
             "readme": {"empiricalN0": ${N0}, "pilotUnauthorized": ${AUTH}},
             "propagation": {"340PercentClaimOccurrences": ${CLAIM_COUNT}},
             "governance": {"failClosed": true}
@@ -60,9 +68,19 @@ jobs:
           EOF
           cat orbit-evidence/snapshot.json
 
+      - name: Verify source SHA semantics
+        shell: bash
+        env:
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          ACTUAL="$(git rev-parse HEAD)"
+          if [[ -n "${PR_HEAD_SHA}" && "${ACTUAL}" != "${PR_HEAD_SHA}" ]]; then exit 1; fi
+          echo "ORBIT source HEAD semantics: PASS (${ACTUAL})"
+
       - name: Upload immutable evidence artifact
         uses: actions/upload-artifact@v4
         with:
-          name: orbit-evidence-${{ github.sha }}
+          name: orbit-evidence-${{ github.event.pull_request.head.sha || github.sha }}
           path: orbit-evidence/snapshot.json
           retention-days: 90
