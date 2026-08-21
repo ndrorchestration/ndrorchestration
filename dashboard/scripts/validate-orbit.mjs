@@ -34,7 +34,7 @@ if (!api.includes('orbitConfig.repository') || !api.includes('orbitConfig.branch
 if (!/function scoreFor\(snapshot/.test(page)) throw new Error('ORBIT UI must support snapshot-derived readiness');
 if (!page.includes("cache: 'no-store'")) throw new Error('ORBIT live refresh must bypass browser cache');
 if (!health.includes("status: 'ok'") || !health.includes("req.method !== 'GET'")) throw new Error('ORBIT health endpoint incomplete');
-if (!schema.includes('orbit.evidence.v2') || !schema.includes('source-head semantics')) throw new Error('ORBIT schema endpoint incomplete');
+if (!schema.includes('EVIDENCE_SCHEMA') || !schema.includes("'source-head semantics'")) throw new Error('ORBIT schema endpoint incomplete');
 
 for (const header of ['X-Content-Type-Options', 'X-Frame-Options', 'Referrer-Policy', 'Permissions-Policy', 'Content-Security-Policy']) {
   if (!nextConfig.includes(header)) throw new Error(`ORBIT security header missing: ${header}`);
