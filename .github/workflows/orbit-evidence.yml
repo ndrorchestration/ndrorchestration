@@ -33,8 +33,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: npm
-          cache-dependency-path: dashboard/package-lock.json
 
       - name: Install dashboard
         working-directory: dashboard
