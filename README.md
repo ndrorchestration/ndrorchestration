@@ -17,9 +17,6 @@ evaluated, auditable agentic systems.
 **PDMAL** — Phi-Driven Multi-Agent Lattice — is the associated
 experimental multi-agent topology research track.
 
-> **Current empirical state:** N = 0  
-> **Pilot authorization:** Not granted
-
 ---
 
 ## Areas of Work
