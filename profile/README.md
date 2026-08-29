@@ -1,66 +1,103 @@
 # ndrorchestration
 
-**AI Governance & Evaluation Ecosystem**
+**AI Systems Design · Orchestration · Evaluation · Governance**
 
-Meta-orchestrated by **Agent Amethyst** | Built by [Ndr "Ender" Hensel](https://www.linkedin.com/in/andrewhensel)
-
----
-
-## What This Is
-
-A production AI governance ecosystem built around **DGAF** — the Dynamic Governance Agentic Formation Framework — a layer-0 governance architecture for multi-agent AI orchestration.
-
-Every repo here is governed, traceable, and aligned to enterprise compliance standards.
+Built by **Andrew “Ndr / Ender” Hensel**. This profile centers on AI systems engineering with emphasis on multi-agent orchestration, prompt systems, evaluation methodology, provenance, governance, and reproducible infrastructure.
 
 ---
 
-## Core Repos
+## Primary Body of Work
 
-| Repo | Purpose | Status |
-|---|---|---|
-| [🧠 DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | Governance spine — NDR patterns, AXIS constraints, phi-harmonic gates | ✅ Active (post-S070) |
-| [📊 Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Real-time phi-harmonic drift detection + truth scoring | ✅ Active |
-| [🔍 junior-apogee-app](https://github.com/ndrorchestration/junior-apogee-app) | Multi-agent QA platform + OWASP Agentic Top 10 eval | ✅ Active |
-| [🛰️ sentinel-governance](https://github.com/ndrorchestration/sentinel-governance) | CI/CD integrity monitoring + automated governance sweeps | ✅ Active |
-| [🏪 entrepreneur-hub](https://github.com/ndrorchestration/entrepreneur-hub) | AI governance workflow templates for Needle.app | ✅ Active |
-| [🔬 resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | DGAF-certified 3-layer LLM benchmark suite | ✅ Active |
-| [🎵 Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) | WebRTC phi-harmonic acoustic mesh | ✅ Active |
-| [📈 ai-governance-frameworks](https://github.com/ndrorchestration/ai-governance-frameworks) | NIST AI RMF, ISO 42001, EU AI Act implementation references | ✅ Active |
-| [📝 ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | Public prompt engineering portfolio (DGAF-certified) | ✅ Active |
+### DGAF — Dynamic Governance Agentic Formation
+
+DGAF is an evolving research and implementation framework for governed agentic systems, combining orchestration, governance gates, evidence handling, provenance, semantic controls, evaluation, and deployment safeguards.
+
+### PDMAL — Phi-Driven Multi-Agent Lattice
+
+PDMAL is the associated experimental research track for multi-agent topology and control.
+
+**Current experimental state: PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0.** Engineering and verification infrastructure are substantially developed; empirical efficacy has not been established.
 
 ---
 
-## Governance Architecture
+## Areas of Work
 
+- AI orchestration and multi-agent systems
+- Prompt engineering and prompt evaluation
+- AI evaluation and benchmark methodology
+- Governance, provenance, and evidence architecture
+- Agent control-plane design
+- Runtime and deployment verification
+- Adversarial testing and failure-mode discovery
+- Reproducible experimental infrastructure
+- Semantic / ontological boundary governance
+- Spatial and acoustic intelligence research
+
+---
+
+## Selected Repositories
+
+| Repository | Focus |
+|---|---|
+| [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | Governance, orchestration, evaluation, provenance, and control-plane research |
+| [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Drift detection and evaluation |
+| [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | Evaluation protocols and artifacts |
+| [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) | Reference control-plane architecture |
+| [Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) | Acoustic / spatial intelligence |
+| [Meshsense](https://github.com/ndrorchestration/Meshsense) | Runtime and deployment observation |
+| [aoga-dashboard](https://github.com/ndrorchestration/aoga-dashboard) | AI governance dashboard / API work |
+| [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | Prompt engineering portfolio |
+
+---
+
+## Portfolio Architecture
+
+```text
+NDR AI Systems
+├── Orchestration
+│   ├── DGAF
+│   ├── PDMAL
+│   └── Agent Control Plane
+│
+├── Evaluation
+│   ├── Driftwatch
+│   ├── ResumeApex
+│   └── QA / benchmark systems
+│
+├── Governance
+│   ├── Evidence
+│   ├── Provenance
+│   ├── Semantic controls
+│   └── Runtime / deployment verification
+│
+└── Spatial AI
+    ├── ASIS
+    ├── Acoustic-Mesh
+    └── MeshSense
 ```
-DGAF-Framework (Layer-0 spine)
-├── Agent Amethyst       → Meta-orchestrator
-├── Agent COLLEEN        → Institutional anchor / SSoT
-├── Agent Apogee         → QA orchestrator / eval
-├── Agent Sentinel       → CI integrity / safety gating
-├── Agent Herald         → Audit stream / event logging
-├── NDR Pattern Registry → P-01 through P-33+ active patterns
-└── Phi-Harmonic Gates   → φ = 1.61818 convergence layer
-```
 
 ---
 
-## Standards Alignment
+## Evidence Discipline
 
-- **NIST AI RMF 2.0** — Govern, Map, Measure, Manage
-- **ISO 42001** — AI management system alignment
-- **EU AI Act Art. 13** — Transparency by design
-- **OWASP Agentic Top 10** — Safety sweep integration
+The project distinguishes **defined, implemented, computed, verified, attested, historical, hypothesis, and unsupported** states. A test's existence is not proof of success; a historical result is not current verification; a deployment is not automatically provenance for a particular candidate; and engineering maturity is not empirical efficacy.
 
----
-
-## Latest Activity
-
-- **2026-06-28** — STRUCT-QA-IP-001: IP hygiene sweep + CITATION.cff + NOTICE hardening
-- **2026-06-27** — SWEEP-EH-004 closed: 5 Needle templates submitted
-- **2026-06-27** — S070 sealed: SWEEP-002 merged, COLLEEN 1-1-1-1 attestation, P-01–P-33 active
-- **2026-06-27** — GOVERNANCE_CONSTITUTION.md anchored to spine
+Public-facing documentation is kept subordinate to repository-local authoritative state and exact evidence scope.
 
 ---
 
-*φ = 1.61818 · Ionian sustained · Post-S070 · Updated 2026-06-28*
+## Current Engineering Direction
+
+The DGAF work currently emphasizes a governed recursive control plane with immutable governance envelopes, bounded recursion, exact state identity and cycle detection, provenance, proposal/authorization/commit barriers, capability-boundary testing, hardened TGL semantics, audit sealing, exact-head CI controls, and deployment source-SHA attestation.
+
+The latest engineering evidence is still being reconciled at exact-head scope. Experimental freeze, pilot authorization, and empirical execution remain separate gates.
+
+---
+
+## Professional Direction
+
+Current focus: **AI systems design, orchestration, evaluation, prompt engineering, and governance**, including AI evaluation, model-quality, prompt-system, agentic-workflow, and trustworthy-AI infrastructure roles.
+
+---
+
+*Profile reconciled: 2026-08-29. This page is a public profile surface, not the experimental source of truth.*
