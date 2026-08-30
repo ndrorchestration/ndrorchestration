@@ -1,7 +1,6 @@
-# Ecosystem Synchronization Manifest — 2026-08-15
+# Ecosystem Synchronization Manifest — 2026-08-30 Refresh
 
 ## Purpose
-
 Canonical mechanical inventory for the connected `ndrorchestration` ecosystem. This manifest distinguishes repository inventory from runtime and experimental evidence.
 
 ## Status vocabulary
@@ -11,194 +10,34 @@ Canonical mechanical inventory for the connected `ndrorchestration` ecosystem. T
 - **PENDING** — a specific evidence or synchronization action remains.
 - **HISTORICAL** — evidence is dated and must not be treated as current state.
 
-## GitHub inventory
+## 2026-08-30 epistemic refresh
 
-Current connected owner inventory: **29 repositories**.
+The ecosystem-wide evidence boundary has been refreshed. Active canonical repositories now carry a dated `docs/EVIDENCE_STATUS_2026-08-30.md` (or equivalent ecosystem-standard file) recording that implementation, CI, deployment, benchmarks, governance mappings, and project-local terminology must not be promoted beyond their directly supported evidence.
 
-### Core systems / research
+The refresh does **not** convert any PENDING gate into VERIFIED. In particular:
 
-| Repository | System / role | State |
-|---|---|---|
-| `Acoustic-mesh` | Acoustic/WebRTC mesh; ASIS engineering track | VERIFIED inventory; physical/acoustic validation PENDING |
-| `Meshsense` | MeshSense / RuView Status | VERIFIED inventory; runtime/source equivalence PENDING |
-| `DGAF-Framework` | Dynamic Governance Agentic Formation; PDMAL lineage | VERIFIED inventory; empirical claims bounded |
-| `Driftwatch` | Drift simulation/detection research | VERIFIED inventory; detector benchmark PENDING |
-| `Amethyst-Governance-Eval-Stack` | Guardrail/evaluation stack | VERIFIED inventory; effectiveness validation PENDING |
-| `phi-calculus-app` | Phi-calculus research/visualization | VERIFIED inventory; empirical claims bounded |
-| `AHG-Zeta-Pell-Autonomous-Lattice` | AHG/Pell/lattice research | VERIFIED inventory; Pass 2 source work PENDING |
-| `agent-control-plane` | Proposed orchestration/control plane | VERIFIED inventory; executable kernel/CI present; production-scale claims excluded |
+- PDMAL empirical efficacy remains PENDING until the current candidate apparatus is authorized and reproducible results exist.
+- Driftwatch detector effectiveness remains PENDING independent benchmark evidence.
+- Acoustic/ASIS physical validation remains PENDING physical measurement and replication.
+- MeshSense exact source/runtime equivalence remains PENDING unless current deployment metadata establishes it.
+- AOGA endpoint/runtime and end-to-end behavior remain separate verification gates.
+- AHG Pass 2 remains PENDING where previously identified.
+- Historical repositories remain historical and are not current authorities.
 
-### Evaluation / governance tooling
+## Canonical inventory
 
-| Repository | Role | State |
-|---|---|---|
-| `sentinel-governance` | CI/CD integrity and governance automation | VERIFIED inventory |
-| `ai-governance-frameworks` | Governance-framework research/mapping | VERIFIED inventory |
-| `junior-apogee-app` | Agent evaluation/QA application | VERIFIED inventory |
-| `resumeapex-eval` | Resume/evaluation benchmark tooling | VERIFIED inventory |
-| `Gold-star-standards` | QA/rating standards | VERIFIED inventory |
-| `gold-star-qa-framework` | Historical/archived QA framework | VERIFIED inventory; ARCHIVED |
-| `pptl-governance-dashboard` | Governance dashboard | VERIFIED inventory |
-| `aoga-dashboard` | Agentic orchestration/governance dashboard | VERIFIED inventory |
-| `dgaf-ops` | DGAF operational internals | VERIFIED inventory |
-| `entrepreneur-hub` | Governance/evaluation templates and workflows | VERIFIED inventory |
+The 2026-08-15 manifest's 29-repository canonical set remains the governance inventory. GitHub currently exposes additional repositories in the connected owner account, including forks, transient test repositories, and other newly created surfaces; these are not silently promoted into the canonical ecosystem set without classification.
 
-### Portfolio / support / archive infrastructure
-
-| Repository | Role | State |
-|---|---|---|
-| `AI-Prompt-Engineer` | Prompt-engineering portfolio/archive | VERIFIED inventory |
-| `ai-prompt-engineering-portfolio` | Prompt-engineering portfolio | VERIFIED inventory |
-| `ai-prompt-systems-portfolio` | Public prompt-systems portfolio | VERIFIED inventory |
-| `prompt-optimization-library` | Prompt optimization archive/library | VERIFIED inventory |
-| `3d-visualization-hub` | Visualization infrastructure | VERIFIED inventory |
-| `career-positioning` | Career strategy | VERIFIED inventory |
-| `automation-scripts` | Ecosystem automation utilities | VERIFIED inventory |
-| `chat-archives` | Conversation archive/knowledge base | VERIFIED inventory |
-| `ndrorchestration` | Public ecosystem portfolio/index | VERIFIED inventory |
-| `api` | Phi-Knight Vertical Corridor API surface | VERIFIED inventory |
-| `.github` | Organization community-health files | VERIFIED inventory |
-
-## Canonical system mappings
-
-| System | GitHub | Vercel | Connection state |
-|---|---|---|---|
-| MeshSense / RuView Status | `ndrorchestration/Meshsense` | `meshsense-ruview-status` | **VERIFIED** identity + production deployment exists; runtime endpoint/source equivalence **PENDING** |
-| Driftwatch | `ndrorchestration/Driftwatch` | `driftwatch` | **VERIFIED** identity/name match; detector evidence **PENDING** |
-| Phi-Calculus | `ndrorchestration/phi-calculus-app` | `phi-calculus` | **VERIFIED** identity/name mapping; runtime/evidence state tracked separately |
-| Portfolio / ecosystem index | `ndrorchestration/ndrorchestration` | `ndrorchestration` | **VERIFIED** as deployment/project surface; scope is presentation/infrastructure |
-| AOGA Dashboard | `ndrorchestration/aoga-dashboard` | `aoga-dashboard` | **VERIFIED** identity + current production deployment bound to GitHub commit `7ef3f560f650fe63b6e40c2e9a38b96e39d3800d`; endpoint/runtime behavior **PENDING** |
-| DGAF RuView mitigation | DGAF ecosystem surface | `dgaf-ruview-mitigation` | **PENDING** exact source binding; do not infer from project name |
-| Quintet hardening report | DGAF/evaluation ecosystem surface | `quintet-hardening-report` | **PENDING** exact source binding; do not infer from project name |
-| Phi-Knight Vertical Corridor | `ndrorchestration/api` | `phiknightverticalcorridor` | **VERIFIED** functional naming relationship; runtime evidence tracked separately |
-
-## Vercel team inventory
-
-Current connected team exposes 8 projects:
-
-- `driftwatch`
-- `phiknightverticalcorridor`
-- `phi-calculus`
-- `ndrorchestration`
-- `meshsense-ruview-status`
-- `aoga-dashboard`
-- `dgaf-ruview-mitigation`
-- `quintet-hardening-report`
-
-### Current deployment evidence — 2026-08-15
-
-- **AOGA Dashboard:** latest production deployment is `READY` and is explicitly bound by Vercel metadata to GitHub commit `7ef3f560f650fe63b6e40c2e9a38b96e39d3800d` (`docs: establish AOGA Dashboard quality baseline`). This establishes a current GitHub → Vercel source/deployment binding. It does **not** establish endpoint correctness or end-to-end orchestration behavior.
-- **MeshSense / RuView Status:** latest production deployment is `READY`, with prior production deployments including both `READY` and `ERROR` states. The latest deployment metadata does not expose a GitHub commit binding in the inspected response. Therefore production existence is verified, but GitHub source equivalence remains **PENDING**.
-
-Presence in Vercel does **not** imply runtime correctness or source equivalence unless deployment metadata establishes the relationship.
-
-## High-value evidence gates
-
-### Meshsense
-
-`canonical source → CI → production deployment → authenticated endpoint verification → runtime/source equivalence → behavioral evidence`
-
-Current gate: production deployment existence is **VERIFIED**; endpoint/runtime equivalence remains **PENDING**. The latest production deployment lacks an exposed GitHub commit binding in the inspected Vercel metadata.
-
-### AOGA Dashboard
-
-`canonical source → deployment commit binding → endpoint smoke tests → route behavior → end-to-end trace → security/reliability evidence`
-
-Current gate: GitHub → Vercel deployment binding is now **VERIFIED** for the latest production deployment. Endpoint behavior and end-to-end Sentinel traces remain **PENDING**.
-
-### Driftwatch
-
-`signal specification → detector implementation → frozen baseline → benchmark → error analysis → reproducible artifact`
-
-Current gate: detector implementation/benchmark evidence **PENDING**. Package and lockfile identity were corrected during normalization; CI build/type integrity is not detector validation.
-
-### Acoustic-Mesh / ASIS
-
-`network implementation → software tests → acoustic/sensor protocol → physical measurement → uncertainty/replication`
-
-Current gate: physical measurement evidence **PENDING**. Workspace/CI structure is verified separately from acoustic capability.
-
-### PDMAL / Phi-Calculus / AHG lattice
-
-`definition → derivation → computation → reproducible experiment → appropriate review`
-
-Current gate: project-local experimental evidence remains incomplete where explicitly marked.
-
-## 2026-08-15 normalization findings
-
-### PDMAL mathematical authority correction
-
-`DGAF-Framework/docs/formalism/PDMAL_MATH_VERIFIED_v1.md` is now explicitly **SUPERSEDED** for current mathematical authority. The current correction record is `docs/formalism/PDMAL_MATH_CORRECTION_2026-08-15.md`.
-
-The correction establishes:
-
-- plastic constant = `1.3247179572447454`;
-- dodecahedral graph Cheeger constant = `0.6`;
-- unweighted Forman-Ricci on the current dodecahedral topology is constant at `-2` per edge and is therefore not currently a useful discriminating audit signal;
-- ContractionMonitor is an empirical runtime proxy, not proof of contraction;
-- weighted Forman-Ricci remains an open research item pending a defined edge-weight model and usefulness validation;
-- `D_a` admission belongs to DGAF Quintet calibration discipline rather than an arbitrary universal threshold.
-
-### Axiom Lens inventory discrepancy
-
-No repository named `Axiom Lens` is present in the current 29-repository connected owner inventory, and no matching repository was found by GitHub repository search. Its canonical GitHub identity is therefore **UNRESOLVED** and must not be inferred from project terminology.
-
-### Repository quality normalization
-
-The 2026-08-15 quality pass established concrete baselines for DGAF, Driftwatch, Acoustic-Mesh, AHG Zeta-Pell, MeshSense, ACP, ResumeApex, Junior Apogee, Sentinel Governance, and AOGA Dashboard. These baselines classify code/build evidence separately from detector effectiveness, acoustic validation, runtime equivalence, benchmark validity, security posture, or experimental validation.
-
-Key findings:
-
-- Driftwatch package/lockfile root identity mismatch corrected; behavioral detector benchmark remains open.
-- DGAF CI contains meaningful tests and scans but several gates are non-blocking and coverage has a zero failure threshold; CI is therefore `VERIFIED PARTIAL`.
-- Acoustic-Mesh CI/workspace structure is present, but no inspected evidence establishes acoustic performance or conventional automated behavioral tests.
-- AHG Zeta-Pell Pass-2 chaos/FML mitigation and Three-Regime Governor source evidence were not established; historical benchmarks remain unreproduced.
-- MeshSense source/runtime surface is coded and deployment configuration exists; production deployment exists, but exact GitHub source equivalence remains unverified.
-- ACP has a real executable kernel and pytest CI, but dependency reproducibility, security/coverage gates, and broader integration evidence remain gaps.
-- ResumeApex is a protocol/scaffold rather than a validated benchmark; evaluator functions and aggregate confidence calculations remain unimplemented.
-- Junior Apogee has meaningful compatibility/smoke/package-build CI but incomplete dependency reproducibility and security/coverage gates.
-- Sentinel Governance has an operational observe/repair concept but no attested generalized remediation correctness or security certification.
-- AOGA Dashboard now has a verified GitHub → Vercel deployment binding for the latest production deployment; endpoint and end-to-end behavior remain unverified.
-
-### Normalization rule
+## Normalization rule
 
 A mathematically correct calculation is not automatically a useful engineering signal. Repository claims must distinguish calculation correctness from engineering usefulness, and neither should be promoted beyond the evidence actually produced by the repository.
 
-## Cross-system rules
+A commit is not a deployment; a deployment is not runtime verification; runtime verification is not physical or empirical validation; a benchmark specification is not benchmark validation; and a numerical target is not an achieved result.
 
-- ASIS = **Acoustic Spatial Insight System**.
-- `Meshsense` is the shortened GitHub repository identifier.
-- `MeshSense / RuView Status` is the system identity.
-- `meshsense-ruview-status` is the Vercel project/deployment identifier for that system.
-- `Acoustic-Mesh` is separate from MeshSense/RuView.
-- PDMAL is a DGAF research lineage; do not create a duplicate repository solely for documentation symmetry.
-- Repository relationships do not transfer validation.
-- A commit is not a deployment; a deployment is not runtime verification; runtime verification is not physical or empirical validation.
-- Historical connector limitations remain historical and must not be represented as current access state.
+## Refresh status
 
-## Closure classification
+- Canonical active repositories: epistemic-boundary refresh applied where writable.
+- `gold-star-qa-framework`: archived/read-only; refresh could not be written. Its archived state remains the authoritative boundary.
+- Cross-repository validation transfer: NOT PERMITTED.
 
-| Layer | State |
-|---|---|
-| GitHub repository inventory | **VERIFIED** |
-| GitHub taxonomy/classification | **VERIFIED** |
-| GitHub ↔ Notion registry representation | **VERIFIED at inventory/registry level** |
-| Known GitHub ↔ Vercel identity mappings | **VERIFIED where explicitly listed** |
-| AOGA latest GitHub → Vercel deployment binding | **VERIFIED** |
-| MeshSense latest GitHub → Vercel source equivalence | **PENDING** |
-| Unknown GitHub ↔ Vercel bindings | **PENDING; not inferred** |
-| MeshSense runtime/source equivalence | **PENDING** |
-| AOGA endpoint/runtime behavior | **PENDING** |
-| Driftwatch detector effectiveness | **PENDING** |
-| Acoustic/ASIS physical validation | **PENDING** |
-| PDMAL comparative experiment | **PENDING** |
-| AHG Pass 2 | **PENDING** |
-| Axiom Lens repository identity | **PENDING / unresolved** |
-| Documentation/inventory layer | **MECHANICALLY SYNCHRONIZED at current inventory level** |
-| Repository quality normalization | **IN PROGRESS** |
-
-## Final closure condition
-
-The documentation-and-connections layer is considered synchronized when every accessible repository has an inventory classification and every applicable cross-system connection is marked `VERIFIED`, `NOT APPLICABLE`, or `PENDING` with an actionable reason. The 2026-08-15 inventory and manifest satisfy that inventory-level condition. Runtime, empirical, and repository-quality closure remain separate gates.
-
-*Last updated: 2026-08-15 during repository quality normalization.*
+*Last refreshed: 2026-08-30.*
