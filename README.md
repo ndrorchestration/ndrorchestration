@@ -1,8 +1,8 @@
 # Andrew “Ndr / Ender” Hensel
 
-### AI Systems Designer · Orchestration · Evaluation · Governance
+### AI Systems Designer · AI Orchestration Engineer · Evaluation · Governance
 
-I design and evaluate AI systems with a focus on multi-agent orchestration, prompt systems, evaluation methodology, provenance, governance, and reproducible experimental infrastructure.
+I design and evaluate AI systems with a focus on multi-agent orchestration, prompt systems, evaluation methodology, provenance, governance, reproducible experimentation, and trustworthy deployment controls.
 
 My primary body of work is **DGAF (Dynamic Governance Agentic Formation)**, an evolving research and implementation framework for governed agentic systems. The associated **PDMAL (Phi-Driven Multi-Agent Lattice)** track investigates multi-agent topology and control experimentally.
 
@@ -14,13 +14,15 @@ My primary body of work is **DGAF (Dynamic Governance Agentic Formation)**, an e
 
 DGAF combines agent orchestration, governance gates, evidence handling, provenance, semantic controls, evaluation, and deployment safeguards into a governed control-plane architecture.
 
-Recent work includes a **governed recursive control-plane** with bounded recursion, immutable governance envelopes, exact state identity and cycle detection, append-oriented provenance, explicit proposal/authorization/commit barriers, capability-boundary tests, hardened TGL lifecycle semantics, audit sealing, exact-head CI checks, and deployment source-SHA attestation.
+Recent work includes a **governed recursive control-plane** with bounded recursion, immutable governance envelopes, exact state identity and cycle detection, append-oriented provenance, explicit proposal/authorization/commit barriers, capability-boundary tests, hardened TGL lifecycle semantics, audit sealing, exact-head CI checks, source-SHA attestation, and candidate-bound evidence reconciliation.
+
+The September 2026 engineering cycle also hardened the **P-35 premise-gate boundary**, reconciled mandatory checker propagation through adapter/task paths, corrected a strict TLA+ toolchain release digest, and brought the current candidate through a broad exact-head verification wave covering governance, security, truth-layer, provenance, documentation, and pre-freeze controls.
 
 ### PDMAL — Phi-Driven Multi-Agent Lattice
 
-PDMAL is the associated experimental research track. It is designed around deterministic execution, topology generation, blinded comparisons, artifact schemas, provenance, and pre-specified statistical analysis.
+PDMAL is the associated experimental research track. It is designed around deterministic execution, topology generation, blinded comparisons, artifact schemas, provenance, reproducibility, and pre-specified statistical analysis.
 
-**Current experimental state: PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0.** Engineering and verification infrastructure are substantially developed, but empirical efficacy has not been established.
+**Current experimental state: PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0.** The engineering and verification infrastructure is substantially developed, but empirical efficacy has not been established. Passing CI, synthetic/dry-run evidence, deployment readiness, or historical verification is not treated as experimental efficacy.
 
 ---
 
@@ -28,7 +30,7 @@ PDMAL is the associated experimental research track. It is designed around deter
 
 - AI orchestration and multi-agent systems
 - Prompt engineering and prompt evaluation
-- AI evaluation and benchmark methodology
+- AI evaluation, QA, and benchmark methodology
 - Governance, provenance, and evidence architecture
 - Agent control-plane design
 - Runtime and deployment verification
@@ -47,7 +49,7 @@ A central design principle of the work is to keep these states distinct:
 
 A passing test, deployment, historical attestation, or repository claim is not automatically equivalent to independent verification or empirical efficacy. Exact candidate identity, execution context, run evidence, provenance, and scope matter.
 
-The project deliberately records unresolved conditions rather than converting implementation maturity into success claims.
+The project deliberately records unresolved conditions rather than converting implementation maturity into success claims. Historical evidence is retained as provenance and is not silently transferred across candidate, deployment, run, or artifact boundaries.
 
 ---
 
@@ -94,13 +96,15 @@ NDR AI Systems
 
 ---
 
-## Current Engineering Snapshot — 2026-08-29
+## Current Engineering Snapshot — 2026-09-02
 
-The latest DGAF engineering work includes a broad evidence/CI wave covering control-plane contracts, governance checks, PDMAL pre-authorization security, pre-freeze runner validation, instrumentation, regression coverage, truth-layer validation, epistemic-evidence checks, provenance consistency, claim/IP hygiene, and exact-head deployment controls.
+The current DGAF integration candidate is **PR #192 / `58ba9a072f40e94638b0332eeec19dd882a7ff95`**. It remains a draft, non-authorizing engineering lane.
 
-The current DGAF integration candidate remains a **draft, non-authorizing engineering lane**. Historical checkpoints are preserved as provenance and are not silently promoted to current-head verification.
+The current candidate has completed a broad exact-head verification wave: Governance CI, PDMAL Pre-Freeze Runner Validation, PDMAL Pre-Authorization Security, truth-layer validation, regression coverage, provenance/evidence checks, PDMAL harness and instrumentation validation, control-state checks, documentation/claim/IP hygiene, and related deterministic verification all passed.
 
-The project is intentionally finishing its apparatus and governance controls before executing the empirical pilot.
+The current candidate also carries reviewed remediation for the P-35 test-contract boundary and the TLA+ v1.8.0 release digest. Fresh candidate-bound artifacts are retained by GitHub Actions.
+
+Deployment-bound runtime evidence remains a separate prerequisite. The experimental control state therefore remains **PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0** until the remaining candidate-bound runtime, evidence, scientific-binding, freeze, and authorization predicates are satisfied.
 
 ---
 
@@ -118,8 +122,10 @@ The project is intentionally finishing its apparatus and governance controls bef
 
 ## Contact / Professional Direction
 
-My current professional focus is **AI systems design, orchestration, evaluation, prompt engineering, and governance**, with particular interest in entry-level and growth-oriented roles involving AI evaluation, model quality, prompt systems, agentic workflows, and trustworthy AI infrastructure.
+My current professional focus is **AI systems design, AI orchestration, evaluation, prompt engineering, governance, and trustworthy AI infrastructure**, with particular interest in roles involving AI evaluation, model quality, prompt systems, agentic workflows, QA, reproducible experimentation, and governance-aware AI engineering.
+
+I am especially interested in work where careful evaluation, evidence quality, provenance, and system-level reasoning matter as much as producing a working prototype.
 
 ---
 
-*Public profile last reconciled: 2026-08-29. Project status is maintained in the DGAF repository's authoritative state documentation; this profile is a public representation, not the experimental source of truth.*
+*Public profile last reconciled: 2026-09-02. Project status is maintained in the DGAF repository's authoritative state documentation; this profile is a public representation, not the experimental source of truth.*
