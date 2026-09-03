@@ -1,6 +1,8 @@
 # Cross-Account Bridge: Flickerflash ↔ ndrorchestration
-**Version:** 1.0 | **Date:** 2026-07-02 | **Maintainer:** ndrorchestration  
+**Version:** 1.1 | **Date:** 2026-09-03 | **Maintainer:** ndrorchestration  
 **Status:** ACTIVE — routing tables and risk register live; full migration log pending owner audit
+
+> **Epistemic boundary:** This is an operational inventory and routing record. Repository status labels describe portfolio intent, not external certification or empirical validation.
 
 ---
 
@@ -21,7 +23,7 @@
 
 | Repo | Domain | Status | Notes |
 |---|---|---|---|
-| [ai-governance-frameworks](https://github.com/Flickerflash/ai-governance-frameworks) | FG | ACTIVE | Public — NIST RMF, ISO 42001, Paul-Elder |
+| [ai-governance-frameworks](https://github.com/Flickerflash/ai-governance-frameworks) | FG | ARCHIVE | Public — NIST RMF, ISO 42001, Paul-Elder |
 | [ai-prompt-engineering-portfolio](https://github.com/Flickerflash/ai-prompt-engineering-portfolio) | PE | ARCHIVE | Public — Agent Lavender micro-benchmark, Gold Star |
 | [prompt-optimization-library](https://github.com/Flickerflash/prompt-optimization-library) | PE | ARCHIVE | Public — optimization frameworks |
 | [gold-star-qa-framework](https://github.com/Flickerflash/gold-star-qa-framework) | PE | ARCHIVE | Public — S-Tier certification standards |
@@ -37,7 +39,7 @@
 | [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | FG | ACTIVE | Core governance — NDR P-01–P-42, AXIS, Phi-Calculus |
 | [ai-governance-frameworks](https://github.com/ndrorchestration/ai-governance-frameworks) | FG | ACTIVE | NIST RMF, ISO 42001, Index 11 |
 | [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | RT | ACTIVE | Phi-driven multi-agent drift simulation |
-| [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | CP | ACTIVE | DGAF-certified 3-layer benchmark |
+| [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | CP | ACTIVE | Experimental 3-layer evaluator; known-answer fixture and harness infrastructure |
 | [junior-apogee-app](https://github.com/ndrorchestration/junior-apogee-app) | PE | ACTIVE | OWASP Agentic Top 10 eval platform |
 | [sentinel-governance](https://github.com/ndrorchestration/sentinel-governance) | FG | ACTIVE | CI/CD governance sweeps |
 | [Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) | RT | ACTIVE | Schizophonic Studio substrate |
@@ -83,5 +85,4 @@
 
 ---
 
-*v1.0 promoted: 2026-07-02 by Amethyst × COLLEEN | ndrorchestration*  
-*Stub → v1.0: routing tables, risk register, and migration log scaffold live; full Flickerflash audit deferred to owner*
+*v1.1 synchronized: 2026-09-03 by ndrorchestration | historical certification wording retained only as repository-history descriptions*
