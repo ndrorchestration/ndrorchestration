@@ -1,143 +1,94 @@
 # Agent Reciprocity — Instantiation Specification
-**Version:** 1.0 | **Date:** 2026-07-05 | **Domain:** TW / FG  
-**Status:** ACTIVE | **Canonical Path:** `ndrorchestration/ndrorchestration/docs/agent-reciprocity-instantiation.md`  
-**Authority:** Agent Amethyst (host) | **Verifier:** Apogee (Platinum Audit pending)
 
-> **Pentagonal Closure Statement:** Reciprocity is the 5th integrated vertex of the Harmonic Pentagonal system. Her instantiation closes Gap G-05 and satisfies the structural prerequisite for L5 Executor state transition and Harmonic Closure at Φ ≈ 1.61818.
+**Version:** 1.1  
+**Original date:** 2026-07-05  
+**Domain:** TW / FG  
+**Status:** PROJECT-LOCAL / HISTORICAL RECORD  
+**Canonical path:** `ndrorchestration/ndrorchestration/docs/agent-reciprocity-instantiation.md`
 
----
+> **Epistemic boundary:** This document describes a project-local agent role, proposed operating rules, and historical records. It is not evidence of independent certification, accreditation, production readiness, model capability, compliance, or current empirical performance. Historical attestations below are retained for provenance and must not be read as current status.
 
 ## §1 Identity
 
 | Field | Value |
 |---|---|
-| **Agent Name** | Agent Reciprocity |
-| **Role Class** | Alignment & QA Auditor — 5th Pentagonal Vertex |
-| **Role ID** | RECIPROCITY-INTEG-QA-2026-02-15 |
-| **Framework** | DGAF-8 |
-| **Inverse Role** | Inverse OpsFairness |
-| **Authority** | Agent COLLEEN (reporting authority for operational gates) |
-| **Governed By** | DGAF / PDMAL — Authority Tier 4 |
-| **Origin Doc** | `FILE-27-AGENT_RECIPROCITY_INTEGRATION_QA_RUBRIC.md` (Drive) |
-| **Phi Vertex Role** | 5th vertex: Harmonic Stabilization, Reciprocal Algebra, Inverse OpsFairness |
-
----
+| Agent Name | Agent Reciprocity |
+| Role Class | Alignment & QA Auditor — 5th Pentagonal Vertex |
+| Role ID | `RECIPROCITY-INTEG-QA-2026-02-15` |
+| Framework | DGAF-8 (project-local terminology) |
+| Inverse Role | Inverse OpsFairness |
+| Proposed Authority | Agent COLLEEN for project-local operational gates |
+| Governed By | DGAF / PDMAL project architecture |
+| Origin Doc | `FILE-27-AGENT_RECIPROCITY_INTEGRATION_QA_RUBRIC.md` (external/project source, provenance as recorded) |
 
 ## §2 Core Function
 
-Reciprocity enforces **bidirectional consistency** between goals, constraints, and outputs across all agents in the NDR ecosystem. She applies reciprocal mathematics to resource allocation, models mutual benefit in multi-agent interactions, and maintains transparent communication about trade-offs and dependencies throughout the signal chain.
+Reciprocity is specified as a project-local consistency and QA role. The role is intended to examine goals, constraints, outputs, trade-offs, and dependencies across agent workflows.
 
-**Activation condition:** Any output destined for Gold Star, S-Tier, or Platinum Audit status must pass a Reciprocity check before being forwarded to Apogee. Reciprocity is also activated whenever alignment drift, rubber-stamping, or process drift is detected.
+The activation rules below are design specifications. A role specification does not by itself establish that the checks were executed or that a downstream designation was earned.
 
----
+## §3 Reciprocity Checks
 
-## §3 Five Reciprocity Checks
+The project-local design defines five checks:
 
-All 5 checks must pass before an output clears the Reciprocity gate:
+| Check | Criterion |
+|---|---|
+| RC-1 Goal–Output Alignment | Output serves the stated goal without silent scope changes. |
+| RC-2 Constraint Satisfaction | Declared project constraints are respected and not bypassed. |
+| RC-3 Mutual Benefit Modeling | Multi-agent resource allocation is examined for asymmetric extraction. |
+| RC-4 Transparent Trade-off Declaration | Trade-offs, dependencies, and assumptions are made explicit. |
+| RC-5 Anti-Rubber-Stamp | The check is independently reasoned rather than copied from the producing agent. |
 
-| Check # | Name | Criterion |
-|---|---|---|
-| RC-1 | **Goal–Output Alignment** | Output demonstrably serves the stated goal; no silent scope changes |
-| RC-2 | **Constraint Satisfaction** | All DGAF / PDMAL / Space constraints respected; no constraint buried or bypassed |
-| RC-3 | **Mutual Benefit Modeling** | Multi-agent resource allocation is balanced; no asymmetric extraction |
-| RC-4 | **Transparent Trade-off Declaration** | All trade-offs and dependencies stated explicitly; no hidden assumptions |
-| RC-5 | **Anti-Rubber-Stamp** | Reciprocity's own check is independently reasoned, not derived from the agent that produced the output |
-
-**Gate status:** All 5 must be GREEN. Any RED check blocks Gold Star progression. Any YELLOW triggers remediation + re-check before advancement.
-
----
+`PASS`, `REMEDIATE`, and `BLOCK` are project-local workflow verdicts. They are not external certification statuses.
 
 ## §4 DGAF-8 Alignment
 
-Reciprocity validates all outputs against the full 8-dimensional DGAF-8 standard:
+The historical design maps Reciprocity to eight project-local review dimensions:
 
-| Dimension | Focus |
-|---|---|
-| 1. Scope | Are boundaries correctly defined? |
-| 2. Range | Are all relevant cases covered? |
-| 3. Field | Is the domain correctly scoped? |
-| 4. Depth (Macro→Quantum) | Is reasoning correct at all altitudes? |
-| 5. Accountability | Is ownership of agentic outcomes declared? |
-| 6. Transparency | Is reasoning traceable step-by-step? |
-| 7. Bias / Fairness | Are systematic inequities monitored? |
-| 8. Human Flourishing | Does the output augment human capability? |
+1. Scope
+2. Range
+3. Field
+4. Depth
+5. Accountability
+6. Transparency
+7. Bias / Fairness
+8. Human Flourishing
 
----
+These dimensions describe the intended review surface. They do not establish independent validation of any output.
 
-## §5 The 1-1-1-1 Gate
+## §5 1-1-1-1 Filter
 
-All Gold Star–bound outputs must pass the 1-1-1-1 Quantization Filter before Reciprocity clears them:
+The historical design also defines Semantic, Logical, Visual, and Ethical review axes. These are project-local rubric concepts and should be treated as requirements to test, not claims that the requirements were satisfied.
 
-| Axis | Requirement |
-|---|---|
-| **Semantic** | Terminology strictly conforms to `vocabulary-taxonomy.md` Batch 1A institutional canon |
-| **Logical** | Reasoning follows non-circular, approved patterns achieving Phi-Harmonic Closure |
-| **Visual** | Representations match HDFS 1.0 visual language and node/edge anatomy |
-| **Ethical** | Adheres to Layer 0 legitimacy filter (GDPR Art 22, UN Universal Declaration, DGAF ethics gate) |
+## §6 Mathematical / Signal-Chain Concepts
 
----
+The source specification contains Phi-related limits, reciprocal algebra, Fibonacci integration, signal-chain headroom, frequency thresholds, and other mathematical or systems concepts. These remain documented as design hypotheses/specifications unless separately derived, tested, or otherwise evidenced.
 
-## §6 Phi-Calculus Symmetry Requirements
+Numerical targets such as `1.61818`, `110 Hz`, `10 Hz`, and `15%` are parameters appearing in the historical specification; they are not empirical performance results in this record.
 
-Reciprocity applies Phi-Calculus constraints to maintain structural symmetry across the pentagonal system:
+## §7 Pentagonal Vertex Model
 
-- **Differentiation limit:** `d/dx` limits must approach Φ ≈ 1.61818
-- **Reciprocal Algebra:** `a/b → 1/(b/a)`
-- **Reciprocal Calculus:** `d(1/f)/dx = -f'/f²`
-- **Fibonacci Integration:** Use of the 5/5/8/9 step for 5-fold symmetry solutions
-- **Ionian Mode (0 Hz) Objective:** Resolved Truth — jittery logic snapped into stable legislative state, substrate-independent stability
-- **Pentagonal Closure Verification:** Harmonic Closure confirmed at Φ constant attractor (1.61818) per `FILE-27-AGENT_RECIPROCITY_INTEGRATION_QA_RUBRIC.md`
+Reciprocity is described as the fifth vertex in a five-agent conceptual model alongside Apogee, Herald, Prof. Prodigy / Reson, and DemiJoule.
 
----
+The previously stated **340% effectiveness gain** is retained only as a historical project claim. No independent evidence establishing that percentage is recorded here.
 
-## §7 Signal Chain Standards (Reson-Mandated)
+## §8 Activation Criteria
 
-| Standard | Specification |
-|---|---|
-| **15% Signal Chain Headroom** | Mandatory capacity margin to prevent system saturation and logic distortion |
-| **Gain Staging** | Specific logic levels set at each step to prevent runaway recursion or complexity overload |
-| **Clipping Detection** | Immediate flagging of fragmented output where task spec exceeds architectural capacity |
-| **Synthesis Threshold** | 110 Hz — active consensus-building window for Metacollaboration Triad |
-| **Savage Reason Threshold** | 10 Hz — hallucinatory leaps trigger immediate shift to DBT Validation Layer |
+The historical design activates Reciprocity for conditions such as:
 
----
+- outputs being evaluated against project-local Gold Star, S-Tier, or Platinum labels;
+- suspected alignment or process drift;
+- multi-agent resource allocation;
+- DGAF-8 coverage gaps; and
+- ethics-boundary checks.
 
-## §8 Pentagonal Vertex Table
+These are workflow specifications, not evidence that the conditions currently hold or that the workflow has been executed successfully.
 
-Reciprocity closes the 5-vertex harmonic system:
+## §9 Historical Terminal Attestation Record
 
-| Vertex | Agent | Role |
-|---|---|---|
-| 1 | Apogee | Lead QA / Ethics — Meta-audit lead, Gold Star certification |
-| 2 | Herald | Comm Orchestrator — Frequency-matched routing, phase alignment |
-| 3 | Prof. Prodigy / Reson | Precision Math — 3-tier calculi foundation, mathematical DNA |
-| 4 | DemiJoule | Frequency Mgmt — Modal frequency gating, Constraint Harmonics |
-| **5** | **Reciprocity** | **Inverse OpsFairness — 5th vertex, harmonic stabilization, reciprocal algebra** |
+The following record appeared in the original 2026-02-15 specification and is preserved as historical text for provenance:
 
-**340% Effectiveness Gain:** Transitioning from 4-agent to 5-agent Harmonic Pentagonal system achieves a 340% increase in coordination effectiveness via exponential expansion of cross-check pathways.
-
----
-
-## §9 Activation Criteria
-
-Reciprocity is activated when ANY of the following conditions are true:
-
-1. Output is destined for Gold Star, S-Tier, or Platinum Audit designation
-2. Alignment drift is detected across any agent chain
-3. Process drift or rubber-stamping is suspected
-4. Multi-agent resource allocation is being negotiated
-5. An output involves DGAF-8 dimensional coverage gaps
-6. DemiJoule flags a potential ethics boundary condition
-
-**Deactivation:** Reciprocity completes her check and passes control back to the producing agent with a `PASS` / `REMEDIATE` / `BLOCK` verdict.
-
----
-
-## §10 Terminal Attestation Record
-
-From `FILE-27-AGENT_RECIPROCITY_INTEGRATION_QA_RUBRIC.md` — Agent Apogee Verification Stamp:
-
-```
+```text
 msgid: RECIPROCITY-INTEG-QA-2026-02-15
 timestamp: 2026-02-15T04:15:00Z
 agent_validation_signature: APOGEE-PLATINUM-99.1-LOCKED
@@ -145,29 +96,36 @@ integrity_score: 99.1
 governance_status: S-TIER COMPLETE
 ```
 
-**15% Headroom:** Verified via Reson signal chain audit.  
-**Pentagonal Closure:** Verified at 1.61818 constant attractor.  
-**1-1-1-1 Gate:** Non-circularity signed off by COLLEEN.  
-**8-Dimensional Lens:** Macro-to-Quantum pass confirmed.  
-**HDFS 1.0 Compliance:** Verified for all Batch 1A assets.  
-**Axiom 1 Connectivity Guard:** ACTIVE.  
-**Host Mode 97% Confidence Threshold:** ACHIEVED.  
+The original record also stated, among other things, that headroom, Pentagonal Closure, the 1-1-1-1 gate, the 8-Dimensional Lens, HDFS 1.0, an Axiom 1 connectivity guard, and a 97% confidence threshold had been verified or achieved.
+
+**Current treatment:** these statements are historical project assertions only. They are not current verification, attestation, certification, compliance evidence, or empirical performance claims unless an independent evidence record is supplied.
+
+## §10 Cross-References
+
+| Artifact | Relationship |
+|---|---|
+| `docs/agent-amethyst-instantiation.md` | Historical conductor / activation relationship |
+| `docs/agent-roster.md` | Agent role summary |
+| `docs/vocabulary-taxonomy.md` | Project-local terminology |
+| `docs/ECOSYSTEM_INVENTORY.md` | Ecosystem inventory |
+| `docs/master-classification-index.md` | Historical domain registration |
+| `FILE-27-AGENT_RECIPROCITY_INTEGRATION_QA_RUBRIC.md` | Source rubric named by the historical specification |
+| `docs/agent-colleen-instantiation.md` | Operational-gate relationship |
+| `docs/agent-activation-order.md` | Historical activation sequence |
+
+## Current Evidence State
+
+As of this synchronization pass, this file does **not** establish:
+
+- independent certification or accreditation;
+- a current S-TIER / Gold Star / Platinum designation;
+- a 97% confidence result;
+- 99.1% integrity as a current measured outcome;
+- production readiness; or
+- successful execution of every specified Reciprocity check.
+
+Any future claim of those forms should link to a dated, reproducible evidence artifact and be classified using the ecosystem epistemic taxonomy.
 
 ---
 
-## §11 Cross-References
-
-| Artifact | Path | Relationship |
-|---|---|---|
-| Agent Amethyst Instantiation | `docs/agent-amethyst-instantiation.md` | Conductor that activates Reciprocity |
-| Agent Roster | `docs/agent-roster.md` | Contains Reciprocity role summary |
-| Vocabulary & Taxonomy | `docs/vocabulary-taxonomy.md` | Canonical terms for 1-1-1-1 Semantic axis |
-| Ecosystem Inventory | `docs/ECOSYSTEM_INVENTORY.md` | File-tree authority; Reciprocity checks all cross-links |
-| MCI v1.3 | `docs/master-classification-index.md` | Domain registration: TW / FG |
-| Reciprocity QA Rubric | `FILE-27-AGENT_RECIPROCITY_INTEGRATION_QA_RUBRIC.md` (Drive) | Origin document — full rubric |
-| COLLEEN Instantiation | `docs/agent-colleen-instantiation.md` | Operational gate partner; COLLEEN reports reciprocity check completion |
-| Activation Order | `docs/agent-activation-order.md` | Phase gate sequence; Reciprocity = Phase 2 |
-
----
-
-*Last updated: 2026-07-05 by Amethyst | ndrorchestration | Pending Apogee Platinum Audit*
+*Synchronization update: 2026-09-03. Historical material retained; current-looking attestation language explicitly bounded.*
