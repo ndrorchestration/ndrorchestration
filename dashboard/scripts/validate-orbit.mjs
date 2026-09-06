@@ -23,7 +23,7 @@ if (!config.includes('ORBIT_REPOSITORY') || !config.includes('ORBIT_BRANCH')) th
 if (!config.includes('githubTimeoutMs: 5000')) throw new Error('ORBIT GitHub timeout configuration missing');
 
 if (packageJson.engines?.node !== '>=24.0.0') throw new Error('ORBIT requires Node >=24.0.0');
-if (packageJson.dependencies?.next !== '14.2.35') throw new Error('ORBIT must remain on patched Next.js 14.2.35');
+if (packageJson.dependencies?.next !== '15.5.21') throw new Error('ORBIT must remain on the reviewed Next.js 15.5.21 security baseline');
 if (!api.includes('orbitConfig.githubTimeoutMs')) throw new Error('ORBIT live GitHub calls must use configured timeout');
 if (!api.includes("req.method !== 'GET'")) throw new Error('ORBIT API must be GET-only');
 if (!api.includes("Cache-Control', 'no-store")) throw new Error('ORBIT API must disable caching');
