@@ -55,16 +55,17 @@ The project deliberately records unresolved conditions rather than converting im
 
 ## Selected Projects
 
-| Project | Focus |
-|---|---|
-| [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | AI governance, orchestration, evaluation, provenance, and control-plane research |
-| [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) | Integrated orchestration, drift detection, evaluation, and portfolio-facing AI systems work |
-| [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Drift detection and evaluation |
-| [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | Evaluation protocols and artifacts |
-| [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) | Reference control-plane architecture |
-| [Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) | Acoustic / spatial intelligence |
-| [Meshsense](https://github.com/ndrorchestration/Meshsense) | Runtime and deployment observation |
-| [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | Prompt engineering portfolio |
+| Project | What it demonstrates | Current evidence boundary |
+|---|---|---|
+| [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | Governed multi-agent orchestration, provenance, evidence gates, confidential-execution research | Engineering/verification apparatus active; experiment remains PRE-FREEZE, NOT AUTHORIZED, N=0 |
+| [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) | Observable multi-agent workflow, provider boundaries, web retrieval, claim→source provenance, portable run artifacts | Deterministic and contract tests pass; live hosted execution and public showcase deployment remain open gates |
+| [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Drift instrumentation, failure-aware evaluation, reproducible synthetic benchmark apparatus | Implementation and synthetic benchmark verified; real-world calibration/efficacy not established |
+| [Morse-Orchestration](https://github.com/ndrorchestration/Morse-Orchestration) | Phase-preserving orchestration research, seeded synthetic experiments, paired analysis | Synthetic research apparatus verified; model/production efficacy not established |
+| [sentinel-governance](https://github.com/ndrorchestration/sentinel-governance) | Fail-closed repository repair governance and mutation validation | Operator/validation checks pass; autonomous semantic correctness is not established |
+| [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | Executable evaluation harness, known-answer controls, deterministic reproduction | Harness CI/reproducibility verified; not a model-performance certification |
+| [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) | Minimal control-plane kernel, capability dispatch, rejection provenance, portable manifests | Local kernel behavior tested; distributed/production controls remain outside current scope |
+| [Meshsense](https://github.com/ndrorchestration/Meshsense) | Exact source→deployment→runtime provenance and observable runtime state | Deployment identity verified; physical sensing efficacy remains separate/unverified |
+| [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | Prompt/evaluation specifications and recruiter-readable prompt engineering artifacts | Specifications are not presented as an executable evaluator; executable evaluation lives in ResumeApex |
 
 ---
 
@@ -73,39 +74,42 @@ The project deliberately records unresolved conditions rather than converting im
 ```text
 NDR AI Systems
 ├── Orchestration
-│   ├── DGAF
-│   ├── PDMAL
+│   ├── DGAF / PDMAL
 │   ├── Orbit-Driftwatch
+│   ├── Morse-Orchestration
 │   └── Agent Control Plane
 │
 ├── Evaluation
 │   ├── Driftwatch
 │   ├── ResumeApex
-│   └── QA / benchmark systems
+│   └── Prompt-system evaluation specifications
 │
 ├── Governance
-│   ├── Evidence
-│   ├── Provenance
-│   ├── Semantic controls
+│   ├── Sentinel Governance
+│   ├── Evidence / provenance controls
+│   ├── Semantic boundaries
 │   └── Runtime / deployment verification
 │
-└── Spatial AI
-    ├── ASIS
-    ├── Acoustic-Mesh
-    └── MeshSense
+└── Spatial / Experimental Interfaces
+    ├── ASIS / Acoustic-Mesh
+    ├── MeshSense
+    └── Phi-Calculus
 ```
 
 ---
 
 ## Current Engineering Snapshot — 2026-09-06
 
-The current DGAF engineering line is focused on connecting previously tested controls into one trustworthy execution lifecycle: **reservation → authorization → authorization consumption → pre-execution attestation → in-process key generation → blinded output/manifest → post-execution attestation → lineage verification**.
+The portfolio now contains several executable verification surfaces rather than architecture documents alone:
 
-Current development has demonstrated authenticated attestation-verification logic and synthetic end-to-end lifecycle execution with crash/retry coverage under exact-head CI. That work remains **development-stage and unmerged where still under review**; it is not presented as independent security validation, confidential-compute admission, experimental authorization, or empirical evidence.
+- DGAF has a broad exact-head CI/governance surface while preserving **PRE-FREEZE / NOT AUTHORIZED / N=0**.
+- Orbit-Driftwatch has deterministic orchestration, a server-backed provider boundary, source-bound web retrieval, explicit unsupported/conflicting-claim handling, and portable run artifacts; live hosted execution and public deployment are still open.
+- Driftwatch has a hardened build/dependency lane plus a retained synthetic detector benchmark, without promoting that synthetic result to real-world efficacy.
+- Morse-Orchestration has a validated seeded synthetic harness and paired research methodology.
+- Sentinel Governance has a fail-closed repair-mutation boundary and current dependency/validation checks.
+- ResumeApex has an executable deterministic evaluation harness with known-answer controls and a green current-main verification workflow.
 
-The remaining promotion boundary includes independent security review, independently retained authorization/consumption evidence, reviewed confidential-workload configuration, real authenticated confidential-environment admission, and independent re-verification of resulting attestation evidence.
-
-The experimental control state therefore remains **PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0**. No empirical efficacy claim is made.
+The highest-value remaining work is increasingly **integration and external validation rather than basic implementation**: public Orbit deployment, a real provenance-retained hosted Orbit run, DGAF candidate/freeze/authorization progression, representative real-world Driftwatch calibration data, and independently reviewed evidence at the gates that require it.
 
 ---
 
@@ -129,4 +133,4 @@ I am especially interested in work where careful evaluation, evidence quality, p
 
 ---
 
-*Public profile last reconciled: 2026-09-06. Project status is maintained in the DGAF repository's authoritative state documentation; this profile is a public representation, not the experimental source of truth.*
+*Public profile last reconciled: 2026-09-06. Project status is maintained in each repository's authoritative evidence and governance records; this profile is a public representation, not an experimental source of truth.*
