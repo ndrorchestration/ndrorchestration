@@ -14,9 +14,9 @@ My primary body of work is **DGAF (Dynamic Governance Agentic Formation)**, an e
 
 DGAF combines agent orchestration, governance gates, evidence handling, provenance, semantic controls, evaluation, and deployment safeguards into a governed control-plane architecture.
 
-Recent work includes a **governed recursive control-plane** with bounded recursion, immutable governance envelopes, exact state identity and cycle detection, append-oriented provenance, explicit proposal/authorization/commit barriers, capability-boundary tests, hardened TGL lifecycle semantics, audit sealing, exact-head CI checks, source-SHA attestation, and candidate-bound evidence reconciliation.
+Recent engineering work includes a **governed recursive control-plane** with bounded recursion, immutable governance envelopes, exact state identity and cycle detection, append-oriented provenance, explicit proposal/authorization/commit barriers, capability-boundary tests, hardened lifecycle semantics, audit sealing, exact-head CI checks, source-SHA attestation, and candidate-bound evidence reconciliation.
 
-The September 2026 engineering cycle also hardened the **P-35 premise-gate boundary**, reconciled mandatory checker propagation through adapter/task paths, corrected a strict TLA+ toolchain release digest, and brought the current candidate through a broad exact-head verification wave covering governance, security, truth-layer, provenance, documentation, and pre-freeze controls.
+The current engineering cycle is extending that foundation into a **fail-closed confidential-execution path** for blinded experimental work. This work covers authenticated attestation verification, explicit pre-execution authorization consumption, in-process key generation, blinded output/manifest binding, post-execution attestation, crash/retry controls, and end-to-end lineage verification. These controls are being developed and tested before any empirical experiment is authorized.
 
 ### PDMAL — Phi-Driven Multi-Agent Lattice
 
@@ -58,12 +58,12 @@ The project deliberately records unresolved conditions rather than converting im
 | Project | Focus |
 |---|---|
 | [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | AI governance, orchestration, evaluation, provenance, and control-plane research |
+| [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) | Integrated orchestration, drift detection, evaluation, and portfolio-facing AI systems work |
 | [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Drift detection and evaluation |
 | [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | Evaluation protocols and artifacts |
 | [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) | Reference control-plane architecture |
 | [Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) | Acoustic / spatial intelligence |
 | [Meshsense](https://github.com/ndrorchestration/Meshsense) | Runtime and deployment observation |
-| [aoga-dashboard](https://github.com/ndrorchestration/aoga-dashboard) | AI governance dashboard / API work |
 | [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | Prompt engineering portfolio |
 
 ---
@@ -75,6 +75,7 @@ NDR AI Systems
 ├── Orchestration
 │   ├── DGAF
 │   ├── PDMAL
+│   ├── Orbit-Driftwatch
 │   └── Agent Control Plane
 │
 ├── Evaluation
@@ -96,15 +97,15 @@ NDR AI Systems
 
 ---
 
-## Current Engineering Snapshot — 2026-09-02
+## Current Engineering Snapshot — 2026-09-06
 
-The current DGAF integration candidate is **PR #192 / `58ba9a072f40e94638b0332eeec19dd882a7ff95`**. It remains a draft, non-authorizing engineering lane.
+The current DGAF engineering line is focused on connecting previously tested controls into one trustworthy execution lifecycle: **reservation → authorization → authorization consumption → pre-execution attestation → in-process key generation → blinded output/manifest → post-execution attestation → lineage verification**.
 
-The current candidate has completed a broad exact-head verification wave: Governance CI, PDMAL Pre-Freeze Runner Validation, PDMAL Pre-Authorization Security, truth-layer validation, regression coverage, provenance/evidence checks, PDMAL harness and instrumentation validation, control-state checks, documentation/claim/IP hygiene, and related deterministic verification all passed.
+Current development has demonstrated authenticated attestation-verification logic and synthetic end-to-end lifecycle execution with crash/retry coverage under exact-head CI. That work remains **development-stage and unmerged where still under review**; it is not presented as independent security validation, confidential-compute admission, experimental authorization, or empirical evidence.
 
-The current candidate also carries reviewed remediation for the P-35 test-contract boundary and the TLA+ v1.8.0 release digest. Fresh candidate-bound artifacts are retained by GitHub Actions.
+The remaining promotion boundary includes independent security review, independently retained authorization/consumption evidence, reviewed confidential-workload configuration, real authenticated confidential-environment admission, and independent re-verification of resulting attestation evidence.
 
-Deployment-bound runtime evidence remains a separate prerequisite. The experimental control state therefore remains **PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0** until the remaining candidate-bound runtime, evidence, scientific-binding, freeze, and authorization predicates are satisfied.
+The experimental control state therefore remains **PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0**. No empirical efficacy claim is made.
 
 ---
 
@@ -128,4 +129,4 @@ I am especially interested in work where careful evaluation, evidence quality, p
 
 ---
 
-*Public profile last reconciled: 2026-09-02. Project status is maintained in the DGAF repository's authoritative state documentation; this profile is a public representation, not the experimental source of truth.*
+*Public profile last reconciled: 2026-09-06. Project status is maintained in the DGAF repository's authoritative state documentation; this profile is a public representation, not the experimental source of truth.*
