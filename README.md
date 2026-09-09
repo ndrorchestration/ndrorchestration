@@ -22,7 +22,7 @@ The current engineering cycle is extending that foundation into a **fail-closed 
 
 PDMAL is the associated experimental research track. It is designed around deterministic execution, topology generation, blinded comparisons, artifact schemas, provenance, reproducibility, and pre-specified statistical analysis.
 
-**Current experimental state: PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0.** The engineering and verification infrastructure is substantially developed, but empirical efficacy has not been established. Passing CI, synthetic/dry-run evidence, deployment readiness, or historical verification is not treated as experimental efficacy.
+**Current experimental state:** Epoch 001 is retained historical blinded collection evidence (50 paired seed units / 2,250 observations) whose protected mapping is cryptographically unrecoverable; its primary analysis is therefore **UNANALYZABLE / NOT RUN**. The prospective successor Track A is **PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0**. Canonical DGAF/PDMAL efficacy is **NOT ESTABLISHED**. Passing CI, synthetic/dry-run evidence, deployment readiness, or historical verification is not treated as experimental efficacy.
 
 ---
 
@@ -57,7 +57,7 @@ The project deliberately records unresolved conditions rather than converting im
 
 | Project | What it demonstrates | Current evidence boundary |
 |---|---|---|
-| [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | Governed multi-agent orchestration, provenance, evidence gates, confidential-execution research | Engineering/verification apparatus active; experiment remains PRE-FREEZE, NOT AUTHORIZED, N=0 |
+| [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | Governed multi-agent orchestration, provenance, evidence gates, confidential-execution research | Epoch 001 retained but primary analysis unanalyzable; successor experiment remains PRE-FREEZE, NOT AUTHORIZED, N=0; efficacy not established |
 | [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) | Observable multi-agent workflow, provider boundaries, web retrieval, claim→source provenance, portable run artifacts | Deterministic and contract tests pass; live hosted execution and public showcase deployment remain open gates |
 | [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Drift instrumentation, failure-aware evaluation, reproducible synthetic benchmark apparatus | Implementation and synthetic benchmark verified; real-world calibration/efficacy not established |
 | [Morse-Orchestration](https://github.com/ndrorchestration/Morse-Orchestration) | Phase-preserving orchestration research, seeded synthetic experiments, paired analysis | Synthetic research apparatus verified; model/production efficacy not established |
@@ -102,7 +102,7 @@ NDR AI Systems
 
 The portfolio now contains several executable verification surfaces rather than architecture documents alone:
 
-- DGAF has a broad exact-head CI/governance surface while preserving **PRE-FREEZE / NOT AUTHORIZED / N=0**.
+- DGAF has a broad exact-head CI/governance surface. Epoch 001 is historical retained collection evidence whose primary analysis is unanalyzable; the successor track remains **PRE-FREEZE / NOT AUTHORIZED / N=0** and efficacy is not established.
 - Orbit-Driftwatch has deterministic orchestration, a server-backed provider boundary, source-bound web retrieval, explicit unsupported/conflicting-claim handling, and portable run artifacts; live hosted execution and public deployment are still open.
 - Driftwatch has a hardened build/dependency lane plus a retained synthetic detector benchmark, without promoting that synthetic result to real-world efficacy.
 - Morse-Orchestration has a validated seeded synthetic harness and paired research methodology.
@@ -133,4 +133,4 @@ I am especially interested in work where careful evaluation, evidence quality, p
 
 ---
 
-*Public profile last reconciled: 2026-09-06. Project status is maintained in each repository's authoritative evidence and governance records; this profile is a public representation, not an experimental source of truth.*
+*Public profile last reconciled: 2026-09-09. Project status is maintained in each repository's authoritative evidence and governance records; this profile is a public representation, not an experimental source of truth.*
