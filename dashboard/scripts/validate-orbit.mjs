@@ -32,7 +32,10 @@ if (!api.includes('readinessStateFor(gates)')) throw new Error('ORBIT API observ
 if (!api.includes("return 'BLOCKED'") || !api.includes("return 'ATTENTION'") || !api.includes("return 'CLEAR'")) {
   throw new Error('ORBIT API categorical state contract is incomplete');
 }
-if (!api.includes('README contradiction')) throw new Error('ORBIT must fail closed on documentation contradiction');
+if (!api.includes('!declaredN0 || !declaredUnauthorized || !declaredFailClosed')) {
+  throw new Error('ORBIT must detect incomplete canonical governance declarations');
+}
+if (!api.includes("freeze.state = 'blocked'")) throw new Error('ORBIT documentation contradiction must fail closed');
 if (!api.includes('orbitConfig.repository') || !api.includes('orbitConfig.branch')) throw new Error('ORBIT API must honor runtime repository configuration');
 if (!page.includes('overallState: payload.overallState')) throw new Error('ORBIT UI must render API-derived categorical observed state');
 if (!page.includes("live?.overallState || 'CHECKING'")) throw new Error('ORBIT UI observed-state display missing');
