@@ -1,60 +1,102 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
-import { orbitSnapshot as initialSnapshot, readinessScore, GateState } from '../data/orbit';
 
-const stateLabel: Record<GateState, string> = { verified: 'VERIFIED', ready: 'READY', blocked: 'BLOCKED', 'not-established': 'NOT ESTABLISHED', warning: 'WARNING' };
-const stateClass: Record<GateState, string> = { verified: 'ok', ready: 'ready', blocked: 'bad', 'not-established': 'muted', warning: 'warn' };
+const systems = [
+  {
+    name: 'DGAF',
+    type: 'Governance / multi-agent systems',
+    description: 'Dynamic Governance Agentic Formation separates capability, evidence, verification, authority, and permission to act in governed agentic systems.',
+    boundary: 'PRE-FREEZE · FAIL-CLOSED · NOT AUTHORIZED · empirical N = 0',
+    href: 'https://github.com/ndrorchestration/DGAF-Framework',
+  },
+  {
+    name: 'Intellectro',
+    type: 'Independent application',
+    description: 'A separate governed application program with its own runtime, data, and product boundaries.',
+    boundary: 'Independent project; DGAF patterns may inform it without transferring DGAF authority or evidence.',
+    href: 'https://intellectro.vercel.app/',
+  },
+  {
+    name: 'Driftwatch',
+    type: 'Evaluation / drift instrumentation',
+    description: 'Failure-aware evaluation and drift instrumentation with reproducible synthetic benchmark apparatus.',
+    boundary: 'Synthetic benchmark evidence does not establish real-world calibration or efficacy.',
+    href: 'https://driftwatch-gamma.vercel.app/',
+  },
+  {
+    name: 'AOGA Dashboard',
+    type: 'Operational surface',
+    description: 'A bounded operational dashboard for the AOGA project and its currently implemented runtime/data surfaces.',
+    boundary: 'Deployment state is not treated as proof of end-to-end efficacy or broader governance authority.',
+    href: 'https://aoga-dashboard.vercel.app/',
+  },
+];
 
-type Snapshot = typeof initialSnapshot;
-type LiveState = { sourceFreshness?: string; currentHead?: string; fetchedAt?: string; status?: string };
-
-function scoreFor(snapshot: Snapshot) {
-  const weights: Record<GateState, number> = { verified: 1, ready: 0.75, warning: 0.5, 'not-established': 0.25, blocked: 0 };
-  const total = snapshot.gates.reduce((sum, gate) => sum + weights[gate.state], 0);
-  return Math.round((total / snapshot.gates.length) * 100);
-}
-
-const Home: NextPage = () => {
-  const [snapshot, setSnapshot] = useState<Snapshot>(initialSnapshot);
-  const [live, setLive] = useState<LiveState | null>(null);
-  const [score, setScore] = useState(readinessScore());
-  const [refreshing, setRefreshing] = useState(false);
-
-  async function refresh() {
-    setRefreshing(true);
-    try {
-      const response = await fetch('/api/orbit', { cache: 'no-store' });
-      if (!response.ok) throw new Error(`ORBIT API ${response.status}`);
-      const payload = await response.json();
-      if (payload.snapshot) {
-        setSnapshot(payload.snapshot);
-        setScore(typeof payload.readiness === 'number' ? payload.readiness : scoreFor(payload.snapshot));
-      }
-      setLive({ sourceFreshness: payload.live?.sourceFreshness, currentHead: payload.live?.github?.currentHead, fetchedAt: payload.live?.fetchedAt, status: payload.live?.status });
-    } catch (error) {
-      setLive({ status: error instanceof Error ? error.message : 'UNAVAILABLE' });
-    } finally { setRefreshing(false); }
-  }
-
-  useEffect(() => { void refresh(); }, []);
-  const verified = snapshot.gates.filter(g => g.state === 'verified').length;
-  const blockers = snapshot.gates.filter(g => g.state === 'blocked').length;
-
-  return <>
-    <Head><title>ORBIT — Evidence & Readiness Command Center</title><meta name="description" content="Evidence-first readiness control plane for DGAF/PDMAL." /></Head>
+const Home: NextPage = () => (
+  <>
+    <Head>
+      <title>NDR AI Systems — Andrew Hensel</title>
+      <meta name="description" content="AI systems design, orchestration, evaluation, governance, provenance, and reproducible experimentation by Andrew Hensel." />
+    </Head>
     <main className="shell">
-      <header className="topbar"><div><span className="eyebrow">ORBIT / NDR ORCHESTRATION</span><h1>Evidence & Readiness Command Center</h1><p>One operational surface for what is true, what proves it, and what remains blocked.</p></div><div className="score"><strong>{score}%</strong><span>READINESS INDEX</span><button onClick={() => void refresh()} disabled={refreshing}>{refreshing ? 'REFRESHING' : 'REFRESH EVIDENCE'}</button></div></header>
-      <section className="state panel"><div><span className="label">CURRENT EPISTEMIC STATE</span><h2>{snapshot.epistemicState}</h2></div><div className="stop">EMPIRICAL EXECUTION STOPPED</div></section>
-      <section className="metrics"><div className="metric"><span>HEAD</span><b>{snapshot.head}</b><small>dashboard evidence snapshot</small></div><div className="metric"><span>LIVE SOURCE</span><b>{live?.currentHead?.slice(0, 8) || '—'}</b><small>{live?.sourceFreshness || live?.status || 'checking GitHub'}</small></div><div className="metric"><span>EMPIRICAL N</span><b>{snapshot.empiricalN}</b><small>efficacy not established</small></div><div className="metric"><span>BLOCKERS</span><b>{blockers}</b><small>authorization / execution gates</small></div></section>
-      <div className="grid">
-        <section className="panel"><div className="sectionHead"><div><span className="label">EVIDENCE GATES</span><h2>Governance matrix</h2></div><span className="tiny">{verified}/{snapshot.gates.length} verified</span></div><div className="gates">{snapshot.gates.map(g => <article className="gate" key={g.id}><div className={`dot ${stateClass[g.state]}`} /><div className="gateMain"><div><b>{g.id} · {g.name}</b><span className={`badge ${stateClass[g.state]}`}>{stateLabel[g.state]}</span></div><p>{g.detail}</p><small>{g.evidence}</small></div></article>)}</div></section>
-        <section className="panel"><div className="sectionHead"><div><span className="label">CLAIM INTEGRITY</span><h2>Propagation monitor</h2></div><span className="tiny">fail-closed</span></div>{snapshot.claims.map(c => <article className="claim" key={c.claim}><div className="claimTitle"><b>{c.claim}</b><span className={`badge ${c.status === 'warning' ? 'warn' : 'bad'}`}>{c.status.toUpperCase()}</span></div><div className="bar"><i style={{ width: `${c.occurrences ? (c.qualified / c.occurrences) * 100 : 0}%` }} /></div><p>{c.occurrences} occurrences · {c.qualified} qualified · {c.bare} bare</p></article>)}<div className="rule">Claims do not upgrade epistemic status. Evidence does.</div></section>
-      </div>
-      <section className="panel deployment"><div><span className="label">TRACE</span><h2>Immutable evidence boundary</h2><p>Historical evidence: <code>{snapshot.historicalEvidence}</code> · Deployment: <code>{snapshot.deployment}</code></p><p>Last live reconciliation: <code>{live?.fetchedAt || 'pending'}</code></p></div><a href="/api/orbit">JSON endpoint →</a></section>
-      <footer>ORBIT v0.1 · live GitHub reconciliation · snapshot-backed · DGAF/PDMAL pilot remains unauthorized</footer>
+      <header className="hero">
+        <span className="eyebrow">NDR AI SYSTEMS</span>
+        <h1>Andrew “Ndr / Ender” Hensel</h1>
+        <h2>AI Systems Designer · Orchestration · Evaluation · Governance</h2>
+        <p>I design and evaluate AI systems with an emphasis on multi-agent orchestration, prompt and evaluation methodology, provenance, governance, reproducible experimentation, and trustworthy deployment controls.</p>
+        <div className="actions">
+          <a className="primary" href="https://github.com/ndrorchestration">GitHub</a>
+          <a href="/orbit">Open ORBIT evidence observer</a>
+        </div>
+      </header>
+
+      <section className="principle">
+        <span>WORKING PRINCIPLE</span>
+        <strong>Build the apparatus before claiming the result.</strong>
+        <p>Implementation, testing, verification, deployment, authorization, and empirical efficacy are kept as distinct evidence states.</p>
+      </section>
+
+      <section>
+        <div className="sectionHead">
+          <div><span className="eyebrow">FEATURED SYSTEMS</span><h2>Current deployed and research surfaces</h2></div>
+          <p>Each project carries an explicit evidence boundary rather than inheriting claims from the rest of the ecosystem.</p>
+        </div>
+        <div className="cards">
+          {systems.map(system => (
+            <article className="card" key={system.name}>
+              <span className="type">{system.type}</span>
+              <h3>{system.name}</h3>
+              <p>{system.description}</p>
+              <div className="boundary"><b>Evidence boundary</b><span>{system.boundary}</span></div>
+              <a href={system.href}>View system →</a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="architecture">
+        <div><span className="eyebrow">PORTFOLIO ARCHITECTURE</span><h2>Research and engineering focus</h2></div>
+        <div className="lanes">
+          <div><b>Governance</b><span>DGAF · evidence gates · provenance · authorization boundaries</span></div>
+          <div><b>Orchestration</b><span>multi-agent formations · topology/choreography · control-plane design</span></div>
+          <div><b>Evaluation</b><span>Driftwatch · benchmark methodology · prompt/evaluator systems</span></div>
+          <div><b>Experimental interfaces</b><span>spatial, acoustic, topology, and geometric research tools</span></div>
+        </div>
+      </section>
+
+      <section className="observer">
+        <div>
+          <span className="eyebrow">EVIDENCE OBSERVABILITY</span>
+          <h2>ORBIT is deliberately subordinate.</h2>
+          <p>ORBIT is a read-only observer that reconciles evidence and surfaces blockers. It does not become a source of governance authority simply because it can display or reconcile state.</p>
+        </div>
+        <a href="/orbit">View ORBIT →</a>
+      </section>
+
+      <footer>Public portfolio surface · project-specific repositories and evidence records remain authoritative for their own state.</footer>
     </main>
-    <style jsx global>{`*{box-sizing:border-box}body{margin:0;background:#07090d;color:#e7eaf0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}.shell{max-width:1240px;margin:auto;padding:42px 28px 60px}.topbar{display:flex;justify-content:space-between;gap:30px;align-items:flex-start;border-bottom:1px solid #202630;padding-bottom:30px}.eyebrow,.label{font-size:11px;letter-spacing:.13em;color:#778091;font-weight:700}.topbar h1{font-size:30px;margin:8px 0}.topbar p,.panel p,.metric small{color:#8992a2}.score{text-align:right}.score strong{display:block;font-size:40px}.score span,.tiny{font-size:10px;color:#6f7887;letter-spacing:.1em}.score button{margin-top:10px;background:#151b24;border:1px solid #303947;color:#aeb8c7;border-radius:6px;padding:7px 10px;font-size:10px}.score button:disabled{opacity:.6}.panel{background:#0d1118;border:1px solid #202630;border-radius:12px;padding:22px}.state{margin:22px 0;display:flex;justify-content:space-between;align-items:center;gap:20px}.state h2{font-size:17px;font-weight:500;margin:9px 0 0}.stop{border:1px solid #6f3333;color:#ff8d8d;padding:9px 12px;border-radius:7px;font-size:10px;font-weight:800;letter-spacing:.08em;white-space:nowrap}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}.metric{background:#0d1118;border:1px solid #202630;border-radius:10px;padding:17px}.metric span{display:block;font-size:10px;color:#697382;font-weight:700;letter-spacing:.1em}.metric b{display:block;margin:9px 0 4px;font-size:18px;font-family:ui-monospace,monospace}.metric small{font-size:11px}.grid{display:grid;grid-template-columns:1.45fr 1fr;gap:22px}.sectionHead{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid #202630;padding-bottom:15px;margin-bottom:6px}.sectionHead h2,.deployment h2{font-size:18px;margin:7px 0 0}.gate{display:flex;gap:13px;padding:16px 4px;border-bottom:1px solid #1b2028}.dot{width:8px;height:8px;border-radius:50%;margin-top:7px;flex:none}.dot.ok{background:#54d69a}.dot.ready{background:#6ba8ff}.dot.bad{background:#ff6e72}.dot.warn{background:#e5b75c}.dot.muted{background:#657080}.gateMain{width:100%}.gateMain>div,.claimTitle{display:flex;justify-content:space-between;gap:10px;align-items:center}.gateMain p{font-size:12px;margin:7px 0}.gateMain small{font-size:10px;color:#667080}.badge{font-size:9px;border:1px solid;padding:3px 6px;border-radius:4px;font-weight:800;letter-spacing:.06em}.badge.ok{color:#65dca3;border-color:#275d45}.badge.ready{color:#76aeff;border-color:#294a77}.badge.bad{color:#ff8085;border-color:#71363a}.badge.warn{color:#e8bf68;border-color:#665225}.badge.muted{color:#8490a0;border-color:#39414d}.claim{padding:18px 0;border-bottom:1px solid #1b2028}.claimTitle{font-size:12px}.bar{height:5px;background:#202630;border-radius:10px;margin:15px 0 8px;overflow:hidden}.bar i{display:block;height:100%;background:#d2a94d}.claim p{font-size:11px;margin:0}.rule{margin-top:18px;padding:12px;background:#111720;border-left:2px solid #657080;font-size:11px;color:#aab2bf}.deployment{margin-top:22px;display:flex;justify-content:space-between;align-items:center}.deployment p{font-size:12px}.deployment a{color:#91b8ff;text-decoration:none;font-size:12px}.deployment code{font-family:ui-monospace,monospace;color:#c8d0dd}footer{text-align:center;color:#4d5663;font-size:10px;margin-top:30px}@media(max-width:800px){.topbar,.state,.deployment{flex-direction:column}.metrics,.grid{grid-template-columns:1fr}.score{text-align:left}}`}</style>
-  </>;
-};
+    <style jsx global>{`*{box-sizing:border-box}body{margin:0;background:#07090d;color:#edf0f5;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}.shell{max-width:1180px;margin:auto;padding:58px 28px 46px}.eyebrow,.type{font-size:11px;letter-spacing:.14em;font-weight:800;color:#7e8999}.hero{padding:32px 0 48px;border-bottom:1px solid #202630}.hero h1{font-size:48px;line-height:1.05;margin:12px 0 8px;letter-spacing:-.035em}.hero h2{font-size:18px;font-weight:500;color:#aeb7c5;margin:0 0 22px}.hero p{max-width:790px;font-size:17px;line-height:1.65;color:#929cab}.actions{display:flex;gap:10px;margin-top:28px}.actions a,.card a,.observer a{display:inline-block;color:#a9c8ff;text-decoration:none;border:1px solid #303947;border-radius:7px;padding:9px 12px;font-size:12px}.actions .primary{background:#e9edf4;color:#0a0d12;border-color:#e9edf4}.principle{margin:26px 0 52px;padding:22px;background:#0d1118;border:1px solid #202630;border-radius:12px}.principle>span{display:block;font-size:10px;letter-spacing:.13em;color:#768193;font-weight:800}.principle strong{display:block;font-size:19px;margin:8px 0}.principle p{margin:0;color:#8994a5}.sectionHead{display:flex;justify-content:space-between;gap:32px;align-items:end;margin-bottom:18px}.sectionHead h2,.architecture h2,.observer h2{margin:8px 0 0;font-size:25px}.sectionHead p{max-width:460px;color:#838e9f;font-size:13px;line-height:1.5}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card{background:#0d1118;border:1px solid #202630;border-radius:12px;padding:22px}.card h3{font-size:23px;margin:8px 0 10px}.card>p{color:#939dac;line-height:1.55;min-height:74px}.boundary{background:#101620;border-left:2px solid #687588;padding:12px;margin:18px 0}.boundary b{display:block;font-size:10px;letter-spacing:.1em;color:#798597;margin-bottom:6px}.boundary span{font-size:12px;line-height:1.45;color:#bcc5d1}.architecture{margin-top:58px;padding-top:30px;border-top:1px solid #202630}.lanes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}.lanes div{padding:17px;border:1px solid #1e2530;border-radius:9px}.lanes b{display:block;margin-bottom:6px}.lanes span{font-size:12px;color:#8490a0}.observer{margin-top:42px;background:#0d1118;border:1px solid #263141;border-radius:12px;padding:24px;display:flex;justify-content:space-between;gap:30px;align-items:center}.observer p{max-width:700px;color:#8d98a8;line-height:1.55}.observer a{white-space:nowrap}footer{text-align:center;color:#525c69;font-size:10px;margin-top:42px}@media(max-width:760px){.hero h1{font-size:36px}.cards,.lanes{grid-template-columns:1fr}.sectionHead,.observer{display:block}.observer a{margin-top:12px}.card>p{min-height:0}}`}</style>
+  </>
+);
+
 export default Home;
