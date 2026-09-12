@@ -1,22 +1,50 @@
-# ORBIT — Evidence & Readiness Command Center
+# NDR AI Systems Public Surface + ORBIT Evidence Observer
 
-ORBIT is an evidence-first operational control plane for DGAF/PDMAL. It separates current repository state, historical evidence, deployment identity, experimental state, governance gates, and documentation claim propagation.
+This Vercel application serves two deliberately separate responsibilities:
+
+1. `/` is the public NDR AI Systems portfolio/ecosystem front door.
+2. `/orbit` is the ORBIT read-only evidence observability surface for DGAF/PDMAL.
+
+The public home is not a governance authority. ORBIT is not a governance authority. Project-specific repositories and their canonical evidence/governance records remain authoritative for their own state.
 
 ## Product surface
 
-- `/` — operational dashboard with live reconciliation and fail-closed status.
-- `/api/orbit` — live evidence/readiness API.
+- `/` — public NDR AI Systems portfolio and ecosystem map.
+- `/orbit` — ORBIT observer for DGAF evidence state, provenance, blockers, and claim propagation.
+- `/api/orbit` — machine-readable ORBIT reconciliation endpoint.
 - `/api/health` — deployment health probe.
 - `/api/schema` — machine-readable ORBIT version/evidence-schema metadata.
 
-## Runtime configuration
+## ORBIT authority boundary
 
-The dashboard is configurable without changing source code:
+ORBIT is an **observer-only** surface. It may retrieve, compare, and display evidence, but it cannot establish freeze, grant experimental authorization, upgrade a claim, or create empirical authority.
 
-- `ORBIT_REPOSITORY` — GitHub `owner/name`; defaults to `ndrorchestration/ndrorchestration`.
+By default ORBIT observes `ndrorchestration/DGAF-Framework` on `main`, because DGAF owns the governance/evidence state that ORBIT is displaying. It must not infer DGAF state from this public profile repository.
+
+Runtime configuration:
+
+- `ORBIT_REPOSITORY` — GitHub `owner/name`; defaults to `ndrorchestration/DGAF-Framework`.
 - `ORBIT_BRANCH` — tracked branch; defaults to `main`.
-- `GITHUB_TOKEN` — optional GitHub token for higher API limits/private repositories. Never expose this to the browser.
-- `VERCEL_GIT_COMMIT_SHA` / `VERCEL_URL` — automatically supplied by Vercel when available.
+- `GITHUB_TOKEN` — optional server-side GitHub token. Never expose it to the browser.
+- `VERCEL_GIT_COMMIT_SHA` / `VERCEL_URL` — supplied by Vercel when available.
+
+## Gate semantics
+
+ORBIT reports a categorical observer state rather than a percentage readiness score:
+
+- `BLOCKED` — at least one blocking gate is observed.
+- `ATTENTION` — no blocking gate is observed, but warning or not-established state remains.
+- `CLEAR` — the observed gate set contains neither blockers nor unresolved warning/not-established states.
+
+These categories describe the **observed evidence state only**. `CLEAR` is not experimental authorization.
+
+The DGAF authority check is fail-closed and requires canonical documentation to simultaneously affirm:
+
+- `FAIL-CLOSED`;
+- `NOT AUTHORIZED` (or equivalent explicit denial of authorization);
+- empirical `N = 0`.
+
+If any required state cannot be established, the observed authorization gate remains blocked.
 
 ## Local development
 
@@ -29,7 +57,7 @@ npm run build
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open `http://localhost:3000` for the public home and `http://localhost:3000/orbit` for ORBIT.
 
 ## CI / evidence boundary
 
@@ -41,22 +69,18 @@ Generated build output, dependency trees, VCS metadata, and ORBIT's generated ev
 
 **Claims do not upgrade epistemic status. Evidence does.**
 
-The PDMAL pilot remains unauthorized while the required freeze and authorization chain is incomplete. ORBIT is observational: it must never authorize an experiment merely because a dashboard state looks ready.
-
-## Fail-closed behavior
-
-If live GitHub evidence cannot be established, `/api/orbit` returns HTTP 503 and retains the immutable baseline snapshot. Documentation contradictions force the freeze gate blocked. SHA values must be full 40-character Git commit identifiers. Browser responses are non-cacheable for live evidence.
+ORBIT must fail closed when required evidence is missing, stale, contradictory, or unavailable. The existence of this dashboard, a successful deployment, or a favorable observed state never substitutes for DGAF's own governance controls.
 
 ## Deployment acceptance
 
-A release is not considered product-ready until all of the following are true on the exact release commit:
+A release is not considered operationally accepted until, on the exact release commit:
 
 1. `npm test` passes.
 2. `npm run build` passes.
 3. CI source-HEAD verification passes.
-4. Evidence artifact is uploaded and retained.
+4. Evidence artifacts required by the workflow are retained.
 5. `/api/health` returns `status: ok`.
 6. `/api/schema` reports the expected ORBIT version and evidence schema.
-7. `/api/orbit` successfully reconciles the configured GitHub repository, or correctly fails closed with HTTP 503.
+7. `/api/orbit` reconciles the configured DGAF source or correctly fails closed with HTTP 503.
 8. Deployment commit and tracked source HEAD are explicitly compared when Vercel metadata is available.
-9. No DGAF/PDMAL experimental authorization is inferred from ORBIT readiness.
+9. No DGAF/PDMAL experimental authorization is inferred from ORBIT state.
