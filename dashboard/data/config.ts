@@ -1,5 +1,5 @@
-export const ORBIT_VERSION = '1.0.0';
-export const EVIDENCE_SCHEMA = 'orbit.evidence.v2';
+export const ORBIT_VERSION = '1.1.0';
+export const EVIDENCE_SCHEMA = 'orbit.evidence.v3';
 
 function required(name: string, fallback: string) {
   const value = process.env[name]?.trim();
@@ -7,7 +7,10 @@ function required(name: string, fallback: string) {
 }
 
 export const orbitConfig = Object.freeze({
-  repository: required('ORBIT_REPOSITORY', 'ndrorchestration/ndrorchestration'),
+  // ORBIT is an observer, not an authority. Its default source is the
+  // repository that owns DGAF governance/evidence state, not this public
+  // profile repository.
+  repository: required('ORBIT_REPOSITORY', 'ndrorchestration/DGAF-Framework'),
   branch: required('ORBIT_BRANCH', 'main'),
   githubTimeoutMs: 5000,
 });
