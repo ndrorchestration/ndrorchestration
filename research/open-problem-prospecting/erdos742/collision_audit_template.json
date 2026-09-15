@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "INCOMPLETE",
+  "checked_at_utc": null,
+  "problem": "Erdos #742 / Murty-Simon",
+  "sources": {
+    "canonical_page": {"checked": false, "accessible": null, "url": null, "finding": null},
+    "discussion_forum": {"checked": false, "accessible": null, "url": null, "finding": null},
+    "arxiv_math_co": {"checked": false, "accessible": null, "url": null, "finding": null},
+    "github": {"checked": false, "accessible": null, "url": null, "finding": null},
+    "zenodo_artifacts": {"checked": false, "accessible": null, "url": null, "finding": null},
+    "recent_papers_preprints": {"checked": false, "accessible": null, "url": null, "finding": null}
+  },
+  "collision_found": null,
+  "notes": "Canonical-source inaccessibility keeps status INCOMPLETE."
+}
