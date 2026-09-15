@@ -31,5 +31,5 @@
     "zenodo_artifacts",
     "recent_papers_preprints"
   ],
-  "frontier_default_status": "NOT_AUTHORIZED"
+  "frontier_default_status": "COLLISION_HOLD"
 }
