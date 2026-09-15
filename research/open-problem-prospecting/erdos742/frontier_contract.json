@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "NOT_AUTHORIZED",
+  "status": "COLLISION_HOLD",
   "claim": {
     "n": 25,
     "edges_exact": 157,
@@ -12,7 +12,10 @@
     "formal_encoding_ready",
     "collision_audit_COMPLETE",
     "pinned_upstream_identity",
-    "baseline_reproduction_recorded"
+    "baseline_reproduction_recorded",
+    "frontier_status_READY_FOR_AUTHORIZATION"
   ],
-  "branch_order": "equal-budget feasibility probes across all five deltas before selecting a full branch"
+  "branch_order": "equal-budget feasibility probes across all five deltas before selecting a full branch",
+  "hold_reason": "2026-09-15 same-day audit found public candidate n=25 proof work in paullenz/MurtySimon742 and prior bounded LRAT work in edisonymy/erdos-lean-research. Competing novelty computation is held; independent verification/reproduction is the authorized direction.",
+  "next_authorized_mode": "INDEPENDENT_VERIFICATION"
 }
