@@ -1,0 +1,25 @@
+name: Erdos 742 n25 Independent Relaxation Review
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "research/open-problem-prospecting/erdos742/independent_n25_relaxation_check.cpp"
+      - ".github/workflows/erdos742-n25-independent-review.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce-finite-relaxation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile independent reviewer
+        run: |
+          g++ -O3 -std=c++20 \
+            research/open-problem-prospecting/erdos742/independent_n25_relaxation_check.cpp \
+            -o /tmp/erdos742-n25-review
+      - name: Reproduce reviewer-v2 finite counts
+        run: /tmp/erdos742-n25-review
