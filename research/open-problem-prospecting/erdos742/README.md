@@ -1,8 +1,14 @@
 # Erdős #742 Verified Proof-Certificate Pilot
 
-**State:** WRAPPER VERIFIED / LEANSMS RUNTIME NOT EXECUTED HERE / FRONTIER NOT AUTHORIZED
+**State:** WRAPPER VERIFIED / LEANSMS RUNTIME NOT EXECUTED HERE / FRONTIER COLLISION HOLD
 
 This directory is an incubator implementation surface for the bounded Erdős #742 / Murty–Simon proof-certificate pilot. The canonical research/scoping record remains in Notion. Nothing in this directory should be read as a proof of the global Murty–Simon conjecture.
+
+## 2026-09-15 collision decision
+
+The same-day audit found a public candidate fixed-order proof project (`paullenz/MurtySimon742`) that claims the full n=25 bound `e(G) <= 156` with equality `K(12,13)`, while explicitly leaving independent mathematical and computational review open. Separate public work (`edisonymy/erdos-lean-research`) already contains LRAT-backed exclusions for restricted order-25 symmetry classes.
+
+Therefore the novelty lane is **COLLISION_HOLD**. The authorized direction is independent verification/reproduction, not a competing n=25 priority claim. This hold is encoded in `pilot_config.json`, `frontier_contract.json`, and `collision_audit_2026-09-15.json` and is enforced by `authorize_frontier`.
 
 ## Trust anchor
 
@@ -75,7 +81,8 @@ The wrapper therefore refuses to produce a frontier command unless:
 
 1. a branch-specific formal encoding is explicitly marked ready;
 2. the complete same-day collision audit passes;
-3. exact frontier parameters and upstream identity match the pinned contract.
+3. exact frontier parameters and upstream identity match the pinned contract;
+4. the recorded frontier status is explicitly changed to `READY_FOR_AUTHORIZATION` after review.
 
 The emitted executable name `murty-simon-frontier-generate` is a future branch-specific interface. It is not claimed to exist upstream today. Do not create or run it until the Lean encoding and proof obligations are actually implemented and compiled.
 
@@ -90,7 +97,7 @@ Before any novel frontier computation, the audit must cover:
 - Zenodo/artifact repositories;
 - recent papers/preprints.
 
-If the canonical source is inaccessible, audit status remains `INCOMPLETE` and frontier authorization stays closed.
+The dated 2026-09-15 audit found a priority collision and the canonical Erdős page was also inaccessible to direct same-day fetch. The resulting state is `COLLISION_HOLD`; frontier novelty authorization remains closed.
 
 ## Resource ceilings
 
