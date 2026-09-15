@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "NOT_AUTHORIZED",
+  "claim": {
+    "n": 25,
+    "edges_exact": 157,
+    "delta_branches": [13, 14, 15, 16, 17]
+  },
+  "branch_evidence_ceiling": "A verified UNSAT result establishes only the exact n=25, e=157, Delta=d branch encoded and verified.",
+  "finite_frontier_ceiling": "All five verified branches exhaust only the stated n=25 finite frontier; they do not by themselves prove the global Murty-Simon conjecture.",
+  "authorization_requires": [
+    "formal_encoding_ready",
+    "collision_audit_COMPLETE",
+    "pinned_upstream_identity",
+    "baseline_reproduction_recorded"
+  ],
+  "branch_order": "equal-budget feasibility probes across all five deltas before selecting a full branch"
+}
