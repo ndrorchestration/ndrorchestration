@@ -115,3 +115,22 @@ def test_frontier_denied_when_audit_claims_complete_without_sources():
     ok, reason = authorize_frontier(cfg, {"status": "COMPLETE"}, True)
     assert ok is False
     assert "collision audit" in reason.lower()
+
+
+def test_frontier_denied_while_collision_hold():
+    cfg = load_config(CONFIG_PATH)
+    cfg["frontier_default_status"] = "COLLISION_HOLD"
+    audit = {
+        "status": "COMPLETE",
+        "sources": {
+            "canonical_page": {"checked": True, "accessible": True},
+            "discussion_forum": {"checked": True, "accessible": True},
+            "arxiv_math_co": {"checked": True, "accessible": True},
+            "github": {"checked": True, "accessible": True},
+            "zenodo_artifacts": {"checked": True, "accessible": True},
+            "recent_papers_preprints": {"checked": True, "accessible": True},
+        },
+    }
+    ok, reason = authorize_frontier(cfg, audit, True)
+    assert ok is False
+    assert "hold" in reason.lower()
