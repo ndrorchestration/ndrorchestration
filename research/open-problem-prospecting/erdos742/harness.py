@@ -66,6 +66,9 @@ def authorize_frontier(config: dict, audit: dict, formal_encoding_ready: bool) -
     leansms = config.get("leansms", {})
     if leansms.get("commit") != PINNED_COMMIT or leansms.get("lean_toolchain") != PINNED_LEAN:
         return False, "Pinned LeanSMS identity does not match approved trust anchor"
+    frontier_status = config.get("frontier_default_status", "NOT_AUTHORIZED")
+    if frontier_status != "READY_FOR_AUTHORIZATION":
+        return False, f"Frontier authorization hold is active: {frontier_status}"
     return True, "AUTHORIZED_BY_LOCAL_GATE"
 
 
