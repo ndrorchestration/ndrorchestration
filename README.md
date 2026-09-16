@@ -1,136 +1,148 @@
 # Andrew “Ndr / Ender” Hensel
 
-### AI Systems Designer · AI Orchestration Engineer · Evaluation · Governance
+### AI Systems Designer · Evaluation & Orchestration · Governance & Provenance
 
-I design and evaluate AI systems with a focus on multi-agent orchestration, prompt systems, evaluation methodology, provenance, governance, reproducible experimentation, and trustworthy deployment controls.
+I design, build, and evaluate AI systems with an emphasis on **multi-agent orchestration, prompt/evaluation systems, provenance, fail-closed governance, reproducible experimentation, and inspectable runtime controls**.
 
-My primary body of work is **DGAF (Dynamic Governance Agentic Formation)**, an evolving research and implementation framework for governed agentic systems. The associated **PDMAL (Phi-Driven Multi-Agent Lattice)** track investigates multi-agent topology and control experimentally.
+A recurring question across my work is not just *“Can the system do this?”* but:
+
+> **What evidence supports the claim, what remains unresolved, and what is the system actually authorized to do?**
+
+My current professional direction includes **AI evaluation, model/system quality, prompt systems, agentic workflows, AI training, QA, and governance-aware AI engineering**.
 
 ---
 
-## Current Focus
+## Featured Work
 
-### DGAF — Dynamic Governance Agentic Formation
+### [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) — observable multi-agent evaluation
 
-DGAF combines agent orchestration, governance gates, evidence handling, provenance, semantic controls, evaluation, and deployment safeguards into a governed control-plane architecture.
+A compact employer-facing showcase for **source-bound multi-agent observability and claim-to-evidence governance**.
 
-Recent engineering work includes a **governed recursive control-plane** with bounded recursion, immutable governance envelopes, exact state identity and cycle detection, append-oriented provenance, explicit proposal/authorization/commit barriers, capability-boundary tests, hardened lifecycle semantics, audit sealing, exact-head CI checks, source-SHA attestation, and candidate-bound evidence reconciliation.
+It includes explicit Planner / Researcher / Skeptic / Verifier roles, source-aware provenance, unsupported/conflicting-claim handling, provider boundaries, deterministic controls, portable run artifacts, and a fail-closed readiness audit.
 
-The current engineering cycle is extending that foundation into a **fail-closed confidential-execution path** for blinded experimental work. This work covers authenticated attestation verification, explicit pre-execution authorization consumption, in-process key generation, blinded output/manifest binding, post-execution attestation, crash/retry controls, and end-to-end lineage verification. These controls are being developed and tested before any empirical experiment is authorized.
+**Evidence boundary:** provider + retrieval architecture is implemented and deterministic controls are verified in CI. Live hosted OpenAI-backed execution/retrieval and a public hosted showcase remain **NOT YET VERIFIED**.
 
-### PDMAL — Phi-Driven Multi-Agent Lattice
+### [Intellectro](https://github.com/ndrorchestration/Intellectro) — governed social application
 
-PDMAL is the associated experimental research track. It is designed around deterministic execution, topology generation, blinded comparisons, artifact schemas, provenance, reproducibility, and pre-specified statistical analysis.
+A governed social-network alpha exploring how humans can interact with accountable AI infrastructure without silently transferring authority to agents.
 
-**Current experimental state:** Epoch 001 is retained historical blinded collection evidence (50 paired seed units / 2,250 observations) whose protected mapping is cryptographically unrecoverable; its primary analysis is therefore **UNANALYZABLE / NOT RUN**. The prospective successor Track A is **PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0**. Canonical DGAF/PDMAL efficacy is **NOT ESTABLISHED**. Passing CI, synthetic/dry-run evidence, deployment readiness, or historical verification is not treated as experimental efficacy.
+Current implementation work includes deny-by-default capability decisions, human approval gates, provenance and revision-aware Content Passport contracts, source-linked social content, governed agent-action records, correction/appeal flows, Supabase-backed persistence boundaries, RLS, and authenticated application paths.
+
+**Evidence boundary:** repository and database governance surfaces are implemented and tested within their admitted scope. Production persistence is not currently configured, browser auth/session verification remains open, and no broad production/security certification is claimed.
+
+### [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) / PDMAL — governed agentic-systems research
+
+**DGAF (Dynamic Governance Agentic Formation)** is an experimental framework for governed multi-agent AI systems. It separates capability, evidence, verification, authority, and permission to act instead of assuming one implies another.
+
+**PDMAL (Phi-Driven Multi-Agent Lattice)** is its associated topology/robustness research track.
+
+Current bounded Track A Epoch 002 state:
+
+- blinded collection **COMPLETE** at **50 paired seed units / 2,250 observations**;
+- dataset lock **ESTABLISHED**;
+- bounded mapping release/decryption **AUTHORIZED** at its exact scope;
+- Stage-1 and Stage-2 materialization tooling **ACCEPTED**;
+- real materialization **NOT ESTABLISHED**;
+- primary analysis **NOT AUTHORIZED / NOT RUN**;
+- scientific-N increment **0**;
+- canonical DGAF efficacy **NOT ESTABLISHED**;
+- independent validation **NOT ESTABLISHED**;
+- broader High-Assurance DGAF remains **PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0**.
+
+The point of publishing those limits is deliberate: engineering maturity is not being presented as empirical efficacy.
+
+---
+
+## Supporting Projects
+
+| Project | What it demonstrates | Evidence boundary |
+|---|---|---|
+| [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Drift instrumentation, failure-aware evaluation, reproducible synthetic benchmark apparatus | Implementation/synthetic apparatus evidence; real-world calibration and efficacy are not established |
+| [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | Executable evaluation harness, known-answer controls, deterministic reproduction | Harness/reproducibility evidence; not a model-performance certification |
+| [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) | Minimal capability dispatch, rejection provenance, portable manifests, control-plane primitives | Local kernel behavior tested; distributed/production controls remain outside current scope |
+| [Morse-Orchestration](https://github.com/ndrorchestration/Morse-Orchestration) | Seeded synthetic orchestration experiments and paired-analysis methodology | Research apparatus evidence; production/model efficacy is not established |
+| [Meshsense](https://github.com/ndrorchestration/Meshsense) | Source→deployment→runtime provenance and observable runtime state | Runtime identity evidence remains separate from physical-sensing efficacy |
+| [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | Prompt/evaluation specifications and recruiter-readable prompt-system artifacts | Specifications are not represented as an executable evaluator |
 
 ---
 
 ## Areas of Work
 
-- AI orchestration and multi-agent systems
-- Prompt engineering and prompt evaluation
-- AI evaluation, QA, and benchmark methodology
-- Governance, provenance, and evidence architecture
-- Agent control-plane design
-- Runtime and deployment verification
-- Adversarial testing and failure-mode discovery
-- Reproducible experimental infrastructure
-- Semantic and ontological boundary governance
-- Spatial and acoustic intelligence research
+- **AI evaluation & QA** — test design, known-answer controls, failure modes, evidence classes, claim ceilings
+- **Multi-agent orchestration** — role separation, handoffs, provider boundaries, state and control-plane design
+- **Prompt systems** — prompt/evaluation specifications, structured outputs, failure-aware iteration
+- **Governance & authorization** — fail-closed gates, capability boundaries, approval/rejection semantics
+- **Provenance & reproducibility** — source binding, artifact identity, deterministic controls, custody and audit trails
+- **Runtime verification** — source/deployment/runtime separation, exact-identity checks, health/evidence boundaries
+- **Research tooling** — preregistered experimental infrastructure, blinded workflows, computational reproduction and adversarial checks
+- **Spatial / sensing prototypes** — acoustic, mesh, and visualization research interfaces
 
 ---
 
 ## Evidence Discipline
 
-A central design principle of the work is to keep these states distinct:
+I try to keep these categories separate rather than collapsing them into a generic “works” claim:
 
-**defined → implemented → computed → verified → attested → historical → hypothesis → unsupported**
+**defined → implemented → tested → computed → verified → independently verified → authorized → executed → empirically supported**
 
-A passing test, deployment, historical attestation, or repository claim is not automatically equivalent to independent verification or empirical efficacy. Exact candidate identity, execution context, run evidence, provenance, and scope matter.
+A passing test does not prove efficacy. A healthy deployment does not establish scientific validity. A provenance record establishes origin/history, not truth. A governance control does not automatically grant authorization. Historical evidence does not silently transfer to a new candidate, deployment, run, or artifact.
 
-The project deliberately records unresolved conditions rather than converting implementation maturity into success claims. Historical evidence is retained as provenance and is not silently transferred across candidate, deployment, run, or artifact boundaries.
-
----
-
-## Selected Projects
-
-| Project | What it demonstrates | Current evidence boundary |
-|---|---|---|
-| [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | Governed multi-agent orchestration, provenance, evidence gates, confidential-execution research | Epoch 001 retained but primary analysis unanalyzable; successor experiment remains PRE-FREEZE, NOT AUTHORIZED, N=0; efficacy not established |
-| [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) | Observable multi-agent workflow, provider boundaries, web retrieval, claim→source provenance, portable run artifacts | Deterministic and contract tests pass; live hosted execution and public showcase deployment remain open gates |
-| [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Drift instrumentation, failure-aware evaluation, reproducible synthetic benchmark apparatus | Implementation and synthetic benchmark verified; real-world calibration/efficacy not established |
-| [Morse-Orchestration](https://github.com/ndrorchestration/Morse-Orchestration) | Phase-preserving orchestration research, seeded synthetic experiments, paired analysis | Synthetic research apparatus verified; model/production efficacy not established |
-| [sentinel-governance](https://github.com/ndrorchestration/sentinel-governance) | Fail-closed repository repair governance and mutation validation | Operator/validation checks pass; autonomous semantic correctness is not established |
-| [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | Executable evaluation harness, known-answer controls, deterministic reproduction | Harness CI/reproducibility verified; not a model-performance certification |
-| [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) | Minimal control-plane kernel, capability dispatch, rejection provenance, portable manifests | Local kernel behavior tested; distributed/production controls remain outside current scope |
-| [Meshsense](https://github.com/ndrorchestration/Meshsense) | Exact source→deployment→runtime provenance and observable runtime state | Deployment identity verified; physical sensing efficacy remains separate/unverified |
-| [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | Prompt/evaluation specifications and recruiter-readable prompt engineering artifacts | Specifications are not presented as an executable evaluator; executable evaluation lives in ResumeApex |
+This is why several repositories intentionally preserve states such as **NOT VERIFIED**, **NOT AUTHORIZED**, **NOT ESTABLISHED**, or **blocked** when the required evidence does not exist yet.
 
 ---
 
-## Portfolio Architecture
+## Portfolio Shape
 
 ```text
 NDR AI Systems
-├── Orchestration
+├── Orchestration & control planes
 │   ├── DGAF / PDMAL
 │   ├── Orbit-Driftwatch
 │   ├── Morse-Orchestration
 │   └── Agent Control Plane
 │
-├── Evaluation
+├── Evaluation & quality
 │   ├── Driftwatch
 │   ├── ResumeApex
 │   └── Prompt-system evaluation specifications
 │
-├── Governance
-│   ├── Sentinel Governance
-│   ├── Evidence / provenance controls
-│   ├── Semantic boundaries
-│   └── Runtime / deployment verification
+├── Governed applications
+│   └── Intellectro
 │
-└── Spatial / Experimental Interfaces
-    ├── ASIS / Acoustic-Mesh
+├── Governance, provenance & runtime verification
+│   ├── Sentinel Governance
+│   ├── evidence / custody controls
+│   └── deployment / identity verification
+│
+└── Spatial / experimental interfaces
+    ├── Acoustic-Mesh / ASIS
     ├── MeshSense
     └── Phi-Calculus
 ```
 
 ---
 
-## Current Engineering Snapshot — 2026-09-06
-
-The portfolio now contains several executable verification surfaces rather than architecture documents alone:
-
-- DGAF has a broad exact-head CI/governance surface. Epoch 001 is historical retained collection evidence whose primary analysis is unanalyzable; the successor track remains **PRE-FREEZE / NOT AUTHORIZED / N=0** and efficacy is not established.
-- Orbit-Driftwatch has deterministic orchestration, a server-backed provider boundary, source-bound web retrieval, explicit unsupported/conflicting-claim handling, and portable run artifacts; live hosted execution and public deployment are still open.
-- Driftwatch has a hardened build/dependency lane plus a retained synthetic detector benchmark, without promoting that synthetic result to real-world efficacy.
-- Morse-Orchestration has a validated seeded synthetic harness and paired research methodology.
-- Sentinel Governance has a fail-closed repair-mutation boundary and current dependency/validation checks.
-- ResumeApex has an executable deterministic evaluation harness with known-answer controls and a green current-main verification workflow.
-
-The highest-value remaining work is increasingly **integration and external validation rather than basic implementation**: public Orbit deployment, a real provenance-retained hosted Orbit run, DGAF candidate/freeze/authorization progression, representative real-world Driftwatch calibration data, and independently reviewed evidence at the gates that require it.
-
----
-
 ## Public Project Principles
 
 - Build the apparatus before claiming the result.
-- Preserve exact source and evidence identity.
-- Fail closed when required evidence is absent.
-- Treat adversarial findings as development signals, not embarrassments to hide.
-- Keep internal/private working records separate from public claims.
-- Distinguish governance-framework resemblance from legal or regulatory compliance.
-- Keep commercial, certification, and endorsement claims scoped to explicit evidence.
+- Preserve exact source and evidence identity when it matters.
+- Fail closed when required evidence is absent or ambiguous.
+- Treat adversarial findings as useful development evidence.
+- Separate implementation, runtime, scientific evidence, and authorization.
+- Preserve historical records without letting them masquerade as current authority.
+- Distinguish governance-framework resemblance from legal/regulatory compliance.
+- Keep certification, efficacy, security, and production-readiness claims bounded to explicit evidence.
 
 ---
 
-## Contact / Professional Direction
+## Professional Direction
 
-My current professional focus is **AI systems design, AI orchestration, evaluation, prompt engineering, governance, and trustworthy AI infrastructure**, with particular interest in roles involving AI evaluation, model quality, prompt systems, agentic workflows, QA, reproducible experimentation, and governance-aware AI engineering.
+I am particularly interested in work involving:
 
-I am especially interested in work where careful evaluation, evidence quality, provenance, and system-level reasoning matter as much as producing a working prototype.
+**AI Evaluation · Model/System Quality · Prompt Engineering · AI Training · Agentic Workflows · QA · Provenance · Governance-Aware AI Engineering**
+
+The strongest fit is work where careful evaluation, failure-mode discovery, evidence quality, and system-level reasoning matter alongside implementation.
 
 ---
 
-*Public profile last reconciled: 2026-09-09. Project status is maintained in each repository's authoritative evidence and governance records; this profile is a public representation, not an experimental source of truth.*
+*Public profile reconciled: 2026-09-16. This repository is a portfolio/projection surface, not the source of truth for another project's live state. Project-specific implementation, evidence, runtime, and governance facts remain authoritative in their owning repositories and control records.*
