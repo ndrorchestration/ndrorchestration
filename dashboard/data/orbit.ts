@@ -9,13 +9,16 @@ export interface Gate {
 }
 
 // Governance invariant: Claims do not upgrade epistemic status. Evidence does.
+// This object is a historical fallback only. Current authority must be reconciled
+// from the owning DGAF repository before any bundled gate/claim state is shown as current.
 export const orbitSnapshot = {
   project: 'DGAF / PDMAL',
+  projectionKind: 'historical-fallback',
   epistemicState: 'Historical freeze → corrected runner → candidate apparatus → new freeze not authorized',
   empiricalN: 0,
-  head: 'c5547674',
+  capturedHead: 'c5547674',
   historicalEvidence: 'e1f077f',
-  deployment: 'dpl_8YCHnqd4ZLGXnk9U2CuAJozUYLZ7',
+  capturedDeployment: 'dpl_8YCHnqd4ZLGXnk9U2CuAJozUYLZ7',
   gates: [
     { id: 'P0', name: 'Truth Layer', state: 'verified', evidence: 'CI evidence', detail: 'Historical P0 evidence passed on e1f077f.' },
     { id: 'P2', name: 'Live POST Matrix', state: 'blocked', evidence: 'Environment', detail: 'Execution was not performed from this environment.' },

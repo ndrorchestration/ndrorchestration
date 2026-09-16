@@ -53,9 +53,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const declaredN0 = /empirical\s+N\s*=\s*0/i.test(readmeText);
     const declaredUnauthorized = /(?:NOT\s+AUTHORIZED|authorization[^\n]{0,80}NOT\s+(?:GRANTED|AUTHORIZED))/i.test(readmeText);
     const declaredFailClosed = /FAIL-CLOSED/i.test(readmeText);
+    const declarationsComplete = declaredN0 && declaredUnauthorized && declaredFailClosed;
     const deploymentCommit = process.env.VERCEL_GIT_COMMIT_SHA || null;
-    const sourceFreshness = currentHead === orbitSnapshot.head ? 'ALIGNED' : 'DRIFT';
+    const sourceFreshness = currentHead.startsWith(orbitSnapshot.capturedHead) ? 'ALIGNED' : 'DRIFT';
     const deploymentFreshness = deploymentCommit ? (deploymentCommit === currentHead ? 'ALIGNED' : 'DRIFT') : 'UNAVAILABLE';
+    const projectionAdmissible = sourceFreshness === 'ALIGNED' && declarationsComplete;
     const gates = orbitSnapshot.gates.map(g => ({ ...g }));
 
     if (!declaredN0 || !declaredUnauthorized || !declaredFailClosed) {
@@ -67,13 +69,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     }
 
-    if (sourceFreshness === 'DRIFT') {
-      const doc = gates.find(g => g.id === 'DOC');
-      if (doc) {
-        doc.state = 'warning';
-        doc.evidence = `DGAF HEAD drift: ${currentHead.slice(0, 8)}`;
-        doc.detail = 'The bundled ORBIT snapshot does not match current DGAF main; live evidence is newer than the snapshot.';
-      }
+    if (!projectionAdmissible) {
+      gates.splice(0, gates.length, {
+        id: 'AUTHORITY',
+        name: 'Current authority reconciliation',
+        state: 'blocked' as GateState,
+        evidence: sourceFreshness === 'DRIFT' ? `DGAF HEAD drift: ${currentHead.slice(0, 8)}` : 'Canonical governance declaration check incomplete',
+        detail: sourceFreshness === 'DRIFT'
+          ? 'Current DGAF authority moved beyond the bundled historical fallback; historical gate states are withheld until the bundle is refreshed and revalidated.'
+          : 'Current DGAF authority could not be admitted from the bundled fallback because canonical governance declarations are incomplete.',
+      });
     }
 
     const fetchedAt = new Date().toISOString();
@@ -86,10 +91,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         branch: orbitConfig.branch,
         note: 'ORBIT reports evidence state; it does not grant freeze, authorization, or empirical authority.',
       },
-      snapshot: { ...orbitSnapshot, head: currentHead, gates },
+      snapshot: {
+        ...orbitSnapshot,
+        gates,
+        claims: projectionAdmissible ? orbitSnapshot.claims : [],
+      },
       live: {
         fetchedAt,
         sourceFreshness,
+        currentProjection: projectionAdmissible,
         github: {
           repository: orbitConfig.repository,
           branch: orbitConfig.branch,
@@ -119,8 +129,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         repository: orbitConfig.repository,
         branch: orbitConfig.branch,
       },
-      snapshot: orbitSnapshot,
-      live: { status: 'UNAVAILABLE', error: message },
+      snapshot: { ...orbitSnapshot, gates: [], claims: [] },
+      live: { status: 'UNAVAILABLE', sourceFreshness: 'UNAVAILABLE', currentProjection: false, error: message },
     });
   }
 }

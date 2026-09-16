@@ -15,6 +15,9 @@ const required = ['empiricalN: 0', 'Pilot Authorization', 'Propagation Integrity
 for (const token of required) if (!orbit.includes(token)) throw new Error(`ORBIT invariant missing: ${token}`);
 if (!/state: 'blocked'/.test(orbit)) throw new Error('ORBIT must contain a blocked gate');
 if (!/state: 'verified'/.test(orbit)) throw new Error('ORBIT must contain a verified gate');
+if (!orbit.includes("projectionKind: 'historical-fallback'")) throw new Error('ORBIT bundled state must be explicitly historical/fallback');
+if (!orbit.includes('capturedHead:')) throw new Error('ORBIT historical source identity must be labeled as captured, not current');
+if (!orbit.includes('capturedDeployment:')) throw new Error('ORBIT historical deployment identity must be labeled as captured, not current');
 if (!evidence.includes("EVIDENCE_SCHEMA = 'orbit.evidence.v2'")) throw new Error('ORBIT evidence schema missing');
 if (!evidence.includes("headSemantics: 'source-head'")) throw new Error('ORBIT source-head semantics missing');
 if (!evidence.includes('v.head') || !evidence.includes('/^[0-9a-f]{40}$/')) throw new Error('ORBIT must validate full commit SHAs');
@@ -37,9 +40,30 @@ if (!api.includes('!declaredN0 || !declaredUnauthorized || !declaredFailClosed')
 }
 if (!api.includes("freeze.state = 'blocked'")) throw new Error('ORBIT documentation contradiction must fail closed');
 if (!api.includes('orbitConfig.repository') || !api.includes('orbitConfig.branch')) throw new Error('ORBIT API must honor runtime repository configuration');
+if (!api.includes("const projectionAdmissible = sourceFreshness === 'ALIGNED' && declarationsComplete")) {
+  throw new Error('ORBIT must make current-projection admission explicit');
+}
+if (!api.includes('currentProjection: projectionAdmissible')) {
+  throw new Error('ORBIT API must disclose whether the bundled projection is admissible as current');
+}
+if (!api.includes('Current DGAF authority moved beyond the bundled historical fallback')) {
+  throw new Error('ORBIT source drift must withhold stale bundled gate state');
+}
+if (!api.includes("currentProjection: false")) {
+  throw new Error('ORBIT live-evidence failure must explicitly deny current projection status');
+}
 if (!page.includes('overallState: payload.overallState')) throw new Error('ORBIT UI must render API-derived categorical observed state');
 if (!page.includes("live?.overallState || 'CHECKING'")) throw new Error('ORBIT UI observed-state display missing');
 if (!page.includes("cache: 'no-store'")) throw new Error('ORBIT live refresh must bypass browser cache');
+if (!page.includes('live?.currentProjection === true')) {
+  throw new Error('ORBIT UI must distinguish current authority from historical fallback');
+}
+if (!page.includes('HISTORICAL FALLBACK')) {
+  throw new Error('ORBIT UI must visibly label bundled fallback state as historical');
+}
+if (!page.includes('CURRENT AUTHORITY STATE')) {
+  throw new Error('ORBIT UI must reserve current-state labeling for admitted live authority state');
+}
 if (!health.includes("status: 'ok'") || !health.includes("req.method !== 'GET'")) throw new Error('ORBIT health endpoint incomplete');
 if (!schema.includes('EVIDENCE_SCHEMA') || !schema.includes("'source-head semantics'")) throw new Error('ORBIT schema endpoint incomplete');
 
