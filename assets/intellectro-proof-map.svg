@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Intellectro portfolio proof map</title>
+  <desc id="desc">Architecture overview showing human interaction through a Next.js application, authenticated server actions, Supabase and Postgres with row level security, capability checks, human approval, governed action provenance, and correction or appeal paths.</desc>
+  <rect width="1200" height="650" fill="#ffffff"/>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #111827; }
+    .title { font-size: 30px; font-weight: 700; }
+    .subtitle { font-size: 17px; fill: #4b5563; }
+    .box { fill: #f9fafb; stroke: #374151; stroke-width: 2; rx: 14; }
+    .boundary { fill: #f3f4f6; stroke: #111827; stroke-width: 2.2; rx: 14; }
+    .label { font-size: 18px; font-weight: 650; }
+    .small { font-size: 14px; fill: #4b5563; }
+    .arrow { stroke: #4b5563; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+  <text x="60" y="62" class="title">Intellectro — accountable human/AI interaction</text>
+  <text x="60" y="94" class="subtitle">A governed social application where capability, approval, persistence, provenance, and correction stay explicit.</text>
+  <rect x="60" y="150" width="165" height="88" class="box"/>
+  <text x="142" y="185" text-anchor="middle" class="label">Human user</text>
+  <text x="142" y="211" text-anchor="middle" class="small">profiles · Spaces · posts</text>
+  <rect x="275" y="135" width="220" height="118" class="boundary"/>
+  <text x="385" y="169" text-anchor="middle" class="label">Next.js application</text>
+  <text x="385" y="197" text-anchor="middle" class="small">React UI</text>
+  <text x="385" y="221" text-anchor="middle" class="small">authenticated server actions</text>
+  <text x="385" y="245" text-anchor="middle" class="small">identity from validated claims</text>
+  <rect x="550" y="135" width="235" height="118" class="box"/>
+  <text x="667" y="169" text-anchor="middle" class="label">Supabase / Postgres</text>
+  <text x="667" y="197" text-anchor="middle" class="small">Auth · migrations · RLS</text>
+  <text x="667" y="221" text-anchor="middle" class="small">profiles · Spaces · content</text>
+  <text x="667" y="245" text-anchor="middle" class="small">governed records</text>
+  <rect x="855" y="135" width="285" height="118" class="boundary"/>
+  <text x="997" y="169" text-anchor="middle" class="label">Capability decision</text>
+  <text x="997" y="197" text-anchor="middle" class="small">deny by default</text>
+  <text x="997" y="221" text-anchor="middle" class="small">typed permission + policy checks</text>
+  <text x="997" y="245" text-anchor="middle" class="small">human approval when required</text>
+  <rect x="230" y="365" width="270" height="118" class="box"/>
+  <text x="365" y="399" text-anchor="middle" class="label">Governed action record</text>
+  <text x="365" y="428" text-anchor="middle" class="small">request · decision · actor</text>
+  <text x="365" y="453" text-anchor="middle" class="small">policy version · immutable event</text>
+  <rect x="570" y="365" width="265" height="118" class="box"/>
+  <text x="702" y="399" text-anchor="middle" class="label">Provenance / passport</text>
+  <text x="702" y="428" text-anchor="middle" class="small">source + revision history</text>
+  <text x="702" y="453" text-anchor="middle" class="small">transformations · accountable actors</text>
+  <rect x="905" y="365" width="235" height="118" class="box"/>
+  <text x="1022" y="399" text-anchor="middle" class="label">Challenge & correction</text>
+  <text x="1022" y="428" text-anchor="middle" class="small">appeal · correction</text>
+  <text x="1022" y="453" text-anchor="middle" class="small">original record preserved</text>
+  <path d="M225 194 H270" class="arrow"/>
+  <path d="M495 194 H545" class="arrow"/>
+  <path d="M785 194 H850" class="arrow"/>
+  <path d="M997 253 V310 H365 V360" class="arrow"/>
+  <path d="M500 424 H565" class="arrow"/>
+  <path d="M835 424 H900" class="arrow"/>
+  <text x="60" y="560" class="label">Design invariant</text>
+  <text x="60" y="590" class="small">Human social relationships do not silently grant agent permission or governance authority; missing runtime/provider configuration fails closed.</text>
+  <text x="60" y="616" class="small">Repository/database controls and product-runtime verification remain separate evidence layers.</text>
+</svg>
