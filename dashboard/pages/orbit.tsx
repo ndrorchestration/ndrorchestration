@@ -26,6 +26,7 @@ type LiveState = {
   status?: string;
   overallState?: string;
   authorityRepository?: string;
+  currentProjection?: boolean;
 };
 
 const Orbit: NextPage = () => {
@@ -37,7 +38,6 @@ const Orbit: NextPage = () => {
     setRefreshing(true);
     try {
       const response = await fetch('/api/orbit', { cache: 'no-store' });
-      if (!response.ok) throw new Error(`ORBIT API ${response.status}`);
       const payload = await response.json();
       if (payload.snapshot) setSnapshot(payload.snapshot);
       setLive({
@@ -47,15 +47,17 @@ const Orbit: NextPage = () => {
         status: payload.live?.status,
         overallState: payload.overallState,
         authorityRepository: payload.authority?.repository,
+        currentProjection: payload.live?.currentProjection,
       });
     } catch (error) {
-      setLive({ status: error instanceof Error ? error.message : 'UNAVAILABLE', overallState: 'UNAVAILABLE' });
+      setLive({ status: error instanceof Error ? error.message : 'UNAVAILABLE', overallState: 'UNAVAILABLE', currentProjection: false });
     } finally {
       setRefreshing(false);
     }
   }
 
   useEffect(() => { void refresh(); }, []);
+  const currentProjection = live?.currentProjection === true;
   const verified = snapshot.gates.filter(g => g.state === 'verified').length;
   const blockers = snapshot.gates.filter(g => g.state === 'blocked').length;
 
@@ -74,37 +76,41 @@ const Orbit: NextPage = () => {
         </div>
         <div className="stateSummary">
           <strong>{live?.overallState || 'CHECKING'}</strong>
-          <span>OBSERVED GATE STATE</span>
+          <span>OBSERVED AUTHORITY STATE</span>
           <button onClick={() => void refresh()} disabled={refreshing}>{refreshing ? 'REFRESHING' : 'REFRESH EVIDENCE'}</button>
         </div>
       </header>
 
       <section className="state panel">
-        <div><span className="label">CURRENT EPISTEMIC STATE</span><h2>{snapshot.epistemicState}</h2></div>
-        <div className="stop">EMPIRICAL EXECUTION STOPPED</div>
+        <div>
+          <span className="label">{currentProjection ? 'CURRENT AUTHORITY STATE' : 'HISTORICAL FALLBACK'}</span>
+          <h2>{currentProjection ? snapshot.epistemicState : 'Current DGAF state is withheld until live authority reconciliation succeeds.'}</h2>
+          {!currentProjection && <p>Bundled historical state: {snapshot.epistemicState}</p>}
+        </div>
+        <div className="stop">{currentProjection ? 'EMPIRICAL EXECUTION STOPPED' : 'NOT CURRENT AUTHORITY'}</div>
       </section>
 
       <section className="metrics">
-        <div className="metric"><span>DGAF HEAD</span><b>{live?.currentHead?.slice(0, 8) || snapshot.head}</b><small>{live?.sourceFreshness || live?.status || 'checking authority source'}</small></div>
+        <div className="metric"><span>DGAF HEAD</span><b>{live?.currentHead?.slice(0, 8) || snapshot.capturedHead}</b><small>{live?.sourceFreshness || live?.status || 'checking authority source'}</small></div>
         <div className="metric"><span>AUTHORITY SOURCE</span><b className="smallCode">{live?.authorityRepository || 'ndrorchestration/DGAF-Framework'}</b><small>ORBIT observes; DGAF owns governance state</small></div>
-        <div className="metric"><span>EMPIRICAL N</span><b>{snapshot.empiricalN}</b><small>canonical efficacy not established</small></div>
-        <div className="metric"><span>BLOCKERS</span><b>{blockers}</b><small>blocking gates in observed snapshot</small></div>
+        <div className="metric"><span>EMPIRICAL N</span><b>{currentProjection ? snapshot.empiricalN : '—'}</b><small>{currentProjection ? 'canonical efficacy not established' : 'withheld until current authority is admitted'}</small></div>
+        <div className="metric"><span>BLOCKERS</span><b>{blockers}</b><small>{currentProjection ? 'blocking gates in admitted observed state' : 'authority reconciliation blockers only'}</small></div>
       </section>
 
       <div className="grid">
         <section className="panel">
-          <div className="sectionHead"><div><span className="label">EVIDENCE GATES</span><h2>Observed governance matrix</h2></div><span className="tiny">{verified}/{snapshot.gates.length} verified</span></div>
+          <div className="sectionHead"><div><span className="label">EVIDENCE GATES</span><h2>{currentProjection ? 'Observed governance matrix' : 'Current authority gates withheld'}</h2></div><span className="tiny">{currentProjection ? `${verified}/${snapshot.gates.length} verified` : 'fail-closed'}</span></div>
           <div className="gates">{snapshot.gates.map(g => <article className="gate" key={g.id}><div className={`dot ${stateClass[g.state]}`} /><div className="gateMain"><div><b>{g.id} · {g.name}</b><span className={`badge ${stateClass[g.state]}`}>{stateLabel[g.state]}</span></div><p>{g.detail}</p><small>{g.evidence}</small></div></article>)}</div>
         </section>
         <section className="panel">
-          <div className="sectionHead"><div><span className="label">CLAIM INTEGRITY</span><h2>Propagation monitor</h2></div><span className="tiny">fail-closed</span></div>
-          {snapshot.claims.map(c => <article className="claim" key={c.claim}><div className="claimTitle"><b>{c.claim}</b><span className={`badge ${c.status === 'warning' ? 'warn' : 'bad'}`}>{c.status.toUpperCase()}</span></div><div className="bar"><i style={{ width: `${c.occurrences ? (c.qualified / c.occurrences) * 100 : 0}%` }} /></div><p>{c.occurrences} occurrences · {c.qualified} qualified · {c.bare} bare</p></article>)}
+          <div className="sectionHead"><div><span className="label">CLAIM INTEGRITY</span><h2>{currentProjection ? 'Propagation monitor' : 'Historical claim counts withheld'}</h2></div><span className="tiny">fail-closed</span></div>
+          {currentProjection ? snapshot.claims.map(c => <article className="claim" key={c.claim}><div className="claimTitle"><b>{c.claim}</b><span className={`badge ${c.status === 'warning' ? 'warn' : 'bad'}`}>{c.status.toUpperCase()}</span></div><div className="bar"><i style={{ width: `${c.occurrences ? (c.qualified / c.occurrences) * 100 : 0}%` }} /></div><p>{c.occurrences} occurrences · {c.qualified} qualified · {c.bare} bare</p></article>) : <div className="rule">Bundled claim counts are historical fallback data and are not displayed as current after authority drift or live-evidence failure.</div>}
           <div className="rule">Claims do not upgrade epistemic status. Evidence does.</div>
         </section>
       </div>
 
       <section className="panel deployment">
-        <div><span className="label">TRACE</span><h2>Observer boundary</h2><p>Historical snapshot: <code>{snapshot.historicalEvidence}</code> · Last reconciliation: <code>{live?.fetchedAt || 'pending'}</code></p></div>
+        <div><span className="label">TRACE</span><h2>Observer boundary</h2><p>Historical snapshot: <code>{snapshot.historicalEvidence}</code> · Captured DGAF head: <code>{snapshot.capturedHead}</code> · Last reconciliation: <code>{live?.fetchedAt || 'pending'}</code></p></div>
         <a href="/api/orbit">JSON endpoint →</a>
       </section>
       <footer>ORBIT v1.1 · observer-only · DGAF/PDMAL authority remains external to this surface</footer>
