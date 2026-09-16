@@ -1,4 +1,4 @@
-# Andrew “Ndr / Ender” Hensel
+# Andrew // Ndr "Ender" Hensel
 
 ### AI Evaluation & Agentic Systems · Prompt Engineering · Governance & Provenance
 
