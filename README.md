@@ -22,6 +22,8 @@ My current professional direction includes **AI evaluation, prompt engineering, 
 
 A compact portfolio showcase for inspecting a multi-agent workflow instead of showing only its final answer.
 
+<img src="assets/orbit-driftwatch-proof-map.svg" alt="Orbit-Driftwatch architecture: question input passes through a provider boundary to Planner, Researcher, Skeptic, and Verifier roles, then through claim and evidence inspection, Driftwatch observability, Orbit interpretation, and a portable evidence artifact." width="100%">
+
 **Built:** explicit Planner / Researcher / Skeptic / Verifier roles, provider boundaries, source-aware provenance, disagreement and evidence-coverage metrics, unsupported/conflicting-claim handling, deterministic controls, portable run artifacts, and a fail-closed claim-readiness audit.
 
 **Stack:** JavaScript · Node.js · browser UI · provider abstraction · OpenAI Responses adapter · GitHub Actions
@@ -35,6 +37,8 @@ A compact portfolio showcase for inspecting a multi-agent workflow instead of sh
 ### [Intellectro](https://github.com/ndrorchestration/Intellectro) — governed social application
 
 A social-network alpha exploring accountable human/AI interaction without silently transferring authority to agents.
+
+<img src="assets/intellectro-proof-map.svg" alt="Intellectro architecture: human users interact through a Next.js application and authenticated server actions backed by Supabase and Postgres with row-level security, then explicit capability decisions and human approvals produce governed action records, provenance, and correction or appeal paths." width="100%">
 
 **Built:** deny-by-default capability decisions, human approval gates, provenance and revision-aware Content Passport contracts, governed action records, correction/appeal paths, source-linked social content, authenticated application paths, and Supabase-backed persistence boundaries with RLS.
 
