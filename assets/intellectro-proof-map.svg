@@ -46,7 +46,7 @@
   <text x="702" y="428" text-anchor="middle" class="small">source + revision history</text>
   <text x="702" y="453" text-anchor="middle" class="small">transformations · accountable actors</text>
   <rect x="905" y="365" width="235" height="118" class="box"/>
-  <text x="1022" y="399" text-anchor="middle" class="label">Challenge & correction</text>
+  <text x="1022" y="399" text-anchor="middle" class="label">Challenge &amp; correction</text>
   <text x="1022" y="428" text-anchor="middle" class="small">appeal · correction</text>
   <text x="1022" y="453" text-anchor="middle" class="small">original record preserved</text>
   <path d="M225 194 H270" class="arrow"/>
