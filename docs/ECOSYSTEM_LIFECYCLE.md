@@ -9,9 +9,19 @@
 
 This document classifies how repositories relate to the `ndrorchestration` account. It does **not** override repository-local source code, tests, CI, evidence, runtime facts, governance state, scientific state, security claims, or authorization.
 
-Project repositories remain authoritative for their own implementation and evidence. Runtime providers remain authoritative for runtime facts. DGAF may maintain a bounded DGAF-related projection, but it is not the canonical account-wide repository inventory.
+Project repositories remain authoritative for their own implementation and evidence. Runtime providers remain authoritative for runtime facts. DGAF may maintain a bounded DGAF-related projection, but it is not the canonical account-wide repository inventory. Cross-repository relationships are descriptive only and never transfer validation or authority.
 
-Cross-repository relationships are descriptive only and never transfer validation or authority.
+## Current census
+
+The current connected GitHub owner census contains **47 repositories**:
+
+- **38 `VERIFIED`** lifecycle classifications;
+- **9 `PENDING_REVIEW`** classifications;
+- **0 `CONFLICTED`** classifications;
+- **3 `ARCHIVE_CANDIDATE`** repositories awaiting the final archive gate; and
+- **1 already `ARCHIVED`** repository.
+
+A verified lifecycle means the account-level role is supported by current repository-local documentation and/or GitHub metadata. It does not mean production readiness, scientific validation, security certification, or authorization.
 
 ## Lifecycle vocabulary
 
@@ -20,69 +30,85 @@ Cross-repository relationships are descriptive only and never transfer validatio
 - `EXPERIMENTAL` — active research/prototype work whose claims remain explicitly bounded by evidence.
 - `INCUBATING` — a real but not-yet-mature project identity.
 - `HISTORICAL` — superseded or predecessor work retained for provenance.
-- `EXTERNAL_REFERENCE` — imported, fork-derived, upstream, benchmark, or dependency-study code retained for a concrete reason.
+- `EXTERNAL_REFERENCE` — imported/fork-derived code retained for a concrete active reference purpose.
 - `ARCHIVE_CANDIDATE` — verified inactive/test/obsolete repository proposed for archival after dependency checks.
 - `ARCHIVED` — GitHub-archived repository retained read-only for history.
 
-Review status is separate from lifecycle:
+Review status is separate from lifecycle: `VERIFIED`, `PENDING_REVIEW`, or `CONFLICTED`.
 
-- `VERIFIED` — lifecycle and responsibility are supported by current evidence.
-- `PENDING_REVIEW` — lifecycle remains intentionally unresolved pending repository-local review.
-- `CONFLICTED` — evidence sources disagree and the conflict is preserved rather than guessed through.
-
-## Verified classifications
-
-### Active core
+## Active core
 
 | Repository | Product/system | Separate responsibility |
 |---|---|---|
-| `DGAF-Framework` | DGAF | Owns DGAF governance, evidence, authorization, provenance, and governed experimental-control framework. |
-| `Orbit-Driftwatch` | Orbit-Driftwatch | Owns the public observable multi-agent reasoning and claim-to-evidence showcase. |
-| `Intellectro` | **Collabration** | Owns the governed human+AI social product and its application-specific governance, provenance, persistence, and social interaction contracts. |
+| `DGAF-Framework` | DGAF | Governance, evidence, authorization, provenance, and governed experimental controls. |
+| `Orbit-Driftwatch` | Orbit-Driftwatch | Observable multi-agent reasoning and claim-audit showcase. |
+| `Intellectro` | **Collabration** | Governed human+AI social product. |
 
-`Intellectro` remains the current repository/provider identifier. **Collabration** is the canonical human-facing product identity. A repository/provider rename is a separate migration event.
+`Intellectro` remains the repository/provider identifier. **Collabration** is the canonical human-facing product identity. A repository/provider rename is a separate migration event.
 
-### Active supporting
+## Active supporting
 
-| Repository | Responsibility |
+`Gold-star-standards`, `ai-prompt-systems-portfolio`, `.github`, `career-positioning`, `automation-scripts`, `ndrorchestration`, `entrepreneur-hub`, `dgaf-ops`, and `agent-control-plane`.
+
+These repositories support current work but are not interchangeable authorities. For example, the profile repository owns account-level lifecycle/navigation only, and `dgaf-ops` does not own DGAF scientific or authorization state.
+
+## Experimental
+
+`ai-governance-frameworks`, `3d-visualization-hub`, `junior-apogee-app` / **AI Evaluation Workbench**, `phi-calculus-app`, `sentinel-governance`, `resumeapex-eval`, `Driftwatch`, `Amethyst-Governance-Eval-Stack`, `Acoustic-mesh`, `aoga-dashboard`, `pptl-governance-dashboard`, `AHG-Zeta-Pell-Autonomous-Lattice`, `Meshsense`, `orbit-everyday`, and `Morse-Orchestration`.
+
+`EXPERIMENTAL` means the project is a current research/prototype track with bounded claims. It does not mean the work is invalid or abandoned.
+
+## Historical
+
+- `AI-Prompt-Engineer` — earlier private prompt-engineering portfolio archive.
+- `ai-prompt-engineering-portfolio` — v1 private portfolio predecessor.
+- `prompt-optimization-library` — v0 prompt-optimization baseline archive.
+- `chat-archives` — conversation/protocol/research provenance archive.
+- `api` — dated generic API evidence-status record without an active implementation surface in that repository.
+
+The current public prompt-systems portfolio is `ai-prompt-systems-portfolio`; the older prompt repositories remain useful lineage rather than competing current portfolios.
+
+## Incubating
+
+- `Agentic-Iteration-Metaconcert-Yaml-AIMY-` — experiment scaffold whose current purpose is not yet sufficiently documented for a stronger lifecycle.
+- `SP1` — game-project home whose current identity and implementation are still minimally documented.
+
+## Archive candidates
+
+The following have passed classification review as archive candidates but **have not yet been archived by this lifecycle record**:
+
+- `cli` — only a minimal Go “Hello, Bounty Hunter!” stub and no established current ecosystem responsibility.
+- `__forktest_1787727107` — disposable fork test of `octocat/Hello-World`; no operational account references found outside lifecycle-cleanup documentation.
+- `DGAF-Google-AIStudio` — generic AI Studio scaffold; no established current DGAF implementation responsibility or account references outside this cleanup.
+
+Archival still requires the final dependency/open-work/readback gate. `ARCHIVE_CANDIDATE` is not equivalent to `ARCHIVED`.
+
+## Archived
+
+- `gold-star-qa-framework` — GitHub archived state is already established; retained for historical Gold Star QA provenance.
+
+## Verified fork provenance, retention still unresolved
+
+GitHub metadata verifies these as fork-derived repositories, but their active retention purpose has not yet been adjudicated. They therefore remain `PENDING_REVIEW` rather than being promoted automatically to `EXTERNAL_REFERENCE` or `ARCHIVE_CANDIDATE`:
+
+| Repository | Verified upstream/source |
 |---|---|
-| `ndrorchestration` | Owns account-level portfolio navigation and lifecycle classification, not project-local implementation truth. |
-| `agent-control-plane` | Owns the reusable experimental execution-control kernel for capability dispatch, policy decisions, cooperative budgets, and run-scoped provenance. |
+| `unsloth` | `unslothai/unsloth` |
+| `GatorEducator__gatorgrader` | `GatorEducator/gatorgrader` |
+| `deliverymanager__cordova-plugin-media-capture` | `apache/cordova-plugin-media-capture` source lineage |
+| `drydart__flutter_android` | `drydart/flutter_android` |
+| `Soroban-Eas__soroban-sas` | `Soroban-Eas/soroban-sas` |
+| `eliezerkirubi-sys__quadcopter-rl-control` | `eliezerkirubi-sys/quadcopter-rl-control` |
+| `fabastrunck__cli` | `fabastrunck/cli` |
 
-### Experimental
+Fork provenance establishes origin, not an active reason to retain the fork.
 
-| Repository | Responsibility |
-|---|---|
-| `Meshsense` | Owns the independent companion-layer failure-mode compensation experiment around RuView. |
-| `orbit-everyday` | Owns Orbit's local-first, privacy-oriented interpretation and UX research track. |
+## Remaining pending review
 
-### Archived
+Two authored repositories remain intentionally unresolved in addition to the seven fork-retention decisions above:
 
-| Repository | Reason |
-|---|---|
-| `gold-star-qa-framework` | GitHub reports the repository archived; it is retained as historical Gold Star QA provenance. |
-
-## Pending repository review
-
-The following repositories are present in the live owner census but are intentionally **not yet assigned a lifecycle**. Their current registry records use `PENDING_REVIEW` rather than inferring status from name, size, age, or conceptual similarity.
-
-### Governance, evaluation, and application repositories
-
-`Driftwatch`, `sentinel-governance`, `Amethyst-Governance-Eval-Stack`, `junior-apogee-app`, `resumeapex-eval`, `aoga-dashboard`, `pptl-governance-dashboard`, `dgaf-ops`, `Gold-star-standards`, `ai-governance-frameworks`.
-
-### Prompt, portfolio, and support repositories
-
-`ai-prompt-systems-portfolio`, `ai-prompt-engineering-portfolio`, `AI-Prompt-Engineer`, `prompt-optimization-library`, `.github`, `career-positioning`, `automation-scripts`, `chat-archives`, `entrepreneur-hub`.
-
-### Research and creative repositories
-
-`phi-calculus-app`, `AHG-Zeta-Pell-Autonomous-Lattice`, `Morse-Orchestration`, `Acoustic-mesh`, `3d-visualization-hub`, `Agentic-Iteration-Metaconcert-Yaml-AIMY-`, `DGAF-Google-AIStudio`, `SP1`, `aetherwake-jrpg`, `lily-contracts`.
-
-### External/imported-looking and ambiguous repositories
-
-`unsloth`, `GatorEducator__gatorgrader`, `deliverymanager__cordova-plugin-media-capture`, `drydart__flutter_android`, `Soroban-Eas__soroban-sas`, `eliezerkirubi-sys__quadcopter-rl-control`, `fabastrunck__cli`, `__forktest_1787727107`, `api`, `cli`.
-
-Naming alone is not treated as proof of fork/upstream provenance or inactivity. The external/reference and archive pass must verify origin, active purpose, dependency use, unique material, and open work before changing those classifications.
+- `lily-contracts` — the repository has a coherent Lily Protocol contract scope, but its account-level program/ownership relationship requires explicit adjudication before assigning a lifecycle here.
+- `aetherwake-jrpg` — substantial game source and a technical specification exist, but no current README/lifecycle statement exists; implementation volume alone is not being used to infer active status.
 
 ## Separate-repository rule
 
@@ -105,22 +131,16 @@ A repository may move from `ARCHIVE_CANDIDATE` to `ARCHIVED` only after verifyin
 
 No repository is archived merely to make the profile look cleaner.
 
-## Relationship semantics
-
-Relationships such as `SUPPORTS`, `DERIVED_FROM`, `HISTORICAL_PREDECESSOR_OF`, `SHOWCASE_OF`, `EXPERIMENTS_WITH`, and `EXTERNAL_REFERENCE_FOR` are descriptive edges only. They do not transfer implementation status, runtime verification, empirical evidence, security assurance, scientific results, or authorization.
-
 ## Public portfolio rule
 
-The GitHub profile is a curated projection, not the complete inventory. It should emphasize a small set of current authored work and link here for lifecycle detail. External/reference repositories, archive candidates, and unresolved repositories remain discoverable without being presented as equivalent current portfolio projects.
+The GitHub profile is a curated projection, not the complete inventory. It emphasizes a small set of current authored work and links here for lifecycle detail. External/reference repositories, archive candidates, historical work, and unresolved repositories remain discoverable without being presented as equivalent current portfolio projects.
 
-## Next review sequence
+## Next reconciliation work
 
-1. verify remaining authored governance/control repositories;
-2. identify the canonical prompt/evaluation portfolio and classify duplicative containers;
-3. verify research, creative, and private support repositories;
-4. verify imported/reference provenance and ambiguous test repositories;
-5. apply minimal repository-local boundary documentation;
-6. archive only candidates that satisfy every approved predicate;
-7. synchronize DGAF and workspace projections without creating a competing source of truth.
+1. resolve the seven fork-retention decisions;
+2. adjudicate `lily-contracts` and `aetherwake-jrpg`;
+3. correct stale account/repository authority language where found;
+4. execute archival only for candidates satisfying every archive predicate;
+5. synchronize DGAF and workspace projections without creating competing sources of truth.
 
 The machine-readable registry remains the canonical account-level lifecycle classification surface. This document is its human-readable companion.
