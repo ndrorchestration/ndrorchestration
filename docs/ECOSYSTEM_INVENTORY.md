@@ -1,5 +1,7 @@
 # NDR Ecosystem Inventory
 
+> **Lifecycle authority notice — 2026-09-16:** [`../ecosystem/repository-lifecycle.json`](../ecosystem/repository-lifecycle.json) is the canonical account-level repository lifecycle classification. [`ECOSYSTEM_LIFECYCLE.md`](ECOSYSTEM_LIFECYCLE.md) is its human-readable companion. This inventory is a historical/mechanical projection and must not override repository-local implementation/evidence truth, runtime-provider facts, or the lifecycle registry.
+
 **Version:** 2.1 | **Date:** 2026-08-17 | **Domain:** OI  
 **Status:** ACTIVE / NORMALIZATION IN PROGRESS  
 **Canonical Path:** `ndrorchestration/ndrorchestration/docs/ECOSYSTEM_INVENTORY.md`
