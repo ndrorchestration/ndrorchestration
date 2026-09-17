@@ -34,11 +34,13 @@ A compact portfolio showcase for inspecting a multi-agent workflow instead of sh
 
 ---
 
-### [Intellectro](https://github.com/ndrorchestration/Intellectro) — governed social application
+### [Collabration](https://github.com/ndrorchestration/Intellectro) — governed human+AI social application
 
 A social-network alpha exploring accountable human/AI interaction without silently transferring authority to agents.
 
-<img src="assets/intellectro-proof-map.svg" alt="Intellectro architecture: human users interact through a Next.js application and authenticated server actions backed by Supabase and Postgres with row-level security, then explicit capability decisions and human approvals produce governed action records, provenance, and correction or appeal paths." width="100%">
+> **Repository identifier:** the GitHub repository and some provider identifiers still use the historical name `Intellectro`; **Collabration** is the canonical product identity. No repository/provider rename is implied here.
+
+<img src="assets/intellectro-proof-map.svg" alt="Collabration architecture: human users interact through a Next.js application and authenticated server actions backed by Supabase and Postgres with row-level security, then explicit capability decisions and human approvals produce governed action records, provenance, and correction or appeal paths." width="100%">
 
 **Built:** deny-by-default capability decisions, human approval gates, provenance and revision-aware Content Passport contracts, governed action records, correction/appeal paths, source-linked social content, authenticated application paths, and Supabase-backed persistence boundaries with RLS.
 
@@ -84,6 +86,20 @@ A social-network alpha exploring accountable human/AI interaction without silent
 | [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | drift instrumentation, failure-aware evaluation, reproducible synthetic benchmark apparatus |
 | [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) | minimal capability dispatch, rejection provenance, manifests, and control-plane primitives |
 | [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | executable evaluation harnesses, known-answer controls, and deterministic reproduction |
+
+## Ecosystem navigation
+
+The public profile is intentionally curated; it is not an exhaustive list of repositories.
+
+- **Governance & control:** DGAF-Framework, Agent Control Plane, and related governance/evaluation systems.
+- **Evaluation & observability:** Orbit-Driftwatch, Driftwatch, and focused evaluation harnesses.
+- **Human-facing product work:** Collabration and the Orbit interpretation/UX track.
+- **Experimental research:** MeshSense, mathematical/control experiments, sensing/acoustic work, and other bounded research tracks.
+- **Portfolio & support:** prompt/evaluation artifacts, governance references, visualization work, and private operational/career support repositories.
+
+For the complete account-level repository classification—including active, experimental, historical, external/reference, unresolved, and archived states—see the [Repository Lifecycle Map](docs/ECOSYSTEM_LIFECYCLE.md).
+
+Lifecycle classification does not transfer implementation status, empirical evidence, production readiness, security assurance, or authorization between projects. Exact project state remains authoritative in the owning repository and relevant runtime providers.
 
 ## How I work
 
