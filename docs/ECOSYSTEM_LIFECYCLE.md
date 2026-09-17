@@ -3,7 +3,7 @@
 **Status:** ACTIVE ACCOUNT-LEVEL CLASSIFICATION  
 **Authority scope:** `ACCOUNT_LEVEL_LIFECYCLE_ONLY`  
 **Machine-readable source:** [`../ecosystem/repository-lifecycle.json`](../ecosystem/repository-lifecycle.json)  
-**Reviewed:** 2026-09-16
+**Reviewed:** 2026-09-17
 
 ## Authority boundary
 
@@ -15,10 +15,10 @@ Project repositories remain authoritative for their own implementation and evide
 
 The current connected GitHub owner census contains **47 repositories**:
 
-- **38 `VERIFIED`** lifecycle classifications;
-- **9 `PENDING_REVIEW`** classifications;
+- **47 `VERIFIED`** lifecycle classifications;
+- **0 `PENDING_REVIEW`** classifications;
 - **0 `CONFLICTED`** classifications;
-- **3 `ARCHIVE_CANDIDATE`** repositories awaiting the final archive gate; and
+- **5 `ARCHIVE_CANDIDATE`** repositories awaiting the final archive gate; and
 - **1 already `ARCHIVED`** repository.
 
 A verified lifecycle means the account-level role is supported by current repository-local documentation and/or GitHub metadata. It does not mean production readiness, scientific validation, security certification, or authorization.
@@ -72,6 +72,7 @@ The current public prompt-systems portfolio is `ai-prompt-systems-portfolio`; th
 
 - `Agentic-Iteration-Metaconcert-Yaml-AIMY-` — experiment scaffold whose current purpose is not yet sufficiently documented for a stronger lifecycle.
 - `SP1` — game-project home whose current identity and implementation are still minimally documented.
+- `aetherwake-jrpg` — private JRPG prototype with a substantive technical specification and fresh baseline implementation; retained as an incubating game-development track.
 
 ## Archive candidates
 
@@ -80,6 +81,8 @@ The following have passed classification review as archive candidates but **have
 - `cli` — only a minimal Go “Hello, Bounty Hunter!” stub and no established current ecosystem responsibility.
 - `__forktest_1787727107` — disposable fork test of `octocat/Hello-World`; no operational account references found outside lifecycle-cleanup documentation.
 - `DGAF-Google-AIStudio` — generic AI Studio scaffold; no established current DGAF implementation responsibility or account references outside this cleanup.
+- `unsloth` — upstream-derived Unsloth snapshot with no local authored branch or active account dependency found; preserve Apache-2.0/upstream provenance.
+- `Soroban-Eas__soroban-sas` — contribution-attempt fork whose upstream issue is completed and whose account PRs are closed unmerged; no separate active account responsibility found.
 
 Archival still requires the final dependency/open-work/readback gate. `ARCHIVE_CANDIDATE` is not equivalent to `ARCHIVED`.
 
@@ -87,28 +90,24 @@ Archival still requires the final dependency/open-work/readback gate. `ARCHIVE_C
 
 - `gold-star-qa-framework` — GitHub archived state is already established; retained for historical Gold Star QA provenance.
 
-## Verified fork provenance, retention still unresolved
+## External/reference forks
 
-GitHub metadata verifies these as fork-derived repositories, but their active retention purpose has not yet been adjudicated. They therefore remain `PENDING_REVIEW` rather than being promoted automatically to `EXTERNAL_REFERENCE` or `ARCHIVE_CANDIDATE`:
+The following fork-derived repositories have a concrete retained contribution/reference purpose. Upstream remains canonical, and these forks are not counted as original authored portfolio projects:
 
-| Repository | Verified upstream/source |
-|---|---|
-| `unsloth` | `unslothai/unsloth` |
-| `GatorEducator__gatorgrader` | `GatorEducator/gatorgrader` |
-| `deliverymanager__cordova-plugin-media-capture` | `apache/cordova-plugin-media-capture` source lineage |
-| `drydart__flutter_android` | `drydart/flutter_android` |
-| `Soroban-Eas__soroban-sas` | `Soroban-Eas/soroban-sas` |
-| `eliezerkirubi-sys__quadcopter-rl-control` | `eliezerkirubi-sys/quadcopter-rl-control` |
-| `fabastrunck__cli` | `fabastrunck/cli` |
-| `lily-contracts` | `Lilly-Protocol/lily-contracts` |
+| Repository | Verified upstream/source | Retention evidence |
+|---|---|---|
+| `fabastrunck__cli` | `fabastrunck/cli` | Account PR #2 remains open; retain until the open contribution is adjudicated. |
+| `deliverymanager__cordova-plugin-media-capture` | `apache/cordova-plugin-media-capture` source lineage | Funded issue #1 and account PR #2 remain open. |
+| `drydart__flutter_android` | `drydart/flutter_android` | Funded issue #1 and account PR #17 remain open. |
+| `GatorEducator__gatorgrader` | `GatorEducator/gatorgrader` | Account PRs #290/#291 remain open. |
+| `eliezerkirubi-sys__quadcopter-rl-control` | `eliezerkirubi-sys/quadcopter-rl-control` | Account PRs #24/#25/#26 remain open. |
+| `lily-contracts` | `Lilly-Protocol/lily-contracts` | Account PR #166 was merged on 2026-09-02; retain as successful upstream-contribution provenance/reference. |
 
-Fork provenance establishes origin, not an active reason to retain the fork.
+Fork provenance and contribution history establish origin and a bounded retention reason only; they do not transfer upstream authority or make these repositories original portfolio projects.
 
 ## Remaining pending review
 
-One authored repository remains intentionally unresolved in addition to the eight fork-retention decisions above:
-
-- `aetherwake-jrpg` — substantial game source and a technical specification exist, and GitHub confirms this is a new non-fork repository created on 2026-09-16; however, no current README/lifecycle statement exists. Implementation volume alone is not being used to infer the intended long-term lifecycle.
+No repositories remain `PENDING_REVIEW` at this checkpoint. New ambiguity must be recorded explicitly rather than inferred into an existing lifecycle.
 
 ## Separate-repository rule
 
@@ -137,10 +136,9 @@ The GitHub profile is a curated projection, not the complete inventory. It empha
 
 ## Next reconciliation work
 
-1. resolve the eight fork-retention decisions;
-2. establish `aetherwake-jrpg`'s project-local lifecycle statement;
+1. adjudicate retained open upstream contribution PRs before any related archive decision;
+2. execute archival only for candidates satisfying every archive predicate and verify `archived=true` by readback;
 3. continue correcting stale account/repository authority language where found;
-4. execute archival only for candidates satisfying every archive predicate;
-5. synchronize DGAF and workspace projections without creating competing sources of truth.
+4. synchronize DGAF and workspace projections after the canonical lifecycle merge without creating competing sources of truth.
 
 The machine-readable registry remains the canonical account-level lifecycle classification surface. This document is its human-readable companion.
