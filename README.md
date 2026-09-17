@@ -1,126 +1,101 @@
 # Andrew // Ndr "Ender" Hensel
 
-### AI Evaluation & Agentic Systems · Prompt Engineering · Governance & Provenance
+### AI Systems Design · Evaluation · Agentic Governance · Provenance
 
-I design, build, and evaluate AI systems with an emphasis on **multi-agent workflows, prompt/evaluation systems, provenance, reproducibility, failure-mode discovery, and fail-closed controls**.
+I design and evaluate AI systems with a focus on a practical question:
 
-My current professional direction includes **AI evaluation, prompt engineering, AI training, model/system quality, QA, and governance-aware agentic systems**.
+> **What did the system actually do, what evidence supports that claim, and what is it authorized to do next?**
 
-> **What I focus on:** What did the system actually do, what evidence supports the claim, what failed, and what is it authorized to do next?
+My work sits at the intersection of **AI evaluation, multi-agent systems, prompt engineering, provenance, reproducibility, and governance-aware orchestration**. I am especially interested in systems where capability, evidence, verification, and permission must remain distinct rather than collapsing into a generic “works” claim.
 
-## What I can help a team do
+## Flagship: DGAF
 
-- Design **AI evaluation harnesses** with known-answer controls, negative tests, failure modes, and clear pass/fail criteria.
-- Test and improve **prompts, agent workflows, and structured-output pipelines** without confusing a passing demo with reliable behavior.
-- Make **multi-agent systems observable** through role traces, disagreement, source bindings, provenance, and portable run artifacts.
-- Add practical **governance and authorization controls** around high-impact or autonomous AI actions.
-- Audit AI claims for **evidence quality, reproducibility, provenance, and unsupported state transitions**.
+### [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) — governance control plane for agentic systems
 
-## Featured work
+**Dynamic Governance Agentic Formation (DGAF)** is an experimental framework for governed multi-agent AI systems. It treats **capability, evidence, verification, authority, and permission to act as separate machine-relevant states**.
+
+DGAF explores whether agentic systems can make consequential transitions only when the evidence and authority available at that exact state actually permit them.
+
+**Implemented research/engineering surfaces include:**
+
+- explicit governance and state-transition logic;
+- provenance and source/evidence binding;
+- deterministic validators and negative controls;
+- fail-closed CI and authorization boundaries;
+- custody, freeze, closure, and experimental-integrity machinery;
+- blinded experimental infrastructure and reproducibility tooling;
+- separation of implementation, verification, independent verification, authorization, execution, and empirical support.
+
+**Current bounded research state:** Track A Epoch 002 collection is complete at **50 paired seed units / 2,250 blinded observations**, with dataset lock established. Controlled materialization is not yet established; primary analysis is not authorized or run; scientific-N increment remains 0; canonical efficacy and independent validation are not established. Broader High-Assurance DGAF remains **PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0**.
+
+**Start here:** [DGAF five-minute evaluator orientation](https://github.com/ndrorchestration/DGAF-Framework#five-minute-evaluator-orientation)
+
+## What I build around that problem
 
 ### [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) — multi-agent evaluation & observability
 
-A compact portfolio showcase for inspecting a multi-agent workflow instead of showing only its final answer.
+A compact system for inspecting a multi-agent workflow rather than showing only its final answer.
 
-<img src="assets/orbit-driftwatch-proof-map.svg" alt="Orbit-Driftwatch architecture: question input passes through a provider boundary to Planner, Researcher, Skeptic, and Verifier roles, then through claim and evidence inspection, Driftwatch observability, Orbit interpretation, and a portable evidence artifact." width="100%">
-
-**Built:** explicit Planner / Researcher / Skeptic / Verifier roles, provider boundaries, source-aware provenance, disagreement and evidence-coverage metrics, unsupported/conflicting-claim handling, deterministic controls, portable run artifacts, and a fail-closed claim-readiness audit.
+**Demonstrates:** Planner / Researcher / Skeptic / Verifier role separation, provider boundaries, source-aware provenance, disagreement and evidence-coverage metrics, unsupported/conflicting-claim handling, deterministic controls, portable run artifacts, and fail-closed claim-readiness auditing.
 
 **Stack:** JavaScript · Node.js · browser UI · provider abstraction · OpenAI Responses adapter · GitHub Actions
 
-**Evidence:** deterministic behavior and repository controls are CI-tested, including frozen reproducible artifacts. Live hosted OpenAI-backed execution/retrieval remains outside the currently verified public evidence boundary.
+**Evidence boundary:** deterministic behavior and repository controls are CI-tested, including frozen reproducible artifacts. Live hosted OpenAI-backed execution/retrieval remains outside the currently verified public evidence boundary.
 
-**Start here:** [five-minute evaluation path](https://github.com/ndrorchestration/Orbit-Driftwatch#five-minute-evaluation-path)
+### [Collabration](https://github.com/ndrorchestration/Intellectro) — governed human+AI collaboration
 
----
+A social application exploring accountable human/AI interaction without silently transferring authority to agents.
 
-### [Collabration](https://github.com/ndrorchestration/Intellectro) — governed human+AI social application
+**Demonstrates:** deny-by-default capability decisions, human approval gates, provenance and revision-aware Content Passport contracts, governed action records, correction/appeal paths, authenticated application paths, and Supabase/Postgres row-level-security boundaries.
 
-A social-network alpha exploring accountable human/AI interaction without silently transferring authority to agents.
+> The repository still uses the historical identifier `Intellectro`; **Collabration** is the canonical product name.
 
-> **Repository identifier:** the GitHub repository and some provider identifiers still use the historical name `Intellectro`; **Collabration** is the canonical product identity. No repository/provider rename is implied here.
+### [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) — minimal control-plane primitives
 
-<img src="assets/intellectro-proof-map.svg" alt="Collabration architecture: human users interact through a Next.js application and authenticated server actions backed by Supabase and Postgres with row-level security, then explicit capability decisions and human approvals produce governed action records, provenance, and correction or appeal paths." width="100%">
+A smaller implementation surface for capability dispatch, rejection provenance, manifests, and explicit control boundaries.
 
-**Built:** deny-by-default capability decisions, human approval gates, provenance and revision-aware Content Passport contracts, governed action records, correction/appeal paths, source-linked social content, authenticated application paths, and Supabase-backed persistence boundaries with RLS.
+### [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) — prompt/evaluation systems
 
-**Stack:** Next.js · React · Node.js · Supabase · Postgres/RLS · GitHub Actions · Vercel
+Recruiter-readable prompt and evaluation specifications, structured-output contracts, failure-aware iteration, and reproducible comparison artifacts.
 
-**Evidence:** repository and database-governance surfaces are implemented and tested within their admitted scope. Production persistence configuration and browser/session verification remain separate open runtime gates; no broad production or security certification is claimed.
-
-**Explore:** [repository](https://github.com/ndrorchestration/Intellectro) · [deployed application](https://intellectro.vercel.app)
-
----
-
-### [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) / PDMAL — governed agentic-systems research
-
-**DGAF (Dynamic Governance Agentic Formation)** is an experimental framework that treats capability, evidence, verification, authority, and permission to act as separate machine-relevant states.
-
-**Built:** governance logic, provenance controls, deterministic validators, negative controls, CI, source/evidence binding, custody machinery, experimental tooling, and blinded-data infrastructure.
-
-**Stack:** Python · GitHub Actions · deterministic validation · experimental/reproducibility tooling · governed evidence pipelines
-
-**Current bounded research state:** Track A Epoch 002 collection is complete at **50 paired seed units / 2,250 blinded observations**, and dataset lock is established. Controlled materialization is not yet established; primary analysis is not authorized or run; scientific-N increment remains 0; canonical efficacy and independent validation are not established. Broader High-Assurance DGAF remains **PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0**.
-
-**Research status:** [DGAF repository](https://github.com/ndrorchestration/DGAF-Framework)
-
-## Core capabilities & tools
+## Capabilities I am developing
 
 | Area | Working focus |
 |---|---|
-| **AI evaluation & QA** | known-answer controls, negative testing, failure taxonomies, evidence classes, claim ceilings |
-| **Prompt systems** | prompt/evaluation specs, structured outputs, failure-aware iteration, reproducible comparisons |
-| **Agentic workflows** | role separation, handoffs, provider boundaries, state/control-plane design |
-| **Governance & authorization** | fail-closed gates, capability boundaries, approval/rejection semantics |
+| **AI evaluation & QA** | known-answer controls, negative tests, failure taxonomies, evidence classes, claim ceilings |
+| **Agentic systems** | role separation, handoffs, state/control-plane design, orchestration boundaries |
+| **Governance & authorization** | fail-closed gates, explicit permissions, transition constraints, approval/rejection semantics |
 | **Provenance & reproducibility** | source binding, artifact identity, deterministic controls, audit trails |
+| **Prompt systems** | prompt/evaluation specifications, structured outputs, failure-aware iteration |
 | **Runtime verification** | source/deployment/runtime separation, health checks, exact-identity reasoning |
-| **Research tooling** | preregistered infrastructure, blinded workflows, computational reproduction, adversarial checks |
+| **Research tooling** | preregistration, blinded workflows, reproducibility, adversarial and negative controls |
 
-**Primary tools represented in current public work:** Python · JavaScript/Node.js · Next.js/React · Supabase/Postgres/RLS · GitHub Actions · Vercel · model/provider API integration
-
-## More selected work
-
-| Project | What it demonstrates |
-|---|---|
-| [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | recruiter-readable prompt/evaluation specifications and structured prompt-system artifacts |
-| [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | drift instrumentation, failure-aware evaluation, reproducible synthetic benchmark apparatus |
-| [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) | minimal capability dispatch, rejection provenance, manifests, and control-plane primitives |
-| [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | executable evaluation harnesses, known-answer controls, and deterministic reproduction |
-
-## Ecosystem navigation
-
-The public profile is intentionally curated; it is not an exhaustive list of repositories.
-
-- **Governance & control:** DGAF-Framework, Agent Control Plane, and related governance/evaluation systems.
-- **Evaluation & observability:** Orbit-Driftwatch, Driftwatch, and focused evaluation harnesses.
-- **Human-facing product work:** Collabration and the Orbit interpretation/UX track.
-- **Experimental research:** MeshSense, mathematical/control experiments, sensing/acoustic work, and other bounded research tracks.
-- **Portfolio & support:** prompt/evaluation artifacts, governance references, visualization work, and private operational/career support repositories.
-
-For the complete account-level repository classification—including active, experimental, historical, external/reference, unresolved, and archived states—see the [Repository Lifecycle Map](docs/ECOSYSTEM_LIFECYCLE.md).
-
-Lifecycle classification does not transfer implementation status, empirical evidence, production readiness, security assurance, or authorization between projects. Exact project state remains authoritative in the owning repository and relevant runtime providers.
+**Primary tools represented in current public work:** Python · JavaScript/Node.js · Next.js/React · Supabase/Postgres/RLS · GitHub Actions · Vercel · model/provider APIs
 
 ## How I work
 
-I try to keep these states separate instead of collapsing them into a generic “works” claim:
+I use a simple discipline across projects:
 
 **defined → implemented → tested → computed → verified → independently verified → authorized → executed → empirically supported**
 
-That means:
+Those states are intentionally not interchangeable.
 
-- a passing test does not by itself prove efficacy;
-- a healthy deployment does not establish scientific validity;
-- provenance establishes origin/history, not truth;
-- governance controls do not automatically grant authorization;
-- historical evidence does not silently transfer to a new candidate, deployment, run, or artifact.
+A passing test does not prove efficacy. A healthy deployment does not establish scientific validity. Provenance establishes origin and history, not truth. Governance controls do not automatically grant authorization. Historical evidence does not silently transfer to a new candidate, deployment, run, or artifact.
 
-Several repositories therefore intentionally preserve states such as **NOT VERIFIED**, **NOT AUTHORIZED**, **NOT ESTABLISHED**, or **blocked** when the required evidence does not exist yet.
+That is why several repositories deliberately preserve states such as **NOT VERIFIED**, **NOT AUTHORIZED**, **NOT ESTABLISHED**, or **blocked** when the required evidence does not exist.
 
-## Current direction
+## Current professional direction
 
-I am especially interested in **AI Evaluator, Prompt Engineer, AI Training / Quality, and agentic-systems roles** where careful testing, failure-mode discovery, evidence quality, and system-level reasoning matter alongside implementation.
+I am building toward **AI Evaluator, Prompt Engineer, AI Training / Quality, AI Systems, and agentic-governance roles** where careful testing, failure-mode discovery, provenance, evidence quality, and system-level reasoning matter alongside implementation.
+
+My broader goal is to help make increasingly capable AI systems easier to **inspect, constrain, verify, and trust for the right reasons**.
+
+## Explore the ecosystem
+
+The public profile is curated rather than exhaustive. The account also contains work in evaluation, observability, sensing, mathematical/control experiments, visualization, and supporting research infrastructure.
+
+For the account-level classification of active, experimental, historical, external/reference, unresolved, and archived repositories, see the [Repository Lifecycle Map](docs/ECOSYSTEM_LIFECYCLE.md).
 
 ---
 
-*This profile is a selected public portfolio, not an inventory of every repository or a substitute for project-local source of truth. Exact implementation, runtime, evidence, and governance facts remain authoritative in their owning repositories.*
+*Exact implementation, runtime, evidence, and governance facts remain authoritative in each project’s owning repository and relevant runtime providers. This profile does not transfer evidence or readiness claims between projects.*
