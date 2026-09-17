@@ -100,15 +100,15 @@ GitHub metadata verifies these as fork-derived repositories, but their active re
 | `Soroban-Eas__soroban-sas` | `Soroban-Eas/soroban-sas` |
 | `eliezerkirubi-sys__quadcopter-rl-control` | `eliezerkirubi-sys/quadcopter-rl-control` |
 | `fabastrunck__cli` | `fabastrunck/cli` |
+| `lily-contracts` | `Lilly-Protocol/lily-contracts` |
 
 Fork provenance establishes origin, not an active reason to retain the fork.
 
 ## Remaining pending review
 
-Two authored repositories remain intentionally unresolved in addition to the seven fork-retention decisions above:
+One authored repository remains intentionally unresolved in addition to the eight fork-retention decisions above:
 
-- `lily-contracts` — the repository has a coherent Lily Protocol contract scope, but its account-level program/ownership relationship requires explicit adjudication before assigning a lifecycle here.
-- `aetherwake-jrpg` — substantial game source and a technical specification exist, but no current README/lifecycle statement exists; implementation volume alone is not being used to infer active status.
+- `aetherwake-jrpg` — substantial game source and a technical specification exist, and GitHub confirms this is a new non-fork repository created on 2026-09-16; however, no current README/lifecycle statement exists. Implementation volume alone is not being used to infer the intended long-term lifecycle.
 
 ## Separate-repository rule
 
@@ -137,9 +137,9 @@ The GitHub profile is a curated projection, not the complete inventory. It empha
 
 ## Next reconciliation work
 
-1. resolve the seven fork-retention decisions;
-2. adjudicate `lily-contracts` and `aetherwake-jrpg`;
-3. correct stale account/repository authority language where found;
+1. resolve the eight fork-retention decisions;
+2. establish `aetherwake-jrpg`'s project-local lifecycle statement;
+3. continue correcting stale account/repository authority language where found;
 4. execute archival only for candidates satisfying every archive predicate;
 5. synchronize DGAF and workspace projections without creating competing sources of truth.
 
