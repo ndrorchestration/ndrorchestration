@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "project": "erdos742-verified-pilot",
+  "leansms": {
+    "repository": "https://github.com/leansolving/leansms",
+    "commit": "8fa708e4c8a00a8951dadc5c0f68863d057fcfab",
+    "lean_toolchain": "leanprover/lean4:v4.24.0-rc1",
+    "mathlib": "v4.24.0-rc1",
+    "certificate_format": "LRAT",
+    "solver_pipeline": "SMS symmetry clauses -> verified in Lean -> CaDiCaL LRAT -> Lean LRAT check"
+  },
+  "baseline": {
+    "smoke_n": 9,
+    "published_verified_n": 13,
+    "extension_n": 14
+  },
+  "frontier": {
+    "n": 25,
+    "edges": 157,
+    "deltas": [13, 14, 15, 16, 17]
+  },
+  "budgets": {
+    "probe_wall_minutes": 60,
+    "first_branch_wall_hours": 24
+  },
+  "required_audit_sources": [
+    "canonical_page",
+    "discussion_forum",
+    "arxiv_math_co",
+    "github",
+    "zenodo_artifacts",
+    "recent_papers_preprints"
+  ],
+  "frontier_default_status": "COLLISION_HOLD"
+}
