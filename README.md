@@ -1,6 +1,6 @@
 # Andrew // Ndr "Ender" Hensel
 
-### AI Systems Design · Evaluation · Agentic Governance · Provenance
+### AI Systems Design · Evaluation · Agentic Governance & Assurance · Provenance
 
 I design and evaluate AI systems with a focus on a practical question:
 
@@ -10,11 +10,14 @@ My work sits at the intersection of **AI evaluation, multi-agent systems, prompt
 
 ## Flagship: DGAF
 
-### [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) — governance control plane for agentic systems
+### [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) — assurance control plane for agentic AI
 
-**Dynamic Governance Agentic Formation (DGAF)** is an experimental framework for governed multi-agent AI systems. It treats **capability, evidence, verification, authority, and permission to act as separate machine-relevant states**.
+**Dynamic Governance Agentic Formation (DGAF)** is an experimental **AI governance platform** and **assurance control plane for agentic AI**. It treats **capability, evidence, verification, authority, and permission to act as separate machine-relevant states**.
 
-DGAF explores whether agentic systems can make consequential transitions only when the evidence and authority available at that exact state actually permit them.
+**Market lane:** AI Governance Platform · Assurance Control Plane · Governance-as-Code  
+**Technical differentiator:** evidence-aware / epistemic transition control.
+
+DGAF asks whether the evidence, provenance, verification state, and authority available at an exact moment actually permit an AI system to take an action, make a claim, or enter a new lifecycle state.
 
 **Implemented research/engineering surfaces include:**
 
@@ -26,7 +29,7 @@ DGAF explores whether agentic systems can make consequential transitions only wh
 - blinded experimental infrastructure and reproducibility tooling;
 - separation of implementation, verification, independent verification, authorization, execution, and empirical support.
 
-**Current bounded research state:** Track A Epoch 002 collection is complete at **50 paired seed units / 2,250 blinded observations**, with dataset lock established. Controlled materialization is not yet established; primary analysis is not authorized or run; scientific-N increment remains 0; canonical efficacy and independent validation are not established. Broader High-Assurance DGAF remains **PRE-FREEZE / FAIL-CLOSED / NOT AUTHORIZED / N=0**.
+**Current bounded research state:** Track A Epoch 002 completed and closed its exact preregistered lifecycle under a bounded **same-system non-independent** disposition. That completion does **not** establish canonical DGAF efficacy, independent validation, certification, production readiness, or High-Assurance authorization. Exact mutable state remains authoritative in DGAF's own current-state records.
 
 **Start here:** [DGAF five-minute evaluator orientation](https://github.com/ndrorchestration/DGAF-Framework#five-minute-evaluator-orientation)
 
