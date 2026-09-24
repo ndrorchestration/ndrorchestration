@@ -2,14 +2,14 @@
 
 This Vercel application serves two deliberately separate responsibilities:
 
-1. `/` is the public NDR AI Systems portfolio/ecosystem front door.
+1. `/` is the curated public NDR AI Systems portfolio front door, synchronized to the canonical repository-root profile README.
 2. `/orbit` is the ORBIT read-only evidence observability surface for DGAF/PDMAL.
 
 The public home is not a governance authority. ORBIT is not a governance authority. Project-specific repositories and their canonical evidence/governance records remain authoritative for their own state.
 
 ## Product surface
 
-- `/` — public NDR AI Systems portfolio and ecosystem map.
+- `/` — curated NDR AI Systems portfolio projection; the repository-root `README.md` is the canonical GitHub profile copy.
 - `/orbit` — ORBIT observer for DGAF evidence state, provenance, blockers, and claim propagation.
 - `/api/orbit` — machine-readable ORBIT reconciliation endpoint.
 - `/api/health` — deployment health probe.

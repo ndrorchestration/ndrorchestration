@@ -9,6 +9,8 @@ const health = read('../pages/api/health.ts');
 const schema = read('../pages/api/schema.ts');
 const page = read('../pages/orbit.tsx');
 const nextConfig = read('../next.config.js');
+const home = read('../pages/index.tsx');
+const legacyProfile = read('../../profile/README.md');
 const packageJson = JSON.parse(read('../package.json'));
 
 const required = ['empiricalN: 0', 'Pilot Authorization', 'Propagation Integrity', 'Claims do not upgrade epistemic status'];
@@ -66,6 +68,19 @@ if (!page.includes('CURRENT AUTHORITY STATE')) {
 }
 if (!health.includes("status: 'ok'") || !health.includes("req.method !== 'GET'")) throw new Error('ORBIT health endpoint incomplete');
 if (!schema.includes('EVIDENCE_SCHEMA') || !schema.includes("'source-head semantics'")) throw new Error('ORBIT schema endpoint incomplete');
+
+for (const token of ['Orbit-Driftwatch', 'Collabration', 'Agent Control Plane', 'AI Prompt Systems Portfolio']) {
+  if (!home.includes(token)) throw new Error(`Public portfolio selection missing: ${token}`);
+}
+for (const stale of ["name: 'Intellectro'", "name: 'Driftwatch'", "name: 'AOGA Dashboard'", 'PRE-FREEZE · FAIL-CLOSED · NOT AUTHORIZED · empirical N = 0']) {
+  if (home.includes(stale)) throw new Error(`Stale public-profile projection returned: ${stale}`);
+}
+if (!home.includes('Scientific-N increment remains 0')) {
+  throw new Error('Public portfolio must retain the current bounded DGAF scientific-N statement');
+}
+if (!legacyProfile.includes('canonical public GitHub profile') || !legacyProfile.includes('../README.md')) {
+  throw new Error('Nested profile README must remain a pointer to the canonical root profile');
+}
 
 for (const header of ['X-Content-Type-Options', 'X-Frame-Options', 'Referrer-Policy', 'Permissions-Policy', 'Content-Security-Policy']) {
   if (!nextConfig.includes(header)) throw new Error(`ORBIT security header missing: ${header}`);
