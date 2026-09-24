@@ -3,7 +3,7 @@
 **Status:** ACTIVE ACCOUNT-LEVEL CLASSIFICATION  
 **Authority scope:** `ACCOUNT_LEVEL_LIFECYCLE_ONLY`  
 **Machine-readable source:** [`../ecosystem/repository-lifecycle.json`](../ecosystem/repository-lifecycle.json)  
-**Reviewed:** 2026-09-17
+**Reviewed:** 2026-09-24
 
 ## Authority boundary
 
@@ -13,10 +13,10 @@ Project repositories remain authoritative for their own implementation and evide
 
 ## Current census
 
-The current connected GitHub owner census contains **47 repositories**:
+The current connected GitHub owner census contains **48 repositories**:
 
 - **47 `VERIFIED`** lifecycle classifications;
-- **0 `PENDING_REVIEW`** classifications;
+- **1 `PENDING_REVIEW`** classification;
 - **0 `CONFLICTED`** classifications;
 - **5 `ARCHIVE_CANDIDATE`** repositories awaiting the final archive gate; and
 - **1 already `ARCHIVED`** repository.
@@ -72,7 +72,8 @@ The current public prompt-systems portfolio is `ai-prompt-systems-portfolio`; th
 
 - `Agentic-Iteration-Metaconcert-Yaml-AIMY-` — experiment scaffold whose current purpose is not yet sufficiently documented for a stronger lifecycle.
 - `SP1` — game-project home whose current identity and implementation are still minimally documented.
-- `aetherwake-jrpg` — private JRPG prototype with a substantive technical specification and fresh baseline implementation; retained as an incubating game-development track.
+- `aetherwake-jrpg` — private pre-alpha **Aetherwake — The Last Solarpunk Airship** track with a playable vertical slice and active standalone Windows preview packaging; retained as incubating while the game and delivery path mature.
+- `coherence-control-benchmark` — private AI evaluation/orchestration-control benchmark prototype; provisionally `INCUBATING` with `PENDING_REVIEW` because repository metadata establishes the intended identity while the README/package presentation layer remains unreconciled starter scaffolding.
 
 ## Archive candidates
 
@@ -107,7 +108,9 @@ Fork provenance and contribution history establish origin and a bounded retentio
 
 ## Remaining pending review
 
-No repositories remain `PENDING_REVIEW` at this checkpoint. New ambiguity must be recorded explicitly rather than inferred into an existing lifecycle.
+- `coherence-control-benchmark` — `PENDING_REVIEW`. Repository metadata identifies **Coherence Control Benchmark** as an AI evaluation and orchestration-control harness with multi-agent governance and an ablation workbench, but `README.md` still contains generic AI Studio starter instructions and `package.json` still uses the generic `react-example` package identity. Do not promote it into the public portfolio or a stronger lifecycle until documentation and implementation identity are reconciled.
+
+New ambiguity must be recorded explicitly rather than inferred into an existing lifecycle.
 
 ## Separate-repository rule
 
@@ -136,9 +139,10 @@ The GitHub profile is a curated projection, not the complete inventory. It empha
 
 ## Next reconciliation work
 
-1. adjudicate retained open upstream contribution PRs before any related archive decision;
-2. execute archival only for candidates satisfying every archive predicate and verify `archived=true` by readback;
-3. continue correcting stale account/repository authority language where found;
-4. synchronize DGAF and workspace projections after the canonical lifecycle merge without creating competing sources of truth.
+1. reconcile `coherence-control-benchmark` README/package identity with its repository metadata and implementation before lifecycle promotion;
+2. adjudicate retained open upstream contribution PRs before any related archive decision;
+3. execute archival only for candidates satisfying every archive predicate and verify `archived=true` by readback;
+4. continue correcting stale account/repository authority language where found;
+5. synchronize DGAF and workspace projections after canonical lifecycle changes without creating competing sources of truth.
 
 The machine-readable registry remains the canonical account-level lifecycle classification surface. This document is its human-readable companion.
