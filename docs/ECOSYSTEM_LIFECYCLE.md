@@ -108,7 +108,7 @@ Fork provenance and contribution history establish origin and a bounded retentio
 
 ## Remaining pending review
 
-- `coherence-control-benchmark` — `PENDING_REVIEW`. Repository metadata identifies **Coherence Control Benchmark** as an AI evaluation and orchestration-control harness with multi-agent governance and an ablation workbench, but `README.md` still contains generic AI Studio starter instructions and `package.json` still uses the generic `react-example` package identity. Do not promote it into the public portfolio or a stronger lifecycle until documentation and implementation identity are reconciled.
+- `coherence-control-benchmark` — `PENDING_REVIEW`. Foundation PR #1 now reconciles the intended identity, restores the missing React/Express entrypoints, adds explicit experimental-status/evidence-boundary documentation, CI, and cross-platform runtime scripts. However, `foundation-ci` has twice failed before runner allocation (`runner_id=0`, zero steps executed), so fresh-checkout install, typecheck, and build remain **NOT VERIFIED**. Keep the repository out of the public portfolio and do not strengthen its lifecycle until executable verification completes and the accepted foundation reaches `main`.
 
 New ambiguity must be recorded explicitly rather than inferred into an existing lifecycle.
 
@@ -139,7 +139,7 @@ The GitHub profile is a curated projection, not the complete inventory. It empha
 
 ## Next reconciliation work
 
-1. reconcile `coherence-control-benchmark` README/package identity with its repository metadata and implementation before lifecycle promotion;
+1. complete executable verification for `coherence-control-benchmark` foundation PR #1, then reconcile the accepted foundation on `main` before lifecycle promotion;
 2. adjudicate retained open upstream contribution PRs before any related archive decision;
 3. execute archival only for candidates satisfying every archive predicate and verify `archived=true` by readback;
 4. continue correcting stale account/repository authority language where found;
