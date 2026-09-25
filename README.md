@@ -14,21 +14,37 @@ I’m especially interested in systems that keep **capability, evidence, verific
 
 ### [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) — governance control plane for agentic systems
 
-**Dynamic Governance Agentic Formation (DGAF)** is an experimental framework for governed multi-agent AI systems. It models capability, evidence, verification, authority, and permission to act as separate machine-relevant states.
+**Dynamic Governance Agentic Formation (DGAF)** is an experimental framework for governed multi-agent AI systems. Its central design principle is that **capability, evidence, verification, authority, and permission to act are separate machine-relevant states** rather than interchangeable signals that a system “works.”
 
-**Implemented research/engineering surfaces include:**
+It explores how agentic systems can make consequential transitions only when the evidence and authority required for that specific transition are established.
 
-- explicit governance and state-transition logic;
-- provenance and source/evidence binding;
+**Implemented research and engineering surfaces include:**
+
+- explicit governance states and machine-checkable transition logic;
+- provenance, lineage, and source/evidence binding;
 - deterministic validators, adversarial tests, and negative controls;
 - fail-closed CI and authorization boundaries;
-- custody, freeze, closure, and experimental-integrity machinery;
+- custody, freeze, closure, and experimental-integrity controls;
 - blinded experimental infrastructure and reproducibility tooling;
-- separation of implementation, verification, independent verification, authorization, execution, and empirical support.
+- controlled materialization and content-addressed evidence receipts;
+- separation of implementation, verification, independent verification, authorization, execution, interpretation, and empirical support.
 
-**Bounded research state — September 24, 2026:** Track A Epoch 002 completed its preregistered blinded collection at **50 paired seed units / 2,250 observations**. Dataset lock, bounded unblinding, controlled materialization and its immutable receipt, locked-primary-analysis authorization, local execution of the frozen primary analysis, content-addressed result admission, and bounded same-system interpretation/adjudication are established at their exact scopes. The Epoch 002 lifecycle is **closed for its exact preregistered scope**. Scientific-N increment remains **0**; canonical DGAF efficacy, independent validation, production certification, and High-Assurance authorization remain **NOT ESTABLISHED / NOT AUTHORIZED**. AOSS Stage A has an accepted independent-validation handoff; external review remains outstanding under [Issue #929](https://github.com/ndrorchestration/DGAF-Framework/issues/929).
+### Current research boundary
 
-**Start here:** [five-minute evaluator orientation](https://github.com/ndrorchestration/DGAF-Framework#five-minute-evaluator-orientation) · [current-state record](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/CURRENT_STATE.md)
+DGAF has progressed beyond architecture-only work into bounded experimental execution.
+
+**Track A Epoch 002** completed a preregistered blinded collection of **50 paired seed units / 2,250 observations**, followed by governed dataset lock, bounded unblinding, controlled materialization, locked-primary-analysis authorization and execution, content-addressed result admission, and bounded same-system interpretation/adjudication. The epoch is **closed for its exact preregistered scope**.
+
+Those results deliberately do **not** transfer into broader claims:
+
+`SCIENTIFIC_N_INCREMENT = 0`  
+`CANONICAL_DGAF_EFFICACY = NOT_ESTABLISHED`  
+`INDEPENDENT_VALIDATION = NOT_ESTABLISHED`  
+`HIGH_ASSURANCE = NOT_AUTHORIZED`
+
+For **AOSS Stage A**, an independent-validation handoff has been accepted and the system includes a bounded internal operator self-test path. Actual external review remains outstanding under [Issue #929](https://github.com/ndrorchestration/DGAF-Framework/issues/929).
+
+**Start here:** [Five-minute evaluator orientation](https://github.com/ndrorchestration/DGAF-Framework#five-minute-evaluator-orientation) · [Current-state record](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/CURRENT_STATE.md)
 
 ## Selected work
 
