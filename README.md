@@ -50,60 +50,68 @@ For **AOSS Stage A**, an independent-validation handoff has been accepted and th
 
 ### [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) — multi-agent evaluation & observability
 
-A compact system for inspecting a multi-agent workflow rather than showing only its final answer. It demonstrates Planner / Researcher / Skeptic / Verifier role separation, provider boundaries, source-aware provenance, disagreement and evidence-coverage metrics, unsupported/conflicting-claim handling, deterministic controls, portable run artifacts, and fail-closed claim-readiness auditing.
+A compact system for inspecting a multi-agent workflow rather than exposing only its final answer. It demonstrates **Planner / Researcher / Skeptic / Verifier role separation**, provider boundaries, source-aware provenance, disagreement and evidence-coverage metrics, unsupported/conflicting-claim handling, deterministic controls, portable run artifacts, and fail-closed claim-readiness auditing.
 
-**Evidence boundary:** deterministic behavior and repository controls are CI-tested, including frozen reproducible artifacts. Live hosted OpenAI-backed execution/retrieval remains outside the currently verified public evidence boundary.
+**Evidence boundary:** deterministic behavior, repository controls, and frozen reproducible artifacts are CI-tested. OpenAI-backed execution and web retrieval are implemented behind a server-side provider boundary, but live hosted execution/retrieval remains outside the currently verified public evidence boundary.
 
-### [Collabration](https://github.com/ndrorchestration/Intellectro) — governed human+AI collaboration
+### [Collabration](https://github.com/ndrorchestration/Collabration) — governed human+AI collaboration
 
-A social application exploring accountable human/AI interaction without silently transferring authority to agents. It includes deny-by-default capability decisions, human approval gates, provenance and revision-aware Content Passport contracts, governed action records, correction/appeal paths, authenticated application paths, and Supabase/Postgres row-level-security boundaries.
+A social application exploring accountable human/AI interaction without silently transferring authority to agents. It combines **deny-by-default capability decisions, human approval gates, provenance and revision-aware Content Passports, governed action records, correction and appeal paths, authenticated application flows, and Supabase/Postgres row-level-security boundaries**.
 
-> The repository still uses the historical identifier `Intellectro`; **Collabration** is the canonical product name.
+The system distinguishes social participation from agent authority: relationships, content creation, and AI involvement do not implicitly grant capabilities or permission to act.
+
+> **Collabration** is the canonical product identity. Historical artifacts and provider records may retain the former **Intellectro** identifier where preserving provenance requires it.
 
 ### [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) — minimal control-plane primitives
 
-An executable deterministic kernel for capability dispatch, explicit policy allow/deny decisions, fail-closed rejection provenance, cooperative execution budgets, run-scoped provenance, and portable manifests. Its guarantees are deliberately scoped to tested local software invariants rather than production security or distributed reliability.
+An executable deterministic kernel for **capability dispatch, explicit policy allow/deny decisions, fail-closed rejection provenance, cooperative execution budgets, run-scoped provenance, and portable manifests**.
 
-### [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) — prompt/evaluation systems
+Its guarantees are deliberately narrow: tested local software invariants rather than claims of distributed reliability, production security, durable authorization infrastructure, or provider-level resource accounting.
 
-Public, recruiter-readable prompt-system artifacts and evaluation specifications covering state anchoring, constraint gates, multi-agent role decomposition, parametric behavior, and failure-aware recovery. Written specifications are kept distinct from executed benchmark evidence.
+### [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) — prompt & evaluation systems
+
+Public, recruiter-readable examples of prompt-system design and evaluation specifications covering **state anchoring, constraint gates, multi-agent role decomposition, parametric behavior, structured evaluation, and failure-aware recovery**.
+
+The repository deliberately distinguishes written specifications and evaluation rubrics from executed benchmark evidence.
 
 ## Capabilities
 
 | Area | Working focus |
-|---|---|
-| **AI evaluation & QA** | known-answer controls, negative tests, failure taxonomies, evidence classes, claim ceilings |
-| **Agentic systems** | role separation, handoffs, state/control-plane design, orchestration boundaries |
-| **Governance & authorization** | fail-closed gates, explicit permissions, transition constraints, approval/rejection semantics |
-| **Provenance & reproducibility** | source binding, artifact identity, deterministic controls, audit trails |
-| **Prompt systems** | prompt/evaluation specifications, structured outputs, failure-aware iteration |
-| **Runtime verification** | source/deployment/runtime separation, health checks, exact-identity reasoning |
-| **Research tooling** | preregistration, blinded workflows, reproducibility, adversarial and negative controls |
+| --- | --- |
+| **AI evaluation & QA** | Known-answer controls, negative tests, failure taxonomies, evidence classes, claim ceilings |
+| **Agentic systems** | Role separation, handoffs, control-plane design, orchestration boundaries |
+| **Governance & authorization** | Fail-closed gates, explicit permissions, transition constraints, approval/rejection semantics |
+| **Provenance & reproducibility** | Source binding, artifact identity, deterministic controls, audit trails |
+| **Prompt systems** | Prompt/evaluation specifications, structured outputs, constraint design, failure-aware iteration |
+| **Runtime verification** | Source/deployment/runtime separation, health checks, exact-identity reasoning |
+| **Research tooling** | Preregistration, blinded workflows, reproducibility, adversarial and negative controls |
 
-**Primary tools represented in current public work:** Python · JavaScript/Node.js · TypeScript · Next.js/React · Supabase/Postgres/RLS · GitHub Actions · Vercel · model/provider APIs
+**Primary technologies represented in current public work:** Python · JavaScript/Node.js · TypeScript · Next.js/React · Supabase/Postgres/RLS · GitHub Actions · Vercel · model/provider APIs
 
 ## Evidence discipline
 
-Across projects I use a progression such as:
+Across projects, I treat states such as
 
 **defined → implemented → tested → computed → verified → independently verified → authorized → executed → empirically supported**
 
-Those states are intentionally not interchangeable. A passing test does not prove efficacy. A healthy deployment does not establish scientific validity. Provenance establishes origin and history, not truth. Governance controls do not automatically grant authorization. Historical evidence does not silently transfer to a new candidate, deployment, run, or artifact.
+as distinct rather than interchangeable.
 
-That is why several repositories deliberately preserve states such as **NOT VERIFIED**, **NOT AUTHORIZED**, **NOT ESTABLISHED**, or **blocked** when the required evidence does not exist.
+A passing test does not prove efficacy. A healthy deployment does not establish scientific validity. Provenance establishes origin and history, not truth. Authorization does not follow automatically from capability. Historical evidence does not silently transfer to a new candidate, deployment, run, or artifact.
+
+That is why my repositories deliberately preserve states such as **NOT VERIFIED**, **NOT AUTHORIZED**, **NOT ESTABLISHED**, and **BLOCKED** when the evidence required for a stronger claim does not yet exist.
 
 ## Professional direction
 
-I am building toward **AI Evaluator, Prompt Engineer, AI Training / Quality, AI Systems, and agentic-governance roles** where careful testing, failure-mode discovery, provenance, evidence quality, and system-level reasoning matter alongside implementation.
+I am building toward work in **AI evaluation, prompt engineering, AI quality/training, agentic systems, and governance-aware AI engineering**—particularly where careful testing, failure-mode discovery, provenance, evidence quality, and system-level reasoning matter alongside implementation.
 
-My broader goal is to help make increasingly capable AI systems easier to **inspect, constrain, verify, and trust for the right reasons**.
+My broader goal is to help make increasingly capable AI systems easier to **inspect, constrain, evaluate, verify, and trust for the right reasons**.
 
 ## Explore the ecosystem
 
-This profile is a curated portfolio, not a complete repository inventory. The account also contains experimental, supporting, historical, external/reference, and incubating work.
+This profile is a curated portfolio rather than a complete repository inventory. The account also contains supporting infrastructure, experimental research, historical lineage, external/reference work, and incubating projects.
 
-For the account-level classification and provenance boundary, see the [Repository Lifecycle Map](docs/ECOSYSTEM_LIFECYCLE.md).
+For account-level classification and provenance boundaries, see the [Repository Lifecycle Map](https://github.com/ndrorchestration/ndrorchestration/blob/main/docs/ECOSYSTEM_LIFECYCLE.md).
 
 ---
 
-*Exact implementation, runtime, evidence, governance, and scientific facts remain authoritative in each project’s owning repository and relevant runtime providers. This profile does not transfer evidence or readiness claims between projects.*
+*Exact implementation, runtime, evidence, governance, and scientific facts remain authoritative in each project's owning repository and relevant runtime providers. This profile does not transfer evidence, validation, authorization, or readiness claims between projects.*
