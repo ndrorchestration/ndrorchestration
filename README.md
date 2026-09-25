@@ -1,4 +1,4 @@
-# Andrew // Ndr "Ender" Hensel
+**Andrew Hensel // Ndr “Ender”**
 
 ### AI Systems Design · Evaluation · Agentic Governance · Provenance
 
@@ -6,7 +6,9 @@ I design and evaluate AI systems around a practical question:
 
 > **What did the system actually do, what evidence supports that claim, and what is it authorized to do next?**
 
-My work focuses on **AI evaluation, multi-agent systems, prompt engineering, provenance, reproducibility, and governance-aware orchestration**. I am especially interested in systems where capability, evidence, verification, authority, and permission remain distinct rather than collapsing into a generic “works” claim.
+My work focuses on **AI evaluation, multi-agent systems, prompt engineering, provenance, reproducibility, and governance-aware orchestration**.
+
+I’m especially interested in systems that keep **capability, evidence, verification, authority, and permission** distinct—so that producing an output is not automatically treated as proving a claim, passing evaluation, or earning authorization for the next action.
 
 ## Flagship: DGAF
 
