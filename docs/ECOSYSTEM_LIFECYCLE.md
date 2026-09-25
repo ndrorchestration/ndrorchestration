@@ -42,9 +42,9 @@ Review status is separate from lifecycle: `VERIFIED`, `PENDING_REVIEW`, or `CONF
 |---|---|---|
 | `DGAF-Framework` | DGAF | Governance, evidence, authorization, provenance, and governed experimental controls. |
 | `Orbit-Driftwatch` | Orbit-Driftwatch | Observable multi-agent reasoning and claim-audit showcase. |
-| `Intellectro` | **Collabration** | Governed human+AI social product. |
+| `Collabration` | **Collabration** | Governed human+AI social product. |
 
-`Intellectro` remains the repository/provider identifier. **Collabration** is the canonical human-facing product identity. A repository/provider rename is a separate migration event.
+`Collabration` is the current repository and canonical human-facing product identity. Historical artifacts, deployment/provider records, and immutable provenance may retain the former `Intellectro` identifier where that identity was recorded at event time; those historical identifiers do not redefine the current repository name.
 
 ## Active supporting
 
