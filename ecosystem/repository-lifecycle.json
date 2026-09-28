@@ -59,9 +59,9 @@
       "responsibility": "DGAF governance, evidence, authorization, provenance, and experiment-control framework.",
       "canonical_project_source": "https://github.com/ndrorchestration/DGAF-Framework",
       "relationships": [],
-      "current_claim_boundary": "Project-local truth remains authoritative.",
-      "reviewed_at": "2026-09-16",
-      "notes": null
+      "current_claim_boundary": "Project-local truth remains authoritative; current-facing repository state is docs/CURRENT_STATE.md on protected main, reconciled through PR #1116. Architecture governance accepted through PR #1089; PR #1041 is historical/superseded/unmerged.",
+      "reviewed_at": "2026-09-28",
+      "notes": "Documentation/SSOT reconciliation verified after PR #1116 merge. No lifecycle, scientific-N, independent-validation, efficacy, runtime-authority, or High-Assurance promotion."
     },
     {
       "repository": "ndrorchestration/chat-archives",
