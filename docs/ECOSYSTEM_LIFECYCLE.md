@@ -74,7 +74,7 @@ The current public prompt-systems portfolio is `ai-prompt-systems-portfolio`; th
 - `Agentic-Iteration-Metaconcert-Yaml-AIMY-` — experiment scaffold whose current purpose is not yet sufficiently documented for a stronger lifecycle.
 - `SP1` — game-project home whose current identity and implementation are still minimally documented.
 - `aetherwake-jrpg` — private pre-alpha **Aetherwake — The Last Solarpunk Airship** track with a playable vertical slice and active standalone Windows preview packaging; retained as incubating while the game and delivery path mature.
-- `coherence-control-benchmark` — private AI evaluation/orchestration-control benchmark prototype; provisionally `INCUBATING` with `PENDING_REVIEW` because repository metadata establishes the intended identity while the README/package presentation layer remains unreconciled starter scaffolding.
+- `coherence-control-benchmark` — private AI evaluation/orchestration-control benchmark prototype; `INCUBATING` with `PENDING_REVIEW`. The repository README now states the intended identity and evidence boundary; executable verification remains the promotion gate.
 
 ## Archive candidates
 
@@ -109,7 +109,7 @@ Fork provenance and contribution history establish origin and a bounded retentio
 
 ## Remaining pending review
 
-- `coherence-control-benchmark` — `PENDING_REVIEW`. Foundation PR #1 now reconciles the intended identity, restores the missing React/Express entrypoints, adds explicit experimental-status/evidence-boundary documentation, CI, and cross-platform runtime scripts. However, `foundation-ci` has twice failed before runner allocation (`runner_id=0`, zero steps executed), so fresh-checkout install, typecheck, and build remain **NOT VERIFIED**. Keep the repository out of the public portfolio and do not strengthen its lifecycle until executable verification completes and the accepted foundation reaches `main`.
+- `coherence-control-benchmark` — `PENDING_REVIEW`. The README now reconciles the intended identity and explicit evidence boundary on `main`. Fresh-checkout install, typecheck, build, and any benchmark-specific verification remain **NOT VERIFIED** for lifecycle promotion. Keep the repository out of the public portfolio until executable verification completes and the implementation/evidence surface is re-audited.
 
 New ambiguity must be recorded explicitly rather than inferred into an existing lifecycle.
 
