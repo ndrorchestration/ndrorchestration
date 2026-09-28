@@ -6,6 +6,13 @@
 **Lifecycle classifications reviewed:** 2026-09-24  
 **Connected owner census reconfirmed:** 2026-09-28
 
+## Current DGAF documentation overlay — 2026-09-28
+
+- `ndrorchestration/DGAF-Framework` protected `main`: `728a5a5ba63e63952f7c3c717239bd4dbdcd92b5`.
+- Primary current-facing repository state: `docs/CURRENT_STATE.md`, reconciled through merged PR #1116.
+- Accepted architecture authority: PR #1089 architecture governance; PR #1041 is historical/superseded/unmerged.
+- This overlay does not alter repository lifecycle classification or promote scientific, efficacy, independent-validation, runtime, or High-Assurance state.
+
 ## Authority boundary
 
 This document classifies how repositories relate to the `ndrorchestration` account. It does **not** override repository-local source code, tests, CI, evidence, runtime facts, governance state, scientific state, security claims, or authorization.
