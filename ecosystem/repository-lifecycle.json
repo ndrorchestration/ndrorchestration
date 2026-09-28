@@ -673,7 +673,7 @@
       "notes": "Archive action requires final dependency/readback gate."
     },
     {
-      "repository": "ndrorchestration/Intellectro",
+      "repository": "ndrorchestration/Collabration",
       "product_name": "Collabration",
       "visibility": "public",
       "github_archived": false,
@@ -681,11 +681,11 @@
       "review_status": "VERIFIED",
       "lifecycle": "ACTIVE_CORE",
       "responsibility": "Governed human+AI social product.",
-      "canonical_project_source": "https://github.com/ndrorchestration/Intellectro",
+      "canonical_project_source": "https://github.com/ndrorchestration/Collabration",
       "relationships": [],
       "current_claim_boundary": "Project-local truth remains authoritative.",
-      "reviewed_at": "2026-09-16",
-      "notes": "Collabration is canonical product identity; Intellectro remains repository/provider identifier.",
+      "reviewed_at": "2026-09-28",
+      "notes": "Collabration is the canonical repository and product identity. Intellectro is retained only as a historical/provider identifier where immutable provenance requires it.",
       "historical_names": [
         "Intellectro"
       ]
