@@ -2,13 +2,22 @@
 
 ### AI Systems Design · Evaluation · Agentic Governance · Provenance
 
-I design and evaluate AI systems around a practical question:
+I build and evaluate AI systems around a practical question:
 
 > **What did the system actually do, what evidence supports that claim, and what is it authorized to do next?**
 
-My work focuses on **AI evaluation, multi-agent systems, prompt engineering, provenance, reproducibility, and governance-aware orchestration**.
+My work focuses on **AI evaluation, multi-agent systems, prompt engineering, provenance, reproducibility, and governance-aware orchestration**. I design systems that keep **capability, evidence, verification, authority, and permission** distinct so that producing an output is not automatically treated as proving a claim, passing evaluation, or earning authorization for the next action.
 
-I’m especially interested in systems that keep **capability, evidence, verification, authority, and permission** distinct—so that producing an output is not automatically treated as proving a claim, passing evaluation, or earning authorization for the next action.
+## Start here
+
+| If you want to inspect… | Start with |
+| --- | --- |
+| **Governance, evidence, authorization, and research controls** | [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) |
+| **Observable multi-agent reasoning and claim auditing** | [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) |
+| **Minimal execution/control-plane primitives** | [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) |
+| **Governed human + AI product design** | [Collabration](https://github.com/ndrorchestration/Collabration) |
+| **Prompt-system and evaluation specifications** | [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) |
+| **Executable evaluation-harness design** | [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) |
 
 ## Flagship: DGAF
 
@@ -16,22 +25,9 @@ I’m especially interested in systems that keep **capability, evidence, verific
 
 **Dynamic Governance Agentic Formation (DGAF)** is an experimental framework for governed multi-agent AI systems. Its central design principle is that **capability, evidence, verification, authority, and permission to act are separate machine-relevant states** rather than interchangeable signals that a system “works.”
 
-It explores how agentic systems can make consequential transitions only when the evidence and authority required for that specific transition are established.
-
-**Implemented research and engineering surfaces include:**
-
-- explicit governance states and machine-checkable transition logic;
-- provenance, lineage, and source/evidence binding;
-- deterministic validators, adversarial tests, and negative controls;
-- fail-closed CI and authorization boundaries;
-- custody, freeze, closure, and experimental-integrity controls;
-- blinded experimental infrastructure and reproducibility tooling;
-- controlled materialization and content-addressed evidence receipts;
-- separation of implementation, verification, independent verification, authorization, execution, interpretation, and empirical support.
+Implemented surfaces include explicit governance states and machine-checkable transitions; provenance and source/evidence binding; deterministic validators and negative controls; fail-closed CI and authorization boundaries; custody/freeze/closure controls; blinded experimental infrastructure; controlled materialization; content-addressed evidence receipts; and explicit separation of implementation, verification, independent verification, authorization, execution, interpretation, and empirical support.
 
 ### Current research boundary
-
-DGAF has progressed beyond architecture-only work into bounded experimental execution.
 
 **Track A Epoch 002** completed a preregistered blinded collection of **50 paired seed units / 2,250 observations**, followed by governed dataset lock, bounded unblinding, controlled materialization, locked-primary-analysis authorization and execution, content-addressed result admission, and bounded same-system interpretation/adjudication. The epoch is **closed for its exact preregistered scope**.
 
@@ -42,9 +38,11 @@ Those results deliberately do **not** transfer into broader claims:
 `INDEPENDENT_VALIDATION = NOT_ESTABLISHED`  
 `HIGH_ASSURANCE = NOT_AUTHORIZED`
 
+DGAF now also maintains an explicit architecture ownership model spanning governance-kernel components, cross-cutting assurance, governed profiles, and external integrations. That architecture work is engineering/governance evidence only and does not promote scientific, efficacy, independent-validation, or High-Assurance state.
+
 For **AOSS Stage A**, an independent-validation handoff has been accepted and the system includes a bounded internal operator self-test path. Actual external review remains outstanding under [Issue #929](https://github.com/ndrorchestration/DGAF-Framework/issues/929).
 
-**Start here:** [Five-minute evaluator orientation](https://github.com/ndrorchestration/DGAF-Framework#five-minute-evaluator-orientation) · [Current-state record](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/CURRENT_STATE.md)
+**Evaluate DGAF:** [Five-minute evaluator orientation](https://github.com/ndrorchestration/DGAF-Framework#five-minute-evaluator-orientation) · [Current-state record](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/CURRENT_STATE.md)
 
 ## Selected work
 
@@ -54,25 +52,27 @@ A compact system for inspecting a multi-agent workflow rather than exposing only
 
 **Evidence boundary:** deterministic behavior, repository controls, and frozen reproducible artifacts are CI-tested. OpenAI-backed execution and web retrieval are implemented behind a server-side provider boundary, but live hosted execution/retrieval remains outside the currently verified public evidence boundary.
 
-### [Collabration](https://github.com/ndrorchestration/Collabration) — governed human+AI collaboration
+### [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) — execution-control primitives
+
+An executable deterministic kernel for **capability dispatch, explicit policy allow/deny decisions, fail-closed rejection provenance, cooperative execution budgets, run-scoped provenance, portable manifests, and bounded remote-execution contracts**.
+
+Its guarantees remain deliberately narrow: tested software invariants do not automatically establish distributed reliability, production security, durable authorization infrastructure, cross-runtime portability, or provider-level resource accounting.
+
+### [Collabration](https://github.com/ndrorchestration/Collabration) — governed human + AI collaboration
 
 A social application exploring accountable human/AI interaction without silently transferring authority to agents. It combines **deny-by-default capability decisions, human approval gates, provenance and revision-aware Content Passports, governed action records, correction and appeal paths, authenticated application flows, and Supabase/Postgres row-level-security boundaries**.
 
-The system distinguishes social participation from agent authority: relationships, content creation, and AI involvement do not implicitly grant capabilities or permission to act.
-
 > **Collabration** is the canonical product identity. Historical artifacts and provider records may retain the former **Intellectro** identifier where preserving provenance requires it.
-
-### [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) — minimal control-plane primitives
-
-An executable deterministic kernel for **capability dispatch, explicit policy allow/deny decisions, fail-closed rejection provenance, cooperative execution budgets, run-scoped provenance, and portable manifests**.
-
-Its guarantees are deliberately narrow: tested local software invariants rather than claims of distributed reliability, production security, durable authorization infrastructure, or provider-level resource accounting.
 
 ### [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) — prompt & evaluation systems
 
 Public, recruiter-readable examples of prompt-system design and evaluation specifications covering **state anchoring, constraint gates, multi-agent role decomposition, parametric behavior, structured evaluation, and failure-aware recovery**.
 
 The repository deliberately distinguishes written specifications and evaluation rubrics from executed benchmark evidence.
+
+### [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) — executable evaluation harness
+
+A reproducible evaluation repository demonstrating **known-answer fixtures, deterministic-repeatability checks, evidence-state separation, metric computation, bootstrap analysis, and explicit boundaries between evaluator verification and real-model empirical results**.
 
 ## Capabilities
 
