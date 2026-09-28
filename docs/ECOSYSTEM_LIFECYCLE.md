@@ -3,7 +3,8 @@
 **Status:** ACTIVE ACCOUNT-LEVEL CLASSIFICATION  
 **Authority scope:** `ACCOUNT_LEVEL_LIFECYCLE_ONLY`  
 **Machine-readable source:** [`../ecosystem/repository-lifecycle.json`](../ecosystem/repository-lifecycle.json)  
-**Reviewed:** 2026-09-24
+**Lifecycle classifications reviewed:** 2026-09-24  
+**Connected owner census reconfirmed:** 2026-09-28
 
 ## Authority boundary
 
