@@ -13,6 +13,7 @@
     "exact_runtime_version",
     "execution_timestamp",
     "portable_vector_results",
+    "adapter_surface",
     "read_before_write_evidence",
     "post_write_readback_evidence",
     "block_preservation_evidence",
@@ -30,7 +31,8 @@
     "No covered case may produce Pass or Done promotion.",
     "Runtime receipt must bind exact workflow/runtime identity and conformance result.",
     "Any missing, stale, ambiguous, or conflicting evidence keeps state NOT_DEPLOYED.",
-    "A successful connection, workflow import, workflow activation, or single happy-path run is insufficient for promotion."
+    "A successful connection, workflow import, workflow activation, or single happy-path run is insufficient for promotion.",
+    "Deployment promotion requires adapter_surface=LIVE_NOTION; SHADOW_ONLY evidence is non-promotable."
   ],
   "forbidden_inferences": [
     "CONNECTED implies DEPLOYED",

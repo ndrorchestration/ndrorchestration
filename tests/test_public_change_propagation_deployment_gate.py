@@ -58,6 +58,11 @@ class PublicChangePropagationDeploymentGateNegativeTests(unittest.TestCase):
         gate["required_evidence"].remove("runtime_identity")
         self.assert_rejected(gate, "required_evidence changed")
 
+    def test_adapter_surface_evidence_cannot_be_removed(self) -> None:
+        gate = copy.deepcopy(BASE)
+        gate["required_evidence"].remove("adapter_surface")
+        self.assert_rejected(gate, "required_evidence changed")
+
     def test_portable_vector_results_cannot_be_removed(self) -> None:
         gate = copy.deepcopy(BASE)
         gate["required_evidence"].remove("portable_vector_results")
