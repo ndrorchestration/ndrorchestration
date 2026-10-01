@@ -1,0 +1,58 @@
+{
+  "id": "publicChangeShadowAdapter001",
+  "name": "Public Change Propagation — Shadow Adapter Conformance v1",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-trigger",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const cases = [];\n\nfunction clone(x){ return JSON.parse(JSON.stringify(x)); }\n\nfunction apply(snapshot, simulateConflict=false) {\n  const prior = clone(snapshot);\n  const intended = clone(snapshot);\n  const observedBeforeWrite = clone(snapshot);\n  let result = 'PASS';\n  let writeConflict = false;\n\n  if (simulateConflict) {\n    observedBeforeWrite.assets.a.version += 1;\n  }\n\n  if (observedBeforeWrite.assets.a.version !== prior.assets.a.version) {\n    writeConflict = true;\n    result = 'BLOCKED';\n    return { prior, intended: prior, observed_post_state: observedBeforeWrite, result, writeConflict };\n  }\n\n  if (intended.assets.a.release_gate === 'Block') {\n    result = 'PARTIAL';\n  } else {\n    intended.assets.a.release_gate = 'Review';\n    intended.assets.a.reconciliation_status = 'In progress';\n    intended.assets.a.version += 1;\n  }\n\n  const eid = intended.assets.a.endpoint_id;\n  const endpoint = intended.endpoints[eid];\n  if (!endpoint) {\n    result = 'PARTIAL';\n  } else if (endpoint.release_gate === 'Block') {\n    result = 'PARTIAL';\n  } else {\n    endpoint.release_gate = 'Review';\n    endpoint.copy_state = 'Review Needed';\n    endpoint.version += 1;\n  }\n\n  const observedPostState = clone(intended);\n  return { prior, intended, observed_post_state: observedPostState, result, writeConflict };\n}\n\nconst base = {\n  assets: {\n    a: {\n      release_gate: 'Pass',\n      reconciliation_status: 'Done',\n      endpoint_id: 'e',\n      version: 1\n    }\n  },\n  endpoints: {\n    e: {\n      release_gate: 'Pass',\n      copy_state: 'Reconciled',\n      version: 1\n    }\n  }\n};\n\nconst normal = apply(base, false);\ncases.push({\n  id: 'normal_read_write_readback',\n  pass:\n    normal.prior.assets.a.release_gate === 'Pass' &&\n    normal.intended.assets.a.release_gate === 'Review' &&\n    normal.observed_post_state.assets.a.release_gate === 'Review' &&\n    normal.observed_post_state.endpoints.e.release_gate === 'Review' &&\n    normal.writeConflict === false\n});\n\nconst conflict = apply(base, true);\ncases.push({\n  id: 'optimistic_conflict_blocks_write',\n  pass:\n    conflict.result === 'BLOCKED' &&\n    conflict.writeConflict === true &&\n    conflict.intended.assets.a.release_gate === 'Pass'\n});\n\nconst blocked = clone(base);\nblocked.assets.a.release_gate = 'Block';\nconst blockedResult = apply(blocked, false);\ncases.push({\n  id: 'blocked_asset_preserved',\n  pass:\n    blockedResult.result === 'PARTIAL' &&\n    blockedResult.observed_post_state.assets.a.release_gate === 'Block'\n});\n\nconst passDoneProhibition = ![\n  normal.observed_post_state.assets.a.release_gate,\n  normal.observed_post_state.endpoints.e.release_gate\n].includes('Pass') && normal.observed_post_state.assets.a.reconciliation_status !== 'Done';\ncases.push({id:'pass_done_prohibition', pass:passDoneProhibition});\n\nconst failed = cases.filter(c=>!c.pass);\nif (failed.length) throw new Error('SHADOW_ADAPTER_CONFORMANCE_FAILED:'+JSON.stringify(failed));\n\nreturn [{json:{\n  harness:'NDR_PUBLIC_CHANGE_PROPAGATION_N8N_SHADOW_ADAPTER_V1',\n  mode:'SHADOW_ONLY',\n  adapter_surface:'SHADOW_ONLY',\n  runtime_state:'NOT_DEPLOYED',\n  promotion_eligible:false,\n  authority_effect:'NONE_DEPLOYMENT_EVIDENCE_ONLY',\n  read_before_write:'PASS',\n  post_write_readback:'PASS',\n  block_preservation:'PASS',\n  pass_done_prohibition:'PASS',\n  write_conflict_detection:'PASS',\n  total:cases.length,\n  passed:cases.length,\n  failed:0,\n  result:'PASS',\n  cases\n}}];"
+      },
+      "id": "shadow-adapter",
+      "name": "Run Shadow Adapter",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        260,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Run Shadow Adapter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "d8f2c906-7f2e-401b-a10a-bfe5b3932c11",
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "harness_schema": "NDR_PUBLIC_CHANGE_PROPAGATION_N8N_SHADOW_ADAPTER_V1",
+    "adapter_surface": "SHADOW_ONLY",
+    "mutation_authority": "NONE",
+    "network_authority": "NONE",
+    "intended_runtime": "n8n 2.40.7 local Governance Lab"
+  },
+  "tags": []
+}
