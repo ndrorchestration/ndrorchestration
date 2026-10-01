@@ -33,6 +33,7 @@ def valid_receipt() -> dict:
         "contract_schema_version": "NDR_PUBLIC_CHANGE_PROPAGATION_CONTRACT_V1",
         "adapter_schema_version": "NDR_PUBLIC_CHANGE_PROPAGATION_ADAPTER_V1",
         "conformance_schema_version": "NDR_PUBLIC_CHANGE_PROPAGATION_CONFORMANCE_V1",
+        "adapter_surface": "LIVE_NOTION",
         "portable_vector_results": "PASS",
         "read_before_write": "PASS",
         "post_write_readback": "PASS",
@@ -105,9 +106,18 @@ class RuntimeEvidenceReceiptTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("promotion_eligible true", result.stderr)
 
+    def test_shadow_adapter_cannot_be_promotable(self) -> None:
+        r = valid_receipt()
+        r["adapter_surface"] = "SHADOW_ONLY"
+        r["receipt_digest"] = digest(r)
+        result = self.run_validator(r)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("promotion_eligible true", result.stderr)
+
     def test_nonpromotable_receipt_can_still_be_valid(self) -> None:
         r = valid_receipt()
         r["operator_review"] = "NOT_RUN"
+        r["adapter_surface"] = "SHADOW_ONLY"
         r["promotion_eligible"] = False
         r["receipt_digest"] = digest(r)
         result = self.run_validator(r)
