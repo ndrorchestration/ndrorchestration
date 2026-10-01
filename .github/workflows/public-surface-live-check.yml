@@ -1,6 +1,12 @@
 name: Public Surface Live Check
 
 on:
+  pull_request:
+    paths:
+      - 'docs/public-surface-manifest.v1.json'
+      - 'scripts/verify_public_surfaces_live.py'
+      - 'scripts/validate_public_surface_manifest.py'
+      - '.github/workflows/public-surface-live-check.yml'
   workflow_dispatch:
   schedule:
     - cron: '43 12 * * *'
