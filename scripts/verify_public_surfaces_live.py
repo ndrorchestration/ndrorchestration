@@ -8,7 +8,10 @@ independent validation, production assurance, or authorization state.
 
 from __future__ import annotations
 
+import hashlib
 import json
+import os
+import subprocess
 import sys
 import urllib.error
 import urllib.request
@@ -17,6 +20,7 @@ from pathlib import Path
 
 MANIFEST = Path("docs/public-surface-manifest.v1.json")
 OUT = Path("public-surface-live-check.json")
+RECEIPT = Path("public-surface-live-check.sha256")
 
 CHECKS = {
     "portfolio.home": {
@@ -81,8 +85,24 @@ def fetch(url: str) -> tuple[int, str, str]:
         return exc.code, exc.geturl(), body
 
 
+def source_head() -> str:
+    github_sha = os.environ.get("GITHUB_SHA", "").strip()
+    if github_sha:
+        return github_sha
+    try:
+        return subprocess.check_output(
+            ["git", "rev-parse", "HEAD"],
+            text=True,
+            stderr=subprocess.DEVNULL,
+        ).strip()
+    except (OSError, subprocess.CalledProcessError):
+        return "UNKNOWN"
+
+
 def main() -> None:
-    data = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    manifest_bytes = MANIFEST.read_bytes()
+    manifest_sha256 = hashlib.sha256(manifest_bytes).hexdigest()
+    data = json.loads(manifest_bytes.decode("utf-8"))
     by_id = {s["id"]: s for s in data["surfaces"]}
 
     results = []
@@ -127,10 +147,23 @@ def main() -> None:
             }
         )
 
+    provenance = {
+        "repository": os.environ.get("GITHUB_REPOSITORY", "ndrorchestration/ndrorchestration"),
+        "source_head": source_head(),
+        "manifest_path": str(MANIFEST),
+        "manifest_sha256": manifest_sha256,
+        "workflow": os.environ.get("GITHUB_WORKFLOW", ""),
+        "workflow_run_id": os.environ.get("GITHUB_RUN_ID", ""),
+        "workflow_run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT", ""),
+        "workflow_ref": os.environ.get("GITHUB_WORKFLOW_REF", ""),
+        "event_name": os.environ.get("GITHUB_EVENT_NAME", ""),
+    }
+
     artifact = {
         "schema": "NDR_PUBLIC_SURFACE_LIVE_CHECK_V1",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "manifest_schema": data.get("schema_version"),
+        "provenance": provenance,
         "scope": "public reachability and stable rendered markers only",
         "authority_note": "PASS does not establish technical, scientific, governance, runtime, validation, efficacy, security, or authorization truth.",
         "results": results,
@@ -141,8 +174,16 @@ def main() -> None:
         },
     }
 
-    OUT.write_text(json.dumps(artifact, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps(artifact, indent=2))
+    payload = (json.dumps(artifact, indent=2) + "\n").encode("utf-8")
+    OUT.write_bytes(payload)
+    receipt_sha256 = hashlib.sha256(payload).hexdigest()
+    RECEIPT.write_text(
+        f"{receipt_sha256}  {OUT.name}\n",
+        encoding="utf-8",
+    )
+
+    print(payload.decode("utf-8"), end="")
+    print(f"PUBLIC_SURFACE_LIVE_CHECK_RECEIPT_SHA256={receipt_sha256}")
 
     if failures:
         print("PUBLIC_SURFACE_LIVE_CHECK_FAILED", file=sys.stderr)
