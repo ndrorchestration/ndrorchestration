@@ -47,6 +47,9 @@ jobs:
       - name: Adversarial public change propagation tests
         run: python3 -m unittest tests/test_public_change_propagation_contract.py
 
+      - name: Reference public change propagation tests
+        run: python3 -m unittest tests/test_public_change_propagation_reference.py
+
       - name: Install dashboard
         working-directory: dashboard
         run: npm install --no-audit --no-fund
