@@ -11,6 +11,7 @@
     "contract_schema_version",
     "adapter_schema_version",
     "conformance_schema_version",
+    "adapter_surface",
     "portable_vector_results",
     "read_before_write",
     "post_write_readback",
@@ -41,6 +42,10 @@
     ],
     "authority_effect": [
       "NONE_DEPLOYMENT_EVIDENCE_ONLY"
+    ],
+    "adapter_surface": [
+      "LIVE_NOTION",
+      "SHADOW_ONLY"
     ]
   },
   "promotion_requirements": {
@@ -55,7 +60,8 @@
     "unknown_trigger_behavior": "PASS",
     "receipt_schema_validation": "PASS",
     "operator_review": "PASS",
-    "authority_effect": "NONE_DEPLOYMENT_EVIDENCE_ONLY"
+    "authority_effect": "NONE_DEPLOYMENT_EVIDENCE_ONLY",
+    "adapter_surface": "LIVE_NOTION"
   },
   "digest": {
     "algorithm": "sha256",
