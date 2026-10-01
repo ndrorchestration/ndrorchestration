@@ -1,0 +1,57 @@
+{
+  "name": "Public Change Propagation — Conformance Harness v1",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "0d9a540c-43be-4f9e-9a39-d6922dd5aa01",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const binding = {\n  contract_schema: 'NDR_PUBLIC_CHANGE_PROPAGATION_CONTRACT_V1',\n  adapter_schema: 'NDR_PUBLIC_CHANGE_PROPAGATION_ADAPTER_V1',\n  conformance_schema: 'NDR_PUBLIC_CHANGE_PROPAGATION_CONFORMANCE_V1',\n  deployment_gate_schema: 'NDR_PUBLIC_CHANGE_PROPAGATION_DEPLOYMENT_GATE_V1',\n  receipt_schema: 'NDR_PUBLIC_CHANGE_RUNTIME_EVIDENCE_RECEIPT_V1',\n};\n\nreturn [{ json: {\n  harness: 'NDR_PUBLIC_CHANGE_PROPAGATION_N8N_CONFORMANCE_HARNESS_V1',\n  mode: 'INERT_CONFORMANCE_ONLY',\n  runtime_state: 'NOT_DEPLOYED',\n  promotion_eligible: false,\n  authority_effect: 'NONE_DEPLOYMENT_EVIDENCE_ONLY',\n  bindings: binding,\n  next_action: 'Run portable conformance vectors only after local runtime import is separately verified.',\n} }];"
+      },
+      "id": "1e6bbfea-44de-4cb7-a7c4-e4fd730eaa02",
+      "name": "Emit Inert Harness Binding",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        260,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Emit Inert Harness Binding",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "c92f1379-0cbd-48a9-87e4-cf7567d97d11",
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "harness_schema": "NDR_PUBLIC_CHANGE_PROPAGATION_N8N_CONFORMANCE_HARNESS_V1",
+    "intended_runtime": "n8n 2.40.7 local Governance Lab",
+    "import_compatibility": "UNVERIFIED_UNTIL_LOCAL_RUNTIME_AVAILABLE",
+    "mutation_authority": "NONE",
+    "network_authority": "NONE"
+  },
+  "tags": []
+}
