@@ -53,5 +53,6 @@
     "mutation_authority": "NONE",
     "network_authority": "NONE"
   },
-  "tags": []
+  "tags": [],
+  "id": "publicChangeConformance001"
 }
