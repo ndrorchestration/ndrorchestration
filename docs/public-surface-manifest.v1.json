@@ -38,7 +38,11 @@
         "DEPLOYMENT_CHANGED",
         "PUBLIC_COPY_CHANGED",
         "ROLE_POSITIONING_CHANGED"
-      ]
+      ],
+      "local_source": {
+        "path": "dashboard/pages/index.tsx",
+        "git_blob_sha": "fa83203848f81e7da92cc62b9a8326ef728e4d1b"
+      }
     },
     {
       "id": "github.profile",
@@ -66,7 +70,11 @@
         "SOURCE_AUTHORITY_CHANGED",
         "PUBLIC_COPY_CHANGED",
         "ROLE_POSITIONING_CHANGED"
-      ]
+      ],
+      "local_source": {
+        "path": "README.md",
+        "git_blob_sha": "44e5f493f0011af67b92b62c7ad179297467c750"
+      }
     },
     {
       "id": "github.organization_profile",
