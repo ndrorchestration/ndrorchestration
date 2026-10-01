@@ -1,0 +1,140 @@
+{
+  "schema_version": "NDR_PUBLIC_CHANGE_PROPAGATION_CONTRACT_V1",
+  "purpose": "Fail-closed propagation of material canonical-message changes into public reconciliation state.",
+  "authority_note": "This contract may only move governed public assets/endpoints toward REVIEW. It cannot strengthen claims, publish copy, authorize actions, or establish validation, efficacy, assurance, or production authority.",
+  "trigger": {
+    "source": "Audience Translation & Externalization Registry canonical message",
+    "material_change_classes": [
+      "CANONICAL_CLAIM_CHANGED",
+      "EVIDENCE_CEILING_CHANGED",
+      "SOURCE_AUTHORITY_CHANGED",
+      "PRODUCT_STATE_CHANGED",
+      "PUBLIC_SURFACE_CHANGED",
+      "ROLE_POSITIONING_CHANGED"
+    ]
+  },
+  "traversal": {
+    "canonical_to_asset_relation": "Canonical Sources",
+    "asset_to_endpoint_relation": "Public Surface Endpoints",
+    "asset_refresh_trigger_property": "Refresh Trigger"
+  },
+  "allowed_mutations": {
+    "governed_asset": {
+      "Reconciliation Status": "In progress",
+      "Release Gate": "Review"
+    },
+    "public_surface_endpoint": {
+      "Release Gate": "Review",
+      "Copy State": "Review Needed"
+    }
+  },
+  "prohibited_mutations": [
+    "Evidence Ceiling",
+    "Claim Ceiling",
+    "Publication State promotion",
+    "Release Gate = Pass",
+    "public copy rewrite",
+    "scientific validity state",
+    "independent validation state",
+    "canonical efficacy state",
+    "High-Assurance authorization",
+    "production executor authority",
+    "repository mutation authorization"
+  ],
+  "fail_closed_rules": [
+    "If relation traversal is incomplete or ambiguous, do not perform stronger mutations.",
+    "If a required record is missing, emit PARTIAL/BLOCKED audit evidence and stop.",
+    "If a requested transition would strengthen state, reject it.",
+    "Repeated execution on already-Review records must be idempotent."
+  ],
+  "audit_receipt": {
+    "schema": "NDR_PUBLIC_CHANGE_PROPAGATION_RECEIPT_V1",
+    "required_fields": [
+      "receipt_id",
+      "generated_at",
+      "triggering_canonical_message_id",
+      "trigger_class",
+      "trigger_source_version",
+      "affected_assets",
+      "affected_endpoints",
+      "prior_state",
+      "new_state",
+      "result",
+      "authority_effect",
+      "errors"
+    ],
+    "result_enum": [
+      "PASS",
+      "PARTIAL",
+      "BLOCKED"
+    ],
+    "authority_effect": "NONE_RECONCILIATION_ONLY"
+  },
+  "state_machine": {
+    "asset": {
+      "admissible": [
+        [
+          "Pass",
+          "Review"
+        ],
+        [
+          "Review",
+          "Review"
+        ],
+        [
+          "Block",
+          "Block"
+        ]
+      ],
+      "forbidden": [
+        [
+          "Review",
+          "Pass"
+        ],
+        [
+          "Block",
+          "Review"
+        ],
+        [
+          "Block",
+          "Pass"
+        ]
+      ]
+    },
+    "endpoint": {
+      "admissible": [
+        [
+          "Pass",
+          "Review"
+        ],
+        [
+          "Review",
+          "Review"
+        ],
+        [
+          "Block",
+          "Block"
+        ]
+      ],
+      "forbidden": [
+        [
+          "Review",
+          "Pass"
+        ],
+        [
+          "Block",
+          "Review"
+        ],
+        [
+          "Block",
+          "Pass"
+        ]
+      ]
+    }
+  },
+  "deployment": {
+    "intended_runtime": "local n8n Governance Lab",
+    "status": "NOT_DEPLOYED",
+    "blocker": "Remote Desktop Commander device neontic offline at specification time"
+  }
+}
