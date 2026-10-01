@@ -43,6 +43,11 @@ class PublicChangeN8nHarnessNegativeTests(unittest.TestCase):
         result = self.run_validator(copy.deepcopy(BASE))
         self.assertEqual(result.returncode, 0, result.stderr)
 
+    def test_missing_or_changed_workflow_id_is_rejected(self) -> None:
+        w = copy.deepcopy(BASE)
+        w["id"] = "wrong"
+        self.assert_rejected(w, "unexpected workflow id")
+
     def test_activation_is_rejected(self) -> None:
         w = copy.deepcopy(BASE)
         w["active"] = True

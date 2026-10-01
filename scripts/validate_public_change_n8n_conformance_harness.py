@@ -28,6 +28,9 @@ def fail(message: str) -> None:
 def main() -> None:
     d = json.loads(P.read_text(encoding="utf-8"))
 
+    if d.get("id") != "publicChangeConformance001":
+        fail("unexpected workflow id")
+
     if d.get("active") is not False:
         fail("workflow must remain active=false")
 
