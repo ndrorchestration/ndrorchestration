@@ -65,6 +65,9 @@ jobs:
       - name: Adversarial public change propagation deployment gate tests
         run: python3 -m unittest tests/test_public_change_propagation_deployment_gate.py
 
+      - name: Runtime evidence receipt tests
+        run: python3 -m unittest tests/test_public_change_runtime_evidence_receipt.py
+
       - name: Install dashboard
         working-directory: dashboard
         run: npm install --no-audit --no-fund

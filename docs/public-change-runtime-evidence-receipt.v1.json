@@ -1,0 +1,69 @@
+{
+  "schema_version": "NDR_PUBLIC_CHANGE_RUNTIME_EVIDENCE_RECEIPT_V1",
+  "purpose": "Machine-verifiable runtime evidence receipt required by the deployment promotion gate.",
+  "authority_note": "A valid receipt is deployment-conformance evidence for covered cases only. It does not establish validation, efficacy, High Assurance, independent validation, canonical efficacy, production executor authority, or permission to strengthen public claims.",
+  "required_fields": [
+    "receipt_schema_version",
+    "generated_at",
+    "runtime_identity",
+    "runtime_version",
+    "workflow_hash",
+    "contract_schema_version",
+    "adapter_schema_version",
+    "conformance_schema_version",
+    "portable_vector_results",
+    "read_before_write",
+    "post_write_readback",
+    "block_preservation",
+    "pass_done_prohibition",
+    "idempotency",
+    "missing_relation_behavior",
+    "unknown_trigger_behavior",
+    "receipt_schema_validation",
+    "operator_review",
+    "overall_result",
+    "authority_effect"
+  ],
+  "enums": {
+    "check": [
+      "PASS",
+      "FAIL"
+    ],
+    "operator_review": [
+      "PASS",
+      "FAIL",
+      "NOT_RUN"
+    ],
+    "overall_result": [
+      "PASS",
+      "PARTIAL",
+      "BLOCKED"
+    ],
+    "authority_effect": [
+      "NONE_DEPLOYMENT_EVIDENCE_ONLY"
+    ]
+  },
+  "promotion_requirements": {
+    "overall_result": "PASS",
+    "portable_vector_results": "PASS",
+    "read_before_write": "PASS",
+    "post_write_readback": "PASS",
+    "block_preservation": "PASS",
+    "pass_done_prohibition": "PASS",
+    "idempotency": "PASS",
+    "missing_relation_behavior": "PASS",
+    "unknown_trigger_behavior": "PASS",
+    "receipt_schema_validation": "PASS",
+    "operator_review": "PASS",
+    "authority_effect": "NONE_DEPLOYMENT_EVIDENCE_ONLY"
+  },
+  "digest": {
+    "algorithm": "sha256",
+    "canonicalization": "UTF-8 JSON with sorted keys and compact separators, excluding receipt_digest field",
+    "field": "receipt_digest"
+  },
+  "deployment_state_effect": {
+    "on_valid_promotable_receipt": "ELIGIBLE_FOR_DEPLOYED_BOUNDED_REVIEW",
+    "on_invalid_or_incomplete_receipt": "NOT_DEPLOYED"
+  }
+}
