@@ -80,6 +80,12 @@ jobs:
       - name: Adversarial n8n portable vector harness tests
         run: python3 -m unittest tests/test_public_change_n8n_vector_harness.py
 
+      - name: Validate n8n shadow adapter
+        run: python3 scripts/validate_public_change_n8n_shadow_adapter.py
+
+      - name: Adversarial n8n shadow adapter tests
+        run: python3 -m unittest tests/test_public_change_n8n_shadow_adapter.py
+
       - name: Install dashboard
         working-directory: dashboard
         run: npm install --no-audit --no-fund
