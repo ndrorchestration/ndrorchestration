@@ -86,9 +86,6 @@ def fetch(url: str) -> tuple[int, str, str]:
 
 
 def source_head() -> str:
-    github_sha = os.environ.get("GITHUB_SHA", "").strip()
-    if github_sha:
-        return github_sha
     try:
         return subprocess.check_output(
             ["git", "rev-parse", "HEAD"],
@@ -150,6 +147,7 @@ def main() -> None:
     provenance = {
         "repository": os.environ.get("GITHUB_REPOSITORY", "ndrorchestration/ndrorchestration"),
         "source_head": source_head(),
+        "github_event_sha": os.environ.get("GITHUB_SHA", "").strip(),
         "manifest_path": str(MANIFEST),
         "manifest_sha256": manifest_sha256,
         "workflow": os.environ.get("GITHUB_WORKFLOW", ""),
