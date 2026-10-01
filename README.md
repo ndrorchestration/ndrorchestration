@@ -1,6 +1,6 @@
 **Andrew Hensel // Ndr “Ender”**
 
-### AI Systems Design · Evaluation · Agentic Governance · Provenance
+### AI Systems Design · Evaluation · Agent Orchestration · Governance · Provenance
 
 I build and evaluate AI systems around a practical question:
 
@@ -18,6 +18,7 @@ My work focuses on **AI evaluation, multi-agent systems, prompt engineering, pro
 | **Governed human + AI product design** | [Collabration](https://github.com/ndrorchestration/Collabration) |
 | **Prompt-system and evaluation specifications** | [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) |
 | **Executable evaluation-harness design** | [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) |
+| **Public governance / evidence explanation** | [Tektite live demo](https://project-7ybao.vercel.app/demo) |
 
 ## Flagship: DGAF
 
@@ -42,7 +43,9 @@ DGAF now also maintains an explicit architecture ownership model spanning govern
 
 For **AOSS Stage A**, an independent-validation handoff has been accepted and the system includes a bounded internal operator self-test path. Actual external review remains outstanding under [Issue #929](https://github.com/ndrorchestration/DGAF-Framework/issues/929).
 
-**Evaluate DGAF:** [Five-minute evaluator orientation](https://github.com/ndrorchestration/DGAF-Framework#five-minute-evaluator-orientation) · [Current-state record](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/CURRENT_STATE.md)
+**Evaluate DGAF:** [Five-minute evaluator orientation](https://github.com/ndrorchestration/DGAF-Framework#five-minute-evaluator-orientation) · [Current-state record](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/CURRENT_STATE.md) · [Tektite bounded public demo](https://project-7ybao.vercel.app/demo)
+
+**Tektite** is the public-facing explanation layer for this work: it exposes governed action/evidence state and claim boundaries without becoming a source of governance authority. Its live demo is bounded engineering evidence only; availability does not establish independent validation, canonical efficacy, production-executor authority, or High-Assurance status.
 
 ## Selected work
 
