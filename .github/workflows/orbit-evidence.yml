@@ -35,6 +35,9 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Validate public surface manifest
+        run: python3 scripts/validate_public_surface_manifest.py
+
       - name: Install dashboard
         working-directory: dashboard
         run: npm install --no-audit --no-fund
