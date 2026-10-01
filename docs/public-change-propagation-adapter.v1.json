@@ -1,0 +1,86 @@
+{
+  "schema_version": "NDR_PUBLIC_CHANGE_PROPAGATION_ADAPTER_V1",
+  "purpose": "Define the bounded adapter between Notion/n8n records and the runtime-neutral public change-propagation contract.",
+  "authority_note": "The adapter translates records and applies only contract-authorized Review/In-progress mutations. It cannot create stronger authority than the underlying contract.",
+  "source_systems": {
+    "canonical_registry": {
+      "data_source": "collection://d6b116f3-19de-410e-b11f-3828d273d938",
+      "id_field": "page_id",
+      "title_field": "Message Unit",
+      "fields": {
+        "evidence_ceiling": "Evidence Ceiling",
+        "source_authority": "Source Authority"
+      }
+    },
+    "external_asset_registry": {
+      "data_source": "collection://c81c3f9b-bbc7-48ac-bc7f-bd2a9625c2b8",
+      "id_field": "page_id",
+      "relation_to_canonical": "Canonical Sources",
+      "relation_to_endpoints": "Public Surface Endpoints",
+      "refresh_triggers": "Refresh Trigger",
+      "release_gate": "Release Gate",
+      "reconciliation_status": "Reconciliation Status"
+    },
+    "public_surface_manifest": {
+      "data_source": "collection://02334462-afea-472c-b244-b7700bb7e726",
+      "id_field": "page_id",
+      "release_gate": "Release Gate",
+      "copy_state": "Copy State",
+      "public_url": "Public URL"
+    }
+  },
+  "normalization": {
+    "release_gate": {
+      "Pass": "Pass",
+      "Review": "Review",
+      "Block": "Block"
+    },
+    "reconciliation_status": {
+      "Done": "Done",
+      "In progress": "In progress"
+    },
+    "copy_state": {
+      "Reconciled": "Reconciled",
+      "Review Needed": "Review Needed",
+      "Not Inspectable": "Not Inspectable"
+    }
+  },
+  "execution_protocol": [
+    "Read canonical record and capture source version before traversal.",
+    "Resolve assets only through Canonical Sources relation.",
+    "Filter assets by matching Refresh Trigger class.",
+    "Read and snapshot each affected asset before mutation.",
+    "Resolve endpoints only through Public Surface Endpoints relation.",
+    "Read and snapshot each endpoint before mutation.",
+    "Compute intended post-state through the runtime-neutral reference behavior or equivalent conformance logic.",
+    "Reject any mutation not represented in allowed_mutations of the machine-readable contract.",
+    "Apply mutations using optimistic read-before-write semantics.",
+    "Re-read mutated records and compare against intended post-state.",
+    "Persist a receipt containing prior state, intended state, observed post-state, errors, and source identity.",
+    "Stop. Never auto-promote Review or Block."
+  ],
+  "mutation_preconditions": [
+    "Canonical source identity must be resolved.",
+    "All target relation IDs must be explicit Notion page IDs or URLs.",
+    "Prior state must be captured before writes.",
+    "Any target already in Block remains Block.",
+    "No target may transition to Pass or Done.",
+    "If observed state changes between read and write, abort that target and report PARTIAL/BLOCKED."
+  ],
+  "receipt_extension": {
+    "base_schema": "NDR_PUBLIC_CHANGE_PROPAGATION_RECEIPT_V1",
+    "additional_required_fields": [
+      "adapter_schema_version",
+      "canonical_record_url",
+      "asset_record_urls",
+      "endpoint_record_urls",
+      "observed_post_state",
+      "write_conflicts"
+    ]
+  },
+  "deployment": {
+    "intended_runtime": "local n8n Governance Lab",
+    "status": "NOT_DEPLOYED",
+    "prerequisite": "Remote Desktop Commander connectivity and runtime conformance against portable vectors"
+  }
+}
