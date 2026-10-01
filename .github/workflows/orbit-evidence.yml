@@ -68,6 +68,12 @@ jobs:
       - name: Runtime evidence receipt tests
         run: python3 -m unittest tests/test_public_change_runtime_evidence_receipt.py
 
+      - name: Validate inert n8n conformance harness
+        run: python3 scripts/validate_public_change_n8n_conformance_harness.py
+
+      - name: Adversarial inert n8n conformance harness tests
+        run: python3 -m unittest tests/test_public_change_n8n_conformance_harness.py
+
       - name: Install dashboard
         working-directory: dashboard
         run: npm install --no-audit --no-fund
