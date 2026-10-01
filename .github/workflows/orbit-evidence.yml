@@ -74,6 +74,12 @@ jobs:
       - name: Adversarial inert n8n conformance harness tests
         run: python3 -m unittest tests/test_public_change_n8n_conformance_harness.py
 
+      - name: Validate n8n portable vector harness
+        run: python3 scripts/validate_public_change_n8n_vector_harness.py
+
+      - name: Adversarial n8n portable vector harness tests
+        run: python3 -m unittest tests/test_public_change_n8n_vector_harness.py
+
       - name: Install dashboard
         working-directory: dashboard
         run: npm install --no-audit --no-fund
