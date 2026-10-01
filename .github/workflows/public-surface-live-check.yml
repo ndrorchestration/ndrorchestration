@@ -25,6 +25,22 @@ jobs:
     steps:
       - name: Checkout source commit
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Verify exact source-head semantics
+        shell: bash
+        env:
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          ACTUAL="$(git rev-parse HEAD)"
+          if [[ -n "${PR_HEAD_SHA}" && "${ACTUAL}" != "${PR_HEAD_SHA}" ]]; then
+            echo "Expected PR head ${PR_HEAD_SHA}, got ${ACTUAL}" >&2
+            exit 1
+          fi
+          echo "PUBLIC_SURFACE_SOURCE_HEAD=${ACTUAL}"
 
       - name: Verify manifest structure first
         run: python3 scripts/validate_public_surface_manifest.py
