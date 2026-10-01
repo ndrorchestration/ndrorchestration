@@ -43,6 +43,8 @@ def validate(receipt: dict, schema: dict) -> None:
         if receipt[field] not in enums["check"]:
             fail(f"invalid {field}")
 
+    if receipt["adapter_surface"] not in enums["adapter_surface"]:
+        fail("invalid adapter_surface")
     if receipt["operator_review"] not in enums["operator_review"]:
         fail("invalid operator_review")
     if receipt["overall_result"] not in enums["overall_result"]:
