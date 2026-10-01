@@ -1,0 +1,195 @@
+{
+  "schema_version": "NDR_PUBLIC_SURFACE_MANIFEST_V1",
+  "generated_at": "2026-10-01",
+  "authority_note": "This manifest is a public-surface routing and freshness index only. It does not establish technical, scientific, governance, runtime, validation, or authorization truth.",
+  "release_semantics": {
+    "PASS": "Current surface is usable without known semantic or endpoint drift.",
+    "REVIEW": "Surface exists, but at least one copy, source, or verification gap remains.",
+    "BLOCK": "Do not reuse or promote the surface because current wording or endpoint state is materially misleading, broken, or unsupported."
+  },
+  "surfaces": [
+    {
+      "id": "portfolio.home",
+      "type": "portfolio",
+      "url": "https://ndrorchestration.vercel.app",
+      "reachability": "VERIFIED_PUBLIC",
+      "copy_state": "RECONCILED",
+      "release_gate": "PASS",
+      "canonical_dependencies": [
+        "ECOSYSTEM_POSITIONING",
+        "DGAF",
+        "ACP",
+        "TEKTITE",
+        "EVALUATION_METHOD",
+        "STRUCTURAL_EPISTEMICS",
+        "PATTERN_COMMONS",
+        "CAREER_POSITIONING"
+      ],
+      "verification_methods": [
+        "VERCEL_CONNECTOR",
+        "RENDERED_READBACK"
+      ],
+      "source_version": "bd7c293cb9e7222901a9eb006a061a83a49a205a",
+      "last_verified": "2026-10-01",
+      "refresh_triggers": [
+        "CANONICAL_CLAIM_CHANGED",
+        "EVIDENCE_CEILING_CHANGED",
+        "SOURCE_AUTHORITY_CHANGED",
+        "DEPLOYMENT_CHANGED",
+        "PUBLIC_COPY_CHANGED",
+        "ROLE_POSITIONING_CHANGED"
+      ]
+    },
+    {
+      "id": "github.profile",
+      "type": "github_profile",
+      "url": "https://github.com/ndrorchestration/ndrorchestration/blob/main/README.md",
+      "reachability": "VERIFIED_PUBLIC",
+      "copy_state": "RECONCILED",
+      "release_gate": "PASS",
+      "canonical_dependencies": [
+        "ECOSYSTEM_POSITIONING",
+        "DGAF",
+        "ACP",
+        "TEKTITE",
+        "EVALUATION_METHOD",
+        "CAREER_POSITIONING"
+      ],
+      "verification_methods": [
+        "GITHUB_CONNECTOR"
+      ],
+      "source_version": "564d33429202de0532436923d4771d095c3623a8",
+      "last_verified": "2026-10-01",
+      "refresh_triggers": [
+        "CANONICAL_CLAIM_CHANGED",
+        "EVIDENCE_CEILING_CHANGED",
+        "SOURCE_AUTHORITY_CHANGED",
+        "PUBLIC_COPY_CHANGED",
+        "ROLE_POSITIONING_CHANGED"
+      ]
+    },
+    {
+      "id": "github.organization_profile",
+      "type": "github_organization",
+      "url": "https://github.com/ndrorchestration/.github/blob/main/profile/README.md",
+      "reachability": "VERIFIED_PUBLIC",
+      "copy_state": "RECONCILED",
+      "release_gate": "PASS",
+      "canonical_dependencies": [
+        "ECOSYSTEM_POSITIONING",
+        "DGAF",
+        "CAREER_POSITIONING"
+      ],
+      "verification_methods": [
+        "GITHUB_CONNECTOR"
+      ],
+      "source_version": "CURRENT_PUBLIC_PROFILE_README_2026-10-01",
+      "last_verified": "2026-10-01",
+      "refresh_triggers": [
+        "CANONICAL_CLAIM_CHANGED",
+        "EVIDENCE_CEILING_CHANGED",
+        "SOURCE_AUTHORITY_CHANGED",
+        "PUBLIC_COPY_CHANGED",
+        "ROLE_POSITIONING_CHANGED"
+      ]
+    },
+    {
+      "id": "dgaf.command_center",
+      "type": "dgaf_command_center",
+      "url": "https://project-7ybao.vercel.app",
+      "reachability": "VERIFIED_PUBLIC",
+      "copy_state": "RECONCILED",
+      "release_gate": "PASS",
+      "canonical_dependencies": [
+        "DGAF",
+        "TEKTITE"
+      ],
+      "verification_methods": [
+        "VERCEL_CONNECTOR",
+        "RENDERED_READBACK"
+      ],
+      "source_version": {
+        "deployment_id": "dpl_4YhoEyYzkQzejDxtfK25jxgyrPzA",
+        "git_commit": "01773b5dff37f8ded1df0ac2eb76148bd57ffaa8"
+      },
+      "last_verified": "2026-10-01",
+      "refresh_triggers": [
+        "CANONICAL_CLAIM_CHANGED",
+        "EVIDENCE_CEILING_CHANGED",
+        "SOURCE_AUTHORITY_CHANGED",
+        "DEPLOYMENT_CHANGED",
+        "PUBLIC_COPY_CHANGED"
+      ]
+    },
+    {
+      "id": "tektite.bounded_demo",
+      "type": "tektite_demo",
+      "url": "https://project-7ybao.vercel.app/demo",
+      "reachability": "VERIFIED_PUBLIC",
+      "copy_state": "RECONCILED",
+      "release_gate": "PASS",
+      "canonical_dependencies": [
+        "DGAF",
+        "TEKTITE"
+      ],
+      "verification_methods": [
+        "VERCEL_CONNECTOR",
+        "RENDERED_READBACK"
+      ],
+      "source_version": {
+        "current_git_commit": "01773b5dff37f8ded1df0ac2eb76148bd57ffaa8",
+        "accepted_proof_source_sha": "ae0d254158fa831162274077872c3f752a891431",
+        "accepted_proof_deployment_id": "dpl_6W1uTG3sJ6dyU7KJsAzHpXpFXvvU",
+        "accepted_proof_artifact_id": "10993339146",
+        "accepted_proof_sha256": "35a39d19a11d65b7c6af36fe1a6d7e8672636137a66003482d3306505fbe2862",
+        "verifier_result": "TEKTITE_PROOF_OF_OPERATION_V1=PASS"
+      },
+      "last_verified": "2026-10-01",
+      "evidence_note": "Current live deployment identity and accepted historical proof identity are distinct records. Live availability does not rebind or strengthen the accepted proof.",
+      "refresh_triggers": [
+        "CANONICAL_CLAIM_CHANGED",
+        "EVIDENCE_CEILING_CHANGED",
+        "SOURCE_AUTHORITY_CHANGED",
+        "DEPLOYMENT_CHANGED",
+        "PUBLIC_COPY_CHANGED"
+      ]
+    },
+    {
+      "id": "linkedin.profile",
+      "type": "linkedin",
+      "url": "https://www.linkedin.com/in/andrewhensel",
+      "reachability": "VERIFIED_PUBLIC",
+      "copy_state": "NOT_INSPECTABLE",
+      "release_gate": "REVIEW",
+      "canonical_dependencies": [
+        "ECOSYSTEM_POSITIONING",
+        "CAREER_POSITIONING",
+        "DGAF",
+        "ACP",
+        "TEKTITE",
+        "EVALUATION_METHOD"
+      ],
+      "verification_methods": [
+        "LINKEDIN_CONNECTOR",
+        "PUBLIC_DIRECTORY"
+      ],
+      "source_version": "ENDPOINT_IDENTITY_VERIFIED_COPY_NOT_RETRIEVABLE",
+      "last_verified": "2026-10-01",
+      "refresh_triggers": [
+        "CANONICAL_CLAIM_CHANGED",
+        "EVIDENCE_CEILING_CHANGED",
+        "PUBLIC_COPY_CHANGED",
+        "ROLE_POSITIONING_CHANGED"
+      ]
+    }
+  ],
+  "invariant_claims": {
+    "SCIENTIFIC_N_INCREMENT": 0,
+    "INDEPENDENT_VALIDATION": "NOT_ESTABLISHED",
+    "CANONICAL_DGAF_EFFICACY": "NOT_ESTABLISHED",
+    "HIGH_ASSURANCE": "NOT_AUTHORIZED",
+    "LIVE_REPOSITORY_MUTATION": "NOT_AUTHORIZED",
+    "ROLLBACK_EXECUTION": "NOT_AUTHORIZED",
+    "PRODUCTION_EXECUTOR": "NOT_ESTABLISHED"
+  }
+}
