@@ -53,6 +53,9 @@ jobs:
       - name: Portable public change propagation conformance vectors
         run: python3 -m unittest tests/test_public_change_propagation_conformance.py
 
+      - name: Validate public change propagation adapter
+        run: python3 scripts/validate_public_change_propagation_adapter.py
+
       - name: Install dashboard
         working-directory: dashboard
         run: npm install --no-audit --no-fund
