@@ -1,0 +1,294 @@
+{
+  "schema_version": "NDR_PUBLIC_CHANGE_PROPAGATION_CONFORMANCE_V1",
+  "authority_note": "Portable conformance vectors for bounded reconciliation propagation. Passing these vectors does not establish runtime deployment, correctness beyond covered cases, validation, efficacy, assurance, or authorization.",
+  "cases": [
+    {
+      "id": "pass_to_review",
+      "snapshot": {
+        "canonical_messages": {
+          "canonical.dgaf": {
+            "id": "canonical.dgaf"
+          }
+        },
+        "assets": {
+          "asset.dgaf": {
+            "canonical_sources": [
+              "canonical.dgaf"
+            ],
+            "refresh_triggers": [
+              "CANONICAL_CLAIM_CHANGED"
+            ],
+            "release_gate": "Pass",
+            "reconciliation_status": "Done",
+            "public_surface_endpoints": [
+              "endpoint.dgaf"
+            ]
+          }
+        },
+        "endpoints": {
+          "endpoint.dgaf": {
+            "release_gate": "Pass",
+            "copy_state": "Reconciled"
+          }
+        }
+      },
+      "event": {
+        "canonical_message_id": "canonical.dgaf",
+        "trigger_class": "CANONICAL_CLAIM_CHANGED",
+        "trigger_source_version": "v2"
+      },
+      "expect": {
+        "result": "PASS",
+        "asset_state": {
+          "asset.dgaf": {
+            "release_gate": "Review",
+            "reconciliation_status": "In progress"
+          }
+        },
+        "endpoint_state": {
+          "endpoint.dgaf": {
+            "release_gate": "Review",
+            "copy_state": "Review Needed"
+          }
+        },
+        "authority_effect": "NONE_RECONCILIATION_ONLY"
+      }
+    },
+    {
+      "id": "idempotent_review",
+      "snapshot": {
+        "canonical_messages": {
+          "canonical.dgaf": {
+            "id": "canonical.dgaf"
+          }
+        },
+        "assets": {
+          "asset.dgaf": {
+            "canonical_sources": [
+              "canonical.dgaf"
+            ],
+            "refresh_triggers": [
+              "CANONICAL_CLAIM_CHANGED"
+            ],
+            "release_gate": "Review",
+            "reconciliation_status": "In progress",
+            "public_surface_endpoints": [
+              "endpoint.dgaf"
+            ]
+          }
+        },
+        "endpoints": {
+          "endpoint.dgaf": {
+            "release_gate": "Review",
+            "copy_state": "Review Needed"
+          }
+        }
+      },
+      "event": {
+        "canonical_message_id": "canonical.dgaf",
+        "trigger_class": "CANONICAL_CLAIM_CHANGED",
+        "trigger_source_version": "v2"
+      },
+      "expect": {
+        "result": "PASS",
+        "asset_state": {
+          "asset.dgaf": {
+            "release_gate": "Review",
+            "reconciliation_status": "In progress"
+          }
+        },
+        "endpoint_state": {
+          "endpoint.dgaf": {
+            "release_gate": "Review",
+            "copy_state": "Review Needed"
+          }
+        },
+        "authority_effect": "NONE_RECONCILIATION_ONLY"
+      }
+    },
+    {
+      "id": "blocked_asset_preserved",
+      "snapshot": {
+        "canonical_messages": {
+          "canonical.dgaf": {
+            "id": "canonical.dgaf"
+          }
+        },
+        "assets": {
+          "asset.dgaf": {
+            "canonical_sources": [
+              "canonical.dgaf"
+            ],
+            "refresh_triggers": [
+              "CANONICAL_CLAIM_CHANGED"
+            ],
+            "release_gate": "Block",
+            "reconciliation_status": "In progress",
+            "public_surface_endpoints": [
+              "endpoint.dgaf"
+            ]
+          }
+        },
+        "endpoints": {
+          "endpoint.dgaf": {
+            "release_gate": "Pass",
+            "copy_state": "Reconciled"
+          }
+        }
+      },
+      "event": {
+        "canonical_message_id": "canonical.dgaf",
+        "trigger_class": "CANONICAL_CLAIM_CHANGED",
+        "trigger_source_version": "v2"
+      },
+      "expect": {
+        "result": "PARTIAL",
+        "asset_state": {
+          "asset.dgaf": {
+            "release_gate": "Block",
+            "reconciliation_status": "In progress"
+          }
+        },
+        "endpoint_state": {
+          "endpoint.dgaf": {
+            "release_gate": "Review",
+            "copy_state": "Review Needed"
+          }
+        },
+        "error_contains": "blocked asset preserved"
+      }
+    },
+    {
+      "id": "blocked_endpoint_preserved",
+      "snapshot": {
+        "canonical_messages": {
+          "canonical.dgaf": {
+            "id": "canonical.dgaf"
+          }
+        },
+        "assets": {
+          "asset.dgaf": {
+            "canonical_sources": [
+              "canonical.dgaf"
+            ],
+            "refresh_triggers": [
+              "CANONICAL_CLAIM_CHANGED"
+            ],
+            "release_gate": "Pass",
+            "reconciliation_status": "Done",
+            "public_surface_endpoints": [
+              "endpoint.dgaf"
+            ]
+          }
+        },
+        "endpoints": {
+          "endpoint.dgaf": {
+            "release_gate": "Block",
+            "copy_state": "Review Needed"
+          }
+        }
+      },
+      "event": {
+        "canonical_message_id": "canonical.dgaf",
+        "trigger_class": "CANONICAL_CLAIM_CHANGED",
+        "trigger_source_version": "v2"
+      },
+      "expect": {
+        "result": "PARTIAL",
+        "asset_state": {
+          "asset.dgaf": {
+            "release_gate": "Review",
+            "reconciliation_status": "In progress"
+          }
+        },
+        "endpoint_state": {
+          "endpoint.dgaf": {
+            "release_gate": "Block",
+            "copy_state": "Review Needed"
+          }
+        },
+        "error_contains": "blocked endpoint preserved"
+      }
+    },
+    {
+      "id": "missing_endpoint_relation",
+      "snapshot": {
+        "canonical_messages": {
+          "canonical.dgaf": {
+            "id": "canonical.dgaf"
+          }
+        },
+        "assets": {
+          "asset.dgaf": {
+            "canonical_sources": [
+              "canonical.dgaf"
+            ],
+            "refresh_triggers": [
+              "CANONICAL_CLAIM_CHANGED"
+            ],
+            "release_gate": "Pass",
+            "reconciliation_status": "Done",
+            "public_surface_endpoints": []
+          }
+        },
+        "endpoints": {}
+      },
+      "event": {
+        "canonical_message_id": "canonical.dgaf",
+        "trigger_class": "CANONICAL_CLAIM_CHANGED",
+        "trigger_source_version": "v2"
+      },
+      "expect": {
+        "result": "PARTIAL",
+        "asset_state": {
+          "asset.dgaf": {
+            "release_gate": "Review",
+            "reconciliation_status": "In progress"
+          }
+        },
+        "endpoint_state": {},
+        "error_contains": "missing public_surface_endpoints relation"
+      }
+    },
+    {
+      "id": "unknown_canonical",
+      "snapshot": {
+        "canonical_messages": {},
+        "assets": {},
+        "endpoints": {}
+      },
+      "event": {
+        "canonical_message_id": "canonical.missing",
+        "trigger_class": "CANONICAL_CLAIM_CHANGED",
+        "trigger_source_version": "v2"
+      },
+      "expect": {
+        "result": "BLOCKED",
+        "no_state_change": true,
+        "error_contains": "canonical message not found"
+      }
+    },
+    {
+      "id": "unknown_trigger",
+      "snapshot": {
+        "canonical_messages": {
+          "canonical.dgaf": {
+            "id": "canonical.dgaf"
+          }
+        },
+        "assets": {},
+        "endpoints": {}
+      },
+      "event": {
+        "canonical_message_id": "canonical.dgaf",
+        "trigger_class": "UNAUTHORIZED_CHANGE",
+        "trigger_source_version": "v2"
+      },
+      "expect": {
+        "result": "BLOCKED",
+        "no_state_change": true,
+        "error_contains": "unknown trigger_class"
+      }
+    }
+  ]
+}
