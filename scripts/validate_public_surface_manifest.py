@@ -47,6 +47,11 @@ REQUIRED_SURFACE_KEYS = {
     "refresh_triggers",
 }
 
+REPO_LOCAL_SURFACES = {
+    "portfolio.home",
+    "github.profile",
+}
+
 
 def fail(message: str) -> None:
     print(f"PUBLIC_SURFACE_MANIFEST_INVALID: {message}", file=sys.stderr)
@@ -147,6 +152,32 @@ def main() -> None:
 
         if copy_state == "NOT_INSPECTABLE" and release_gate == "PASS":
             fail(f"{surface_id}: NOT_INSPECTABLE cannot be PASS")
+
+        if surface_id in REPO_LOCAL_SURFACES:
+            local_source = surface.get("local_source")
+            if not isinstance(local_source, dict):
+                fail(f"{surface_id}.local_source must bind the repository-owned public copy")
+            path_value = local_source.get("path")
+            expected_blob = local_source.get("git_blob_sha")
+            if not isinstance(path_value, str) or not path_value:
+                fail(f"{surface_id}.local_source.path must be non-empty")
+            if not isinstance(expected_blob, str) or len(expected_blob) != 40:
+                fail(f"{surface_id}.local_source.git_blob_sha must be a 40-character Git blob SHA")
+
+            source_path = Path(path_value)
+            if not source_path.is_file():
+                fail(f"{surface_id}.local_source.path missing from checkout: {path_value}")
+
+            import hashlib
+            body = source_path.read_bytes()
+            actual_blob = hashlib.sha1(
+                f"blob {len(body)}\0".encode("ascii") + body
+            ).hexdigest()
+            if actual_blob != expected_blob:
+                fail(
+                    f"{surface_id}.local_source drift: expected {expected_blob}, "
+                    f"actual {actual_blob}; reconcile public-surface manifest"
+                )
 
     tektite = next((x for x in surfaces if x["id"] == "tektite.bounded_demo"), None)
     if tektite is None:
