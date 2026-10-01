@@ -62,6 +62,9 @@ jobs:
       - name: Validate public change propagation deployment gate
         run: python3 scripts/validate_public_change_propagation_deployment_gate.py
 
+      - name: Adversarial public change propagation deployment gate tests
+        run: python3 -m unittest tests/test_public_change_propagation_deployment_gate.py
+
       - name: Install dashboard
         working-directory: dashboard
         run: npm install --no-audit --no-fund
