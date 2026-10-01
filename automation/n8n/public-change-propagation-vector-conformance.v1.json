@@ -1,0 +1,58 @@
+{
+  "id": "publicChangeVectorConformance001",
+  "name": "Public Change Propagation — Portable Vector Conformance v1",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-trigger",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const cases = [\n  {id:'pass_to_review', snapshot:{assets:{a:{release_gate:'Pass',reconciliation_status:'Done',endpoints:['e']}},endpoints:{e:{release_gate:'Pass',copy_state:'Reconciled'}}}, expect:{result:'PASS',asset:'Review',endpoint:'Review'}},\n  {id:'idempotent_review', snapshot:{assets:{a:{release_gate:'Review',reconciliation_status:'In progress',endpoints:['e']}},endpoints:{e:{release_gate:'Review',copy_state:'Review Needed'}}}, expect:{result:'PASS',asset:'Review',endpoint:'Review'}},\n  {id:'blocked_asset', snapshot:{assets:{a:{release_gate:'Block',reconciliation_status:'In progress',endpoints:['e']}},endpoints:{e:{release_gate:'Pass',copy_state:'Reconciled'}}}, expect:{result:'PARTIAL',asset:'Block',endpoint:'Review'}},\n  {id:'blocked_endpoint', snapshot:{assets:{a:{release_gate:'Pass',reconciliation_status:'Done',endpoints:['e']}},endpoints:{e:{release_gate:'Block',copy_state:'Review Needed'}}}, expect:{result:'PARTIAL',asset:'Review',endpoint:'Block'}},\n  {id:'missing_relation', snapshot:{assets:{a:{release_gate:'Pass',reconciliation_status:'Done',endpoints:[]}},endpoints:{}}, expect:{result:'PARTIAL',asset:'Review'}},\n  {id:'unknown_canonical', blocked:'canonical', expect:{result:'BLOCKED'}},\n  {id:'unknown_trigger', blocked:'trigger', expect:{result:'BLOCKED'}}\n];\n\nfunction run(c) {\n  const s = JSON.parse(JSON.stringify(c.snapshot || {assets:{},endpoints:{}}));\n  if (c.blocked) return {id:c.id,result:'BLOCKED',state:s};\n  const a=s.assets.a;\n  let result='PASS';\n  if (a.release_gate==='Block') result='PARTIAL';\n  else { a.release_gate='Review'; a.reconciliation_status='In progress'; }\n  if (!a.endpoints || a.endpoints.length===0) result='PARTIAL';\n  for (const eid of (a.endpoints||[])) {\n    const e=s.endpoints[eid];\n    if (!e) { result='PARTIAL'; continue; }\n    if (e.release_gate==='Block') result='PARTIAL';\n    else { e.release_gate='Review'; e.copy_state='Review Needed'; }\n  }\n  return {id:c.id,result,state:s};\n}\n\nconst results=cases.map(c=>{\n  const r=run(c);\n  const checks=[r.result===c.expect.result];\n  if(c.expect.asset) checks.push(r.state.assets.a.release_gate===c.expect.asset);\n  if(c.expect.endpoint) checks.push(r.state.endpoints.e.release_gate===c.expect.endpoint);\n  return {...r,pass:checks.every(Boolean)};\n});\nconst failed=results.filter(r=>!r.pass);\nif(failed.length) throw new Error('PORTABLE_VECTOR_CONFORMANCE_FAILED:'+JSON.stringify(failed));\nreturn [{json:{\n  harness:'NDR_PUBLIC_CHANGE_PROPAGATION_N8N_VECTOR_HARNESS_V1',\n  mode:'IN_MEMORY_CONFORMANCE_ONLY',\n  runtime_state:'NOT_DEPLOYED',\n  authority_effect:'NONE_DEPLOYMENT_EVIDENCE_ONLY',\n  conformance_schema:'NDR_PUBLIC_CHANGE_PROPAGATION_CONFORMANCE_V1',\n  total:results.length,\n  passed:results.length-failed.length,\n  failed:failed.length,\n  result:failed.length?'FAIL':'PASS',\n  results\n}}];"
+      },
+      "id": "run-vectors",
+      "name": "Run Portable Vectors",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        260,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Run Portable Vectors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f320e9dc-768c-4f98-96ef-9b118b987701",
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "harness_schema": "NDR_PUBLIC_CHANGE_PROPAGATION_N8N_VECTOR_HARNESS_V1",
+    "conformance_schema": "NDR_PUBLIC_CHANGE_PROPAGATION_CONFORMANCE_V1",
+    "intended_runtime": "n8n 2.40.7 local Governance Lab",
+    "mutation_authority": "NONE",
+    "network_authority": "NONE"
+  },
+  "tags": []
+}
