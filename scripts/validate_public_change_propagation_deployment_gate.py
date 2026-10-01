@@ -20,7 +20,7 @@ def main()->None:
     needed={
         "runtime_identity","workflow_export_or_definition_hash","adapter_schema_version",
         "contract_schema_version","conformance_schema_version","exact_runtime_version",
-        "execution_timestamp","portable_vector_results","read_before_write_evidence",
+        "execution_timestamp","portable_vector_results","adapter_surface","read_before_write_evidence",
         "post_write_readback_evidence","block_preservation_evidence",
         "pass_done_prohibition_evidence","idempotency_evidence",
         "missing_relation_partial_evidence","unknown_trigger_blocked_evidence",
@@ -34,7 +34,8 @@ def main()->None:
         "Every portable conformance vector must pass on the actual runtime implementation.",
         "No covered case may produce Pass or Done promotion.",
         "Any missing, stale, ambiguous, or conflicting evidence keeps state NOT_DEPLOYED.",
-        "A successful connection, workflow import, workflow activation, or single happy-path run is insufficient for promotion."
+        "A successful connection, workflow import, workflow activation, or single happy-path run is insufficient for promotion.",
+        "Deployment promotion requires adapter_surface=LIVE_NOTION; SHADOW_ONLY evidence is non-promotable."
     }
     if not required_rules.issubset(rules):
         fail("promotion rules weakened")
