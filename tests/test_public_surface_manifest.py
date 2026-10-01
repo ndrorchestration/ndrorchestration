@@ -23,6 +23,11 @@ class PublicSurfaceManifestNegativeTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / "docs").mkdir()
+            (root / "dashboard" / "pages").mkdir(parents=True)
+            (root / "README.md").write_bytes((REPO_ROOT / "README.md").read_bytes())
+            (root / "dashboard" / "pages" / "index.tsx").write_bytes(
+                (REPO_ROOT / "dashboard" / "pages" / "index.tsx").read_bytes()
+            )
             (root / "docs" / "public-surface-manifest.v1.json").write_text(
                 json.dumps(manifest, indent=2) + "\n",
                 encoding="utf-8",
@@ -107,6 +112,12 @@ class PublicSurfaceManifestNegativeTests(unittest.TestCase):
         manifest = copy.deepcopy(BASE_MANIFEST)
         manifest["surfaces"][0]["refresh_triggers"] = []
         self.assert_rejected(manifest, "refresh_triggers must be a non-empty list")
+
+    def test_repository_owned_source_blob_drift_fails_closed(self) -> None:
+        manifest = copy.deepcopy(BASE_MANIFEST)
+        portfolio = next(s for s in manifest["surfaces"] if s["id"] == "portfolio.home")
+        portfolio["local_source"]["git_blob_sha"] = "0" * 40
+        self.assert_rejected(manifest, "local_source drift")
 
 
 if __name__ == "__main__":
