@@ -62,7 +62,7 @@
       "verification_methods": [
         "GITHUB_CONNECTOR"
       ],
-      "source_version": "564d33429202de0532436923d4771d095c3623a8",
+      "source_version": "b804476c4b21d818868d48bab9b6cdece7c60511",
       "last_verified": "2026-10-01",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
@@ -73,7 +73,7 @@
       ],
       "local_source": {
         "path": "README.md",
-        "git_blob_sha": "44e5f493f0011af67b92b62c7ad179297467c750"
+        "git_blob_sha": "59adbb3157201efce9572e7fc2775dfc60b0282b"
       }
     },
     {
