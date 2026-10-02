@@ -43,7 +43,9 @@ DGAF now also maintains an explicit architecture ownership model spanning govern
 
 For **AOSS Stage A**, an independent-validation handoff has been accepted and the system includes a bounded internal operator self-test path. Actual external review remains outstanding under [Issue #929](https://github.com/ndrorchestration/DGAF-Framework/issues/929).
 
-**Evaluate DGAF:** [Five-minute evaluator orientation](https://github.com/ndrorchestration/DGAF-Framework#five-minute-evaluator-orientation) · [Current-state record](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/CURRENT_STATE.md) · [Tektite bounded public demo](https://project-7ybao.vercel.app/demo)
+**Evaluate DGAF:** [60-second bounded public demo](https://project-7ybao.vercel.app/demo) · [Five-minute evaluator orientation](https://github.com/ndrorchestration/DGAF-Framework#five-minute-evaluator-orientation) · [Developer self-test](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/qa/DGAF_OPERATOR_SELFTEST.md) · [Outside-operator trial](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/governance/GOVERNED_REPO_OUTSIDE_OPERATOR_TRIAL_V0.md) · [Current-state record](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/CURRENT_STATE.md)
+
+The outside-operator trial is a **currently open usability gate**, not an achieved validation claim. It requires an uninvolved technically capable human operator working from the published packet without implementation-author coaching; same-owner automation, ChatGPT execution, and author execution do not satisfy it.
 
 **Tektite** is the public-facing explanation layer for this work: it exposes governed action/evidence state and claim boundaries without becoming a source of governance authority. Its live demo is bounded engineering evidence only; availability does not establish independent validation, canonical efficacy, production-executor authority, or High-Assurance status.
 
