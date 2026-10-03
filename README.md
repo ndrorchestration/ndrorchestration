@@ -59,9 +59,11 @@ A compact system for inspecting a multi-agent workflow rather than exposing only
 
 ### [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) — execution-control primitives
 
-An executable deterministic kernel for **capability dispatch, explicit policy allow/deny decisions, fail-closed rejection provenance, cooperative execution budgets, run-scoped provenance, portable manifests, and bounded remote-execution contracts**.
+An executable deterministic kernel for **capability dispatch, explicit policy allow/deny decisions, fail-closed rejection provenance, cooperative execution budgets, run-scoped provenance, portable manifests, bounded remote-execution contracts, and non-executing mutation-governance controls**.
 
-Its guarantees remain deliberately narrow: tested software invariants do not automatically establish distributed reliability, production security, durable authorization infrastructure, cross-runtime portability, or provider-level resource accounting.
+ACP's current executor profile is **`BOUNDED_LOCAL_TEST`**. Protected `main` contains admission, path-safety, journal/recovery, postcondition, result-binding, authorization/closure, and forward/rollback simulation primitives, but it does **not** contain a live real-project mutation or rollback executor. Issue [#154](https://github.com/ndrorchestration/agent-control-plane/issues/154) controls any fresh disposable-repository executor reconstruction.
+
+Its guarantees remain deliberately narrow: the retained local-test profile does not establish final path-to-syscall TOCTOU elimination, hostile-local-actor resistance, trusted process identity, peer-process tamper resistance, production execution, real-project mutation authority, rollback authority, independent validation, or High-Assurance.
 
 ### [Collabration](https://github.com/ndrorchestration/Collabration) — governed human + AI collaboration
 
