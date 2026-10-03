@@ -1,6 +1,6 @@
 {
   "schema_version": "NDR_PUBLIC_SURFACE_MANIFEST_V1",
-  "generated_at": "2026-10-01",
+  "generated_at": "2026-10-03",
   "authority_note": "This manifest is a public-surface routing and freshness index only. It does not establish technical, scientific, governance, runtime, validation, or authorization truth.",
   "release_semantics": {
     "PASS": "Current surface is usable without known semantic or endpoint drift.",
@@ -29,8 +29,8 @@
         "VERCEL_CONNECTOR",
         "RENDERED_READBACK"
       ],
-      "source_version": "bd7c293cb9e7222901a9eb006a061a83a49a205a",
-      "last_verified": "2026-10-01",
+      "source_version": "2488ccbdefe4d0f16ad25416f6df4d8ffad33adb",
+      "last_verified": "2026-10-03",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
         "EVIDENCE_CEILING_CHANGED",
@@ -41,7 +41,7 @@
       ],
       "local_source": {
         "path": "dashboard/pages/index.tsx",
-        "git_blob_sha": "fa83203848f81e7da92cc62b9a8326ef728e4d1b"
+        "git_blob_sha": "3488b5be9ded63e2b3b9736da00115d3c5d01688"
       }
     },
     {
@@ -62,8 +62,8 @@
       "verification_methods": [
         "GITHUB_CONNECTOR"
       ],
-      "source_version": "b804476c4b21d818868d48bab9b6cdece7c60511",
-      "last_verified": "2026-10-01",
+      "source_version": "b0c11aa0fc1bef1678f38b5c2044c41bc5c2e0c1",
+      "last_verified": "2026-10-03",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
         "EVIDENCE_CEILING_CHANGED",
@@ -73,7 +73,7 @@
       ],
       "local_source": {
         "path": "README.md",
-        "git_blob_sha": "59adbb3157201efce9572e7fc2775dfc60b0282b"
+        "git_blob_sha": "6242fd3f325430c92dc3031e5801998d86016c2d"
       }
     },
     {
