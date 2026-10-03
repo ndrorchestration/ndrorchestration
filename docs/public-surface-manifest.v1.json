@@ -145,15 +145,16 @@
         "RENDERED_READBACK"
       ],
       "source_version": {
-        "current_git_commit": "01773b5dff37f8ded1df0ac2eb76148bd57ffaa8",
+        "current_git_commit": "45dcf701c63812e9484d98e2cf3e8e8368aeab78",
         "accepted_proof_source_sha": "ae0d254158fa831162274077872c3f752a891431",
         "accepted_proof_deployment_id": "dpl_6W1uTG3sJ6dyU7KJsAzHpXpFXvvU",
         "accepted_proof_artifact_id": "10993339146",
         "accepted_proof_sha256": "35a39d19a11d65b7c6af36fe1a6d7e8672636137a66003482d3306505fbe2862",
-        "verifier_result": "TEKTITE_PROOF_OF_OPERATION_V1=PASS"
+        "verifier_result": "TEKTITE_PROOF_OF_OPERATION_V1=PASS",
+        "current_deployment_id": "dpl_3V6KF44RXD2K1S7pRTUr5xF3wdQj"
       },
-      "last_verified": "2026-10-01",
-      "evidence_note": "Current live deployment identity and accepted historical proof identity are distinct records. Live availability does not rebind or strengthen the accepted proof.",
+      "last_verified": "2026-10-03",
+      "evidence_note": "Current live deployment identity is source-bound to DGAF merge 45dcf701c63812e9484d98e2cf3e8e8368aeab78. The accepted historical proof identity remains distinct; current deployment/readback does not rebind or strengthen that older proof.",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
         "EVIDENCE_CEILING_CHANGED",
