@@ -26,8 +26,8 @@ const systems = [
   {
     name: 'Agent Control Plane',
     type: 'Control-plane primitives',
-    description: 'A compact executable kernel for capability dispatch, explicit policy allow/deny decisions, cooperative execution budgets, and run-scoped provenance.',
-    boundary: 'Tested local software invariants do not establish production security, distributed reliability, or autonomous-system certification.',
+    description: 'A compact kernel for capability dispatch, explicit policy decisions, provenance, non-executing mutation governance, and bounded execution simulation.',
+    boundary: 'Current profile: BOUNDED_LOCAL_TEST. Protected main has no live real-project mutation or rollback executor; #154 controls any fresh disposable-repository reconstruction. Production execution, trusted process identity, hostile-local-actor resistance, independent validation, and High-Assurance remain unestablished / unauthorized.',
     href: 'https://github.com/ndrorchestration/agent-control-plane',
   },
   {
