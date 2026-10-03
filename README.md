@@ -61,7 +61,7 @@ A compact system for inspecting a multi-agent workflow rather than exposing only
 
 An executable deterministic kernel for **capability dispatch, explicit policy allow/deny decisions, fail-closed rejection provenance, cooperative execution budgets, run-scoped provenance, portable manifests, bounded remote-execution contracts, and non-executing mutation-governance controls**.
 
-ACP's current executor profile is **`BOUNDED_LOCAL_TEST`**. Protected `main` contains admission, path-safety, journal/recovery, postcondition, result-binding, authorization/closure, and forward/rollback simulation primitives, but it does **not** contain a live real-project mutation or rollback executor. Issue [#154](https://github.com/ndrorchestration/agent-control-plane/issues/154) controls any fresh disposable-repository executor reconstruction.
+ACP's current executor profile is **`BOUNDED_LOCAL_TEST`**. Protected `main` now includes the bounded disposable-repository executor accepted in PR [#156](https://github.com/ndrorchestration/agent-control-plane/pull/156), together with admission, path-safety, journal/recovery, postcondition, result-binding, single-use authorization/closure, and fresh-adjudication requirements for consequential follow-on effects. That executor is limited to explicitly marked disposable local test repositories and does **not** establish a live real-project mutation or rollback executor.
 
 Its guarantees remain deliberately narrow: the retained local-test profile does not establish final path-to-syscall TOCTOU elimination, hostile-local-actor resistance, trusted process identity, peer-process tamper resistance, production execution, real-project mutation authority, rollback authority, independent validation, or High-Assurance.
 
