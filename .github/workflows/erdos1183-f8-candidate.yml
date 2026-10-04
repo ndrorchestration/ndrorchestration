@@ -1,0 +1,36 @@
+name: Erdos 1183 f8 Candidate Verification
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "research/open-problem-prospecting/erdos1183/**"
+      - ".github/workflows/erdos1183-f8-candidate.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-f8:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile f(8) C++ verifier
+        run: |
+          g++ -O2 -std=c++20 \
+            research/open-problem-prospecting/erdos1183/f8_rank_clique_check.cpp \
+            -o /tmp/erdos1183-f8
+      - name: Run f(8) C++ verifier
+        run: /tmp/erdos1183-f8
+      - name: Run independent f(8) Python verifier
+        run: python research/open-problem-prospecting/erdos1183/f8_rank_clique_check.py
+      - name: Compile F(8) C++ upper-bound verifier
+        run: |
+          g++ -O2 -std=c++20 \
+            research/open-problem-prospecting/erdos1183/F8_union_closure_check.cpp \
+            -o /tmp/erdos1183-F8
+      - name: Run F(8) C++ upper-bound verifier
+        run: /tmp/erdos1183-F8
+      - name: Run independent F(8) Python upper-bound verifier
+        run: python research/open-problem-prospecting/erdos1183/F8_union_closure_check.py
