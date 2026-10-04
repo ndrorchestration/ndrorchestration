@@ -62,7 +62,7 @@
       "verification_methods": [
         "GITHUB_CONNECTOR"
       ],
-      "source_version": "aa42ab2ddd9825938362e76e31b45e306e948c02",
+      "source_version": "4bfd33093b3a2875101d8dd687f6647183538d7b",
       "last_verified": "2026-10-04",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
@@ -73,7 +73,7 @@
       ],
       "local_source": {
         "path": "README.md",
-        "git_blob_sha": "373189e9452fe5de555db99dd26648d2be4aa004"
+        "git_blob_sha": "63b2836f19f03a2c9203c10e798e74c9e27f9114"
       }
     },
     {
@@ -117,10 +117,10 @@
         "RENDERED_READBACK"
       ],
       "source_version": {
-        "deployment_id": "dpl_4YhoEyYzkQzejDxtfK25jxgyrPzA",
-        "git_commit": "01773b5dff37f8ded1df0ac2eb76148bd57ffaa8"
+        "deployment_id": "dpl_DitQVFBt6j2d8sd14RMv8DHqmsVF",
+        "git_commit": "f9dc8de3d814bb631947429ab40126e3c9b154fa"
       },
-      "last_verified": "2026-10-01",
+      "last_verified": "2026-10-04",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
         "EVIDENCE_CEILING_CHANGED",
@@ -145,16 +145,16 @@
         "RENDERED_READBACK"
       ],
       "source_version": {
-        "current_git_commit": "d4d2387cc1f7466a127e57862acf79f7f0e1d9b8",
+        "current_git_commit": "f9dc8de3d814bb631947429ab40126e3c9b154fa",
         "accepted_proof_source_sha": "ae0d254158fa831162274077872c3f752a891431",
         "accepted_proof_deployment_id": "dpl_6W1uTG3sJ6dyU7KJsAzHpXpFXvvU",
         "accepted_proof_artifact_id": "10993339146",
         "accepted_proof_sha256": "35a39d19a11d65b7c6af36fe1a6d7e8672636137a66003482d3306505fbe2862",
         "verifier_result": "TEKTITE_PROOF_OF_OPERATION_V1=PASS",
-        "current_deployment_id": "dpl_C1HM4r8nuSkzSK8nxxdL6uTKgXjs"
+        "current_deployment_id": "dpl_DitQVFBt6j2d8sd14RMv8DHqmsVF"
       },
       "last_verified": "2026-10-04",
-      "evidence_note": "Current live deployment identity is source-bound to DGAF merge d4d2387cc1f7466a127e57862acf79f7f0e1d9b8 and includes the read-only CEP observability projection. The accepted historical proof identity remains distinct; current deployment/readback does not rebind or strengthen that older proof, and CEP catalog-context characterization does not establish live-model efficacy.",
+      "evidence_note": "Current live production is source-bound to DGAF main f9dc8de3d814bb631947429ab40126e3c9b154fa at deployment dpl_DitQVFBt6j2d8sd14RMv8DHqmsVF. The fixed-origin Tektite callback remediation from #1281 has one bounded current-production hostile-forwarded-header denial verification; historical pre-fix deployment exposure remains separately unresolved under #1302. The accepted historical proof identity remains distinct, and neither current deployment health nor CEP characterization establishes independent validation, canonical efficacy, production-executor authority, or High-Assurance.",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
         "EVIDENCE_CEILING_CHANGED",

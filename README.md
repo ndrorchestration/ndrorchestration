@@ -47,7 +47,7 @@ For **AOSS Stage A**, an independent-validation handoff has been accepted and th
 
 The outside-operator trial is a **currently open usability gate**, not an achieved validation claim. It requires an uninvolved technically capable human operator working from the published packet without implementation-author coaching; same-owner automation, ChatGPT execution, and author execution do not satisfy it.
 
-**Tektite** is the public-facing explanation layer for this work: it exposes governed action/evidence state and claim boundaries without becoming a source of governance authority. Its live demo is bounded engineering evidence only; availability does not establish independent validation, canonical efficacy, production-executor authority, or High-Assurance status.
+**Tektite** is the public-facing explanation layer for this work: it exposes governed action/evidence state and claim boundaries without becoming a source of governance authority. Its live demo is bounded engineering evidence only; availability does not establish independent validation, canonical efficacy, production-executor authority, or High-Assurance status. The current production callback path also uses a fixed server-controlled HTTPS audit origin rather than request-derived host/protocol authority; that remediation has bounded live evidence on the current deployment, while historical pre-fix deployment exposure remains separately unresolved.
 
 ## Selected work
 
@@ -65,7 +65,9 @@ ACP's current executor profile is **`BOUNDED_LOCAL_TEST`**. Protected `main` now
 
 Its guarantees remain deliberately narrow: the retained local-test profile does not establish final path-to-syscall TOCTOU elimination, hostile-local-actor resistance, trusted process identity, peer-process tamper resistance, production execution, real-project mutation authority, rollback authority, independent validation, or High-Assurance.
 
-ACP now also contains a bounded **Context Efficiency Plane (CEP)** characterization layer. On a frozen real GitHub connector metadata snapshot, exact-capability gating reduced exposed descriptors from **89 → 1** and serialized `o200k_base` catalog tokens from **32,471 → 268 (~99.17%)** while preserving the required workflow-status descriptor. This is a **catalog-context characterization**, not a live-model efficiency or efficacy claim. The stricter paired Experiment 2 gate remains `BLOCKED_DYNAMIC_EXPOSURE_UNOBSERVED` until a runtime directly demonstrates distinct model-visible control/treatment exposure with preserved result, evidence, and acceptance.
+ACP now also contains a bounded **Context Efficiency Plane (CEP)** characterization layer. On a frozen real GitHub connector metadata snapshot, exact-capability gating reduced exposed descriptors from **89 → 1** and serialized `o200k_base` catalog tokens from **32,471 → 268 (~99.17%)** while preserving the required workflow-status descriptor. This is a **catalog-context characterization**, not a live-model efficiency or efficacy claim.
+
+The CEP lane now includes a fail-closed paired exposure gate, exact request attestation, an attested OpenAI-compatible transport, and a one-shot Gemini A/B runner. The runner is deliberately **no-send by default**: direct invocation returns `BLOCKED_SEND_NOT_REQUESTED` without reading credentials or making a network request; a real provider call requires explicit `--send` through the secure launcher. No accepted live paired provider result exists yet, so model-visible dynamic exposure and end-to-end context-efficiency evidence remain **NOT OBSERVED / NOT ESTABLISHED**.
 
 ### [Collabration](https://github.com/ndrorchestration/Collabration) — governed human + AI collaboration
 
