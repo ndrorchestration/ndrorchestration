@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "audited_at_utc": "2026-09-15T12:00:00Z",
+  "problem": "Erdos #742 / Murty-Simon conjecture",
+  "status": "COLLISION_HOLD",
+  "authorization_effect": "NOVEL_FRONTIER_COMPUTATION_NOT_AUTHORIZED",
+  "canonical_source_complete": false,
+  "collision_found": true,
+  "sources": {
+    "canonical_page": {
+      "checked": true,
+      "accessible": false,
+      "url": "https://www.erdosproblems.com/742",
+      "finding": "Direct same-day fetch returned HTTP 403. Latest accessible secondary working report transcribes the canonical page as DECIDABLE with zero site-registered proof claims as of 2026-07-28. This is not a same-day canonical verification."
+    },
+    "discussion_forum": {
+      "checked": true,
+      "accessible": true,
+      "url": "https://www.lmpx.com/nav/article.php/news.gmane.io/gmane.science.mathematics.discrete/23745/read/index.html",
+      "finding": "A 2026-09-08 Discrete Mathematics mailing-list post publicly solicits independent review of candidate fixed-order Murty-Simon results, including n=25: e(G)<=156 with equality K(12,13)."
+    },
+    "arxiv_math_co": {
+      "checked": true,
+      "accessible": true,
+      "url": "https://arxiv.org/",
+      "finding": "Targeted current searches found no newer arXiv item establishing external acceptance of the full conjecture. Search non-discovery is not evidence of absence."
+    },
+    "github": {
+      "checked": true,
+      "accessible": true,
+      "url": "https://github.com/paullenz/MurtySimon742",
+      "finding": "Priority collision: public repository updated through 2026-09-13 contains a reviewer-ready candidate n=25 proof claiming e(G)<=156, equality K(12,13), with independent mathematical/computational review explicitly still open. A second public repository, edisonymy/erdos-lean-research, contains checked LRAT exclusions for restricted order-25 symmetry classes."
+    },
+    "zenodo_artifacts": {
+      "checked": true,
+      "accessible": true,
+      "url": "https://zenodo.org/",
+      "finding": "Targeted search did not surface a newer Zenodo resolution package. Search non-discovery is not evidence of absence."
+    },
+    "recent_papers_preprints": {
+      "checked": true,
+      "accessible": true,
+      "url": "https://github.com/paullenz/MurtySimon742/blob/main/releases/REVIEW_READY_INDEX.md",
+      "finding": "Reviewer-ready candidate packages now exist for n=25 and additional fixed orders. The n=25 package is explicitly candidate mathematics, not externally accepted mathematics."
+    }
+  },
+  "collisions": [
+    {
+      "project": "paullenz/MurtySimon742",
+      "scope": "complete candidate fixed-order n=25 result",
+      "claim": "e(G)<=156, equality exactly K(12,13)",
+      "public_date": "2026-09-08",
+      "review_state": "independent mathematical and computational review OPEN",
+      "action": "HOLD competing novelty claim; pivot to independent verification/reproduction"
+    },
+    {
+      "project": "edisonymy/erdos-lean-research",
+      "scope": "restricted n=25 symmetry classes",
+      "claim": "checked LRAT exclusions for several order-five automorphism classes/slices",
+      "public_date": "2026-08",
+      "review_state": "bounded computational results with explicit trust boundaries",
+      "action": "treat as prior art and potential independent cross-check target"
+    }
+  ],
+  "decision": "Do not begin or promote an independent n=25 novelty attack under this pilot. Preserve baseline LeanSMS reproduction work and redirect the frontier phase toward independent review of the public candidate proof, with exact provenance and no acceptance claim unless external verification succeeds.",
+  "evidence_ceiling": "The audit establishes a public priority collision and therefore a hold. It does not establish that the n=25 candidate proof is correct or that Erdős #742 is solved."
+}
