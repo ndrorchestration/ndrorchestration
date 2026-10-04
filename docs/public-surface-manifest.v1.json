@@ -1,6 +1,6 @@
 {
   "schema_version": "NDR_PUBLIC_SURFACE_MANIFEST_V1",
-  "generated_at": "2026-10-03",
+  "generated_at": "2026-10-04",
   "authority_note": "This manifest is a public-surface routing and freshness index only. It does not establish technical, scientific, governance, runtime, validation, or authorization truth.",
   "release_semantics": {
     "PASS": "Current surface is usable without known semantic or endpoint drift.",
@@ -62,8 +62,8 @@
       "verification_methods": [
         "GITHUB_CONNECTOR"
       ],
-      "source_version": "35907d8e78bf160cd8c8bd8c864746a3d4415054",
-      "last_verified": "2026-10-03",
+      "source_version": "aa42ab2ddd9825938362e76e31b45e306e948c02",
+      "last_verified": "2026-10-04",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
         "EVIDENCE_CEILING_CHANGED",
@@ -73,7 +73,7 @@
       ],
       "local_source": {
         "path": "README.md",
-        "git_blob_sha": "2d4456ba747bb208b81955171cfad6a3e01804f4"
+        "git_blob_sha": "373189e9452fe5de555db99dd26648d2be4aa004"
       }
     },
     {
@@ -145,16 +145,16 @@
         "RENDERED_READBACK"
       ],
       "source_version": {
-        "current_git_commit": "45dcf701c63812e9484d98e2cf3e8e8368aeab78",
+        "current_git_commit": "d4d2387cc1f7466a127e57862acf79f7f0e1d9b8",
         "accepted_proof_source_sha": "ae0d254158fa831162274077872c3f752a891431",
         "accepted_proof_deployment_id": "dpl_6W1uTG3sJ6dyU7KJsAzHpXpFXvvU",
         "accepted_proof_artifact_id": "10993339146",
         "accepted_proof_sha256": "35a39d19a11d65b7c6af36fe1a6d7e8672636137a66003482d3306505fbe2862",
         "verifier_result": "TEKTITE_PROOF_OF_OPERATION_V1=PASS",
-        "current_deployment_id": "dpl_3V6KF44RXD2K1S7pRTUr5xF3wdQj"
+        "current_deployment_id": "dpl_C1HM4r8nuSkzSK8nxxdL6uTKgXjs"
       },
-      "last_verified": "2026-10-03",
-      "evidence_note": "Current live deployment identity is source-bound to DGAF merge 45dcf701c63812e9484d98e2cf3e8e8368aeab78. The accepted historical proof identity remains distinct; current deployment/readback does not rebind or strengthen that older proof.",
+      "last_verified": "2026-10-04",
+      "evidence_note": "Current live deployment identity is source-bound to DGAF merge d4d2387cc1f7466a127e57862acf79f7f0e1d9b8 and includes the read-only CEP observability projection. The accepted historical proof identity remains distinct; current deployment/readback does not rebind or strengthen that older proof, and CEP catalog-context characterization does not establish live-model efficacy.",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
         "EVIDENCE_CEILING_CHANGED",

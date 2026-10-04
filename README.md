@@ -65,6 +65,8 @@ ACP's current executor profile is **`BOUNDED_LOCAL_TEST`**. Protected `main` now
 
 Its guarantees remain deliberately narrow: the retained local-test profile does not establish final path-to-syscall TOCTOU elimination, hostile-local-actor resistance, trusted process identity, peer-process tamper resistance, production execution, real-project mutation authority, rollback authority, independent validation, or High-Assurance.
 
+ACP now also contains a bounded **Context Efficiency Plane (CEP)** characterization layer. On a frozen real GitHub connector metadata snapshot, exact-capability gating reduced exposed descriptors from **89 → 1** and serialized `o200k_base` catalog tokens from **32,471 → 268 (~99.17%)** while preserving the required workflow-status descriptor. This is a **catalog-context characterization**, not a live-model efficiency or efficacy claim. The stricter paired Experiment 2 gate remains `BLOCKED_DYNAMIC_EXPOSURE_UNOBSERVED` until a runtime directly demonstrates distinct model-visible control/treatment exposure with preserved result, evidence, and acceptance.
+
 ### [Collabration](https://github.com/ndrorchestration/Collabration) — governed human + AI collaboration
 
 A social application exploring accountable human/AI interaction without silently transferring authority to agents. It combines **deny-by-default capability decisions, human approval gates, provenance and revision-aware Content Passports, governed action records, correction and appeal paths, authenticated application flows, and Supabase/Postgres row-level-security boundaries**.
