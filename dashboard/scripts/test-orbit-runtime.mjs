@@ -101,6 +101,15 @@ if (fs.existsSync(new URL('data/observer-view.ts', root))) {
     assert.equal(gates.length, 1); assert.equal(gates[0].id, 'AUTHORITY');
   });
   await check('admitted current projection displays its gates', () => assert.equal(select(snapshot.gates, true).length, snapshot.gates.length));
+  await check('older refresh cannot overwrite the current request', () => {
+    const owner = load('data/observer-view.ts', 'createObserverRefreshOwner')();
+    const older = owner.begin(); const newer = owner.begin();
+    assert.equal(owner.owns(older), false); assert.equal(owner.owns(newer), true);
+  });
+  await check('effect cleanup invalidates every outstanding refresh', () => {
+    const owner = load('data/observer-view.ts', 'createObserverRefreshOwner')();
+    const pending = owner.begin(); owner.invalidate(); assert.equal(owner.owns(pending), false);
+  });
   await check('valid observer snapshot accepted', () => assert.equal(validate(snapshot), true));
   await check('malformed gate collection rejected before rendering', () => assert.equal(validate({ ...snapshot, gates: 'bad' }), false));
   await check('unknown gate state rejected before rendering', () => assert.equal(validate({ ...snapshot, gates: [{ ...snapshot.gates[0], state: 'made-up' }] }), false));

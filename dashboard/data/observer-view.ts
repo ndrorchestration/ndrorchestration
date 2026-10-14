@@ -2,6 +2,16 @@ import type { Gate } from './orbit';
 
 type Snapshot = typeof import('./orbit').orbitSnapshot;
 
+// A response may mutate the view only while it owns the latest refresh.
+export function createObserverRefreshOwner() {
+  let generation = 0;
+  return {
+    begin: () => ++generation,
+    owns: (request: number) => request === generation,
+    invalidate: () => { generation++; },
+  };
+}
+
 // Until admission succeeds, only explicit reconciliation blockers may be shown.
 export function visibleObserverGates(gates: Gate[], currentProjection: boolean): Gate[] {
   return currentProjection ? gates : gates.filter(gate => gate.id === 'AUTHORITY' && gate.state === 'blocked');
