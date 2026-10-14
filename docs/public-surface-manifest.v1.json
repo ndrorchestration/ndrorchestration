@@ -49,8 +49,8 @@
       "type": "github_profile",
       "url": "https://github.com/ndrorchestration/ndrorchestration/blob/main/README.md",
       "reachability": "VERIFIED_PUBLIC",
-      "copy_state": "RECONCILED",
-      "release_gate": "PASS",
+      "copy_state": "REVIEW_NEEDED",
+      "release_gate": "REVIEW",
       "canonical_dependencies": [
         "ECOSYSTEM_POSITIONING",
         "DGAF",
@@ -62,7 +62,7 @@
       "verification_methods": [
         "GITHUB_CONNECTOR"
       ],
-      "source_version": "4bfd33093b3a2875101d8dd687f6647183538d7b",
+      "source_version": "dda3d8a7aa574e5746d873ad876d3eab045e9b00",
       "last_verified": "2026-10-04",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
@@ -73,7 +73,7 @@
       ],
       "local_source": {
         "path": "README.md",
-        "git_blob_sha": "63b2836f19f03a2c9203c10e798e74c9e27f9114"
+        "git_blob_sha": "a7f08b3c383a282b04154d797c26b43a7bcda603"
       }
     },
     {
