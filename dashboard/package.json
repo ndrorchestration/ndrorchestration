@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "node scripts/validate-orbit.mjs"
+    "test": "node scripts/validate-orbit.mjs && node --disable-warning=ExperimentalWarning scripts/test-orbit-runtime.mjs"
   },
   "dependencies": {
     "next": "15.5.21",
