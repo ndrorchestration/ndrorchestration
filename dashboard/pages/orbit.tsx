@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { orbitSnapshot as initialSnapshot, GateState } from '../data/orbit';
+import { createObserverRefreshOwner, isObserverSnapshot, visibleObserverGates } from '../data/observer-view';
 
 const stateLabel: Record<GateState, string> = {
   verified: 'VERIFIED',
@@ -33,13 +34,23 @@ const Orbit: NextPage = () => {
   const [snapshot, setSnapshot] = useState<Snapshot>(initialSnapshot);
   const [live, setLive] = useState<LiveState | null>(null);
   const [refreshing, setRefreshing] = useState(false);
+  const refreshOwner = useRef(createObserverRefreshOwner());
+  const activeRefresh = useRef<AbortController | null>(null);
 
   async function refresh() {
+    const request = refreshOwner.current.begin();
+    activeRefresh.current?.abort();
     setRefreshing(true);
+    setLive({ overallState: 'CHECKING', currentProjection: false });
+    const controller = new AbortController();
+    activeRefresh.current = controller;
+    const timeout = setTimeout(() => controller.abort(), 10000);
     try {
-      const response = await fetch('/api/orbit', { cache: 'no-store' });
+      const response = await fetch('/api/orbit', { cache: 'no-store', signal: controller.signal });
       const payload = await response.json();
-      if (payload.snapshot) setSnapshot(payload.snapshot);
+      if (!refreshOwner.current.owns(request)) return;
+      if (!response.ok || !isObserverSnapshot(payload.snapshot)) throw new Error('Evidence unavailable');
+      setSnapshot(payload.snapshot);
       setLive({
         sourceFreshness: payload.live?.sourceFreshness,
         currentHead: payload.live?.github?.currentHead,
@@ -50,16 +61,29 @@ const Orbit: NextPage = () => {
         currentProjection: payload.live?.currentProjection,
       });
     } catch (error) {
-      setLive({ status: error instanceof Error ? error.message : 'UNAVAILABLE', overallState: 'UNAVAILABLE', currentProjection: false });
+      if (refreshOwner.current.owns(request)) {
+        setLive({ status: error instanceof Error ? error.message : 'UNAVAILABLE', overallState: 'UNAVAILABLE', currentProjection: false });
+      }
     } finally {
-      setRefreshing(false);
+      clearTimeout(timeout);
+      if (refreshOwner.current.owns(request)) {
+        activeRefresh.current = null;
+        setRefreshing(false);
+      }
     }
   }
 
-  useEffect(() => { void refresh(); }, []);
+  useEffect(() => {
+    void refresh();
+    return () => {
+      refreshOwner.current.invalidate();
+      activeRefresh.current?.abort();
+    };
+  }, []);
   const currentProjection = live?.currentProjection === true;
-  const verified = snapshot.gates.filter(g => g.state === 'verified').length;
-  const blockers = snapshot.gates.filter(g => g.state === 'blocked').length;
+  const gates = visibleObserverGates(snapshot.gates, currentProjection);
+  const verified = gates.filter(g => g.state === 'verified').length;
+  const blockers = gates.filter(g => g.state === 'blocked').length;
 
   return <>
     <Head>
@@ -99,8 +123,8 @@ const Orbit: NextPage = () => {
 
       <div className="grid">
         <section className="panel">
-          <div className="sectionHead"><div><span className="label">EVIDENCE GATES</span><h2>{currentProjection ? 'Observed governance matrix' : 'Current authority gates withheld'}</h2></div><span className="tiny">{currentProjection ? `${verified}/${snapshot.gates.length} verified` : 'fail-closed'}</span></div>
-          <div className="gates">{snapshot.gates.map(g => <article className="gate" key={g.id}><div className={`dot ${stateClass[g.state]}`} /><div className="gateMain"><div><b>{g.id} · {g.name}</b><span className={`badge ${stateClass[g.state]}`}>{stateLabel[g.state]}</span></div><p>{g.detail}</p><small>{g.evidence}</small></div></article>)}</div>
+          <div className="sectionHead"><div><span className="label">EVIDENCE GATES</span><h2>{currentProjection ? 'Observed governance matrix' : 'Current authority gates withheld'}</h2></div><span className="tiny">{currentProjection ? `${verified}/${gates.length} verified` : 'fail-closed'}</span></div>
+          <div className="gates">{gates.map(g => <article className="gate" key={g.id}><div className={`dot ${stateClass[g.state]}`} /><div className="gateMain"><div><b>{g.id} · {g.name}</b><span className={`badge ${stateClass[g.state]}`}>{stateLabel[g.state]}</span></div><p>{g.detail}</p><small>{g.evidence}</small></div></article>)}</div>
         </section>
         <section className="panel">
           <div className="sectionHead"><div><span className="label">CLAIM INTEGRITY</span><h2>{currentProjection ? 'Propagation monitor' : 'Historical claim counts withheld'}</h2></div><span className="tiny">fail-closed</span></div>

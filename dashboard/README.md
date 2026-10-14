@@ -65,6 +65,16 @@ Open `http://localhost:3000` for the public home and `http://localhost:3000/orbi
 
 Generated build output, dependency trees, VCS metadata, and ORBIT's generated evidence directory are excluded from claim scans.
 
+### Runtime regression coverage
+
+`npm test` runs both the existing source invariants and 24 production-logic runtime checks. The runtime suite uses Node 24 type erasure, a controlled GitHub transport, and a Next-style response collector to execute the API and snapshot validators. It also executes the same gate selector used by the UI. It is internal regression coverage, not live-deployment or browser acceptance.
+
+Current projection admission requires the exact full historical DGAF source SHA and its owning repository. README declarations are fetched at the observed immutable SHA, so branch movement cannot mix revisions. A different commit sharing the display prefix, or another configured repository, cannot admit the historical DGAF projection.
+
+Snapshot artifact validation checks UTC timestamps, full event/source identities, and PR/source or push/source identity consistency. The runtime response schema (`orbit.evidence.v3`) and workflow artifact schema (`orbit.evidence.v2`) are distinct contracts.
+
+Until current evidence is admitted, the UI displays only explicit blocked authority-reconciliation gates. Loading and failed refreshes withhold previously admitted or historical gate rows and counts. Malformed snapshots are rejected before rendering; UI refresh requests have a ten-second timeout. Only the latest request may update the view; replacing a request or unmounting invalidates and aborts the older request. Browser visual acceptance remains a separate check.
+
 ## Governance invariant
 
 **Claims do not upgrade epistemic status. Evidence does.**

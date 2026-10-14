@@ -37,17 +37,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const [branch, readme] = await Promise.all([
-      github(`/repos/${orbitConfig.repository}/branches/${encodeURIComponent(orbitConfig.branch)}`),
-      github(`/repos/${orbitConfig.repository}/contents/README.md?ref=${encodeURIComponent(orbitConfig.branch)}`),
-    ]);
-
-    if (!branch?.commit?.sha || !readme?.content || typeof readme.content !== 'string') {
-      throw new Error('GitHub response missing required evidence fields');
+    const branch = await github(`/repos/${orbitConfig.repository}/branches/${encodeURIComponent(orbitConfig.branch)}`);
+    const currentHead = branch?.commit?.sha;
+    if (typeof currentHead !== 'string' || !/^[0-9a-f]{40}$/.test(currentHead)) {
+      throw new Error('GitHub returned an invalid commit SHA');
     }
-
-    const currentHead = branch.commit.sha;
-    if (!/^[0-9a-f]{40}$/.test(currentHead)) throw new Error('GitHub returned an invalid commit SHA');
+    // Read declarations from the same immutable revision as the observed HEAD.
+    const readme = await github(`/repos/${orbitConfig.repository}/contents/README.md?ref=${currentHead}`);
+    if (!readme?.content || typeof readme.content !== 'string' || readme.encoding !== 'base64') {
+      throw new Error('GitHub response missing required README evidence fields');
+    }
 
     const readmeText = Buffer.from(readme.content, 'base64').toString('utf8');
     const declaredN0 = /empirical\s+N\s*=\s*0/i.test(readmeText);
@@ -55,7 +54,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const declaredFailClosed = /FAIL-CLOSED/i.test(readmeText);
     const declarationsComplete = declaredN0 && declaredUnauthorized && declaredFailClosed;
     const deploymentCommit = process.env.VERCEL_GIT_COMMIT_SHA || null;
-    const sourceFreshness = currentHead.startsWith(orbitSnapshot.capturedHead) ? 'ALIGNED' : 'DRIFT';
+    const sourceFreshness = orbitConfig.repository === orbitSnapshot.capturedRepository && currentHead === orbitSnapshot.capturedHead ? 'ALIGNED' : 'DRIFT';
     const deploymentFreshness = deploymentCommit ? (deploymentCommit === currentHead ? 'ALIGNED' : 'DRIFT') : 'UNAVAILABLE';
     const projectionAdmissible = sourceFreshness === 'ALIGNED' && declarationsComplete;
     const gates = orbitSnapshot.gates.map(g => ({ ...g }));

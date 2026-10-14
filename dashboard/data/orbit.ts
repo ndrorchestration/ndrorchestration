@@ -16,7 +16,8 @@ export const orbitSnapshot = {
   projectionKind: 'historical-fallback',
   epistemicState: 'Historical freeze → corrected runner → candidate apparatus → new freeze not authorized',
   empiricalN: 0,
-  capturedHead: 'c5547674',
+  capturedRepository: 'ndrorchestration/DGAF-Framework',
+  capturedHead: 'c55476746126ca29f3963887c1c81ad6110c5738',
   historicalEvidence: 'e1f077f',
   capturedDeployment: 'dpl_8YCHnqd4ZLGXnk9U2CuAJozUYLZ7',
   gates: [
