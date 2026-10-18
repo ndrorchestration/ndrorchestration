@@ -43,7 +43,7 @@ Tektite is a DGAF-hosted projection surface, not a separate authority. Orbit-Dri
 
 Implemented surfaces include explicit governance states and machine-checkable transitions; provenance and source/evidence binding; deterministic validators and negative controls; fail-closed CI and authorization boundaries; custody/freeze/closure controls; blinded experimental infrastructure; controlled materialization; content-addressed evidence receipts; and explicit separation of implementation, verification, independent verification, authorization, execution, interpretation, and empirical support.
 
-### Current research boundary
+### Current research and comparative-evidence boundary
 
 **Track A Epoch 002** completed a preregistered blinded collection of **50 paired seed units / 2,250 observations**, followed by governed dataset lock, bounded unblinding, controlled materialization, locked-primary-analysis authorization and execution, content-addressed result admission, and bounded same-system interpretation/adjudication. The epoch is **closed for its exact preregistered scope**.
 
@@ -54,13 +54,21 @@ Those results deliberately do **not** transfer into broader claims:
 `INDEPENDENT_VALIDATION = NOT_ESTABLISHED`  
 `HIGH_ASSURANCE = NOT_AUTHORIZED`
 
+### What the comparative tests actually show
+
+A stronger **conventional policy-as-code comparator (C3)** matched the bounded DGAF decision model on **13/13 fixed fixtures** and on **all 112,200 systematically enumerated states** of the declared schema (**zero allow/deny differences**). These were generated synthetic states, **not** 112,200 independent real-world trials. This falsifies a claim of unique DGAF protection based on the current allow/deny semantics once a simpler comparator has equivalent expressible rules; it does **not** establish that the architectures are identical. See [comparative controller #1061](https://github.com/ndrorchestration/DGAF-Framework/issues/1061) and [independent reproduction gate #1067](https://github.com/ndrorchestration/DGAF-Framework/issues/1067).
+
+Other accepted bounded comparisons found **no unique DGAF advantage** under a neutral reusable-abstraction configuration/update model, in **11/11 matched composition/recovery cases**, or in **8/8 matched provenance-custody mutation checks**. Incremental value, if any, now needs fair measurements of genuinely external operations, integration failures, durable evidence custody, maintainability, or human reviewer burden—not unequal comparator capabilities or architectural complexity. None of these synthetic parity results establishes real-world efficacy, certification, or state-of-the-art superiority.
+
 DGAF now also maintains an explicit architecture ownership model spanning governance-kernel components, cross-cutting assurance, governed profiles, and external integrations. That architecture work is engineering/governance evidence only and does not promote scientific, efficacy, independent-validation, or High-Assurance state.
 
 For **AOSS Stage A**, an independent-validation handoff has been accepted and the system includes a bounded internal operator self-test path. Actual external review remains outstanding under [Issue #929](https://github.com/ndrorchestration/DGAF-Framework/issues/929).
 
-**Evaluate DGAF:** [60-second bounded public demo](https://project-7ybao.vercel.app/demo) · [Five-minute evaluator orientation](https://github.com/ndrorchestration/DGAF-Framework#five-minute-evaluator-orientation) · [Developer self-test](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/qa/DGAF_OPERATOR_SELFTEST.md) · [Outside-operator trial](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/governance/GOVERNED_REPO_OUTSIDE_OPERATOR_TRIAL_V0.md) · [Current-state record](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/CURRENT_STATE.md)
+**Evaluate DGAF:** [60-second bounded public demo](https://project-7ybao.vercel.app/demo) · [Five-minute evaluator orientation](https://github.com/ndrorchestration/DGAF-Framework#five-minute-evaluator-orientation) · [Developer self-test](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/qa/DGAF_OPERATOR_SELFTEST.md) · [Outside-operator trial](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/governance/GOVERNED_REPO_OUTSIDE_OPERATOR_TRIAL_V0.md) · [Independent reproduction gate](https://github.com/ndrorchestration/DGAF-Framework/issues/1067) · [Current-state record](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/CURRENT_STATE.md)
 
 The outside-operator trial is a **currently open usability gate**, not an achieved validation claim. It requires an uninvolved technically capable human operator working from the published packet without implementation-author coaching; same-owner automation, ChatGPT execution, and author execution do not satisfy it.
+
+**October 18, 2026 research frontier:** The separate V2 candidates [#1362](https://github.com/ndrorchestration/DGAF-Framework/pull/1362) (actual OPA/Rego calibration: 13/13 OPA–C3–DGAF synthetic-fixture decision parity) and [#1363](https://github.com/ndrorchestration/DGAF-Framework/pull/1363) (four fake-provider recovery/idempotency scenarios: 8/8 operator-authored provisional-oracle rows, also parity) remain **DRAFT / HOLD / UNMERGED**. Exact-head CI success does **not** substitute for eligible non-author review, real provider fault observations, independent measurement, or scientific evidence. See the [V2 research protocol](https://app.notion.com/p/3fdf5bad238b81bd95beed44d249667f).
 
 **Tektite** is the public-facing explanation layer for this work: it exposes governed action/evidence state and claim boundaries without becoming a source of governance authority. Its live demo is bounded engineering evidence only; availability does not establish independent validation, canonical efficacy, production-executor authority, or High-Assurance status. The current production callback path also uses a fixed server-controlled HTTPS audit origin rather than request-derived host/protocol authority; that remediation has bounded live evidence on the current deployment, while historical pre-fix deployment exposure remains separately unresolved.
 
