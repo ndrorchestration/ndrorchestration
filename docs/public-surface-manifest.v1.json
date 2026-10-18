@@ -1,6 +1,6 @@
 {
   "schema_version": "NDR_PUBLIC_SURFACE_MANIFEST_V1",
-  "generated_at": "2026-10-04",
+  "generated_at": "2026-10-18",
   "authority_note": "This manifest is a public-surface routing and freshness index only. It does not establish technical, scientific, governance, runtime, validation, or authorization truth.",
   "release_semantics": {
     "PASS": "Current surface is usable without known semantic or endpoint drift.",
@@ -49,8 +49,8 @@
       "type": "github_profile",
       "url": "https://github.com/ndrorchestration/ndrorchestration/blob/main/README.md",
       "reachability": "VERIFIED_PUBLIC",
-      "copy_state": "REVIEW_NEEDED",
-      "release_gate": "REVIEW",
+      "copy_state": "RECONCILED",
+      "release_gate": "PASS",
       "canonical_dependencies": [
         "ECOSYSTEM_POSITIONING",
         "DGAF",
@@ -62,8 +62,8 @@
       "verification_methods": [
         "GITHUB_CONNECTOR"
       ],
-      "source_version": "dda3d8a7aa574e5746d873ad876d3eab045e9b00",
-      "last_verified": "2026-10-04",
+      "source_version": "96f274496bd89f645c0173cdb6acc6d5343d0ccb",
+      "last_verified": "2026-10-18",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
         "EVIDENCE_CEILING_CHANGED",
