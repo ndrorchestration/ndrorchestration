@@ -33,7 +33,7 @@ CHECKS = {
     },
     "github.profile": {
         "markers": [
-            "AI Systems Design",
+            "Agentic Assurance",
             "Tektite",
             "What did the system actually do",
         ],
