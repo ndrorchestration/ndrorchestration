@@ -13,8 +13,8 @@
       "type": "portfolio",
       "url": "https://ndrorchestration.vercel.app",
       "reachability": "VERIFIED_PUBLIC",
-      "copy_state": "REVIEW_NEEDED",
-      "release_gate": "REVIEW",
+      "copy_state": "RECONCILED",
+      "release_gate": "PASS",
       "canonical_dependencies": [
         "ECOSYSTEM_POSITIONING",
         "DGAF",
@@ -29,8 +29,8 @@
         "VERCEL_CONNECTOR",
         "RENDERED_READBACK"
       ],
-      "source_version": "2488ccbdefe4d0f16ad25416f6df4d8ffad33adb",
-      "last_verified": "2026-10-03",
+      "source_version": "5e21754f7bd1a76ff1990eda840dd9e8f530e288",
+      "last_verified": "2026-10-18",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
         "EVIDENCE_CEILING_CHANGED",
@@ -91,8 +91,8 @@
       "verification_methods": [
         "GITHUB_CONNECTOR"
       ],
-      "source_version": "CURRENT_PUBLIC_PROFILE_README_2026-10-01",
-      "last_verified": "2026-10-01",
+      "source_version": "403b98c4c3b040a5a72578d1df617f0e3321892e",
+      "last_verified": "2026-10-18",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
         "EVIDENCE_CEILING_CHANGED",

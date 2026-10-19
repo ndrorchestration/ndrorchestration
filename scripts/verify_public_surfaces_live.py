@@ -25,8 +25,8 @@ RECEIPT = Path("public-surface-live-check.sha256")
 CHECKS = {
     "portfolio.home": {
         "markers": [
-            "AI Systems Design",
-            "Governed AI Systems",
+            "Agentic Assurance",
+            "Agentic Assurance &amp; Governance",
             "Evaluation &amp; Evidence",
             "Public Explanation &amp; Reuse",
         ],
