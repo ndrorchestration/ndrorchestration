@@ -1,18 +1,18 @@
 **Andrew Hensel // Ndr “Ender”**
 
-### AI Systems Design · Evaluation · Agent Orchestration · Governance · Provenance
+### AI Evaluation · Agentic Assurance · Governance · Provenance
 
 I build and evaluate AI systems around a practical question:
 
 > **What did the system actually do, what evidence supports that claim, and what is it authorized to do next?**
 
-My work focuses on **AI evaluation, multi-agent systems, prompt engineering, provenance, reproducibility, and governance-aware orchestration**. I design systems that keep **capability, evidence, verification, authority, and permission** distinct so that producing an output is not automatically treated as proving a claim, passing evaluation, or earning authorization for the next action.
+My work focuses on **AI evaluation, agentic assurance, multi-agent systems, prompt engineering, provenance, reproducibility, and governance-aware orchestration**. I design systems that keep **capability, evidence, verification, authority, and permission** distinct so that producing an output is not automatically treated as proving a claim, passing evaluation, or earning authorization for the next action.
 
 ## Start here
 
 | If you want to inspect… | Start with |
 | --- | --- |
-| **Governance, evidence, authorization, and research controls** | [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) |
+| **Agentic assurance, governance, evidence, and authorization** | [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) |
 | **Observable multi-agent reasoning and claim auditing** | [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) |
 | **Minimal execution/control-plane primitives** | [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) |
 | **Governed human + AI product design** | [Collabration](https://github.com/ndrorchestration/Collabration) |
@@ -37,9 +37,11 @@ Tektite is a DGAF-hosted projection surface, not a separate authority. Orbit-Dri
 
 ## Flagship: DGAF
 
-### [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) — governance control plane for agentic systems
+### [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) — evidence-bound assurance for agentic AI
 
-**Dynamic Governance Agentic Formation (DGAF)** is an experimental framework for governed multi-agent AI systems. Its central design principle is that **capability, evidence, verification, authority, and permission to act are separate machine-relevant states** rather than interchangeable signals that a system “works.”
+**Dynamic Governance Agentic Formation (DGAF)** is an experimental **agentic-AI assurance architecture** for determining whether the evidence, provenance, verification state, and authority available at a given moment justify a claim, action, approval, or lifecycle transition. Its central design principle is that **capability, evidence, verification, authority, and permission to act are separate machine-relevant states** rather than interchangeable signals that a system “works.”
+
+**Positioning:** Agentic AI Assurance / AI Governance & Assurance · **Product class:** Evidence & Authorization Assurance Layer · **Architecture:** Assurance Control Plane · **Implementation:** Evidence-bound Governance-as-Code · **Technical thesis:** epistemic transition control.
 
 Implemented surfaces include explicit governance states and machine-checkable transitions; provenance and source/evidence binding; deterministic validators and negative controls; fail-closed CI and authorization boundaries; custody/freeze/closure controls; blinded experimental infrastructure; controlled materialization; content-addressed evidence receipts; and explicit separation of implementation, verification, independent verification, authorization, execution, interpretation, and empirical support.
 
@@ -56,7 +58,9 @@ Those results deliberately do **not** transfer into broader claims:
 
 ### What the comparative tests actually show
 
-A stronger **conventional policy-as-code comparator (C3)** matched the bounded DGAF decision model on **13/13 fixed fixtures** and on **all 112,200 systematically enumerated states** of the declared schema (**zero allow/deny differences**). These were generated synthetic states, **not** 112,200 independent real-world trials. This falsifies a claim of unique DGAF protection based on the current allow/deny semantics once a simpler comparator has equivalent expressible rules; it does **not** establish that the architectures are identical. See [comparative controller #1061](https://github.com/ndrorchestration/DGAF-Framework/issues/1061) and [independent reproduction gate #1067](https://github.com/ndrorchestration/DGAF-Framework/issues/1067).
+A stronger **conventional policy-as-code comparator (C3)** matched the bounded DGAF decision model on **13/13 fixed fixtures** and on **all 112,200 systematically enumerated states** of the declared schema (**zero allow/deny differences**). These were generated synthetic states, **not** 112,200 independent real-world trials. This falsifies a claim of unique DGAF protection based on the current allow/deny semantics once a simpler comparator has equivalent expressible rules; it does **not** establish that the architectures are identical.
+
+That result is part of the current positioning boundary: **DGAF is not presented as a uniquely superior policy engine.** The differentiation under evaluation is the surrounding assurance lifecycle—evidence admissibility, provenance continuity, bounded transfer, reconstructability, explicit authority, and whether evidence actually justifies the next consequential transition. **Policy equivalence does not imply assurance equivalence**, but any incremental value must be measured rather than assumed. See [comparative controller #1061](https://github.com/ndrorchestration/DGAF-Framework/issues/1061) and [independent reproduction gate #1067](https://github.com/ndrorchestration/DGAF-Framework/issues/1067).
 
 Other accepted bounded comparisons found **no unique DGAF advantage** under a neutral reusable-abstraction configuration/update model, in **11/11 matched composition/recovery cases**, or in **8/8 matched provenance-custody mutation checks**. Incremental value, if any, now needs fair measurements of genuinely external operations, integration failures, durable evidence custody, maintainability, or human reviewer burden—not unequal comparator capabilities or architectural complexity. None of these synthetic parity results establishes real-world efficacy, certification, or state-of-the-art superiority.
 
