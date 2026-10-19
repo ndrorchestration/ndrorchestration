@@ -13,8 +13,8 @@
       "type": "portfolio",
       "url": "https://ndrorchestration.vercel.app",
       "reachability": "VERIFIED_PUBLIC",
-      "copy_state": "RECONCILED",
-      "release_gate": "PASS",
+      "copy_state": "REVIEW_NEEDED",
+      "release_gate": "REVIEW",
       "canonical_dependencies": [
         "ECOSYSTEM_POSITIONING",
         "DGAF",
@@ -41,7 +41,7 @@
       ],
       "local_source": {
         "path": "dashboard/pages/index.tsx",
-        "git_blob_sha": "3488b5be9ded63e2b3b9736da00115d3c5d01688"
+        "git_blob_sha": "41c2a18940c4bbbb2dbfe043d7368c8682f2b418"
       }
     },
     {

@@ -68,8 +68,10 @@ class PublicSurfaceManifestNegativeTests(unittest.TestCase):
 
     def test_pass_requires_verified_public_reachability(self) -> None:
         manifest = copy.deepcopy(BASE_MANIFEST)
-        portfolio = next(s for s in manifest["surfaces"] if s["id"] == "portfolio.home")
-        portfolio["reachability"] = "UNVERIFIED"
+        passing_surface = next(
+            s for s in manifest["surfaces"] if s["release_gate"] == "PASS"
+        )
+        passing_surface["reachability"] = "UNVERIFIED"
         self.assert_rejected(manifest, "PASS requires VERIFIED_PUBLIC reachability")
 
     def test_weakened_scientific_n_ceiling_fails_closed(self) -> None:
