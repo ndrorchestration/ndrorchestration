@@ -4,9 +4,9 @@ import Head from 'next/head';
 const systems = [
   {
     name: 'DGAF',
-    type: 'Agentic governance / experimental control plane',
-    description: 'Dynamic Governance Agentic Formation separates capability, evidence, verification, authority, and permission to act in governed multi-agent systems.',
-    boundary: 'Track A Epoch 002 is closed for its exact preregistered scope. Scientific-N increment remains 0; canonical efficacy, independent validation, production certification, and High-Assurance authorization remain NOT ESTABLISHED / NOT AUTHORIZED.',
+    type: 'Agentic assurance / evidence & authorization',
+    description: 'Dynamic Governance Agentic Formation is an experimental evidence-bound assurance architecture for agentic AI, separating capability, evidence, verification, authority, and permission across consequential transitions.',
+    boundary: 'Bounded policy-as-code comparison shows 13/13 fixture parity and zero decision differences across 112,200 enumerated states, so unique policy-decision superiority is not established. Scientific-N increment remains 0; canonical efficacy, independent validation, production assurance, and High-Assurance authorization remain NOT ESTABLISHED / NOT AUTHORIZED.',
     href: 'https://github.com/ndrorchestration/DGAF-Framework',
   },
   {
@@ -21,7 +21,7 @@ const systems = [
     type: 'Governed human + AI collaboration',
     description: 'A social application exploring accountable human/AI interaction with deny-by-default capability decisions, human approval gates, provenance, governed action records, and correction paths.',
     boundary: 'Independent product and evidence domain. DGAF patterns may inform the design without transferring DGAF authority, validation, or scientific claims.',
-    href: 'https://github.com/ndrorchestration/Intellectro',
+    href: 'https://github.com/ndrorchestration/Collabration',
   },
   {
     name: 'Agent Control Plane',
@@ -43,13 +43,13 @@ const Home: NextPage = () => (
   <>
     <Head>
       <title>NDR AI Systems — Andrew Hensel</title>
-      <meta name="description" content="AI systems design, evaluation, agentic governance, provenance, and orchestration by Andrew Hensel." />
+      <meta name="description" content="AI evaluation, agentic assurance, governance, provenance, and orchestration by Andrew Hensel." />
     </Head>
     <main className="shell">
       <header className="hero">
         <span className="eyebrow">NDR AI SYSTEMS</span>
         <h1>Andrew “Ndr / Ender” Hensel</h1>
-        <h2>AI Systems Design · Evaluation · Agent Orchestration · Governance · Provenance</h2>
+        <h2>AI Evaluation · Agentic Assurance · Governance · Provenance</h2>
         <p>I design and evaluate AI systems around a practical question: what did the system actually do, what evidence supports that claim, and what is it authorized to do next?</p>
         <div className="actions">
           <a className="primary" href="https://github.com/ndrorchestration">GitHub</a>
@@ -85,8 +85,8 @@ const Home: NextPage = () => (
         <div><span className="eyebrow">PUBLIC PROOF LANES</span><h2>Three ways to inspect the work</h2></div>
         <div className="lanes">
           <div>
-            <b>Governed AI Systems</b>
-            <span>DGAF + Agent Control Plane · evidence gates · authorization boundaries · execution-control primitives</span>
+            <b>Agentic Assurance &amp; Governance</b>
+            <span>DGAF + Agent Control Plane · evidence admissibility · authorization boundaries · lifecycle and execution-control primitives</span>
           </div>
           <div>
             <b>Evaluation &amp; Evidence</b>
