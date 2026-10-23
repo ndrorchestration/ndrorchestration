@@ -80,3 +80,18 @@ GitHub Actions push-branch/check-suite visibility was unavailable through the co
 Additional DGAF exact-head successful runs: [Governance Sweep #39893009078](https://github.com/ndrorchestration/DGAF-Framework/actions/runs/39893009078) and [Ecosystem Registry Audit #39888279913](https://github.com/ndrorchestration/DGAF-Framework/actions/runs/39888279913). The [Completion Controller #39904297000](https://github.com/ndrorchestration/DGAF-Framework/actions/runs/39904297000) was **skipped**, not passed; release gates remain separate.
 
 Collabration has successful dependency-update workflows on the same head, but the **separate Vercel failure status** remains a live deployment-context exception, not cleared by CI success. No claim is made that the full set of required checks was successful or that these runs establish production/independent validation. GitHub pin settings are not changed by this audit.
+
+## Verification pass 4 — exact-head check-run inventory (2026-10-23)
+
+Using GitHub's approved `commits/{sha}/check-runs?per_page=100` collection, exact-`main` checks were independently inspected. Counts reflect returned GitHub `total_count`, which can include repeated checks and scheduled/other workflow events on the same commit, **not distinct mandatory gates**.
+
+| Repository | GitHub check runs reported | Relevant findings |
+|---|---:|---|
+| DGAF-Framework | 234 | Successful evidence-validation, truth-layer, truth-layer-tests, full-repo-audit, audit-ecosystem, local quick check, live regression and governance sweep among first page; **completion-controller SKIPPED**. Count exceeds requested 100 page and requires paging for a complete conclusion. DGAF release remains HOLD. |
+| resumeapex-eval | 6 | Six `harness-verification` checks returned `success`. |
+| Orbit-Driftwatch | 1 | `test` = `success`. |
+| agent-control-plane | 10 | Python `pytest` across 3.10, 3.11, 3.12, 3.13, 3.14 (repeated matrix) all `success`. |
+| ai-prompt-systems-portfolio | 1 | `verify` = `success`. |
+| Collabration | 6 | Three Dependabot workflow checks, Node 22 and Node 24 governance/domain tests, and Next.js production build all `success`; **separate legacy Vercel deployment status remains failure**. |
+
+The GitHub fetch security-alert endpoint for Dependabot returned a tool-level disallowed-endpoint error (HTTP 400), not a zero-alert result. Security alert inventory and external advisory review remain **unverified**. The results above attest named runs/checks at the examined head; they do not prove every required gate is present, production safety, scientific validation or release admission.
