@@ -15,6 +15,8 @@
 
 ## Capability navigation — 2026-10-12
 
+**Public-access note (checked 2026-10-23):** Entries marked `private` are retained to document lifecycle and ownership but are not publicly inspectable. Their repository names are intentionally plain text rather than links; the visibility label does not establish access for external reviewers.
+
 **Scope:** the 27 repositories supplied for this reorganization. This is a navigation and responsibility mapping, not a fresh account census, dependency lockfile, completeness certification, or evidence promotion. Repository metadata and README identities were read on 2026-10-12; lifecycle labels below are retained from the existing account registry, whose review dates remain authoritative.
 
 The supplied account URL is the profile entry point, not an additional repository. The concatenated chat-archives / ai-prompt-engineering-portfolio URL has been split into two entries. Private repositories are labeled; their links require access. No private artifact contents are reproduced here beyond existing account-level responsibility descriptions.
@@ -32,8 +34,8 @@ The supplied account URL is the profile entry point, not an additional repositor
 | --- | --- | --- | --- |
 | [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) | Reusable experimental agent execution-control kernel. | ACTIVE_SUPPORTING | public |
 | [sentinel-governance](https://github.com/ndrorchestration/sentinel-governance) | Experimental CI/CD integrity and reviewable repair-proposal operator. | EXPERIMENTAL | public |
-| [automation-scripts](https://github.com/ndrorchestration/automation-scripts) | Reusable ecosystem maintenance and organization utilities. | ACTIVE_SUPPORTING | private |
-| [dgaf-ops](https://github.com/ndrorchestration/dgaf-ops) | Private DGAF operational and historical working records. | ACTIVE_SUPPORTING | private |
+| `automation-scripts` | Reusable ecosystem maintenance and organization utilities. | ACTIVE_SUPPORTING | private |
+| `dgaf-ops` | Private DGAF operational and historical working records. | ACTIVE_SUPPORTING | private |
 | [.github](https://github.com/ndrorchestration/.github) | Shared account community-health defaults and evidence conventions. | ACTIVE_SUPPORTING | public |
 
 ### Evaluation, rubrics & drift
@@ -43,15 +45,15 @@ The supplied account URL is the profile entry point, not an additional repositor
 | [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | Goldcanstaytoday protocol and reproducible evaluation harness. | EXPERIMENTAL | public |
 | [junior-apogee-app](https://github.com/ndrorchestration/junior-apogee-app) | Experimental AI evaluation and QA workbench. | EXPERIMENTAL | public |
 | [Driftwatch](https://github.com/ndrorchestration/Driftwatch) | Experimental drift-detection and evaluation track. | EXPERIMENTAL | public |
-| [Amethyst-Governance-Eval-Stack](https://github.com/ndrorchestration/Amethyst-Governance-Eval-Stack) | Experimental multi-agent evaluation and orchestration framework. | EXPERIMENTAL | private |
-| [Gold-star-standards](https://github.com/ndrorchestration/Gold-star-standards) | Current internal evaluation rubrics and project-defined standards. | ACTIVE_SUPPORTING | private |
+| `Amethyst-Governance-Eval-Stack` | Experimental multi-agent evaluation and orchestration framework. | EXPERIMENTAL | private |
+| `Gold-star-standards` | Current internal evaluation rubrics and project-defined standards. | ACTIVE_SUPPORTING | private |
 
 ### Dashboards & evidence projection
 
 | Repository | Responsibility | Retained lifecycle | Visibility / GitHub archive state |
 | --- | --- | --- | --- |
-| [aoga-dashboard](https://github.com/ndrorchestration/aoga-dashboard) | Older experimental AOGA API/dashboard and runtime-evidence surface. | EXPERIMENTAL | private |
-| [pptl-governance-dashboard](https://github.com/ndrorchestration/pptl-governance-dashboard) | Experimental PPTL/Herald dashboard and persistence prototype. | EXPERIMENTAL | private |
+| `aoga-dashboard` | Older experimental AOGA API/dashboard and runtime-evidence surface. | EXPERIMENTAL | private |
+| `pptl-governance-dashboard` | Experimental PPTL/Herald dashboard and persistence prototype. | EXPERIMENTAL | private |
 
 ### Spatial, acoustic & mathematical research
 
@@ -67,7 +69,7 @@ The supplied account URL is the profile entry point, not an additional repositor
 | --- | --- | --- | --- |
 | [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | Current public prompt-systems and evaluation portfolio. | ACTIVE_SUPPORTING | public |
 | [ndrorchestration](https://github.com/ndrorchestration/ndrorchestration) | Account portfolio navigation and lifecycle classification. | ACTIVE_SUPPORTING | public |
-| [career-positioning](https://github.com/ndrorchestration/career-positioning) | Private career strategy and paid-opportunity evidence records. | ACTIVE_SUPPORTING | private |
+| `career-positioning` | Private career strategy and paid-opportunity evidence records. | ACTIVE_SUPPORTING | private |
 | [entrepreneur-hub](https://github.com/ndrorchestration/entrepreneur-hub) | Commercialization and governance-template support track. | ACTIVE_SUPPORTING | public |
 
 ### Historical lineage & placeholders
