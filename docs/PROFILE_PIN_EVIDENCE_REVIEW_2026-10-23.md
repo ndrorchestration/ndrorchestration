@@ -48,3 +48,18 @@ Read-only GitHub commit-status inspection on the six commit-search candidates ab
 For Collabration's candidate commit `2cc00245e09ad39953253ce2b5df060ab34276aa`, one legacy commit status was returned: **Vercel = failure**, target `https://vercel.com/ndrorchestration?upgradeToPro=build-rate-limit`. The target suggests a build-rate/capacity limitation; no job log or runtime evidence was obtained to prove the root cause. This is a deployment-status exception, **not** evidence that the app source is defective.
 
 **Disposition:** Maintain six *provisional* pins, flag Collabration's deployment for separate investigation, and do not assert full CI verification or make release/governance changes. No workflows were rerun.
+
+## Verification pass 2 — 2026-10-23: dependency and deployment inventory
+
+Read-only manifest inspection produced the following **inventory**, not an audited dependency graph or security clearance:
+
+- **DGAF-Framework:** root `pyproject.toml` declares a Python 3.12-compatible Vercel runtime with no root Python dependencies. Root `requirements.txt` explicitly notes deprecated Python API stubs and TypeScript Next.js handlers. These root files do **not** describe all CI/bootstrap lock dependencies; the Black advisory and signed bootstrap work remain separate release/security concerns.
+- **resumeapex-eval:** `requirements.txt` uses minimum-only bounds `numpy>=1.24`, `pandas>=2.0`, `scipy>=1.10`, `pytest>=7.0`. Clean-environment reproducibility should use an accepted lock or constraints set rather than assuming future installs resolve identically.
+- **Orbit-Driftwatch:** root Node package declares Node >=20 and scripts `npm test`, `npm run verify:deployment`, `npm run verify:live`; it advertises no root runtime dependencies. No such command was run in this pass.
+- **agent-control-plane:** Python >=3.10 with setuptools >=68; optional cryptography range >=46,<52 and pinned tiktoken 0.14.0. No CVE conclusion can be inferred from a manifest alone.
+- **ai-prompt-systems-portfolio:** root package.json is absent (404), consistent with a specification/artifact-oriented repository. This is not by itself a defect and should not be represented as an executable JavaScript package.
+- **Collabration:** `apps/web/package.json` declares Next 16.3.4, React/React-DOM 19.2.8, Supabase SSR 0.12.7 and Supabase JS 2.116.0. This is a version inventory, **not** a vulnerability assertion.
+
+The connected Vercel project search for `collabration` returned no project in the authenticated scope. The deployment display action was unavailable. Accordingly, the earlier GitHub legacy Vercel failure with a build-rate-limit URL remains an **unresolved deployment signal**, with root cause and current production status not independently established.
+
+GitHub Actions push-branch/check-suite visibility was unavailable through the connected GitHub operations used. Public web access to GitHub Actions pages also failed. Do not infer CI conclusions from this absence. All six candidates remain **provisional**; no workflows were rerun or project files altered.
