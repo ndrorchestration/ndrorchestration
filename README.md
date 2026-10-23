@@ -53,16 +53,16 @@ The following links are **historical, exact-commit GitHub Actions examples** ins
 
 ## Ecosystem by capability
 
-Repository roles are grouped by the capability they contribute; lifecycle and evidence maturity remain separate. For the complete supplied inventory, ownership boundaries, and relationship types, see the [capability and lifecycle map](docs/ECOSYSTEM_LIFECYCLE.md#capability-navigation--2026-10-12).
+Repository roles are grouped by the capability they contribute; lifecycle and evidence maturity remain separate. Items marked **private** are not publicly accessible and are listed for architecture context only; they are not public review links. For the complete supplied inventory, ownership boundaries, and relationship types, see the [capability and lifecycle map](docs/ECOSYSTEM_LIFECYCLE.md#capability-navigation--2026-10-12).
 
 | Capability | Entry points and supporting work |
 | --- | --- |
 | Governance, evidence & authorization | [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) · [ai-governance-frameworks](https://github.com/ndrorchestration/ai-governance-frameworks) |
-| Execution, operations & CI integrity | [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) · [sentinel-governance](https://github.com/ndrorchestration/sentinel-governance) · [automation-scripts](https://github.com/ndrorchestration/automation-scripts) · [dgaf-ops](https://github.com/ndrorchestration/dgaf-ops) · [.github](https://github.com/ndrorchestration/.github) |
-| Evaluation, rubrics & drift | [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) · [junior-apogee-app](https://github.com/ndrorchestration/junior-apogee-app) · [Driftwatch](https://github.com/ndrorchestration/Driftwatch) · [Amethyst-Governance-Eval-Stack](https://github.com/ndrorchestration/Amethyst-Governance-Eval-Stack) · [Gold-star-standards](https://github.com/ndrorchestration/Gold-star-standards) |
-| Dashboards & evidence projection | [aoga-dashboard](https://github.com/ndrorchestration/aoga-dashboard) · [pptl-governance-dashboard](https://github.com/ndrorchestration/pptl-governance-dashboard) |
+| Execution, operations & CI integrity | [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) · [sentinel-governance](https://github.com/ndrorchestration/sentinel-governance) · `automation-scripts` (private) · `dgaf-ops` (private) · [.github](https://github.com/ndrorchestration/.github) |
+| Evaluation, rubrics & drift | [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) · [junior-apogee-app](https://github.com/ndrorchestration/junior-apogee-app) · [Driftwatch](https://github.com/ndrorchestration/Driftwatch) · `Amethyst-Governance-Eval-Stack` (private) · `Gold-star-standards` (private) |
+| Dashboards & evidence projection | `aoga-dashboard` (private) · `pptl-governance-dashboard` (private) |
 | Spatial, acoustic & mathematical research | [3d-visualization-hub](https://github.com/ndrorchestration/3d-visualization-hub) · [Acoustic-mesh](https://github.com/ndrorchestration/Acoustic-mesh) · [AHG-Zeta-Pell-Autonomous-Lattice](https://github.com/ndrorchestration/AHG-Zeta-Pell-Autonomous-Lattice) |
-| Prompt systems, portfolio & commercialization | [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) · [ndrorchestration](https://github.com/ndrorchestration/ndrorchestration) · [career-positioning](https://github.com/ndrorchestration/career-positioning) · [entrepreneur-hub](https://github.com/ndrorchestration/entrepreneur-hub) |
+| Prompt systems, portfolio & commercialization | [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) · [ndrorchestration](https://github.com/ndrorchestration/ndrorchestration) · `career-positioning` (private) · [entrepreneur-hub](https://github.com/ndrorchestration/entrepreneur-hub) |
 
 Tektite is a DGAF-hosted projection surface, not a separate authority. Orbit-Driftwatch and Collabration remain selected current projects above; Driftwatch is a separate experimental detector track. Historical prompt repositories and the archived Gold Star QA framework are indexed in the lifecycle map rather than presented as equivalent current products.
 
