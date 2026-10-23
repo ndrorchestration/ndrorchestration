@@ -25,15 +25,13 @@ I design and test AI workflows with a focus on **what systems demonstrably do, w
 
 ---
 
-## Technical portfolio and supporting evidence
-
-### AI Evaluation · Agentic Assurance · Governance · Provenance
+## Research approach
 
 I build and evaluate AI systems around a practical question:
 
 > **What did the system actually do, what evidence supports that claim, and what is it authorized to do next?**
 
-My work focuses on **AI evaluation, agentic assurance, multi-agent systems, prompt engineering, provenance, reproducibility, and governance-aware orchestration**. I design systems that keep **capability, evidence, verification, authority, and permission** distinct so that producing an output is not automatically treated as proving a claim, passing evaluation, or earning authorization for the next action.
+My work keeps capability, evidence, verification, authority and permission separate. The detailed entries below document both implemented capabilities and the limits of their current evidence.
 
 ## Start here
 
