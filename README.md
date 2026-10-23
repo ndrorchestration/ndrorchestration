@@ -1,5 +1,32 @@
 **Andrew Hensel // Ndr “Ender”**
 
+### AI Evaluation · Prompt Engineering · Agentic Systems · Evidence & Governance
+
+I design and test AI workflows with a focus on **what systems demonstrably do, which claims their evidence supports, and which actions they are authorized to take**.
+
+**Professional interests:** Remote AI evaluation, AI training/quality, prompt engineering, agent orchestration, and governance-aware systems engineering. My portfolio combines runnable evaluation tooling, reproducible controls, prompt-system specifications, and experimental assurance research.
+
+### Explore in 60 seconds
+
+| Your goal | Best starting point |
+| --- | --- |
+| **Review hands-on AI evaluation** | [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) — deterministic fixtures, metrics and reproducible checks |
+| **Review prompt engineering** | [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) — prompt patterns, rubrics and design specifications |
+| **Inspect multi-agent behavior** | [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) — role separation, provenance, disagreement and claim auditing |
+| **Inspect agent control boundaries** | [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) — scoped execution, budgets and fail-closed decisions |
+| **Explore my primary research** | [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) — evidence-bound authorization and assurance |
+| **See the broader project landscape** | [Repository lifecycle map](https://github.com/ndrorchestration/ndrorchestration/blob/main/docs/ECOSYSTEM_LIFECYCLE.md) |
+
+**Core working stack:** Python · TypeScript/JavaScript · GitHub Actions · React/Next.js · PostgreSQL/Supabase · evaluation fixtures and CI · provider APIs.
+
+**Evidence boundary:** These projects are at different maturity levels. Implemented, tested, independently validated, and authorized are **not** synonyms. DGAF remains experimental; independent scientific validation and high-assurance authorization are **not established**. A green CI run is not by itself release acceptance.
+
+**For reviewers:** Please start with the repository README, tests, current-state documentation and open admission gates rather than assuming that demonstrations imply production readiness.
+
+---
+
+## Technical portfolio and supporting evidence
+
 ### AI Evaluation · Agentic Assurance · Governance · Provenance
 
 I build and evaluate AI systems around a practical question:
