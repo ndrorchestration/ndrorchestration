@@ -40,3 +40,11 @@ Keep the six suggested pins as a **portfolio composition**, contingent on future
 2. Verify advertised clean-install tests on a pinned environment, without equating test execution with independent validation.
 3. Review dependency advisories, license links, README entry points, and any publicly advertised demo.
 4. Set GitHub pinned repositories manually through the account profile UI; this document is **not** evidence that pins were changed.
+
+## Verification pass 1 addendum — 2026-10-23
+
+Read-only GitHub commit-status inspection on the six commit-search candidates above returned **no legacy commit-status entries for five projects**. This must **not** be interpreted as a green GitHub Actions check suite. The workflow lookup available through the connected GitHub action is limited to pull-request-triggered runs and does not establish push/main results. Complete exact-head check-suite conclusions and current main-head identity remain **UNVERIFIED**.
+
+For Collabration's candidate commit `2cc00245e09ad39953253ce2b5df060ab34276aa`, one legacy commit status was returned: **Vercel = failure**, target `https://vercel.com/ndrorchestration?upgradeToPro=build-rate-limit`. The target suggests a build-rate/capacity limitation; no job log or runtime evidence was obtained to prove the root cause. This is a deployment-status exception, **not** evidence that the app source is defective.
+
+**Disposition:** Maintain six *provisional* pins, flag Collabration's deployment for separate investigation, and do not assert full CI verification or make release/governance changes. No workflows were rerun.
