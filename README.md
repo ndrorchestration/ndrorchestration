@@ -33,17 +33,20 @@ I build and evaluate AI systems around a practical question:
 
 My work keeps capability, evidence, verification, authority and permission separate. The detailed entries below document both implemented capabilities and the limits of their current evidence.
 
-## Start here
+## Verification entry points
 
-| If you want to inspect… | Start with |
+The following links are **historical, exact-commit GitHub Actions examples** inspected October 23, 2026; they are not live status badges or guarantees that all release, security, deployment, or independent-review gates have passed.
+
+| Project | Inspect the evidence |
 | --- | --- |
-| **Agentic assurance, governance, evidence, and authorization** | [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) |
-| **Observable multi-agent reasoning and claim auditing** | [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) |
-| **Minimal execution/control-plane primitives** | [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) |
-| **Governed human + AI product design** | [Collabration](https://github.com/ndrorchestration/Collabration) |
-| **Prompt-system and evaluation specifications** | [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) |
-| **Executable evaluation-harness design** | [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) |
-| **Public governance / evidence explanation** | [Tektite live demo](https://project-7ybao.vercel.app/demo) |
+| [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) | [Regression Suite](https://github.com/ndrorchestration/DGAF-Framework/actions/runs/39894062146) · [Current-state record](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/CURRENT_STATE.md) — release admission remains separate |
+| [resumeapex-eval](https://github.com/ndrorchestration/resumeapex-eval) | [Fixture-harness workflow](https://github.com/ndrorchestration/resumeapex-eval/actions/runs/39090571388) — not real-model benchmark performance |
+| [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) | [Deterministic CI](https://github.com/ndrorchestration/Orbit-Driftwatch/actions/runs/34553986767) — not proof of live provider/deployment behavior |
+| [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) | [Python test workflow](https://github.com/ndrorchestration/agent-control-plane/actions/runs/37246080413) — local test scope |
+| [ai-prompt-systems-portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio) | [Artifact-integrity workflow](https://github.com/ndrorchestration/ai-prompt-systems-portfolio/actions/runs/37142047005) — specification checks, not executed model evaluation |
+| [Collabration](https://github.com/ndrorchestration/Collabration) | [Node/application CI](https://github.com/ndrorchestration/Collabration/actions/runs/35107035955) — alpha stage; separate Vercel deployment status unresolved |
+
+[Read the dated portfolio-pin evidence review](docs/PROFILE_PIN_EVIDENCE_REVIEW_2026-10-23.md).
 
 ## Ecosystem by capability
 
