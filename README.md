@@ -15,6 +15,7 @@ I design and test AI workflows with a focus on **what systems demonstrably do, w
 | **Inspect multi-agent behavior** | [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch) — role separation, provenance, disagreement and claim auditing |
 | **Inspect agent control boundaries** | [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) — scoped execution, budgets and fail-closed decisions |
 | **Explore my primary research** | [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) — evidence-bound authorization and assurance |
+| **Explore governed human–AI product engineering** | [Collabration](https://github.com/ndrorchestration/Collabration) — alpha-stage Next.js/Supabase application, approvals and provenance |
 | **See the broader project landscape** | [Repository lifecycle map](https://github.com/ndrorchestration/ndrorchestration/blob/main/docs/ECOSYSTEM_LIFECYCLE.md) |
 
 **Core working stack:** Python · TypeScript/JavaScript · GitHub Actions · React/Next.js · PostgreSQL/Supabase · evaluation fixtures and CI · provider APIs.
@@ -47,6 +48,8 @@ The following links are **historical, exact-commit GitHub Actions examples** ins
 | [Collabration](https://github.com/ndrorchestration/Collabration) | [Node/application CI](https://github.com/ndrorchestration/Collabration/actions/runs/35107035955) — alpha stage; separate Vercel deployment status unresolved |
 
 [Read the dated portfolio-pin evidence review](docs/PROFILE_PIN_EVIDENCE_REVIEW_2026-10-23.md).
+
+[Review proposed GitHub About descriptions and repository topics](docs/PROFILE_METADATA_RECOMMENDATIONS_2026-10-23.md) (recommendations only; account/repository metadata settings are not changed by this document).
 
 ## Ecosystem by capability
 
