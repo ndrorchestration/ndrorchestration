@@ -4,6 +4,8 @@
 
 ---
 
+> **Current-access clarification (2026-10-23):** This July 2026 index retains historical artifact-level `PUBLIC`/`ACTIVE` classifications. Those labels are **not** a live verification of GitHub repository visibility or current deployment availability. In particular, `ndrorchestration/aoga-dashboard` is currently **private** on GitHub; its historical entries below do not make its repository content accessible to external reviewers. For current repository visibility and lifecycle navigation, consult [ECOSYSTEM_LIFECYCLE.md](ECOSYSTEM_LIFECYCLE.md). Do not infer production readiness or public runtime access from the historical index.
+
 ## Changelog
 
 | Version | Date | Change |
