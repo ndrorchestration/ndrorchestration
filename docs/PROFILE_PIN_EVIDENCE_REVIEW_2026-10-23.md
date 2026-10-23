@@ -63,3 +63,20 @@ Read-only manifest inspection produced the following **inventory**, not an audit
 The connected Vercel project search for `collabration` returned no project in the authenticated scope. The deployment display action was unavailable. Accordingly, the earlier GitHub legacy Vercel failure with a build-rate-limit URL remains an **unresolved deployment signal**, with root cause and current production status not independently established.
 
 GitHub Actions push-branch/check-suite visibility was unavailable through the connected GitHub operations used. Public web access to GitHub Actions pages also failed. Do not infer CI conclusions from this absence. All six candidates remain **provisional**; no workflows were rerun or project files altered.
+
+## Verification pass 3 — actual main-head CI evidence (2026-10-23)
+
+**Correction to prior access limitation:** GitHub's approved repository REST collection is accessible via the connected GitHub fetch action. Direct `branches/main` plus `actions/runs?branch=main` reads established the following actual default-branch heads and successful workflow runs. Earlier statements that CI was inaccessible or entirely unverified are superseded **for these named workflows only**.
+
+| Repo | Exact `main` head | Successful run on same head | Date (UTC) |
+| --- | --- | --- | --- |
+| DGAF-Framework | `1a95b94332dffb404c5a3ce026d70781a8c10b90` | [Regression Suite #39894062146](https://github.com/ndrorchestration/DGAF-Framework/actions/runs/39894062146) | 2026-10-23 |
+| resumeapex-eval | `4c9d4cfe8eae52bcac99c6d5f6a38d346a61a89f` | [Goldcanstaytoday Harness #39090571388](https://github.com/ndrorchestration/resumeapex-eval/actions/runs/39090571388) | 2026-10-18 |
+| Orbit-Driftwatch | `333271158f0e11a58dc83b5d1d8433c8999e89d7` | [CI #34553986767](https://github.com/ndrorchestration/Orbit-Driftwatch/actions/runs/34553986767) | 2026-09-11 |
+| agent-control-plane | `bd56a747686d775236bb78603bdaf2afc90733cb` | [test #37246080413](https://github.com/ndrorchestration/agent-control-plane/actions/runs/37246080413) | 2026-10-05 |
+| ai-prompt-systems-portfolio | `0f56fb683f8be2f4599d66fc406f4c8123b5d17c` | [Public portfolio integrity #37142047005](https://github.com/ndrorchestration/ai-prompt-systems-portfolio/actions/runs/37142047005) | 2026-10-03 |
+| Collabration | `2cc00245e09ad39953253ce2b5df060ab34276aa` | [CI #35107035955](https://github.com/ndrorchestration/Collabration/actions/runs/35107035955) | 2026-09-16 |
+
+Additional DGAF exact-head successful runs: [Governance Sweep #39893009078](https://github.com/ndrorchestration/DGAF-Framework/actions/runs/39893009078) and [Ecosystem Registry Audit #39888279913](https://github.com/ndrorchestration/DGAF-Framework/actions/runs/39888279913). The [Completion Controller #39904297000](https://github.com/ndrorchestration/DGAF-Framework/actions/runs/39904297000) was **skipped**, not passed; release gates remain separate.
+
+Collabration has successful dependency-update workflows on the same head, but the **separate Vercel failure status** remains a live deployment-context exception, not cleared by CI success. No claim is made that the full set of required checks was successful or that these runs establish production/independent validation. GitHub pin settings are not changed by this audit.
