@@ -177,7 +177,7 @@ My broader goal is to help make increasingly capable AI systems easier to **insp
 
 ## Creative systems and game development
 
-**To Sail the Starry Sky** *(formerly Aetherwake)* is my in-development solarpunk JRPG and worldbuilding/game-systems project, combining authored character stories, airship exploration, deterministic game-system contracts, and reproducible testing. **Its source repository is private and not a public portfolio artifact or released game.** The existing development repository name remains `aetherwake-jrpg` pending a separately verified repository rename; historical Aetherwake receipts, links and software identifiers remain valid. Future public materials require creator publication approval, rights/secrets review, playable-build verification, and spoiler filtering.
+[**To Sail the Starry Sky**](https://github.com/ndrorchestration/ToSailaStarrySky-jrpg) *(formerly Aetherwake)* is my in-development solarpunk JRPG and worldbuilding/game-systems project, combining authored character stories, airship exploration, deterministic game-system contracts, and reproducible testing. **The source repository is now publicly visible** (GitHub repository ID `1372641872`), but the game remains **pre-alpha** and its source visibility does **not** establish a cleared commercial release, independent QA, title/IP clearance, or player acceptance. The repository was renamed to `ToSailaStarrySky-jrpg`; legacy Aetherwake links, receipts and software identifiers remain historical references. Public-facing releases, packages and spoilers remain separately gated.
 
 ## Explore the ecosystem
 
