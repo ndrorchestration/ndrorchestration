@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-24",
+  "generated_at": "2026-10-23",
   "authority_scope": "ACCOUNT_LEVEL_LIFECYCLE_ONLY",
   "repositories": [
     {
@@ -734,6 +734,81 @@
       "current_claim_boundary": "Repository-local implementation remains authoritative; README identity/evidence boundary is reconciled, but lifecycle promotion remains pending executable verification.",
       "reviewed_at": "2026-09-28",
       "notes": "README identity/evidence boundary reconciled on main. Fresh-checkout install, typecheck, build, and benchmark-specific executable verification remain NOT VERIFIED for promotion; keep PENDING_REVIEW and outside the curated public portfolio until those gates complete."
+    },
+    {
+      "repository": "ndrorchestration/nick-luminous-valley",
+      "product_name": "Nick's Luminous Valley",
+      "visibility": "public",
+      "github_archived": false,
+      "origin": "authored",
+      "review_status": "PENDING_REVIEW",
+      "lifecycle": "INCUBATING",
+      "responsibility": "Godot 4 science-fantasy village/JRPG vertical slice; human interactive acceptance remains pending.",
+      "canonical_project_source": "https://github.com/ndrorchestration/nick-luminous-valley",
+      "relationships": [],
+      "current_claim_boundary": "README describes merged machine-verified slice; not human-accepted gameplay.",
+      "reviewed_at": "2026-10-23",
+      "notes": "Provisional account-level classification from GitHub metadata and repository entrypoints; not independent implementation, release, or security verification."
+    },
+    {
+      "repository": "ndrorchestration/civic-science-os",
+      "product_name": "Civic Science Contribution OS",
+      "visibility": "public",
+      "github_archived": false,
+      "origin": "authored",
+      "review_status": "PENDING_REVIEW",
+      "lifecycle": "EXPERIMENTAL",
+      "responsibility": "Human-only citizen-science participation provenance and session logging.",
+      "canonical_project_source": "https://github.com/ndrorchestration/civic-science-os",
+      "relationships": [],
+      "current_claim_boundary": "No automated classification, scientific judgment, or scientific-impact claims.",
+      "reviewed_at": "2026-10-23",
+      "notes": "Provisional account-level classification from GitHub metadata and repository entrypoints; not independent implementation, release, or security verification."
+    },
+    {
+      "repository": "ndrorchestration/capability-atlas",
+      "product_name": "Capability Atlas",
+      "visibility": "private",
+      "github_archived": false,
+      "origin": "authored",
+      "review_status": "PENDING_REVIEW",
+      "lifecycle": "INCUBATING",
+      "responsibility": "Private placeholder repository; project responsibilities unverified.",
+      "canonical_project_source": "https://github.com/ndrorchestration/capability-atlas",
+      "relationships": [],
+      "current_claim_boundary": "README contains only the project title; no implementation assessed.",
+      "reviewed_at": "2026-10-23",
+      "notes": "Provisional account-level classification from GitHub metadata and repository entrypoints; not independent implementation, release, or security verification."
+    },
+    {
+      "repository": "ndrorchestration/ecosystem-mission-control",
+      "product_name": "Ecosystem Mission Control",
+      "visibility": "private",
+      "github_archived": false,
+      "origin": "authored",
+      "review_status": "PENDING_REVIEW",
+      "lifecycle": "INCUBATING",
+      "responsibility": "Private placeholder repository for an ecosystem mission-control concept; implementation unverified.",
+      "canonical_project_source": "https://github.com/ndrorchestration/ecosystem-mission-control",
+      "relationships": [],
+      "current_claim_boundary": "README contains only the project title; dashboard or integration not established.",
+      "reviewed_at": "2026-10-23",
+      "notes": "Provisional account-level classification from GitHub metadata and repository entrypoints; not independent implementation, release, or security verification."
+    },
+    {
+      "repository": "ndrorchestration/freeCodeCamp",
+      "product_name": "freeCodeCamp",
+      "visibility": "public",
+      "github_archived": false,
+      "origin": "fork-derived",
+      "review_status": "PENDING_REVIEW",
+      "lifecycle": "EXTERNAL_REFERENCE",
+      "responsibility": "Fork of the upstream freeCodeCamp educational codebase.",
+      "canonical_project_source": "https://github.com/ndrorchestration/freeCodeCamp",
+      "relationships": [],
+      "current_claim_boundary": "External reference/fork; not evidence of original authorship or merged upstream contribution.",
+      "reviewed_at": "2026-10-23",
+      "notes": "Provisional account-level classification from GitHub metadata and repository entrypoints; not independent implementation, release, or security verification."
     }
   ]
 }
