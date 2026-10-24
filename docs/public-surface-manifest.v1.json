@@ -73,9 +73,9 @@
       ],
       "local_source": {
         "path": "README.md",
-        "git_blob_sha": "62c34e1ef1e81dd7ad290bf39fe4bba2ab5a4311"
+        "git_blob_sha": "f9c0f82bef367b6bd8fa46297291c55dc0ae9b24"
       },
-      "evidence_note": "README source blob reconciled against GitHub on 2026-10-23 after portfolio edits. Independent public-copy and runtime verification were not repeated; REVIEW retained until separately verified."
+      "evidence_note": "Current README blob identity reconciled after multiple profile edits; public copy remains REVIEW until separately verified. Subsequent README changes require a corresponding manifest refresh."
     },
     {
       "id": "github.organization_profile",
