@@ -707,7 +707,7 @@
     },
     {
       "repository": "ndrorchestration/aetherwake-jrpg",
-      "product_name": "Aetherwake — The Last Solarpunk Airship",
+      "product_name": "To Sail the Starry Sky (formerly Aetherwake)",
       "visibility": "private",
       "github_archived": false,
       "origin": "authored",
@@ -718,7 +718,7 @@
       "relationships": [],
       "current_claim_boundary": "Project-local truth remains authoritative.",
       "reviewed_at": "2026-09-24",
-      "notes": "Repository README establishes a playable vertical slice and active architecture migration; current development is focused on a one-click Windows standalone preview. Remains private and INCUBATING."
+      "notes": "Creator approved the public game title To Sail the Starry Sky on 2026-10-23; the repository slug remains aetherwake-jrpg, private and INCUBATING. Historical evidence/source links remain intact. README establishes a playable vertical slice and active architecture migration toward one-click Windows standalone preview; creator did not approve public visibility, source publication, or release."
     },
     {
       "repository": "ndrorchestration/coherence-control-benchmark",
