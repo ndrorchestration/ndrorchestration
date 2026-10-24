@@ -21,9 +21,10 @@ def git_blob_sha(body: bytes) -> str:
 
 def sync(write: bool = False) -> int:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    profile = next((s for s in manifest["surfaces"] if s.get("id") == "github.profile"), None)
-    if profile is None or profile.get("local_source", {}).get("path") != "README.md":
-        raise ValueError("missing expected github.profile README source binding")
+    profiles = [s for s in manifest["surfaces"] if s.get("id") == "github.profile"]
+    if len(profiles) != 1 or profiles[0].get("local_source", {}).get("path") != "README.md":
+        raise ValueError("expected exactly one github.profile README source binding")
+    profile = profiles[0]
     actual = git_blob_sha(README.read_bytes())
     previous = profile["local_source"].get("git_blob_sha")
     if previous == actual:
