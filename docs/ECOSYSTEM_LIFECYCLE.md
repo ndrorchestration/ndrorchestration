@@ -258,3 +258,16 @@ The GitHub profile is a curated projection, not the complete inventory. It empha
 5. synchronize DGAF and workspace projections after canonical lifecycle changes without creating competing sources of truth.
 
 The machine-readable registry remains the canonical account-level lifecycle classification surface. This document is its human-readable companion.
+## Repository inventory reconciliation — 2026-10-23 (provisional)
+
+A read-only comparison of the 2026-09-24 canonical account lifecycle registry against the authenticated GitHub repository inventory found **53 repositories versus 48 registered entries**. Every registered repository was present; the 48 existing entries had **no observed visibility or archive-status mismatch**. The five newly identified repositories below remain **UNCLASSIFIED / NOT ADMITTED** to the canonical lifecycle registry pending repository-specific purpose and ownership evidence. The registry and historical classifications were not changed.
+
+| Unregistered repository | GitHub visibility | Evidence-limited observation |
+| --- | --- | --- |
+| `nick-luminous-valley` | public | Non-fork; no GitHub About description; purpose unverified |
+| `civic-science-os` | public | Non-fork; About describes provenance-first citizen-science participation tooling, not scientific validation |
+| `capability-atlas` | private | Non-fork; no About description; content and lifecycle role not inferred |
+| `ecosystem-mission-control` | private | Non-fork; no About description; content and lifecycle role not inferred |
+| `freeCodeCamp` | public | **Fork** of external open-source project; not represented as original authored work or accepted external contribution |
+
+This is a **current metadata/inventory comparison**, not a source audit, merge/admission approval, release determination, or authority transfer. Next step: review contents and project-local evidence before adding records to the canonical JSON and updating its generated date.
