@@ -13,15 +13,27 @@
 - Accepted architecture authority: PR #1089 architecture governance; PR #1041 is historical/superseded/unmerged.
 - This overlay does not alter repository lifecycle classification or promote scientific, efficacy, independent-validation, runtime, or High-Assurance state.
 
+## Live visibility and public-link audit — 2026-10-23
+
+**Authenticated GitHub owner census:** 53 repositories, **33 public** and **20 private**; one private repository is archived. GitHub repository metadata is visibility authority. This is a complete count for the 53 owner repositories returned by the connected account, not a review of every committed file for secrets, licenses, or publication suitability.
+
+**Current game identity:** *To Sail the Starry Sky* (formerly *Aetherwake*) is the approved creator-facing name. The **private** `ndrorchestration/aetherwake-jrpg` repository remains at its old slug (repository ID `1372641872`) until a GitHub admin rename actually succeeds. All old repo/PR and exact-source evidence links are therefore retained; `ndrorchestration/to-sail-the-starry-sky` is not yet a working source URL.
+
+**Public navigation rule:** do not create Markdown links to private repositories in public portfolio or index documents. List their names as code only where already necessary for role/context. This update corrects six historical private-repo hyperlinks below. Public links in the GitHub profile reference repositories whose current visibility is public.
+
+**Publishing rule:** 20 private repositories stay private pending source-level credential/data/license audits, author/IP ownership verification, and explicit per-repository visibility approval. Experimental and pre-alpha labels are not blanket authorization to publish. Portfolio promotion is distinct from visibility. Canonical registry still holds lifecycle roles; this new visibility observation does not change them.
+
+**Publicized work:** among the current 33 public repos are externally derived forks/reference repos. Fork visibility does not make upstream work original portfolio evidence. Treat curated authored work and inherited upstream forks separately.
+
 ## Capability navigation — 2026-10-12
 
-**Registry freshness clarification (2026-10-23):** The canonical `ecosystem/repository-lifecycle.json` carries `generated_at: 2026-09-24`. Direct GitHub metadata checks on October 23 confirmed the seven private supporting repositories listed here still have private visibility, but this targeted check does not constitute a complete re-audit of the registry or change its generation timestamp.
+**Registry freshness clarification (2026-10-23):** The canonical `ecosystem/repository-lifecycle.json` currently carries `generated_at: 2026-10-23` with 53 entries. The current GitHub visibility census independently confirms all 53 owner repository identities, including 33 public and 20 private. The classification/lifecycle review dates remain separate from visibility verification.
 
 **Public-access note (checked 2026-10-23):** Entries marked `private` are retained to document lifecycle and ownership but are not publicly inspectable. Their repository names are intentionally plain text rather than links; the visibility label does not establish access for external reviewers.
 
 **Scope:** the 27 repositories supplied for this reorganization. This is a navigation and responsibility mapping, not a fresh account census, dependency lockfile, completeness certification, or evidence promotion. Repository metadata and README identities were read on 2026-10-12; lifecycle labels below are retained from the existing account registry, whose review dates remain authoritative.
 
-The supplied account URL is the profile entry point, not an additional repository. The concatenated chat-archives / ai-prompt-engineering-portfolio URL has been split into two entries. Private repositories are labeled; their links require access. No private artifact contents are reproduced here beyond existing account-level responsibility descriptions.
+The supplied account URL is the profile entry point, not an additional repository. The historical concatenated chat-archives / ai-prompt-engineering-portfolio URL has been split into two entries. Private repositories are labeled and are no longer linked as public review destinations. No private artifact contents are reproduced here beyond existing account-level responsibility descriptions.
 
 ### Governance, evidence & authorization
 
@@ -78,12 +90,12 @@ The supplied account URL is the profile entry point, not an additional repositor
 
 | Repository | Responsibility | Retained lifecycle | Visibility / GitHub archive state |
 | --- | --- | --- | --- |
-| [AI-Prompt-Engineer](https://github.com/ndrorchestration/AI-Prompt-Engineer) | Historical private prompt-engineering portfolio archive. | HISTORICAL | private |
-| [ai-prompt-engineering-portfolio](https://github.com/ndrorchestration/ai-prompt-engineering-portfolio) | Private v1 prompt-engineering portfolio archive. | HISTORICAL | private |
-| [prompt-optimization-library](https://github.com/ndrorchestration/prompt-optimization-library) | Historical v0 prompt-optimization baseline and methodology archive. | HISTORICAL | private |
-| [chat-archives](https://github.com/ndrorchestration/chat-archives) | Historical conversation, protocol, and research archive. | HISTORICAL | private |
-| [gold-star-qa-framework](https://github.com/ndrorchestration/gold-star-qa-framework) | Historical Gold Star QA framework archive. | ARCHIVED | private · archived |
-| [api](https://github.com/ndrorchestration/api) | Historical generic API evidence-status record. | HISTORICAL | private |
+| `AI-Prompt-Engineer` | Historical private prompt-engineering portfolio archive. | HISTORICAL | private |
+| `ai-prompt-engineering-portfolio` | Private v1 prompt-engineering portfolio archive. | HISTORICAL | private |
+| `prompt-optimization-library` | Historical v0 prompt-optimization baseline and methodology archive. | HISTORICAL | private |
+| `chat-archives` | Historical conversation, protocol, and research archive. | HISTORICAL | private |
+| `gold-star-qa-framework` | Historical Gold Star QA framework archive. | ARCHIVED | private · archived |
+| `api` | Historical generic API evidence-status record. | HISTORICAL | private |
 
 ### Relationship and dependency boundaries
 
