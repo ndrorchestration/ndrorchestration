@@ -15,6 +15,8 @@
 
 ## Capability navigation — 2026-10-12
 
+**Registry freshness clarification (2026-10-23):** The canonical `ecosystem/repository-lifecycle.json` carries `generated_at: 2026-09-24`. Direct GitHub metadata checks on October 23 confirmed the seven private supporting repositories listed here still have private visibility, but this targeted check does not constitute a complete re-audit of the registry or change its generation timestamp.
+
 **Public-access note (checked 2026-10-23):** Entries marked `private` are retained to document lifecycle and ownership but are not publicly inspectable. Their repository names are intentionally plain text rather than links; the visibility label does not establish access for external reviewers.
 
 **Scope:** the 27 repositories supplied for this reorganization. This is a navigation and responsibility mapping, not a fresh account census, dependency lockfile, completeness certification, or evidence promotion. Repository metadata and README identities were read on 2026-10-12; lifecycle labels below are retained from the existing account registry, whose review dates remain authoritative.
