@@ -175,6 +175,10 @@ I am building toward work in **AI evaluation, prompt engineering, AI quality/tra
 
 My broader goal is to help make increasingly capable AI systems easier to **inspect, constrain, evaluate, verify, and trust for the right reasons**.
 
+## Creative systems and game development
+
+**To Sail the Starry Sky** *(formerly Aetherwake)* is my in-development solarpunk JRPG and worldbuilding/game-systems project, combining authored character stories, airship exploration, deterministic game-system contracts, and reproducible testing. **Its source repository is private and not a public portfolio artifact or released game.** The existing development repository name remains `aetherwake-jrpg` pending a separately verified repository rename; historical Aetherwake receipts, links and software identifiers remain valid. Future public materials require creator publication approval, rights/secrets review, playable-build verification, and spoiler filtering.
+
 ## Explore the ecosystem
 
 This profile is a curated portfolio rather than a complete repository inventory. The account also contains supporting infrastructure, experimental research, historical lineage, external/reference work, and incubating projects.
