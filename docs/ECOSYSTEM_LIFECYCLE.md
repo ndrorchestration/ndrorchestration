@@ -15,21 +15,21 @@
 
 ## Live visibility and public-link audit — 2026-10-23
 
-**Authenticated GitHub owner census:** 53 repositories, **33 public** and **20 private**; one private repository is archived. GitHub repository metadata is visibility authority. This is a complete count for the 53 owner repositories returned by the connected account, not a review of every committed file for secrets, licenses, or publication suitability.
+**Current authenticated GitHub owner census:** 53 repositories, **34 public** and **19 private**; one archived private repository. These counts supersede the earlier 33-public/20-private snapshot on the same date. This verifies GitHub repository identity and current visibility, **not** release suitability, secret-history safety or commercial approval.
 
-**Current game identity:** *To Sail the Starry Sky* (formerly *Aetherwake*) is the approved creator-facing name. The **private** `ndrorchestration/aetherwake-jrpg` repository remains at its old slug (repository ID `1372641872`) until a GitHub admin rename actually succeeds. All old repo/PR and exact-source evidence links are therefore retained; `ndrorchestration/to-sail-the-starry-sky` is not yet a working source URL.
+**Game repo renamed AND made public:** the stable GitHub repository ID `1372641872` now resolves to [To Sail the Starry Sky — source](https://github.com/ndrorchestration/ToSailaStarrySky-jrpg), exact canonical slug `ndrorchestration/ToSailaStarrySky-jrpg`. The old `aetherwake-jrpg` path resolves as a historical redirect, but no live cross-link should represent it as canonical. The different previously proposed slug `ndrorchestration/to-sail-the-starry-sky` is **not** the actual repo identity. Main remained `7364d43c202b2186e2d4eb3c752367afe61ee408` during the audit and draft branding PR #358 stayed unmerged.
 
-**Public navigation rule:** do not create Markdown links to private repositories in public portfolio or index documents. List their names as code only where already necessary for role/context. This update corrects six historical private-repo hyperlinks below. Public links in the GitHub profile reference repositories whose current visibility is public.
+**Public exposure is not release acceptance:** Game files, source history, issues and draft PRs may now be publicly visible. Do not claim that save migration, art and code ownership, license compliance, secret scanning, external publication permission, Windows QA, Defender review or player acceptance have occurred. Review them before broader promotion. The game remains INCUBATING in the lifecycle registry.
 
-**Publishing rule:** 20 private repositories stay private pending source-level credential/data/license audits, author/IP ownership verification, and explicit per-repository visibility approval. Experimental and pre-alpha labels are not blanket authorization to publish. Portfolio promotion is distinct from visibility. Canonical registry still holds lifecycle roles; this new visibility observation does not change them.
+**Public navigation rule:** link to repositories that are actually public while explaining evidence and release limitations. Keep remaining 19 private repositories unlinked to avoid misleading external readers. Six historical private references in the table below remain plain text.
 
-**Publicized work:** among the current 33 public repos are externally derived forks/reference repos. Fork visibility does not make upstream work original portfolio evidence. Treat curated authored work and inherited upstream forks separately.
+**Public portfolio/provenance rule:** forked upstream/reference repositories are distinct from authored originals. Metadata visibility alone grants no evidence promotion.
 
 ## Capability navigation — 2026-10-12
 
-**Registry freshness clarification (2026-10-23):** The canonical `ecosystem/repository-lifecycle.json` currently carries `generated_at: 2026-10-23` with 53 entries. The current GitHub visibility census independently confirms all 53 owner repository identities, including 33 public and 20 private. The classification/lifecycle review dates remain separate from visibility verification.
+**Registry freshness clarification (2026-10-23):** The canonical `ecosystem/repository-lifecycle.json` carries `generated_at: 2026-10-23` with 53 entries. Current live GitHub verification confirms 53 owner repo identities, including 34 public and 19 private after the game repo rename/visibility change. Classification/lifecycle review dates remain separate from visibility verification.
 
-**Public-access note (checked 2026-10-23):** Entries marked `private` are retained to document lifecycle and ownership but are not publicly inspectable. Their repository names are intentionally plain text rather than links; the visibility label does not establish access for external reviewers.
+**Public-access note (rechecked 2026-10-23):** Entries marked `private` are retained as unlinked names because external visitors cannot inspect them. The game repo is now public but publication is not equal to product release approval.
 
 **Scope:** the 27 repositories supplied for this reorganization. This is a navigation and responsibility mapping, not a fresh account census, dependency lockfile, completeness certification, or evidence promotion. Repository metadata and README identities were read on 2026-10-12; lifecycle labels below are retained from the existing account registry, whose review dates remain authoritative.
 
