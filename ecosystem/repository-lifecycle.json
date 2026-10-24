@@ -706,7 +706,7 @@
       "notes": null
     },
     {
-      "repository": "ndrorchestration/ToSailaStarrySky-jrpg",
+      "repository": "ndrorchestration/ToSailtheStarrySky-jrpg",
       "product_name": "To Sail the Starry Sky (formerly Aetherwake)",
       "visibility": "public",
       "github_archived": false,
@@ -714,11 +714,11 @@
       "review_status": "VERIFIED",
       "lifecycle": "INCUBATING",
       "responsibility": "Publicly visible pre-alpha JRPG source with a playable vertical slice and active standalone Windows preview work; public code is not an authorized player release.",
-      "canonical_project_source": "https://github.com/ndrorchestration/ToSailaStarrySky-jrpg",
+      "canonical_project_source": "https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg",
       "relationships": [],
       "current_claim_boundary": "Project-local truth remains authoritative.",
       "reviewed_at": "2026-10-23",
-      "notes": "GitHub stable repo ID 1372641872 verified after owner rename/visibility mutation on 2026-10-23: ToSailaStarrySky-jrpg, PUBLIC; former slug aetherwake-jrpg. Creator-approved game title To Sail the Starry Sky; source visibility does NOT attest to secret/IP/license review, Windows QA, playable release or commercial permission. Historical SHA/PR references remain provenance. Retain INCUBATING."
+      "notes": "GitHub stable repo ID 1372641872 verified after owner rename/visibility mutation on 2026-10-23: ToSailtheStarrySky-jrpg, PUBLIC; former slug aetherwake-jrpg. Creator-approved game title To Sail the Starry Sky; source visibility does NOT attest to secret/IP/license review, Windows QA, playable release or commercial permission. Historical SHA/PR references remain provenance. Retain INCUBATING."
     },
     {
       "repository": "ndrorchestration/coherence-control-benchmark",
