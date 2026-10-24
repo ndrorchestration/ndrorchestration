@@ -33,3 +33,9 @@ At later main head `73a8d6033c0a285907ccca363727ca49bf1d4c75`, ORBIT Evidence Sn
 4. Validate exposed demo URLs and outstanding security/deployment signals without conflating portfolio fitness with production readiness.
 
 **Provenance:** Review log: [portfolio evidence](PROFILE_PIN_EVIDENCE_REVIEW_2026-10-23.md), [metadata recommendations](PROFILE_METADATA_RECOMMENDATIONS_2026-10-23.md), [lifecycle map](ECOSYSTEM_LIFECYCLE.md). Facts here reflect the GitHub queries performed during the wrap-up.
+
+## October 23 follow-on: recurring ORBIT source-binding repair
+
+The most recent inspected main-head workflow [#40059102141](https://github.com/ndrorchestration/ndrorchestration/actions/runs/40059102141) failed at `Validate public surface manifest`: the stored `github.profile.local_source.git_blob_sha` was `62c34e1ef1e81dd7ad290bf39fe4bba2ab5a4311`, but the README blob had changed to `f9c0f82bef367b6bd8fa46297291c55dc0ae9b24`. The manifest binding was corrected in commit [71757b5](https://github.com/ndrorchestration/ndrorchestration/commit/71757b5381a621ba87bc73ed78cddb929b48af0f), retaining `REVIEW_NEEDED` / `REVIEW` for public copy. This corrects that exact source identity; it is **not** a claim of subsequent CI success or enduring prevention of drift.
+
+**Repeatability control:** Any future PR editing root `README.md` should calculate its Git blob SHA (`git hash-object README.md`), update `docs/public-surface-manifest.v1.json` in the same change, then run `python3 scripts/validate_public_surface_manifest.py` and its adversarial tests before admission. Prefer an automated check or generator with a regression test over repeated manual post-commit repairs. Do **not** exempt `github.profile` from fail-closed source checking, alter invariant claim ceilings, or treat a changed hash as public-copy approval.
