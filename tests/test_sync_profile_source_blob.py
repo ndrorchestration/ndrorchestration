@@ -57,6 +57,13 @@ class ProfileSourceBlobSyncTests(unittest.TestCase):
         self.save()
         self.assertNotEqual(self.run_sync("--write").returncode, 0)
 
+    def test_duplicate_profile_bindings_block_write(self):
+        self.manifest["surfaces"].append(dict(self.manifest["surfaces"][0]))
+        self.save()
+        before = (self.root / "docs" / "public-surface-manifest.v1.json").read_bytes()
+        self.assertNotEqual(self.run_sync("--write").returncode, 0)
+        self.assertEqual(before, (self.root / "docs" / "public-surface-manifest.v1.json").read_bytes())
+
     def test_missing_profile_blocks_write(self):
         self.manifest["surfaces"] = []
         self.save()
