@@ -16,6 +16,7 @@ I design and test AI workflows with a focus on **what systems demonstrably do, w
 | **Inspect agent control boundaries** | [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) — scoped execution, budgets and fail-closed decisions |
 | **Explore my primary research** | [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) — evidence-bound authorization and assurance |
 | **Explore governed human–AI product engineering** | [Collabration](https://github.com/ndrorchestration/Collabration) — alpha-stage Next.js/Supabase application, approvals and provenance |
+| **Learn AI from zero (videos)** | [AI From Zero With Ender](youtube/README.md) — episode index, educational resources, corrections, and dated channel analytics |
 | **See the broader project landscape** | [Repository lifecycle map](https://github.com/ndrorchestration/ndrorchestration/blob/main/docs/ECOSYSTEM_LIFECYCLE.md) |
 
 **Core working stack:** Python · TypeScript/JavaScript · GitHub Actions · React/Next.js · PostgreSQL/Supabase · evaluation fixtures and CI · provider APIs.
