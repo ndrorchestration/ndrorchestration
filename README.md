@@ -16,6 +16,7 @@ I design and test AI workflows with a focus on **what systems demonstrably do, w
 | **Inspect agent control boundaries** | [agent-control-plane](https://github.com/ndrorchestration/agent-control-plane) — scoped execution, budgets and fail-closed decisions |
 | **Explore my primary research** | [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework) — evidence-bound authorization and assurance |
 | **Explore governed human–AI product engineering** | [Collabration](https://github.com/ndrorchestration/Collabration) — alpha-stage Next.js/Supabase application, approvals and provenance |
+| **Explore my JRPG world and game engineering** | [To Sail the Starry Sky](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg) — narrative systems, Godot prototypes, ship/environment visuals and documented music assets |
 | **See the broader project landscape** | [Repository lifecycle map](https://github.com/ndrorchestration/ndrorchestration/blob/main/docs/ECOSYSTEM_LIFECYCLE.md) |
 
 **Core working stack:** Python · TypeScript/JavaScript · GitHub Actions · React/Next.js · PostgreSQL/Supabase · evaluation fixtures and CI · provider APIs.
@@ -177,7 +178,23 @@ My broader goal is to help make increasingly capable AI systems easier to **insp
 
 ## Creative systems and game development
 
-[**To Sail the Starry Sky**](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg) *(formerly Aetherwake)* is my in-development solarpunk JRPG and worldbuilding/game-systems project, combining authored character stories, airship exploration, deterministic game-system contracts, and reproducible testing. **The source repository is now publicly visible** (GitHub repository ID `1372641872`), but the game remains **pre-alpha** and its source visibility does **not** establish a cleared commercial release, independent QA, title/IP clearance, or player acceptance. The repository was renamed to `ToSailtheStarrySky-jrpg`; legacy Aetherwake links, receipts and software identifiers remain historical references. Public-facing releases, packages and spoilers remain separately gated.
+### To Sail the Starry Sky — a 2.5D science-fantasy JRPG in development
+
+[**To Sail the Starry Sky**](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg) *(previously developed under the legacy Aetherwake name)* brings together narrative, game architecture, cinematic environments, character design and music. Its emotional center is the small dragonfly-inspired airship **Aureate Wake** and the people who make it a home. The target game is a **Godot 4.7.2/GDScript** JRPG with five authored protagonists, layered world exploration, dynamic party relationships and a carefully gated celestial mythology.
+
+![Actual native Godot 4.7.2 experimental Aureate Wake bow and wing study — not final production art](https://raw.githubusercontent.com/ndrorchestration/ToSailtheStarrySky-jrpg/9d48d61567c4f8af9b868f79d429a4aa4fa52f17/docs/screenshots/native-2026-10-27/aureate-wake-bow.jpg)
+
+*An actual Godot-rendered ship-and-environment study from the [unmerged screenshot gallery PR #427](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg/pull/427). This is original experimental game-engine output, **not** approved final art, a generated concept trailer or a screenshot of the fully integrated playable build.*
+
+The newer **First Wake** design begins with **Ender answering Captain Ionia's harmonic-engine work notice**, their first test flight and a water landing. Lyra and her son Talen enter after recovery; a shared investigation develops a provisional fuel theory. The old browser build's Lyra-first chronology remains preserved as historical implementation, not the new narrative authority.
+
+The native forward story/ship/quest cue seam [passed Godot tests](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg/actions/runs/40612310838), while a **separate 3D Aureate Wake** renderer [passed four real OpenGL story-phase captures](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg/actions/runs/40625082846). Their interfaces are compatible at the test-record level but have **not** yet been integrated into a single production runtime.
+
+**Music is already part of the ecosystem:** five historically admitted Chapter One MP3 recordings include *Skyward Arpeggio*, *Amonigio Umulula*, *Nocturnal Resolve*, *Solar Punk Airship* and *Open Sky Signal*. The complete files and hashes exist on an **older, closed/unmerged** development commit; they are not yet integrated into the forward Godot game or cleared here for public soundtrack streaming.
+
+[Explore the game source](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg) · [Native Godot media review](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg/pull/427) · [Music provenance / migration register](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg/blob/docs/native-godot-screenshot-gallery-20261027/docs/AUDIO_ASSET_REGISTER.md) · [3D visual integration draft](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg/pull/524)
+
+**Evidence status:** Public pre-alpha source and isolated verified prototype runs. Story, gameplay, native ship/planet simulation, save integration, performance, asset rights, Windows Defender custody and creator visual/gameplay acceptance remain independent. The repository's `main` is still the historical JS build; these newer Godot studies are unmerged drafts. No release or spoiler authorization is implied.
 
 ## Explore the ecosystem
 
