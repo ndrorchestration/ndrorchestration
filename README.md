@@ -6,6 +6,22 @@ I design and test AI workflows with a focus on **what systems demonstrably do, w
 
 **Professional interests:** Remote AI evaluation, AI training/quality, prompt engineering, agent orchestration, and governance-aware systems engineering. My portfolio combines runnable evaluation tooling, reproducible controls, prompt-system specifications, and experimental assurance research.
 
+## Open invitation: Independent review of DGAF
+
+**Independent researchers, AI governance specialists, security engineers, and open-source reviewers are invited to scrutinize [DGAF-Framework](https://github.com/ndrorchestration/DGAF-Framework).**
+
+DGAF is an experimental framework exploring evidence-bound governance, authorization, provenance, and evaluation in agentic AI. It has executable components, tests, and documented limitations, including unresolved defects. **Independent scrutiny is welcome now; scientific efficacy, production readiness, and high-assurance authorization are not established.**
+
+Reviewers are encouraged to challenge the architecture, inspect real authorization and fail-closed call paths, reproduce failures, examine security and dependency boundaries, evaluate the experimental methodology and comparators, and report negative results as readily as positive ones.
+
+**Research posture:** PRE-FREEZE · FAIL-CLOSED · NOT AUTHORIZED · SCIENTIFIC N=0. These are governance boundaries, not a claim of successful validation.
+
+**Start here:** [Repository](https://github.com/ndrorchestration/DGAF-Framework) · [Current state](https://github.com/ndrorchestration/DGAF-Framework/blob/main/docs/CURRENT_STATE.md) · [Independent reproduction gate](https://github.com/ndrorchestration/DGAF-Framework/issues/1067) · [Outside-operator trial](https://github.com/ndrorchestration/DGAF-Framework/issues/1210). To participate, open an issue describing the review scope and any reproducible findings. Please do not submit sensitive vulnerabilities publicly; use the repository's private security-reporting channel if available.
+
+*The goal is not to prove DGAF works, but to determine independently what works, what fails, and why.*
+
+---
+
 ### Explore in 60 seconds
 
 | Your goal | Best starting point |
