@@ -13,8 +13,8 @@
       "type": "portfolio",
       "url": "https://ndrorchestration.vercel.app",
       "reachability": "VERIFIED_PUBLIC",
-      "copy_state": "RECONCILED",
-      "release_gate": "PASS",
+      "copy_state": "REVIEW_NEEDED",
+      "release_gate": "REVIEW",
       "canonical_dependencies": [
         "ECOSYSTEM_POSITIONING",
         "DGAF",
@@ -42,7 +42,8 @@
       "local_source": {
         "path": "dashboard/pages/index.tsx",
         "git_blob_sha": "41c2a18940c4bbbb2dbfe043d7368c8682f2b418"
-      }
+      },
+      "evidence_note": "2026-11-04 documentation review: historical source/deployment identities retained as event-time evidence only; current production alias, source commit, and rendered semantic readback have not been jointly reconciled on this manifest revision. Do not interpret historical PASS as current freshness or as authorization. Historical accepted Tektite proof fields remain immutable."
     },
     {
       "id": "github.profile",
@@ -107,8 +108,8 @@
       "type": "dgaf_command_center",
       "url": "https://project-7ybao.vercel.app",
       "reachability": "VERIFIED_PUBLIC",
-      "copy_state": "RECONCILED",
-      "release_gate": "PASS",
+      "copy_state": "REVIEW_NEEDED",
+      "release_gate": "REVIEW",
       "canonical_dependencies": [
         "DGAF",
         "TEKTITE"
@@ -128,15 +129,16 @@
         "SOURCE_AUTHORITY_CHANGED",
         "DEPLOYMENT_CHANGED",
         "PUBLIC_COPY_CHANGED"
-      ]
+      ],
+      "evidence_note": "2026-11-04 documentation review: historical source/deployment identities retained as event-time evidence only; current production alias, source commit, and rendered semantic readback have not been jointly reconciled on this manifest revision. Do not interpret historical PASS as current freshness or as authorization. Historical accepted Tektite proof fields remain immutable."
     },
     {
       "id": "tektite.bounded_demo",
       "type": "tektite_demo",
       "url": "https://project-7ybao.vercel.app/demo",
       "reachability": "VERIFIED_PUBLIC",
-      "copy_state": "RECONCILED",
-      "release_gate": "PASS",
+      "copy_state": "REVIEW_NEEDED",
+      "release_gate": "REVIEW",
       "canonical_dependencies": [
         "DGAF",
         "TEKTITE"
@@ -155,7 +157,7 @@
         "current_deployment_id": "dpl_DitQVFBt6j2d8sd14RMv8DHqmsVF"
       },
       "last_verified": "2026-10-04",
-      "evidence_note": "Current live production is source-bound to DGAF main f9dc8de3d814bb631947429ab40126e3c9b154fa at deployment dpl_DitQVFBt6j2d8sd14RMv8DHqmsVF. The fixed-origin Tektite callback remediation from #1281 has one bounded current-production hostile-forwarded-header denial verification; historical pre-fix deployment exposure remains separately unresolved under #1302. The accepted historical proof identity remains distinct, and neither current deployment health nor CEP characterization establishes independent validation, canonical efficacy, production-executor authority, or High-Assurance.",
+      "evidence_note": "Current live production is source-bound to DGAF main f9dc8de3d814bb631947429ab40126e3c9b154fa at deployment dpl_DitQVFBt6j2d8sd14RMv8DHqmsVF. The fixed-origin Tektite callback remediation from #1281 has one bounded current-production hostile-forwarded-header denial verification; historical pre-fix deployment exposure remains separately unresolved under #1302. The accepted historical proof identity remains distinct, and neither current deployment health nor CEP characterization establishes independent validation, canonical efficacy, production-executor authority, or High-Assurance. 2026-11-04 documentation review: historical source/deployment identities retained as event-time evidence only; current production alias, source commit, and rendered semantic readback have not been jointly reconciled on this manifest revision. Do not interpret historical PASS as current freshness or as authorization. Historical accepted Tektite proof fields remain immutable.",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
         "EVIDENCE_CEILING_CHANGED",
