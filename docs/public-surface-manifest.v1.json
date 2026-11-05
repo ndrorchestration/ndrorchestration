@@ -49,8 +49,8 @@
       "type": "github_profile",
       "url": "https://github.com/ndrorchestration/ndrorchestration/blob/main/README.md",
       "reachability": "VERIFIED_PUBLIC",
-      "copy_state": "REVIEW_NEEDED",
-      "release_gate": "REVIEW",
+      "copy_state": "RECONCILED",
+      "release_gate": "PASS",
       "canonical_dependencies": [
         "ECOSYSTEM_POSITIONING",
         "DGAF",
@@ -62,7 +62,7 @@
       "verification_methods": [
         "GITHUB_CONNECTOR"
       ],
-      "source_version": "04f14ee91e4c818cb39f083743c6fa0d3ae8a866",
+      "source_version": "69306d68d0774744780382c89e93d2f8148dca50",
       "last_verified": "2026-11-04",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
@@ -75,7 +75,7 @@
         "path": "README.md",
         "git_blob_sha": "b094c7554084a572d0efb5dc6d52187e12fb7c66"
       },
-      "evidence_note": "2026-11-04 candidate aligns recruiter-facing profile identity to AI Evaluation · Agentic Assurance · Governance · Provenance and updates professional-direction copy. Candidate remains REVIEW until exact-head public-surface verification."
+      "evidence_note": "2026-11-04 recruiter-facing profile positioning admitted on signed protected/default main 69306d68d0774744780382c89e93d2f8148dca50 after Public Surface Live Check, ORBIT Evidence Snapshot, and Vercel success. README blob b094c7554084a572d0efb5dc6d52187e12fb7c66. Current identity: AI Evaluation · Agentic Assurance · Governance · Provenance."
     },
     {
       "id": "github.organization_profile",
