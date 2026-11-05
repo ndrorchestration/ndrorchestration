@@ -20,12 +20,13 @@ const fullHead = 'c55476746126ca29f3963887c1c81ad6110c5738';
 const text = 'FAIL-CLOSED\nNOT AUTHORIZED\nempirical N = 0';
 const bytes = Buffer.from(text);
 const blob = createHash('sha1').update(Buffer.from('blob ' + bytes.length + '\0')).update(bytes).digest('hex');
-async function invoke({ head = fullHead, method = 'GET', fail = false, repository = 'ndrorchestration/DGAF-Framework', encoding = 'base64' } = {}) {
+async function invoke({ head = fullHead, method = 'GET', fail = false, repository = 'ndrorchestration/DGAF-Framework', encoding = 'base64', deploymentEnv = {} } = {}) {
   const calls = [];
   const handler = load('pages/api/orbit.ts', 'handler', {
     orbitSnapshot: snapshot,
     orbitConfig: { repository, branch: 'main', githubTimeoutMs: 5000 },
     EVIDENCE_SCHEMA: 'orbit.evidence.v3',
+    process: { env: deploymentEnv },
     fetch: async url => {
       calls.push(url);
       if (fail) throw new Error('network unavailable');
@@ -51,6 +52,46 @@ async function check(name, run) {
 }
 await check('matching full historical identity admits current projection', async () => {
   const result = await invoke(); assert.equal(result.status, 200); assert.equal(result.payload.live.currentProjection, true);
+});
+await check('different-repository deployment commit is not compared to DGAF authority SHA', async () => {
+  const result = await invoke({ deploymentEnv: {
+    VERCEL_GIT_COMMIT_SHA: 'a'.repeat(40),
+    VERCEL_GIT_REPO_OWNER: 'ndrorchestration',
+    VERCEL_GIT_REPO_SLUG: 'ndrorchestration',
+    VERCEL_GIT_COMMIT_REF: 'main',
+  }});
+  assert.equal(result.payload.live.vercel.freshness, 'NOT_COMPARABLE');
+  assert.equal(result.payload.live.vercel.sourceRepository, 'ndrorchestration/ndrorchestration');
+  assert.equal(result.payload.live.currentProjection, true);
+});
+await check('same-repository same-branch matching SHA is deployment-aligned', async () => {
+  const result = await invoke({ deploymentEnv: {
+    VERCEL_GIT_COMMIT_SHA: fullHead,
+    VERCEL_GIT_REPO_OWNER: 'ndrorchestration',
+    VERCEL_GIT_REPO_SLUG: 'DGAF-Framework',
+    VERCEL_GIT_COMMIT_REF: 'main',
+  }});
+  assert.equal(result.payload.live.vercel.freshness, 'ALIGNED');
+});
+await check('same-repository same-branch mismatching SHA is genuine deployment drift', async () => {
+  const result = await invoke({ deploymentEnv: {
+    VERCEL_GIT_COMMIT_SHA: 'd'.repeat(40),
+    VERCEL_GIT_REPO_OWNER: 'ndrorchestration',
+    VERCEL_GIT_REPO_SLUG: 'DGAF-Framework',
+    VERCEL_GIT_COMMIT_REF: 'main',
+  }});
+  assert.equal(result.payload.live.vercel.freshness, 'DRIFT');
+});
+await check('different branch or missing repository provenance cannot assert deployment drift', async () => {
+  const otherBranch = await invoke({ deploymentEnv: {
+    VERCEL_GIT_COMMIT_SHA: 'd'.repeat(40),
+    VERCEL_GIT_REPO_OWNER: 'ndrorchestration',
+    VERCEL_GIT_REPO_SLUG: 'DGAF-Framework',
+    VERCEL_GIT_COMMIT_REF: 'preview',
+  }});
+  assert.equal(otherBranch.payload.live.vercel.freshness, 'NOT_COMPARABLE');
+  const absentRepo = await invoke({ deploymentEnv: {VERCEL_GIT_COMMIT_SHA: 'd'.repeat(40)}});
+  assert.equal(absentRepo.payload.live.vercel.freshness, 'NOT_COMPARABLE');
 });
 await check('different full commit sharing captured prefix is withheld', async () => {
   const result = await invoke({ head: 'c5547674' + 'f'.repeat(32) }); assert.equal(result.payload.live.currentProjection, false);

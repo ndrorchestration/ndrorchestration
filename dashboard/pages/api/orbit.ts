@@ -54,8 +54,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const declaredFailClosed = /FAIL-CLOSED/i.test(readmeText);
     const declarationsComplete = declaredN0 && declaredUnauthorized && declaredFailClosed;
     const deploymentCommit = process.env.VERCEL_GIT_COMMIT_SHA || null;
+    const deploymentOwner = process.env.VERCEL_GIT_REPO_OWNER || null;
+    const deploymentSlug = process.env.VERCEL_GIT_REPO_SLUG || null;
+    const deploymentBranch = process.env.VERCEL_GIT_COMMIT_REF || null;
+    const deploymentRepo = deploymentOwner && deploymentSlug ? `${deploymentOwner}/${deploymentSlug}` : null;
     const sourceFreshness = orbitConfig.repository === orbitSnapshot.capturedRepository && currentHead === orbitSnapshot.capturedHead ? 'ALIGNED' : 'DRIFT';
-    const deploymentFreshness = deploymentCommit ? (deploymentCommit === currentHead ? 'ALIGNED' : 'DRIFT') : 'UNAVAILABLE';
+    // Source HEAD is DGAF governance authority; deployment commit usually
+    // identifies this portfolio repo. Their unequal SHAs are not deployment drift.
+    const comparable = deploymentRepo?.toLowerCase() === orbitConfig.repository.toLowerCase() &&
+      deploymentBranch === orbitConfig.branch;
+    const deploymentFreshness = !deploymentCommit ? 'UNAVAILABLE' : !comparable ?
+      'NOT_COMPARABLE' : (deploymentCommit === currentHead ? 'ALIGNED' : 'DRIFT');
     const projectionAdmissible = sourceFreshness === 'ALIGNED' && declarationsComplete;
     const gates = orbitSnapshot.gates.map(g => ({ ...g }));
 
@@ -113,6 +122,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         },
         vercel: {
           commit: deploymentCommit,
+          sourceRepository: deploymentRepo,
+          sourceBranch: deploymentBranch,
           freshness: deploymentFreshness,
           url: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null,
         },
