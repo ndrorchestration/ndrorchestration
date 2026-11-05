@@ -41,6 +41,11 @@ jobs:
       - name: Adversarial manifest tests
         run: python3 -m unittest tests/test_public_surface_manifest.py
 
+      - name: Profile source-binding regression tests
+        run: |
+          python3 scripts/sync_profile_source_blob.py
+          python3 -m unittest tests/test_sync_profile_source_blob.py
+
       - name: Validate public change propagation contract
         run: python3 scripts/validate_public_change_propagation_contract.py
 
