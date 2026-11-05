@@ -3,8 +3,9 @@
 **Status:** ACTIVE ACCOUNT-LEVEL CLASSIFICATION  
 **Authority scope:** `ACCOUNT_LEVEL_LIFECYCLE_ONLY`  
 **Machine-readable source:** [`../ecosystem/repository-lifecycle.json`](../ecosystem/repository-lifecycle.json)  
-**Lifecycle classifications reviewed:** 2026-09-24  
-**Connected owner census reconfirmed:** 2026-09-28
+**Legacy lifecycle classifications reviewed:** 2026-09-24 (historical baseline; see per-entry `reviewed_at`)  
+**Latest owner census observed (draft registry):** 2026-11-05 (56 repositories; newly added classifications are `PENDING_REVIEW`)  
+**Earlier owner census:** 2026-09-28 (historical; superseded by the dated audit below)
 
 ## Owner repository census reconciliation — 2026-11-05 (draft)
 
