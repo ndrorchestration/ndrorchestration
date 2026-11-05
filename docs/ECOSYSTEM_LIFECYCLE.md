@@ -3,8 +3,21 @@
 **Status:** ACTIVE ACCOUNT-LEVEL CLASSIFICATION  
 **Authority scope:** `ACCOUNT_LEVEL_LIFECYCLE_ONLY`  
 **Machine-readable source:** [`../ecosystem/repository-lifecycle.json`](../ecosystem/repository-lifecycle.json)  
-**Lifecycle classifications reviewed:** 2026-09-24  
-**Connected owner census reconfirmed:** 2026-09-28
+**Legacy lifecycle classifications reviewed:** 2026-09-24 (historical baseline; see per-entry `reviewed_at`)  
+**Latest owner census observed (draft registry):** 2026-11-05 (56 repositories; newly added classifications are `PENDING_REVIEW`)  
+**Earlier owner census:** 2026-09-28 (historical; superseded by the dated audit below)
+
+## Owner repository census reconciliation — 2026-11-05 (draft)
+
+An authenticated GitHub owner census on 2026-11-05 returned **56 repositories: 36 public and 20 private**, including **1 archived private**. The previous account registry snapshot dated 2026-10-23 had 53 entries (34 public / 19 private). All 53 previously listed repositories are still present and have no observed visibility or archive-state changes; three new repositories were found and provisionally classified in the draft machine-readable registry.
+
+| Added repository | Live visibility | Provisional lifecycle | Evidence boundary |
+| --- | --- | --- | --- |
+| `ToSailtheStarrySky-Dev` | private | INCUBATING | Unfinished preproduction; not the canonical public game source; keep private source undisclosed |
+| [AI-From-Zero-With-Ender](https://github.com/ndrorchestration/AI-From-Zero-With-Ender) | public | ACTIVE_SUPPORTING | Educational videos and channel analytics require source-bound verification |
+| [ArchCityInDarkness](https://github.com/ndrorchestration/ArchCityInDarkness) | public | INCUBATING | Game concept/source under development, not proven playable or rights-cleared |
+
+The new entries have `PENDING_REVIEW` status. This is an **account-level inventory update proposal** only: no release, scientific validation, runtime verification, content-rights approval, game canon, or downstream authorization is established. Historical census sections below remain dated snapshots, not current counts.
 
 ## Historical DGAF documentation overlay — 2026-09-28
 
