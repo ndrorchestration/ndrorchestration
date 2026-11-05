@@ -1,10 +1,10 @@
 **Andrew Hensel // Ndr “Ender”**
 
-### AI Evaluation · Prompt Engineering · Agentic Systems · Evidence & Governance
+### AI Evaluation · Agentic Assurance · Governance · Provenance
 
 I design and test AI workflows with a focus on **what systems demonstrably do, which claims their evidence supports, and which actions they are authorized to take**.
 
-**Professional interests:** Remote AI evaluation, AI training/quality, prompt engineering, agent orchestration, and governance-aware systems engineering. My portfolio combines runnable evaluation tooling, reproducible controls, prompt-system specifications, and experimental assurance research.
+**Professional interests:** Remote AI evaluation, AI training/quality, prompt engineering, agentic assurance, governance, and provenance-focused systems work. My portfolio combines runnable evaluation tooling, reproducible controls, prompt-system specifications, and experimental assurance research.
 
 ## Open invitation: Independent review of DGAF
 
@@ -188,7 +188,7 @@ That is why my repositories deliberately preserve states such as **NOT VERIFIED*
 
 ## Professional direction
 
-I am building toward work in **AI evaluation, prompt engineering, AI quality/training, agentic systems, and governance-aware AI engineering**—particularly where careful testing, failure-mode discovery, provenance, evidence quality, and system-level reasoning matter alongside implementation.
+I am building toward work in **AI evaluation, prompt engineering, AI quality/training, agentic assurance, governance, and provenance-focused AI engineering**—particularly where careful testing, failure-mode discovery, evidence quality, authorization boundaries, and system-level reasoning matter alongside implementation.
 
 My broader goal is to help make increasingly capable AI systems easier to **inspect, constrain, evaluate, verify, and trust for the right reasons**.
 
