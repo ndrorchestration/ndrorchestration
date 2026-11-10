@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-23",
+  "generated_at": "2026-11-05",
   "authority_scope": "ACCOUNT_LEVEL_LIFECYCLE_ONLY",
   "repositories": [
     {
@@ -809,6 +809,51 @@
       "current_claim_boundary": "External reference/fork; not evidence of original authorship or merged upstream contribution.",
       "reviewed_at": "2026-10-23",
       "notes": "Provisional account-level classification from GitHub metadata and repository entrypoints; not independent implementation, release, or security verification."
+    },
+    {
+      "repository": "ndrorchestration/ToSailtheStarrySky-Dev",
+      "product_name": "To Sail the Starry Sky — Development Workspace",
+      "visibility": "private",
+      "github_archived": false,
+      "origin": "authored",
+      "review_status": "PENDING_REVIEW",
+      "lifecycle": "INCUBATING",
+      "responsibility": "Private unfinished preproduction development workspace; its relationship to canonical game source requires review.",
+      "canonical_project_source": "https://github.com/ndrorchestration/ToSailtheStarrySky-Dev",
+      "relationships": [],
+      "current_claim_boundary": "Repository README identifies unfinished preproduction only. No canon authority, implementation acceptance, asset promotion, or release is established.",
+      "reviewed_at": "2026-11-05",
+      "notes": "Provisional metadata and README classification. Canonical public TSTSS source remains ToSailtheStarrySky-jrpg; do not infer content equivalence."
+    },
+    {
+      "repository": "ndrorchestration/AI-From-Zero-With-Ender",
+      "product_name": "AI From Zero With Ender",
+      "visibility": "public",
+      "github_archived": false,
+      "origin": "authored",
+      "review_status": "PENDING_REVIEW",
+      "lifecycle": "ACTIVE_SUPPORTING",
+      "responsibility": "Public educational channel companion with episode links, corrections and dated analytics.",
+      "canonical_project_source": "https://github.com/ndrorchestration/AI-From-Zero-With-Ender",
+      "relationships": [],
+      "current_claim_boundary": "Source-bound channel publication and analytics must be distinguished from repository content; educational material is not independent validation of engineering research.",
+      "reviewed_at": "2026-11-05",
+      "notes": "Provisional account-level lifecycle classification from README and Notion episode controller; full channel verification not completed."
+    },
+    {
+      "repository": "ndrorchestration/ArchCityInDarkness",
+      "product_name": "Arch City in Darkness",
+      "visibility": "public",
+      "github_archived": false,
+      "origin": "authored",
+      "review_status": "PENDING_REVIEW",
+      "lifecycle": "INCUBATING",
+      "responsibility": "Incubating Columbus-set supernatural game project; implementation and rights boundaries remain subject to project-local verification.",
+      "canonical_project_source": "https://github.com/ndrorchestration/ArchCityInDarkness",
+      "relationships": [],
+      "current_claim_boundary": "At census, public README contains only a heading. Playability, engine, asset rights, originality and release authorization not verified.",
+      "reviewed_at": "2026-11-05",
+      "notes": "Provisional classification from authenticated repo census; not an implementation or content-rights review."
     }
   ]
 }
