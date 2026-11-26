@@ -9,11 +9,11 @@ PROFILE_URL = "https://github.com/ndrorchestration/ndrorchestration/blob/main/RE
 RAW_URL = "https://raw.githubusercontent.com/ndrorchestration/ndrorchestration/main/README.md"
 LEGACY_MARKERS = ("Agentic Assurance", "Tektite", "What did the system actually do")
 PROJECTS = (
-    ("Agentic Governance Orchestrator", "DGAF-Framework"),
+    ("Dynamic Governance Agentic Formation (DGAF)", "DGAF-Framework"),
     ("Agent Control Plane (ACP)", "agent-control-plane"),
     ("To Sail the Starry Sky", "ToSailtheStarrySky-jrpg"),
     ("ResumeApex Career Assistance Evaluation Suite", "resumeapex-eval"),
-    ("Collab-bration", "Collabration"),
+    ("Collabration", "Collabration"),
     ("AI Evaluation Workbench", "junior-apogee-app"),
     ("Orbit-Driftwatch", "Orbit-Driftwatch"),
     ("MORSE", "Morse-Orchestration"),
