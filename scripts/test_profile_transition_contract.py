@@ -19,10 +19,10 @@ class ProfileTransitionTests(unittest.TestCase):
         self.rendered = (200, PROFILE_URL, " ".join(LEGACY_MARKERS))
         self.raw = (200, RAW_URL, self.legacy)
 
-    def check(self, candidate=None, event="pull_request", ref="refs/pull/85/merge", rendered=None, raw=None):
+    def check(self, candidate=None, event="pull_request", ref="refs/pull/85/merge", rendered=None, raw=None, base_blob=LEGACY_BLOB):
         return check_profile(self.surface, self.candidate if candidate is None else candidate,
                              event, ref, self.rendered if rendered is None else rendered,
-                             self.raw if raw is None else raw)
+                             self.raw if raw is None else raw, base_blob=base_blob)
 
     def test_exact_archived_legacy(self):
         self.assertEqual(blob_sha(self.legacy), LEGACY_BLOB)
@@ -36,6 +36,16 @@ class ProfileTransitionTests(unittest.TestCase):
                             rendered=(200, PROFILE_URL, " ".join(CANDIDATE_MARKERS)),
                             raw=(200, RAW_URL, self.candidate))
         self.assertEqual(result["result"], "PASS")
+
+    def test_unchanged_post_cutover_pr(self):
+        result = self.check(base_blob=blob_sha(self.candidate),
+                            rendered=(200, PROFILE_URL, " ".join(CANDIDATE_MARKERS)),
+                            raw=(200, RAW_URL, self.candidate))
+        self.assertEqual(result["result"], "PASS")
+
+    def test_unknown_or_missing_pr_base(self):
+        for base in (None, "0" * 40):
+            self.assertEqual(self.check(base_blob=base)["result"], "FAIL")
 
     def test_candidate_not_yet_published(self):
         self.assertEqual(self.check(raw=(200, RAW_URL, self.candidate))["result"], "FAIL")
