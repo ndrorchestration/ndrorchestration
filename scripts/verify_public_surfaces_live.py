@@ -11,6 +11,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 import urllib.error
@@ -18,7 +19,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-from profile_transition_contract import check_profile, fetch_raw
+from profile_transition_contract import blob_sha, check_profile, fetch_raw
 
 MANIFEST = Path("docs/public-surface-manifest.v1.json")
 OUT = Path("public-surface-live-check.json")
@@ -98,6 +99,18 @@ def source_head() -> str:
         return "UNKNOWN"
 
 
+def pr_base_blob():
+    base = os.environ.get("PROFILE_PR_BASE_SHA", "")
+    if not re.fullmatch(r"[0-9a-f]{40}", base):
+        return None
+    try:
+        return blob_sha(subprocess.check_output(
+            ["git", "show", f"{base}:README.md"], stderr=subprocess.DEVNULL
+        ))
+    except (OSError, subprocess.CalledProcessError):
+        return None
+
+
 def main() -> None:
     manifest_bytes = MANIFEST.read_bytes()
     manifest_sha256 = hashlib.sha256(manifest_bytes).hexdigest()
@@ -122,7 +135,7 @@ def main() -> None:
                 surface, Path("README.md").read_bytes(),
                 os.environ.get("GITHUB_EVENT_NAME", ""),
                 os.environ.get("GITHUB_REF", ""),
-                rendered, fetch_raw(),
+                rendered, fetch_raw(), base_blob=pr_base_blob(),
             )
             results.append(result)
             if result["result"] != "PASS":
