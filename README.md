@@ -57,7 +57,7 @@ Instead of presenting only a final answer, Orbit-Driftwatch exposes how a workfl
 
 **Boundary:** deterministic controls are verified; live hosted provider execution and factual correctness are separate claims.
 
-### 04 — [ResumeApex Eval Suite](https://github.com/ndrorchestration/resumeapex-eval)
+### 04 — [ResumeApex Career Assistance Evaluation Suite](https://github.com/ndrorchestration/resumeapex-eval)
 
 **Reproducible AI evaluation | Python evaluation harness**
 
