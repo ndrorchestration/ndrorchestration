@@ -16,11 +16,11 @@ My work brings prompt engineering, agentic orchestration, evaluation methodology
 
 ## Five flagship projects
 
-### 01 — [Agentic Governance Orchestrator](https://github.com/ndrorchestration/DGAF-Framework)
+### 01 — [Dynamic Governance Agentic Formation (DGAF)](https://github.com/ndrorchestration/DGAF-Framework)
 
 **Evidence-bound agentic governance and assurance | Experimental research system**
 
-Agentic Governance Orchestrator is the proposed successor name for **Dynamic Governance Agentic Formation (DGAF)**. It explores a control-plane architecture in which evidence, verification, capability, authority and permission to act are distinct machine-relevant states.
+**Dynamic Governance Agentic Formation (DGAF)** is an experimental agentic assurance system. It explores a control-plane architecture in which evidence, verification, capability, authority and permission to act are distinct machine-relevant states.
 
 - **Engineering:** fail-closed authorization, deterministic validators, provenance binding, governed state transitions, content-addressed evidence receipts and research custody.
 - **Orchestration research:** governed agent formations, role-scoped capabilities and explicit control boundaries. Broader durable, interoperable and adaptive orchestration is a development direction, not a completed capability claim.
@@ -71,7 +71,7 @@ A practical evaluation system for resume and career-assistance tasks, using the 
 
 **Boundary:** known-answer fixture verification does not establish real-model benchmark performance.
 
-### 05 — [Collab-bration](https://github.com/ndrorchestration/Collabration)
+### 05 — [Collabration](https://github.com/ndrorchestration/Collabration)
 
 **Accountable human–AI collaboration | Alpha-stage product engineering**
 
@@ -118,4 +118,4 @@ I welcome independent scrutiny, reproducible findings and negative results. For 
 
 [Historical profile archive — November 26, 2026](https://github.com/ndrorchestration/ndrorchestration/blob/3b553facaf81da59a776bc2536ba7fa647133607/README.md)
 
-*This is a curated portfolio of ten public repositories, not an ecosystem census or release certificate. The proposed flagship name remains subject to coordinated admission. Exact implementation and evidence claims remain governed by each project's own source and verification records.*
+*This is a curated portfolio of ten public repositories, not an ecosystem census or release certificate. Exact implementation and evidence claims remain governed by each project's own source and verification records.*
