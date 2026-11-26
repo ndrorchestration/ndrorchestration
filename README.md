@@ -44,18 +44,19 @@ ACP explores the machinery around agent execution: task identity, capability dis
 
 **Boundary:** BOUNDED_LOCAL_TEST. Production execution, real-project mutation authority and independent validation are not established.
 
-### 03 — [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch)
+### 03 — [To Sail the Starry Sky](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg)
 
-**Observable multi-agent reasoning | Evaluation and observability**
+**Interdisciplinary systems engineering | Original solarpunk JRPG**
 
-Instead of presenting only a final answer, Orbit-Driftwatch exposes how a workflow reaches it: role observations, source bindings, disagreement, evidence coverage and unsupported claims.
+An ambitious Unreal-based game-development project integrating narrative, exploration, combat, character progression and cinematic presentation with explicit engineering acceptance gates.
 
-- **Engineering:** Planner / Researcher / Skeptic / Verifier roles, deterministic control, provider abstraction, retrieval architecture and claim-readiness auditing.
-- **Review:** run the reproducible default without model credentials; inspect the fail-closed claim audit and frozen run artifacts.
+- **Engineering:** Unreal C++ gameplay foundations, ordered quest state, combat and class contracts, guarded save/load, traversable review markers, camera and title-screen systems.
+- **Integration:** merged PR #780 consolidated 199 changed files and 18,984 added lines (including documentation and verification infrastructure). Its November 5 integration record documents 275 passing Python source tests and eight portable C++ harnesses; earlier exact-source native evidence records 29/29 Unreal automation tests.
+- **Development approach:** isolate candidate changes, verify exact revisions, distinguish portable checks from native rendering and player-visible acceptance.
 
-**Explore:** [Five-minute evaluator path](https://github.com/ndrorchestration/Orbit-Driftwatch#five-minute-evaluation-path)
+**Explore:** [Merged Unreal integration](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg/pull/780) · [Integration evidence and blockers](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg/blob/main/unreal/Docs/MAIN_INTEGRATION_2026_11_05.md)
 
-**Boundary:** deterministic controls are verified; live hosted provider execution and factual correctness are separate claims.
+**Boundary:** pre-alpha development; historical verification is revision-specific. Continuous gameplay, final art and commercial release are not accepted.
 
 ### 04 — [ResumeApex Career Assistance Evaluation Suite](https://github.com/ndrorchestration/resumeapex-eval)
 
@@ -89,11 +90,11 @@ A social application exploring a familiar human experience supported by governed
 
 | Project | What it explores |
 | --- | --- |
-| **06 — [AI Prompt Systems Portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio)** | Prompt architecture, state anchoring, constraint gates, agent roles and failure-aware recovery. Public specifications and rubrics, not executed general-model benchmarks. |
-| **07 — [Sentinel Governance](https://github.com/ndrorchestration/sentinel-governance)** | CI failure observation, structural workflow mutation gates and reviewable repair proposals. Structural validation is not proof of semantic repair correctness. |
-| **08 — [MORSE](https://github.com/ndrorchestration/Morse-Orchestration)** | Multi-Orbital Resonance Scheduling Experiment: comparative multi-timescale orchestration and scheduling research. Synthetic apparatus evidence; AI efficacy not established. |
-| **09 — [To Sail the Starry Sky](https://github.com/ndrorchestration/ToSailtheStarrySky-jrpg)** | Original solarpunk JRPG, Unreal development, worldbuilding, reproducible game-system contracts and native test evidence. Pre-alpha; not a commercial release. |
-| **10 — [AI From Zero With Ender](https://github.com/ndrorchestration/AI-From-Zero-With-Ender)** | AI education, practical prompting, responsible experimentation and accessible explanations of increasingly complex AI concepts. |
+| **06 — [AI Evaluation Workbench](https://github.com/ndrorchestration/junior-apogee-app)** | Experimental Python/Flask evaluation and QA workbench with configurable task families, layered evaluation logic, reporting and tests. Legacy slug retained; external certification is not established. |
+| **07 — [Orbit-Driftwatch](https://github.com/ndrorchestration/Orbit-Driftwatch)** | Multi-agent role observations, disagreement, evidence coverage, source bindings and claim-readiness auditing. Reproducible deterministic control; live hosted provider execution remains separate. |
+| **08 — [MORSE](https://github.com/ndrorchestration/Morse-Orchestration)** | Multi-Orbital Resonance Scheduling Experiment: comparative multi-timescale orchestration and phase-preserving scheduling. Synthetic apparatus evidence; AI efficacy not established. |
+| **09 — [AI Prompt Systems Portfolio](https://github.com/ndrorchestration/ai-prompt-systems-portfolio)** | Prompt architecture, state anchoring, constraint gates, agent roles and failure-aware recovery. Public specifications and rubrics, not executed general-model benchmarks. |
+| **10 — [Sentinel Governance](https://github.com/ndrorchestration/sentinel-governance)** | CI failure observation, structural workflow mutation gates and reviewable repair proposals. Structural validation is not proof of semantic repair correctness. |
 
 ## Working capabilities
 
