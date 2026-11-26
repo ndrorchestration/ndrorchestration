@@ -62,7 +62,7 @@
       "verification_methods": [
         "GITHUB_CONNECTOR"
       ],
-      "source_version": "e061d16cfb40ae3ad09cd97b64c4c7cc2f5459fc",
+      "source_version": "d5614cb0e897951955d34acdb946f9cf4f19444e",
       "last_verified": "2026-11-04",
       "refresh_triggers": [
         "CANONICAL_CLAIM_CHANGED",
@@ -73,9 +73,9 @@
       ],
       "local_source": {
         "path": "README.md",
-        "git_blob_sha": "896b51cd623c68f312c42a463f5509e9763f23cd"
+        "git_blob_sha": "dc7c09391bd794f80a52e8bfbf3a1b65fe591537"
       },
-      "evidence_note": "2026-11-04 recruiter-facing profile positioning admitted on signed protected/default main 69306d68d0774744780382c89e93d2f8148dca50 after Public Surface Live Check, ORBIT Evidence Snapshot, and Vercel success. README blob b094c7554084a572d0efb5dc6d52187e12fb7c66. Current identity: AI Evaluation · Agentic Assurance · Governance · Provenance. Historical accepted-main receipt only. AGO-MIG-001 draft PR #85 binds candidate README at e061d16cfb40ae3ad09cd97b64c4c7cc2f5459fc / blob 896b51cd623c68f312c42a463f5509e9763f23cd; candidate is not published or approved. Last verified date refers to prior live record; candidate requires review and new live evidence before PASS."
+      "evidence_note": "2026-11-04 recruiter-facing profile positioning admitted on signed protected/default main 69306d68d0774744780382c89e93d2f8148dca50 after Public Surface Live Check, ORBIT Evidence Snapshot, and Vercel success. README blob b094c7554084a572d0efb5dc6d52187e12fb7c66. Current identity: AI Evaluation · Agentic Assurance · Governance · Provenance. Historical accepted-main receipt only. AGO-MIG-001 draft PR #85 binds candidate README at e061d16cfb40ae3ad09cd97b64c4c7cc2f5459fc / blob 896b51cd623c68f312c42a463f5509e9763f23cd; candidate is not published or approved. Last verified date refers to prior live record; candidate requires review and new live evidence before PASS. Superseding ten-project profile draft: README source commit d5614cb0e897951955d34acdb946f9cf4f19444e / blob dc7c09391bd794f80a52e8bfbf3a1b65fe591537. Exact previous main README preserved as README.archive.2026-11-26.md at commit 97bf9cbfd71b9246eb59cef22d5883f0c32b1d9e. Prior draft checks do not transfer; REVIEW remains controlling."
     },
     {
       "id": "github.organization_profile",
