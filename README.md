@@ -71,7 +71,7 @@ A practical evaluation system for resume and career-assistance tasks, using the 
 
 **Boundary:** known-answer fixture verification does not establish real-model benchmark performance.
 
-### 05 — [Collabration](https://github.com/ndrorchestration/Collabration)
+### 05 — [Collab-bration](https://github.com/ndrorchestration/Collabration)
 
 **Accountable human–AI collaboration | Alpha-stage product engineering**
 
