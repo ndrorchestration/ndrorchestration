@@ -3,7 +3,6 @@ import hashlib
 import re
 import urllib.error
 import urllib.request
-from pathlib import Path
 
 LEGACY_BLOB = "b094c7554084a572d0efb5dc6d52187e12fb7c66"
 PROFILE_URL = "https://github.com/ndrorchestration/ndrorchestration/blob/main/README.md"
@@ -39,7 +38,7 @@ def fetch_raw():
         return 0, RAW_URL, b""
 
 
-def check_profile(surface, local_bytes, event, ref, rendered, raw):
+def check_profile(surface, local_bytes, event, ref, rendered, raw, base_blob=None):
     """Return separate candidate and public-copy observations; never authorize publication."""
     errors = []
     local_blob = blob_sha(local_bytes)
@@ -67,9 +66,15 @@ def check_profile(surface, local_bytes, event, ref, rendered, raw):
     candidate_ok = not errors
 
     if event == "pull_request":
-        mode, expected_blob, markers = "PR_EXISTING_PUBLIC", LEGACY_BLOB, LEGACY_MARKERS
-        if surface.get("release_gate") != "REVIEW":
-            errors.append("PR transition requires REVIEW gate")
+        if base_blob == LEGACY_BLOB:
+            mode, expected_blob, markers = "PR_EXISTING_PUBLIC", LEGACY_BLOB, LEGACY_MARKERS
+            if surface.get("release_gate") != "REVIEW":
+                errors.append("PR transition requires REVIEW gate")
+        elif base_blob == local_blob:
+            mode, expected_blob, markers = "PR_UNCHANGED_CURRENT_PROFILE", local_blob, CANDIDATE_MARKERS
+        else:
+            mode, expected_blob, markers = "PR_UNRECONCILED_BASE", "", ()
+            errors.append("unexpected or missing PR base profile identity")
     elif event in ("schedule", "workflow_dispatch", "push") and ref == "refs/heads/main":
         mode, expected_blob, markers = "MAIN_CURRENT_PUBLIC", local_blob, CANDIDATE_MARKERS
     else:
@@ -89,7 +94,7 @@ def check_profile(surface, local_bytes, event, ref, rendered, raw):
         "final_url": final_url, "http_status": status,
         "required_markers": list(markers), "missing_markers": missing,
         "candidate_blob": local_blob, "candidate_contract": "PASS" if candidate_ok else "FAIL",
-        "mode": mode, "expected_public_blob": expected_blob, "observed_public_blob": actual_raw_blob,
+        "mode": mode, "pr_base_blob": base_blob, "expected_public_blob": expected_blob, "observed_public_blob": actual_raw_blob,
         "raw_http_status": raw_status, "raw_final_url": raw_final_url,
         "errors": errors, "result": "FAIL" if errors else "PASS",
         "publication_authorized": False,
