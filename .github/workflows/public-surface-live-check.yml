@@ -5,6 +5,10 @@ on:
     paths:
       - 'docs/public-surface-manifest.v1.json'
       - 'scripts/verify_public_surfaces_live.py'
+      - 'scripts/profile_transition_contract.py'
+      - 'scripts/test_profile_transition_contract.py'
+      - 'README.md'
+      - 'README.archive.2026-11-26.md'
       - 'scripts/validate_public_surface_manifest.py'
       - '.github/workflows/public-surface-live-check.yml'
   workflow_dispatch:
@@ -44,6 +48,9 @@ jobs:
 
       - name: Verify manifest structure first
         run: python3 scripts/validate_public_surface_manifest.py
+
+      - name: Verify profile transition negative controls
+        run: python3 scripts/test_profile_transition_contract.py
 
       - name: Check public surfaces
         run: python3 scripts/verify_public_surfaces_live.py
