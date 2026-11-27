@@ -4,7 +4,7 @@ from pathlib import Path
 
 from profile_transition_contract import (
     blob_sha, check_profile, PROFILE_URL, RAW_URL, LEGACY_BLOB,
-    LEGACY_MARKERS, CANDIDATE_MARKERS,
+    LEGACY_MARKERS, CANDIDATE_MARKERS, PRIOR_PROFILE_BLOB, PRIOR_PROFILE_MARKERS,
 )
 
 
@@ -42,6 +42,22 @@ class ProfileTransitionTests(unittest.TestCase):
                             rendered=(200, PROFILE_URL, " ".join(CANDIDATE_MARKERS)),
                             raw=(200, RAW_URL, self.candidate))
         self.assertEqual(result["result"], "PASS")
+
+    def test_qualified_successor_required(self):
+        body = self.candidate.replace(b"Proposed successor identity", b"Current official identity")
+        self.surface["local_source"]["git_blob_sha"] = blob_sha(body)
+        self.assertEqual(self.check(candidate=body)["candidate_contract"], "FAIL")
+
+    def test_prior_profile_requires_exact_public_blob_and_review(self):
+        # Exact previous blob is required; candidate bytes must not impersonate it.
+        result = self.check(base_blob=PRIOR_PROFILE_BLOB,
+                            rendered=(200, PROFILE_URL, " ".join(PRIOR_PROFILE_MARKERS)),
+                            raw=(200, RAW_URL, self.candidate))
+        self.assertEqual(result["mode"], "PR_EXISTING_TEN_PROJECT_PROFILE")
+        self.assertEqual(result["expected_public_blob"], PRIOR_PROFILE_BLOB)
+        self.assertEqual(result["result"], "FAIL")
+        self.surface["release_gate"] = "PASS"
+        self.assertIn("PR transition requires REVIEW gate", self.check(base_blob=PRIOR_PROFILE_BLOB)["errors"])
 
     def test_unknown_or_missing_pr_base(self):
         for base in (None, "0" * 40):
