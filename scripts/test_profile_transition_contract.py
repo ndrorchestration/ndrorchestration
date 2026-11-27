@@ -48,6 +48,15 @@ class ProfileTransitionTests(unittest.TestCase):
         self.surface["local_source"]["git_blob_sha"] = blob_sha(body)
         self.assertEqual(self.check(candidate=body)["candidate_contract"], "FAIL")
 
+    def test_exact_prior_profile_transition(self):
+        prior = Path("README.archive.2026-11-27.md").read_bytes()
+        self.assertEqual(blob_sha(prior), PRIOR_PROFILE_BLOB)
+        result = self.check(base_blob=PRIOR_PROFILE_BLOB,
+                            rendered=(200, PROFILE_URL, " ".join(PRIOR_PROFILE_MARKERS)),
+                            raw=(200, RAW_URL, prior))
+        self.assertEqual(result["result"], "PASS")
+        self.assertFalse(result["publication_authorized"])
+
     def test_prior_profile_requires_exact_public_blob_and_review(self):
         # Exact previous blob is required; candidate bytes must not impersonate it.
         result = self.check(base_blob=PRIOR_PROFILE_BLOB,
