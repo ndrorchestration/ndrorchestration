@@ -6,9 +6,9 @@ I’m open to remote work in AI evaluation, prompt engineering and AI training. 
 
 ## Five flagship projects
 
-### 01 — [Dynamic Governance Agentic Formation (DGAF)](https://github.com/ndrorchestration/DGAF-Framework)
+### 01 — [Agentic Governance Orchestrator (AGO)](https://github.com/ndrorchestration/DGAF-Framework)
 
-An experimental framework for deciding when an AI agent has permission to act. In 112,200 simulated cases, DGAF and a conventional policy checker made the same allow-or-deny decision every time. The open research question is what tracking the evidence behind each decision adds.
+Proposed successor identity for my experimental agentic governance research (currently hosted in the DGAF-Framework repository). It investigates evidence-bound authorization, provenance and accountable orchestration. A conventional policy checker matched the earlier decision model across 112,200 enumerated synthetic states. The incremental value of the broader assurance lifecycle remains an open research question; independent validation and high-assurance authorization are not established. The formal identity cutover is pending.
 
 ### 02 — [Agent Control Plane (ACP)](https://github.com/ndrorchestration/agent-control-plane)
 

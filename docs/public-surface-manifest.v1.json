@@ -49,8 +49,8 @@
       "type": "github_profile",
       "url": "https://github.com/ndrorchestration/ndrorchestration/blob/main/README.md",
       "reachability": "VERIFIED_PUBLIC",
-      "copy_state": "RECONCILED",
-      "release_gate": "PASS",
+      "copy_state": "REVIEW_NEEDED",
+      "release_gate": "REVIEW",
       "canonical_dependencies": [
         "ECOSYSTEM_POSITIONING",
         "DGAF",
@@ -74,9 +74,9 @@
       ],
       "local_source": {
         "path": "README.md",
-        "git_blob_sha": "59940d45c64f3d0c4a802d63bcd6d40e269626ba"
+        "git_blob_sha": "59424d1a6a42caeaa832d80bf76c4b244722abde"
       },
-      "evidence_note": "PR #85 published the ten-project README at bec64bb54ebed385a8a6aa6d2e6a6596761637ad. The public account overview returned HTTP 200 with all ten repository links in ranked order. Main verification run 46059212411, attempt 3, job 140736056501 confirmed MAIN_CURRENT_PUBLIC, all 18 regression tests and the receipt hash. The reviewed and public README both have Git blob 59940d45c64f3d0c4a802d63bcd6d40e269626ba. Attempts 1 and 2 recorded transient rendered-page errors and a stale raw response. The prior README is preserved verbatim in README.archive.2026-11-26.md (blob b094c7554084a572d0efb5dc6d52187e12fb7c66). Publication used the owner's profile-only reviewer exception."
+      "evidence_note": "PR #85 published the ten-project README at bec64bb54ebed385a8a6aa6d2e6a6596761637ad. The public account overview returned HTTP 200 with all ten repository links in ranked order. Main verification run 46059212411, attempt 3, job 140736056501 confirmed MAIN_CURRENT_PUBLIC, all 18 regression tests and the receipt hash. The reviewed and public README both have Git blob 59940d45c64f3d0c4a802d63bcd6d40e269626ba. Attempts 1 and 2 recorded transient rendered-page errors and a stale raw response. The prior README is preserved verbatim in README.archive.2026-11-26.md (blob b094c7554084a572d0efb5dc6d52187e12fb7c66). Publication used the owner's profile-only reviewer exception. Candidate only: proposed AGO successor wording, formal identity cutover pending; previous public blob remains 59940d45c64f3d0c4a802d63bcd6d40e269626ba until publication and readback."
     },
     {
       "id": "github.organization_profile",
