@@ -9,7 +9,7 @@ PROFILE_URL = "https://github.com/ndrorchestration/ndrorchestration/blob/main/RE
 RAW_URL = "https://raw.githubusercontent.com/ndrorchestration/ndrorchestration/main/README.md"
 LEGACY_MARKERS = ("Agentic Assurance", "Tektite", "What did the system actually do")
 PROJECTS = (
-    ("Dynamic Governance Agentic Formation (DGAF)", "DGAF-Framework"),
+    ("Agentic Governance Orchestrator (AGO)", "DGAF-Framework"),
     ("Agent Control Plane (ACP)", "agent-control-plane"),
     ("To Sail the Starry Sky", "ToSailtheStarrySky-jrpg"),
     ("ResumeApex Career Assistance Evaluation Suite", "resumeapex-eval"),
@@ -20,7 +20,12 @@ PROJECTS = (
     ("AI Prompt Systems Portfolio", "ai-prompt-systems-portfolio"),
     ("Sentinel Governance", "sentinel-governance"),
 )
+PRIOR_PROFILE_BLOB = "59940d45c64f3d0c4a802d63bcd6d40e269626ba"
+PRIOR_PROFILE_NAME = "Dynamic Governance Agentic Formation (DGAF)"
 CANDIDATE_MARKERS = ("Five flagship projects", "Five additional selected projects") + tuple(p[0] for p in PROJECTS)
+
+
+PRIOR_PROFILE_MARKERS = tuple(PRIOR_PROFILE_NAME if marker == "Agentic Governance Orchestrator (AGO)" else marker for marker in CANDIDATE_MARKERS)
 
 
 def blob_sha(body):
@@ -63,11 +68,17 @@ def check_profile(surface, local_bytes, event, ref, rendered, raw, base_blob=Non
         errors.append("candidate project heading/order mismatch")
     if not all(marker in "\n".join(lines) for marker in CANDIDATE_MARKERS):
         errors.append("candidate markers missing")
+    if "formal identity cutover is pending" not in "\n".join(lines) or "Proposed successor identity" not in "\n".join(lines):
+        errors.append("candidate identity qualification missing")
     candidate_ok = not errors
 
     if event == "pull_request":
         if base_blob == LEGACY_BLOB:
             mode, expected_blob, markers = "PR_EXISTING_PUBLIC", LEGACY_BLOB, LEGACY_MARKERS
+            if surface.get("release_gate") != "REVIEW":
+                errors.append("PR transition requires REVIEW gate")
+        elif base_blob == PRIOR_PROFILE_BLOB:
+            mode, expected_blob, markers = "PR_EXISTING_TEN_PROJECT_PROFILE", PRIOR_PROFILE_BLOB, PRIOR_PROFILE_MARKERS
             if surface.get("release_gate") != "REVIEW":
                 errors.append("PR transition requires REVIEW gate")
         elif base_blob == local_blob:
